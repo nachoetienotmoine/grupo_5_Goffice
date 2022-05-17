@@ -36,3 +36,5 @@ Tip: les recomendamos crear la carpeta design para incluir este contenido.
 ○ Formulario de registro
 ○ Formulario de login
 ★ Opcional: Boceto o diseño gráfico del sitio (logo, colores, tipografías, etc).
+
+Ignacio Andreozzi : Soy Ignacio Andreozzi , de tucuman. Estudio ingeniria Quimica y esta es mi primera experiencia programando. En cuanto al proyecto que efectuaremos , mi inspiracion es "Best Buy". La misma me inspira porque su mercado es cualquier persona con acceso a internet que quiera comprar tecnologia. La pagina Web tiene un diseño practico y agradable al usuario. En cuanto a la funcionalidad observamos una pagina funcional y practica.
