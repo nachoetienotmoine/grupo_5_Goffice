@@ -57,6 +57,7 @@ Con Goffice apuntamos a desarrollar un ecommerce cuyo foco es la oferta y comerc
 
 ★ https://www.gamingcity.com.ar
 
+★ https://www.originpc.com
 
 ○ DevTeam - Proyecto Goffice:
 ---------------------------
@@ -71,7 +72,7 @@ Me llamo Gonzalo Andreozzi, soy de Tucuman. En este momento estoy terminando mi 
 
 Thomas Farre :
 --------------
-
+Mi nombre es Thomas Farre, tengo 18 años y soy de Buenos Aires. Estoy empezando con la carrera de Arquitectura y esta es mi primera experiencia con programacion ademas de ver algunos videos sobre algunos lenguajes. La pagina que uso de inspiracion para este proyecto es "Origin". Esta es una pagina que vende componentes para computadoras gaiming y computadoras completas. Mis razones por las que elegi esta pagina son que es facil de operar, es facil de entender, tiene varias opciones de pagos y tiene envio a varios distintos paises. Ademas tiene distintos consejos por los distinots tipos de computadoras que te pueden serivir y tambien tiene pagos en cuotas en caso de que el comprador no quiera pagar todo de una.
 
 Nelson Patiño :
 ---------------
