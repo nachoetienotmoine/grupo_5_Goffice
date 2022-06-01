@@ -1,3 +1,7 @@
+*{
+    box-sizing: border-box;
+}
+
 main{
     margin: 2%;
 }
@@ -133,7 +137,8 @@ p{
     color: orangered;
     text-decoration: none;
         display: flex;
-        justify-content: space-between;
+        padding: 2%;
+        
 }
 .h3-nombre{
     text-align: center;
@@ -178,28 +183,29 @@ padding-bottom: 1%;
     display: flex;
     background-color: rgb(52, 51, 51);
     color: orangered;
-
-   
+    flex-wrap: wrap;
+    justify-content: space-between;
+    
+    padding-left: 3%;
+    padding-right: 3%;
     }
 .nav-footer{
     display: flex;
     flex-direction: column;
-    padding-left: 5%;
-    padding-top: 2%;
-    padding-bottom: 2%;
-    justify-content: space-between;
+padding-top: 1%;
+  padding-bottom: 1%;
+    
 }
 .nav-footer2{
     display: flex;
     flex-direction: column;
-    padding-left: 45%;
-    padding-top: 2%;
-    padding-bottom: 2%;
-    justify-content: space-between;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    
 }
 .lista-footer2{
    display: flex;
-       background-color: black;
+    background-color: black;
     color: orangered;
 }
 .section-footer{
