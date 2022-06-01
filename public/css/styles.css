@@ -6,10 +6,12 @@
 .burger-menu {
 
     display: flex;
+    padding-top: 2%;
 }
 
 img {
     display: flex;
+    padding-top: 3%;
 
 }
 
@@ -18,7 +20,7 @@ img {
     color: orangered;
     border-style: none;
     background-color: black;
-    display: flex;
+
 
 
 
@@ -30,7 +32,7 @@ article {
 }
 
 
-.buscar{
+.buscar {
     padding-left: 2%;
 }
 
@@ -58,23 +60,23 @@ article {
     border-radius: 20px;
 }
 
-.carrito i {
-    display: inline;
+#carrito {
+
     background-color: black;
-    margin-bottom: 100%;
-    color: orangered;
+        color: orangered;
+    border: none;
+    
 }
 
 .carrito {
+  display: flex;
+        padding-top: 2%;
 
-    background-color: black;
-    color: grey;
-    border: none;
 }
 
 .box {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-
+    
 }
