@@ -1,0 +1,80 @@
+.header-carrito {
+    background-color: black;
+
+}
+
+.burger-menu {
+
+    display: flex;
+}
+
+img {
+    display: flex;
+
+}
+
+#menu {
+
+    color: orangered;
+    border-style: none;
+    background-color: black;
+    display: flex;
+
+
+
+}
+
+article {
+    background-color: #03264c;
+    height: 35vw;
+}
+
+
+.buscar{
+    padding-left: 2%;
+}
+
+.buscar input {
+
+    display: inline;
+    height: 25px;
+    font-size: small;
+    color: black;
+    outline: #03264c;
+    border: 1px solid grey;
+    border-radius: 20px;
+    width: 85%;
+    display: inline;
+    line-height: normal;
+    padding-left: 2%;
+
+
+}
+
+#lupa {
+    color: black;
+    display: inline;
+    border: 1px solid grey;
+    border-radius: 20px;
+}
+
+.carrito i {
+    display: inline;
+    background-color: black;
+    margin-bottom: 100%;
+    color: orangered;
+}
+
+.carrito {
+
+    background-color: black;
+    color: grey;
+    border: none;
+}
+
+.box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+}
