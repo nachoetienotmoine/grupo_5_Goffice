@@ -167,11 +167,13 @@ padding-bottom: 1%;
     justify-content: space-around;
     padding-left: 25%;
     padding-right: 25%;
+    font-size: small;
     
 
    
     
 }
+
 .lista-footer{
     display: flex;
     background-color: rgb(52, 51, 51);
