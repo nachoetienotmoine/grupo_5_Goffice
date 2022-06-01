@@ -80,7 +80,7 @@ img {
 
 }
 
-p {
+.Send {
     display: inline;
     font-size: medium;
     border: none;
@@ -103,4 +103,59 @@ p {
 .fa-map-marker-alt {
     color: orangered;
 
+}
+p{
+    display: flex;
+}
+.box-p{
+    display: flex;
+    flex-direction: column;
+
+}
+
+
+
+.lista-footer{
+    display: flex;
+    background-color: rgb(52, 51, 51);
+    color: orangered;
+    }
+.nav-footer{
+    display: flex;
+    flex-direction: column;
+    padding-left: 5%;
+}
+.nav-footer2{
+    display: flex;
+    flex-direction: column;
+    padding-left: 45%;
+}
+.lista-footer2{
+   display: flex;
+       background-color: black;
+    color: orangered;
+}
+.section-footer{
+    background-color: black;
+}
+
+.p-footer{
+    text-align: center;
+    color: orangered;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+#icono-footer{
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+}
+.h3-footer{
+    color: gray;
+    text-align: center;
+}
+.h4-footer{
+    color: white;
+    margin-left: 2%;
 }
