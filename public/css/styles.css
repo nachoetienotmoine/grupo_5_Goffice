@@ -174,7 +174,7 @@ width: 100%;
 .contenedorproducto{
 display: flex;
 flex-direction: column;
-box-shadow: 0px 0px 20px black;
+box-shadow: 0px 0px 15px black;
 margin: 2%;
 
 }
@@ -305,12 +305,14 @@ background-color: black;
 @media (min-width: 769px){
 .contenedor .contenedorproducto{
    width: 45%;
+   box-shadow: 0px 0px 20px black;
 }
 
 }
 @media  (min-width: 1284px) {
 .contenedor .contenedorproducto{
     width: 21%;
+    box-shadow: 0px 0px 25px black;
 }
 .button-box{
     display: flex;
