@@ -3,7 +3,7 @@
         padding: 0px;
         box-sizing: border-box;
 }
-
+/* carrito*/
 main{
     margin: 2%;
 }
@@ -248,9 +248,12 @@ padding-top: 1%;
     color: black;
     text-align: center;
 }
-.h4-footer{
-    color: black;
+.h5-footer{
+    color: orangered;
     text-align: left;
+}
+.copyright{
+    background-color: black;
 }
 
 @media (min-width: 769px){
@@ -272,7 +275,20 @@ padding-top: 1%;
     
    }
        
-   
+   /* carrito */
+
+   /*home*/
+
+   /*home*/
+
+   /*log in*/
+
+   /* log in*/
+
+   /*register*/
+
+   /*register*/
+
 
 
   
