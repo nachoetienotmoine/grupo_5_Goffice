@@ -42,6 +42,7 @@ margin-top: 1%;
 
 .buscar {
 text-align: center;
+margin-right: 1%;
 }
 
 .buscar input {
@@ -53,10 +54,11 @@ color: black;
 outline: #03264c;
 border: 1px solid grey;
 border-radius: 20px;
-width: 85%;
+width: 84%;
 display: inline;
 line-height: normal;
 padding-left: 0%;
+
 }
 
 #lupa {
