@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/styles.css">
+    <title>Registro</title>
+</head>
+<body>
+    <div class="Container">
+
+        <div class="logo_R">
+            <img src="images/Gofficee.png" alt="logo">
+        </div>
+
+        <form class="register_form" action="" method="">
+
+            <h2>Crear Cuenta</h2>
+            
+            <div class="field name_field">
+                <label class="register_label" for="name">Nombre</label>
+                <input type="text" name="nombre" id="name" required>
+            </div>
+            <div class="error_field">Ingrese su nombre</div>
+            
+            <div class="field lastName_field">
+                <label class="register_label" for="lastName">Apellido</label>
+                <input type="text" name="apellido" id="lastName" required>
+            </div>
+            <div class="error_field">Ingrese su apellido</div>
+
+            <div class="field email_field">
+                <label class="register_label" for="email">Email</label>
+                <input type="email" name="email" id="email" required>
+            </div>
+            <div class="error_field">Ingrese su correo electrónico</div>
+
+            <div class="field password_field">
+                <label class="register_label" for="password">Password</label>
+                <input type="password" name="password" id="password" required>
+            </div>
+            <div class="error_field">Ingrese su contraseña</div>
+
+            <button type="submit">Enviar</button>   
+        </form>
+
+        <div class="nav_button">
+            <a class="nav_button_text" href="">¿Ya tienes una cuenta? <br> Logeate</a>
+        </div>
+
+    </div>
+    
+</body>
+</html>
