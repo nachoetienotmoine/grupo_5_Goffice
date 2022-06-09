@@ -451,10 +451,6 @@ background-color: black;
     background-color: black;
     color: orangered;
     border: none;
-    
-
-    
-    
 }
 
 .socialM2H{
@@ -558,7 +554,7 @@ background-color: black;
             flex-direction: row;
             justify-content: space-around;
         }
-        boxH2{
+        .boxH2{
             display: flex;
             flex-direction: column;
             
