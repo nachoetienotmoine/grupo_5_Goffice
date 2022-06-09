@@ -7,7 +7,8 @@
 
 /* carrito*/
 main {
-    margin: 2%;
+    margin: 3%;
+    padding: 0 1.5%;
 }
 
 .header-carrito {
@@ -171,7 +172,7 @@ p {
 .h2-nombre {
     text-align: center;
    height: 20%;
-
+   
     font-family: "Source Sans Pro", sans-serif;
 }
 
@@ -362,10 +363,16 @@ p {
         width: 100%;
         box-shadow: 0px 0px 8px black;
     }
+main{
+    padding: 0 10%;
+}
 
 }
 
 @media (min-width: 1284px) {
+    main{
+        padding: 0 10%;
+    }
     .contenedor .contenedorproducto {
         width: 100%;
         box-shadow: 0px 0px 8px black;
