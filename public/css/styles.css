@@ -591,17 +591,19 @@ background-color: black;
     padding: 0;
     margin-top: 20px;
     animation: slide 24s infinite alternate ease-in-out;
+    width: 600%;
     
 }
 .photos{
     display: flex;
-    gap: 8px;
+    gap: 50px;
     justify-content: space-between;
+    width: 100%;
 }
 
 .photos img{
     border: 3px solid black;
-    width: 285px;
+    width: 100%;
     height: auto;
     object-fit: contain;
 }
@@ -678,65 +680,59 @@ background-color: black;
 
 
 
-
-
-
-
-
-
-
 @media (min-width:769px){
 
     .carrousel{
         overflow: auto;
     }
     
+    
+    .photos{
+        display: flex;
+        gap: 5px;
+    }
+    
+    .photos img{
+        border: 3px solid black;
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
     .carrousel ul{
         list-style: none;
         margin: 0;
         padding: 0;
         margin-top: 20px;
-        margin-bottom: 20px;
-    }
-    .photos{
-        display: flex;
-        gap: 25px;
-    }
-    
-    .photos img{
-        border: 3px solid black;
-        width: 550px;
-        height: 300px;
-        object-fit: contain;
-    }
+        animation: slide 24s infinite alternate ease-in-out;
+        width: 600%;
+         }
 
-    @keyframes slide{
+    @keyframes slide {
+
         0% {margin-left: 0%;}
-        20% {margin-left: 0%;}
+        15% {margin-left: 0%;}
     
-        20% {margin-left: -100%;}
-        40% {margin-left: -100%;}
+        18% {margin-left: -100%;}
+        32% {margin-left: -100%;}
     
-        40% {margin-left: -200%;}
-        60% {margin-left: -200%;}
+        35% {margin-left: -200%;}
+        50% {margin-left: -200%;}
     
-        60% {margin-left: -300%;}
-        80% {margin-left: -300%;}
+        53% {margin-left: -300%;}
+        68% {margin-left: -300%;}
     
-        80% {margin-left: -400%;}
-        100% {margin-left: -400%;}
+        71% {margin-left: -400%;}
+        86% {margin-left: -400%;}
     
+        89% {margin-left: -500%;}
         100% {margin-left: -500%;}
-        120% {margin-left: -500%;}
+        
 
-        
-    
-        
     }
 }
 
 
-@media (min-width:1284px) {
+@media (min-width:1264px) {
     .arrowH{
         color: orangered;
         border: none;
@@ -823,28 +819,57 @@ background-color: black;
             overflow: auto;
             justify-content: center;
             scroll-behavior: smooth;
-            filter: blur(1.5px);
-            transition: all .3s;
+            
+            transition: all .4s;
         }
+        
         
         .carrousel ul{
             list-style: none;
             margin: 0;
             padding: 0;
             margin-top: 20px;
-        }
+            animation: slide 30s infinite alternate ease-in-out;
+            width: 600%;
+             }
         .photos{
             display: flex;
-            gap: 10px;
+            align-items: center;
+            
+            
+            
         }
         
         .photos img{
             border: 3px solid black;
-            width: 290px;
-            height: 290px;
+            width: 100%;
+            height: 200%;
             object-fit: contain;
+            gap: 10px;
+            
         }
         
+        @keyframes slide{
+            0% {margin-left: 10%;}
+            15% {margin-left: 10%;}
+        
+            18% {margin-left: -100%;}
+            32% {margin-left: -100%;}
+        
+            35% {margin-left: -200%;}
+            50% {margin-left: -200%;}
+        
+            53% {margin-left: -310%;}
+            68% {margin-left: -310%;}
+        
+            71% {margin-left: -420%;}
+            86% {margin-left: -420%;}
+        
+            89% {margin-left: -530%;}
+            100% {margin-left: -530%;}
+
+         }
+    
 }
 /*home*/
 
