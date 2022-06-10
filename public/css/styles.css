@@ -13,7 +13,8 @@ main {
 
 .header-carrito {
     background-color: black;
-
+position: sticky;
+top: 0;
 }
 
 .burger-menu {
@@ -304,9 +305,9 @@ p {
     color: orangered;
     flex-wrap: wrap;
     justify-content: space-between;
-
     padding-left: 3%;
     padding-right: 3%;
+   
 }
 
 .nav-footer {
@@ -365,6 +366,7 @@ p {
 .carrouselC {
     overflow: auto;
     justify-content: center;
+    height: 100%;
   
 
 }
@@ -373,12 +375,14 @@ p {
     list-style: none;
     margin: 0;
     padding: 0;
-    margin-top: 20px;
+    
+    
 }
 
 .photosC {
     display: flex;
     gap: 10px;
+    height: 100%;
    
 }
 
@@ -394,6 +398,7 @@ p {
     display: flex;
     flex-direction: column;
     margin-top: 10%;
+    height: 276px;
 }
 
 .titulocarruselC {
@@ -654,10 +659,7 @@ background-color: black;
     
 }
 
-.article-mainH{
-    
-   
-}
+
 .imagen-nombre-mainH{
     justify-content: space-evenly;
     flex-direction: row;
@@ -675,11 +677,6 @@ background-color: black;
     
 }
 
-.imagen-nombre-mainH {
-    
-    
-
-}
 
 
 @media (min-width:769px){
