@@ -365,6 +365,7 @@ p {
 .carrouselC {
     overflow: auto;
     justify-content: center;
+  
 
 }
 
@@ -378,12 +379,13 @@ p {
 .photosC {
     display: flex;
     gap: 10px;
+   
 }
 
 .photosC img {
     
     width: 200px;
-    height: 200px;
+    height: 76%;
     object-fit: contain;
 }
 
@@ -403,7 +405,6 @@ p {
 .submit-cart {
     width: 100%;
     height: 40px;
-    margin-top: 0px;
     border: none;
     border-radius: 3px;
     background-color: black;
