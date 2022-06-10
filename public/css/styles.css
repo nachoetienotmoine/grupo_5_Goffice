@@ -13,7 +13,8 @@ main {
 
 .header-carrito {
     background-color: black;
-
+position: sticky;
+top: 0;
 }
 
 .burger-menu {
@@ -304,9 +305,9 @@ p {
     color: orangered;
     flex-wrap: wrap;
     justify-content: space-between;
-
     padding-left: 3%;
     padding-right: 3%;
+   
 }
 
 .nav-footer {
