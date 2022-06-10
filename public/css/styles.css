@@ -476,10 +476,6 @@ background-color: black;
     background-color: black;
     color: orangered;
     border: none;
-    
-
-    
-    
 }
 
 .socialM2H{
@@ -518,6 +514,56 @@ background-color: black;
     flex-direction: row;
     justify-content: space-between;
 }
+
+.carrousel{
+    overflow: auto;
+    justify-content: center;
+}
+
+.carrousel ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    margin-top: 20px;
+}
+.photos{
+    display: flex;
+    gap: 10px;
+}
+
+.photos img{
+    border: 3px solid black;
+    width: 200px;
+    height: 200px;
+    object-fit: contain;
+}
+
+@media (min-width:769px){
+
+    .carrousel{
+        overflow: auto;
+    }
+    
+    .carrousel ul{
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    .photos{
+        display: flex;
+        gap: 30px;
+    }
+    
+    .photos img{
+        border: 3px solid black;
+        width: 400px;
+        height: 300px;
+        object-fit: contain;
+    }
+}
+
 
 @media (min-width:1284px) {
     .arrowH{
@@ -583,7 +629,7 @@ background-color: black;
             flex-direction: row;
             justify-content: space-around;
         }
-        boxH2{
+        .boxH2{
             display: flex;
             flex-direction: column;
             
