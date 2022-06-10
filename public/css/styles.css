@@ -517,6 +517,7 @@ background-color: black;
 
 .carrousel{
     overflow: auto;
+    justify-content: center;
 }
 
 .carrousel ul{
@@ -532,12 +533,36 @@ background-color: black;
 
 .photos img{
     border: 3px solid black;
-    width: 300px;
+    width: 200px;
     height: 200px;
     object-fit: contain;
 }
 
+@media (min-width:769px){
 
+    .carrousel{
+        overflow: auto;
+    }
+    
+    .carrousel ul{
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    .photos{
+        display: flex;
+        gap: 30px;
+    }
+    
+    .photos img{
+        border: 3px solid black;
+        width: 400px;
+        height: 300px;
+        object-fit: contain;
+    }
+}
 
 
 @media (min-width:1284px) {
