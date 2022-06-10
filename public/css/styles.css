@@ -240,7 +240,8 @@ p {
     color: black;
 
 }
-
+.button-main:hover{background-color: orangered;
+    cursor: pointer;}
 .imagen-div {
    height: 100%;
    margin-left: 2%;
