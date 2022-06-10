@@ -10,6 +10,6 @@ app.get('/carrito', (req, res) => res.sendFile(path.join(__dirname, './views/car
 app.get('/', (req, res) => res.sendFile(path.join(__dirname, './views/index.html')));
 app.get('/prueba', (req, res) => res.sendFile(path.join(__dirname, './views/prueba.html')));
 app.get('/carrito2', (req, res) => res.sendFile(path.join(__dirname, './views/carrito2.html')));
-app.listen(3000,() => {
+app.listen(3001,() => {
     console.log('Corriendo en el puerto 3000');
 })
