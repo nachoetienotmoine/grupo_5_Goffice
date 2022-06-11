@@ -9,7 +9,7 @@ Cuestiones positivas del sprint anterior: Daily frecuentes, entrega a tiempo, co
 Cosas a mejorar: Poner mas en foco de atención el proyecto.
 Cosas qué deberían empezar a hacer: Reporte con mayor frecuencia sea sincronico o asincrónico entre los miembros del equipo de desarrollo.
 Cosas qué deberían dejar de hacer: No desatender la comunicación interna.
-Conclución general: El sprint 1 fué accesible, pudimos completarlo en tiempo y sin mayores inconvenientes, pero eso decantó en un relajamiento en los preparativos y los preparativos para el segundo sprint.
+Conclución general: El sprint 1 fué accesible, pudimos completarlo en tiempo y sin mayores inconvenientes, pero eso decantó en un relajamiento en los preparativos y actividades requeridas para el segundo sprint.
 
 ○ Temática del sitio y público objetivo:
 ----------------------------------------
