@@ -5,12 +5,7 @@
     font-family: "Sonodeurce Sans Pro", sans-serif;
 }
 
-/* carrito*/
-main {
-    margin: 3%;
-    padding: 0 1.5%;
-}
-
+/*---------------------------------------------- carrito ----------------------------------------------*/
 .header-carrito {
     background-color: black;
 position: sticky;
@@ -30,17 +25,12 @@ top: 0;
     color: orangered;
     border-style: none;
     background-color: black;
-
-
-
-
 }
 
 #img-logo {
     margin-top: 1%;
 
 }
-
 
 .buscar {
 text-align: center;
@@ -91,7 +81,6 @@ padding-left: 0%;
     background-color: black;
     color: orangered;
     border: none;
-
 }
 
 .carrito {
@@ -311,6 +300,7 @@ p {
    
 }
 
+
 .nav-footer {
     display: flex;
     flex-direction: column;
@@ -461,9 +451,9 @@ main{
 
 }
 
-/* carrito */
+/*---------------------------------------------- carrito ----------------------------------------------*/
 
-/*home*/
+/*---------------------------------------------- home ----------------------------------------------*/
 
 
 .headerHome{
@@ -871,13 +861,9 @@ background-color: black;
          }
     
 }
-/*home*/
+/*---------------------------------------------- home ----------------------------------------------*/
 
-/*log in*/
-
-/* log in*/
-
-/*register*/
+/*---------------------------------------------- register ----------------------------------------------*/
 .logo_R {
     background-color: black;
     display: flex;
@@ -975,4 +961,21 @@ background-color: black;
     }
 }
 
-/*register*/
+/*---------------------------------------------- register ----------------------------------------------*/
+
+/*---------------------------------------------- detalle ----------------------------------------------*/
+
+.main-detail{
+    width: 100%;
+}
+
+.main-detail-section {
+    width: 100%;
+    background-color: red;
+}
+/*---------------------------------------------- detalle ----------------------------------------------*/
+
+
+/*---------------------------------------------- log in ----------------------------------------------*/
+
+/*---------------------------------------------- log in ----------------------------------------------*/
