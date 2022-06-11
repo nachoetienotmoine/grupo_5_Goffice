@@ -6,7 +6,7 @@
 }
 
 /* carrito*/
-main {
+.todo-productos-main {
     margin: 3%;
     padding: 0 1.5%;
 }
@@ -428,15 +428,21 @@ p {
         width: 100%;
         box-shadow: 0px 0px 8px black;
     }
-main{
+.todo-productos-main{
     padding: 0 10%;
+    margin: 3%;
+   
 }
 
 }
 
 @media (min-width: 1284px) {
-    main{
+    .todo-productos-main{
         padding: 0 10%;
+        margin: 3%;
+   
+    
+
     }
     .contenedor .contenedorproducto {
         width: 100%;
