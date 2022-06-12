@@ -1,8 +1,8 @@
 Trello: //https://trello.com/b/2HNObFCj/goffice-sprints//
 -------
+:
 
-
-Retro 1:
+Retro 1: 
 --------
 
 Cuestiones positivas del sprint anterior: Daily frecuentes, entrega a tiempo, concluir el sprint antes de la fecha límite, iniciamos el proyecto con un tablero de trello desde antes que se solicite
