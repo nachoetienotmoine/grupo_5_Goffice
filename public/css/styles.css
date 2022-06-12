@@ -57,19 +57,9 @@
     width: 84%;
     display: inline;
     line-height: normal;
-    padding-left: 0%;
+    padding-left: 3%;
 
-    display: inline;
-    height: 25px;
-    font-size: small;
-    color: black;
-    outline: #03264c;
-    border: 1px solid grey;
-    border-radius: 20px;
-    width: 85%;
-    display: inline;
-    line-height: normal;
-    padding-left: 0%;
+  
 }
 
 #lupa {
@@ -438,6 +428,20 @@ p {
         margin-left: 1.5%;
         margin-right: 1.5%;
     }
+    .buscar input {
+
+        display: inline;
+        height: 25px;
+        font-size: small;
+        color: black;
+        outline: #03264c;
+        border: 1px solid grey;
+        border-radius: 20px;
+        width: 84%;
+        display: inline;
+        line-height: normal;
+        padding-left: 1%;
+    }
 }
 
 @media (min-width: 1284px) {
@@ -471,6 +475,23 @@ p {
         margin-left: 1%;
         margin-right: 1%;
     }
+    .buscar input {
+
+        display: inline;
+        height: 25px;
+        font-size: small;
+        color: black;
+        outline: #03264c;
+        border: 1px solid grey;
+        border-radius: 20px;
+        width: 84%;
+        display: inline;
+        line-height: normal;
+        padding-left: 1%;
+    
+      
+    }
+    
 }
 
 /*---------------------------------------------- carrito ----------------------------------------------*/
@@ -1105,18 +1126,11 @@ p {
     display: flex;
     justify-content: center;
 }
-<<<<<<< HEAD
-.title-product-detail {
 
 
-}
-.detail-image{
-=======
 
-.title-product-detail {}
 
 .detail-image {
->>>>>>> 5caf76f1a9e94e38212fb84b17b26294ef6f4876
     display: flex;
 
 
