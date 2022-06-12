@@ -84,7 +84,20 @@
 
 
 }
-
+#cart_menu_num {
+    position: absolute;
+    top: 23%;
+    background: orangered;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    padding: 2px;
+    font-size: small;
+  }
 .box {
     display: flex;
     flex-wrap: wrap;
