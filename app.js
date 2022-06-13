@@ -9,7 +9,7 @@ app.get('/detalle', (req, res) => res.sendFile(path.join(__dirname, './views/det
 app.get('/carrito', (req, res) => res.sendFile(path.join(__dirname, './views/carrito.html')));
 app.get('/', (req, res) => res.sendFile(path.join(__dirname, './views/index.html')));
 app.get('/prueba', (req, res) => res.sendFile(path.join(__dirname, './views/prueba.html')));
-app.get('/carrito2', (req, res) => res.sendFile(path.join(__dirname, './views/carrito2.html')));
+app.get('/login', (req, res) => res.sendFile(path.join(__dirname, './views/login.html')));
 app.listen(process.env.PORT || 3000, function() {
     console.log("Servidor corriendo en el puerto 3000");
 })
