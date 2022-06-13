@@ -632,15 +632,25 @@ p {
     background-color: black;
     color: orangered;
     border: none;
+    margin: 5px;
 }
 
 .socialM2H {
     background-color: black;
     color: orangered;
     border: none;
+    margin-left: 4px;
 
 }
 
+.socialM2TH {
+    background-color: black;
+    color: orangered;
+    border: none;
+    margin-right: 4px;
+    
+
+}
 .boxH1 {
     display: flex;
     flex-direction: column;
@@ -664,12 +674,14 @@ p {
     flex-direction: row;
     justify-content: space-between;
     margin-right: 2%;
+    align-items: center;
 }
 
 .divH2 {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
 }
 
 .carrousel {
