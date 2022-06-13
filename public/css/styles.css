@@ -1546,7 +1546,9 @@ p {
     padding: 5px 0;
 }
 
-
+.Container_R {
+    height: 700px;
+}
 
 .register_form {
     display: flex;
@@ -1608,9 +1610,21 @@ p {
     font-weight: 700;
 }
 
+.footer_R {
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
 @media (min-width: 768px) {
+
+    .Container_R {
+        height: fit-content;
+    }
+
     .register_form {
         padding: 25px 15vw;
+        padding-bottom: 25vh;
         font-size: 28px;
     }
 
@@ -1626,6 +1640,10 @@ p {
         color: black;
         font-size: 24px;
         font-weight: 700;
+    }
+
+    .footer_R {
+        position: static;
     }
 }
 
