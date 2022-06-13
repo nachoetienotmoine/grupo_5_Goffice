@@ -1091,11 +1091,12 @@ background-color: black;
     border-radius: 15px;
 }
 
-.nav_button {
+.nav_button_R {
     text-align: center;
+    margin-bottom: 60px;
 }
 
-.nav_button_text {
+.nav_button_text_R {
     text-decoration: underline 1px black;
     color: black;
     font-weight: 700;
