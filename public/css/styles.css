@@ -1597,11 +1597,12 @@ p {
     border-radius: 15px;
 }
 
-.nav_button {
+.nav_button_R {
     text-align: center;
+    margin-bottom: 60px;
 }
 
-.nav_button_text {
+.nav_button_text_R {
     text-decoration: underline 1px black;
     color: black;
     font-weight: 700;
@@ -1765,5 +1766,102 @@ p {
 
 
 /*---------------------------------------------- log in ----------------------------------------------*/
+
+.logo_L {
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px 0;
+}
+
+
+
+.login_form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px 20px;
+    overflow: hidden;
+}
+
+.login_form h2 {
+    padding: 2px 0 20px 0;
+}
+
+.field {
+    display: block;
+    width: 80%;
+    margin: 10px 0 20px 0;
+}
+
+
+.field input {
+    border: none;
+    border-bottom: rgb(172, 172, 172) solid 1px;
+    outline: none;
+    width: 100%;
+    height: 60%;
+    font-size: 1em;
+    padding-bottom: 5px;
+}
+
+.field input:hover {
+    border-bottom: black solid 1px;
+
+}
+
+.field label {
+    position: relative;
+    color: rgb(172, 172, 172);
+}
+
+.error_field {
+    display: none;
+}
+
+.login_form button {
+    font-size: 20px;
+    padding: 3.5px;
+    border-radius: 15px;
+}
+
+.nav_button {
+    text-align: center;
+}
+
+.nav_button_text {
+    text-decoration: underline 1px black;
+    color: black;
+    font-weight: 700;
+}
+
+@media (min-width: 768px) {
+    .login_form {
+        padding: 25px 15vw;
+        font-size: 28px;
+    }
+
+    .login_form button {
+        font-size: 28px;
+        padding: 5px;
+        margin-top: 2%;
+        border-radius: 25px;
+    }
+
+    .nav_button_text {
+        text-decoration: underline 1px black;
+        color: black;
+        font-size: 24px;
+        font-weight: 700;
+    }
+}
+
+@media (min-width: 1248px) {
+    .login_form {
+        padding: 25px 25vw;
+        font-size: 30px;
+    }
+}
 
 /*---------------------------------------------- log in ----------------------------------------------*/
