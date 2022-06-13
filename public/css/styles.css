@@ -232,7 +232,7 @@ p {
 }
 
 
-
+/*
 .button-main {
     display: flex;
     justify-content: center;
@@ -242,12 +242,29 @@ p {
     color: black;
 
 }
-
+*/
+.button-main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 40px;
+    border: none;
+    border-radius: 3px;
+    background-color: orangered;
+    color: white;
+    font-family: "Source Sans Pro", sans-serif;
+}
+/*
 .button-main:hover {
     background-color: orangered;
     cursor: pointer;
 }
-
+*/
+.button-main:hover {
+    background-color: black;
+    cursor: pointer;
+}
 .imagen-div {
     height: 100%;
     margin-left: 2%;
@@ -294,9 +311,10 @@ p {
     display: flex;
     justify-content: center;
     padding: 1%;
-
+    padding-left: 30%;
+    padding-right: 30%;
 }
-
+/*
 .botoncompra {
     border: 2px orangered solid;
     border-radius: 5%;
@@ -304,12 +322,36 @@ p {
     size: 15px;
     color: black;
 }
+*/
+.botoncompra{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 25px;
+    border: none;
+    border-radius: 3px;
+    background-color: orangered;
+    color: white;
+    font-family: "Source Sans Pro", sans-serif;
+    padding-left: 20%;
+    padding-right: 20%;
+}
 
+
+/*
 .botoncompra:hover {
     background-color: orangered;
     cursor: pointer;
 }
+*/
+.botoncompra:hover{
+    background-color: yellow;
+    cursor: pointer;
+    color: black;
+    border: black 2px solid;
 
+}
 .lista-footer {
     display: flex;
     background-color: black;
