@@ -18,7 +18,7 @@
     top: 0;
 }
 
-.burger-menu {
+.burger-menuc {
 
     display: flex;
 
@@ -26,7 +26,7 @@
 
 
 
-#menu {
+#menuc {
 
     color: orangered;
     border-style: none;
@@ -72,14 +72,15 @@
     text-decoration: none;
 }
 
-#carrito {
+#carritoc {
 
     background-color: black;
     color: orangered;
     border: none;
+    font-size: small;
 }
 
-.carrito {
+.carritoc {
     display: flex;
 
 
@@ -276,7 +277,7 @@ p {
     flex-direction: column;
     justify-content: space-between;
 
-    padding-left: 3%;
+    padding-left: 5%;
     padding-right: 3%;
 
     padding-top: 2%;
@@ -331,7 +332,7 @@ p {
     height: 25px;
     border: none;
     border-radius: 3px;
-    background-color: orangered;
+    background-color: black;
     color: white;
     font-family: "Source Sans Pro", sans-serif;
     padding-left: 20%;
@@ -346,7 +347,8 @@ p {
 }
 */
 .botoncompra:hover{
-    background-color: yellow;
+    background-color: orangered;
+    opacity: 90%;
     cursor: pointer;
     color: black;
     border: black 2px solid;
@@ -500,6 +502,38 @@ p {
         line-height: normal;
         padding-left: 1%;
     }
+    #menuc {
+
+        color: orangered;
+        border-style: none;
+        background-color: black;
+        font-size: medium;
+    }
+    #carritoc {
+
+        background-color: black;
+        color: orangered;
+        border: none;
+    }
+    .button-box {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding-left: 17%;
+        padding-right: 3%;
+        padding-top: 2%;
+        width: 35%;
+        height: 80%;
+        gap: 10%;
+
+    }
+    .comprar {
+        display: flex;
+        justify-content: center;
+        padding: 1%;
+        padding-left: 40%;
+        padding-right: 40%;
+    }
 }
 
 @media (min-width: 1284px) {
@@ -517,7 +551,7 @@ p {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        padding-left: 3%;
+        padding-left: 20%;
         padding-right: 3%;
         padding-top: 2%;
         width: 35%;
@@ -550,7 +584,45 @@ p {
 
 
     }
+    #menuc {
 
+        color: orangered;
+        border-style: none;
+        background-color: black;
+        font-size: large;
+    }
+    #carritoc {
+
+        background-color: black;
+        color: orangered;
+        border: none;
+        font-size: medium;
+    }
+    #cart_menu_num {
+        position: absolute;
+        top: 26%;
+        background: orangered;
+        width: 17px;
+        height: 17px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        padding: 2px;
+        font-size: small;
+    }
+    #img-logo {
+        margin-top: 0.2%;
+    
+    }
+    .comprar {
+        display: flex;
+        justify-content: center;
+        padding: 1%;
+        padding-left: 40%;
+        padding-right: 40%;
+    }
 }
 
 /*---------------------------------------------- carrito ----------------------------------------------*/
