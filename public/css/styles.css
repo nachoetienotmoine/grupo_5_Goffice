@@ -1719,16 +1719,36 @@ p {
 /*---------------------------------------------- home ----------------------------------------------*/
 
 /*---------------------------------------------- register ----------------------------------------------*/
+
+.html_R {
+    height: 100%;
+}
+  
+.body_R {
+    position: relative;
+    margin: 0;
+    padding-bottom: 4rem;
+    min-height: 100%;
+}
+  
+  
+.footer_R {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #000000;
+    text-align: center;
+}
+
+
+
 .logo_R {
     background-color: black;
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 5px 0;
-}
-
-.Container_R {
-    height: 700px;
 }
 
 .register_form {
@@ -1776,25 +1796,23 @@ p {
 
 .register_form button {
     font-size: 20px;
-    padding: 3.5px;
-    border-radius: 15px;
+    padding: 4.5px;
+    border: 0.5px solid black;
+    border-radius: 20px;
+    width: 25%;
+    max-width: 200px;
 }
 
 .nav_button_R {
     text-align: center;
-    margin-bottom: 60px;
+    margin-top: 10px;
+    margin-bottom: 20px;
 }
 
 .nav_button_text_R {
     text-decoration: underline 1px black;
     color: black;
     font-weight: 700;
-}
-
-.footer_R {
-    position: fixed;
-    width: 100%;
-    bottom: 0;
 }
 
 @media (min-width: 768px) {
@@ -1805,11 +1823,12 @@ p {
 
     .register_form {
         padding: 25px 15vw;
-        padding-bottom: 25vh;
+        padding-bottom: 25px;
         font-size: 28px;
     }
 
     .register_form button {
+        width: 100%;
         font-size: 28px;
         padding: 5px;
         margin-top: 2%;
@@ -1823,9 +1842,7 @@ p {
         font-weight: 700;
     }
 
-    .footer_R {
-        position: static;
-    }
+    
 }
 
 @media (min-width: 1248px) {
