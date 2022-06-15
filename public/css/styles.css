@@ -545,6 +545,17 @@ p {
         padding-right: 40%;
     }
    
+ #icono-footer:hover {
+    transition: 850ms;
+        transform: rotate(360deg);
+        opacity: 50%;
+      }
+      .botoncompra:hover{
+       transition: 850ms;
+       transform: matrix3d();
+       transform: scale(110%);
+    
+    }
 }
 
 @media (min-width: 1284px) {
@@ -639,8 +650,17 @@ p {
         padding-left: 40%;
         padding-right: 40%;
     }
-    
- 
+    #icono-footer:hover {
+        transition: 850ms;
+            transform: rotate(360deg);
+            opacity: 50%;
+          }
+          .botoncompra:hover{
+            transition: 850ms;
+            transform: matrix3d();
+            transform: scale(110%);
+         
+         }
 }
 
 /*---------------------------------------------- carrito ----------------------------------------------*/
@@ -865,11 +885,12 @@ p {
     flex-direction: row;
     flex-wrap: wrap;
     padding: 0;
-    border: 1px solid black;
-    border-radius: 5px;
+    border: 1px  black;
+    border-radius: 10px;
     width: 100%;
     justify-content: center;
-
+    box-shadow:  0 4px 8px 0 rgba(26, 0, 0, 0.54), 0 4px 10px 0 rgba(34, 1, 1, 0.19) ;
+    
 }
 
 .div-conteinerH {
@@ -898,10 +919,11 @@ p {
     flex-direction: row;
     flex-wrap: wrap;
     padding: 0;
-    border: 1px solid black;
-    border-radius: 5px;
+    border: 1px  black;
+    border-radius: 10px;
     width: 100%;
     justify-content: center;
+    box-shadow:  0 4px 8px 0 rgba(26, 0, 0, 0.54), 0 4px 10px 0 rgba(34, 1, 1, 0.19)
 
 }
 
@@ -919,6 +941,12 @@ p {
     border: none;
     font-size: x-large;
     color: orangered;
+    
+}
+.button-sale:hover{
+    transition: 1000ms;
+    transform: scale(130%);
+
 }
 
 .section-mainH {
@@ -931,6 +959,7 @@ p {
     height: 90%;
     align-content: center;
     justify-content: space-between;
+    
 
 }
 
@@ -953,6 +982,7 @@ p {
     overflow: auto;
     justify-content: center;
     scroll-behavior: smooth;
+    
 
 
 
@@ -1205,10 +1235,16 @@ p {
         flex-direction: row;
         flex-wrap: wrap;
         padding: 0;
-        border: 1px solid black;
+        border: 1px  black;
         border-radius: 5px;
         width: 100%;
         justify-content: center;
+        box-shadow:  0 4px 8px 0 rgba(26, 0, 0, 0.54), 0 4px 10px 0 rgba(34, 1, 1, 0.19)
+
+    }
+
+    .main-conteinerH:hover{
+        box-shadow: 0px 0px 20px black;
 
     }
 
@@ -1240,10 +1276,16 @@ p {
         flex-direction: row;
         flex-wrap: wrap;
         padding: 0;
-        border: 1px solid black;
+        border: 1px  black;
         border-radius: 5px;
         width: 100%;
         justify-content: center;
+        box-shadow:  0 4px 8px 0 rgba(26, 0, 0, 0.54), 0 4px 10px 0 rgba(34, 1, 1, 0.19)
+
+    }
+
+    .article2H:hover{
+        box-shadow: 0px 0px 20px black;
 
     }
 
@@ -1322,7 +1364,7 @@ p {
     .photos2 img {
         border: 1px black;
         border-radius: 5%;
-        width: 60%;
+        width: 100%;
         height: auto;
         object-fit: contain;
         gap: 5px;
@@ -1433,15 +1475,13 @@ p {
 
     }
 
-.socialM2TH {
-    background-color: black;
-    color: orangered;
-    border: none;
-    margin-right: 4px;
-    font-size: x-large;
-    
-
-}
+    .socialM2TH {
+        background-color: black;
+        color: orangered;
+        border: none;
+        margin-right: 4px;
+        font-size: x-large;
+    }
 
     .boxH1 {
         display: flex;
@@ -1565,10 +1605,17 @@ p {
         flex-direction: row;
         flex-wrap: wrap;
         padding: 0;
-        border: 1px solid black;
+        border: 1px  black;
         border-radius: 5px;
         width: 100%;
         justify-content: center;
+        box-shadow:  0 4px 8px 0 rgba(26, 0, 0, 0.54), 0 4px 10px 0 rgba(34, 1, 1, 0.19)
+
+
+    }
+
+    .main-conteinerH:hover{
+        box-shadow: 0px 0px 20px black;
 
     }
 
@@ -1602,12 +1649,18 @@ p {
         flex-direction: row;
         flex-wrap: wrap;
         padding: 0;
-        border: 1px solid black;
+        border: 1px  black;
         border-radius: 5px;
         width: 100%;
         height: 100%;
         justify-content: center;
+        box-shadow:  0 4px 8px 0 rgba(26, 0, 0, 0.54), 0 4px 10px 0 rgba(34, 1, 1, 0.19)
 
+
+    }
+
+    .article2H:hover{
+        box-shadow: 0px 0px 20px black;
     }
 
     .divarticle2H {
@@ -1686,7 +1739,7 @@ p {
     .photos2 img {
         border: 1px black;
         border-radius: 5%;
-        width: 60%;
+        width: 100%;
         height: auto;
         object-fit: contain;
         gap: 5px;
