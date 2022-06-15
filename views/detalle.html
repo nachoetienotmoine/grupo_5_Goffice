@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -13,34 +12,34 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/styles.css">
-
 </head>
 <!-- body -->
 <body>
 <!-- header -->
 <header class="header-carrito">
-        <nav class="box">
-            <div class="burger-menu">
-                <button id="menu">
-                    <i class="fas fa-bars fa-2x"></i>
-                </button>
-            </div>
-            <img src="images/Gofficee.png" alt="logo" width="100px" height="42px" id="img-logo">
-            <div class="carrito">
-                <button id="carrito">
-                    <i class="fas fa-cart-plus fa-2x"></i>
-                </button>
-            </div>
-        </nav>
-        <br>
-        <div class="buscar">
-            <input type="text" placeholder="  Search Goffice" required>
-            <button id="lupa">
-                <i class="fas fa-search"></i>
+    <nav class="box">
+        <div class="burger-menu">
+            <button id="menu">
+                <i class="fas fa-bars fa-2x"></i>
             </button>
         </div>
-        <br>
-    </header>
+        <img src="images/Gofficee.png" alt="logo" width="100px" height="42px" id="img-logo">
+        <div class="carrito">
+            <button id="carrito">
+                <i class="fas fa-cart-plus fa-2x"></i><span id="cart_menu_num" data-action="cart-can" class="badge rounded-circle">9</span>
+            </button>
+        </div>
+    </nav>
+    <br>
+    <div class="buscar">
+        <input type="text" placeholder="  Search Goffice" required>
+        <button id="lupa">
+            <i class="fas fa-search"></i>
+        </button>
+    </div>
+    <br>
+</header>
+
 <!-- main -->
 <main class="main-detail">
     <section class="main-detail-section">
@@ -59,11 +58,11 @@
     </section>
     <br>
     </section>
-    
     <section class="contenedor-detail">
         <div class="title-product-detail">
             <h2>Detalle de Producto</h2>
         </div>
+        <br>
         <article class="description-product">
             <p class="destacado">Seven Electronics Auriculares Gamer Gaming Master Sound XH 1000 Soul Micrófono Desmontable</p>
             <p class="destacado">El sonido que estabas buscando, los nuevos Master Sound XH1000 tienen un sonido envolvente 7.1.</p>
@@ -81,16 +80,19 @@
             <p>Diafragma: 50 mm</p>
             <p>Ecualizador: Si, Funciones de control de Sonido/Volumen (Silencio ON/OFF)</p>
         </article>
-        <article class="precio-envio-detail">
-            <div class="comprar-detail">
-                <button type="submit" class="submit-cart-detail">Agregar a carrito</button>
-            </div>
-            <br>
-            <div class="return-detail">
-                <button type="submit" class="return-cart-detail">Volver a menú</button>
-            </div>
-        </article>
     </section>
+    <br>
+    <br>
+    <article class="precio-envio-detail">
+        <div class="comprar-detail">
+            <button type="submit" class="submit-cart-detail">Agregar a carrito</button>
+        </div>
+        <br>
+        <div class="return-detail">
+            <button type="submit" class="return-cart-detail">Volver a menú</button>
+        </div>
+    </article>
+    <br>
 </main>
 <!-- footer -->
     <footer>

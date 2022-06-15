@@ -1647,7 +1647,7 @@ p {
 .main-detail-section {
     display: flex;
     flex-direction: column;
-    width: 100%;
+
     background-color: #ffff;
     padding: 2%;
     gap: 15px
@@ -1657,6 +1657,10 @@ p {
     display: flex;
     justify-content: center;
     color: orangered;
+    box-shadow: 0 4px 8px 0 rgba(26, 0, 0, 0.54), 0 6px 20px 0 rgba(34, 1, 1, 0.19);
+    border-radius: 5px;
+    padding: 10px;
+    width: auto;
 }
 
 
@@ -1697,17 +1701,24 @@ p {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     gap: 10px;
 }
 
 .description-product {
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 10px;
     text-align: center;
     padding: 2.5%;
+    width: 80%;
 }
-
+.contenedor-detail>.description-product {
+    border-radius: 10px; 
+    box-shadow: 0 4px 8px 0 rgba(26, 0, 0, 0.54), 0 6px 20px 0 rgba(34, 1, 1, 0.19);
+    
+}
 .submit-cart-detail {
     padding: auto;
 }
@@ -1733,11 +1744,14 @@ p {
 .return-cart-detail:hover {
     background-color: orangered;
     cursor: pointer;
+    box-shadow: 0 4px 8px 0 rgba(26, 0, 0, 0.54), 0 6px 20px 0 rgba(34, 1, 1, 0.19);
 }
 
 .submit-cart-detail:hover {
     background-color: black;
     cursor: pointer;
+    box-shadow: 0 4px 8px 0 rgba(26, 0, 0, 0.54), 0 6px 20px 0 rgba(34, 1, 1, 0.19);
+
 }
 
 .comprar-detail {
@@ -1761,6 +1775,7 @@ p {
         padding: 0 10%;
     }
 }
+x
 
 /*---------------------------------------------- detalle ----------------------------------------------*/
 
