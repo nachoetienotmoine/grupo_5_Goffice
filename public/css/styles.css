@@ -1858,6 +1858,10 @@ p {
     font-size: 12px;
 }
 
+.div_R2 .nav_footer_R {
+    margin: 5px;
+}
+
 @media (min-width: 768px) {
 
     .Container_R {
