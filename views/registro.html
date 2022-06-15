@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="/css/styles.css">
     <title>Registro</title>
 </head>
-<body>
+<body class="body_R">
     <div class="Container_R">
 
         <div class="logo_R">
@@ -21,34 +21,34 @@
             
             <div class="field name_field">
                 <label class="register_label" for="name">Nombre</label>
-                <input type="text" name="nombre" id="name" required>
+                <input type="text" name="nombre" id="name" required minlength="5" maxlength="18">
             </div>
             <div class="error_field">Ingrese su nombre</div>
             
             <div class="field lastName_field">
                 <label class="register_label" for="lastName">Apellido</label>
-                <input type="text" name="apellido" id="lastName" required>
+                <input type="text" name="apellido" id="lastName" required minlength="5" maxlength="18">
             </div>
             <div class="error_field">Ingrese su apellido</div>
 
             <div class="field email_field">
                 <label class="register_label" for="email">Email</label>
-                <input type="email" name="email" id="email" required>
+                <input type="email" name="email" id="email" required maxlength="28">
             </div>
             <div class="error_field">Ingrese su correo electrónico</div>
 
             <div class="field password_field">
                 <label class="register_label" for="password">Password</label>
-                <input type="password" name="password" id="password" required>
+                <input type="password" name="password" id="password" required pattern="[A-Za-z0-9]+" maxlength="20" minlength="10">
             </div>
             <div class="error_field">Ingrese su contraseña</div>
 
-            <button type="submit">Enviar</button>   
+            <button type="submit">Enviar</button> 
+            
+            <div class="nav_button_R">
+                <a class="nav_button_text_R" href="">¿Ya tienes una cuenta? <br> Logeate</a>
+            </div>
         </form>
-
-        <div class="nav_button_R">
-            <a class="nav_button_text_R" href="">¿Ya tienes una cuenta? <br> Logeate</a>
-        </div>
 
     </div>
 
