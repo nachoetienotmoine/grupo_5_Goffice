@@ -18,7 +18,7 @@
     top: 0;
 }
 
-.burger-menu {
+.burger-menuc {
 
     display: flex;
 
@@ -26,7 +26,7 @@
 
 
 
-#menu {
+#menuc {
 
     color: orangered;
     border-style: none;
@@ -72,14 +72,15 @@
     text-decoration: none;
 }
 
-#carrito {
+#carritoc {
 
     background-color: black;
     color: orangered;
     border: none;
+    font-size: small;
 }
 
-.carrito {
+.carritoc {
     display: flex;
 
 
@@ -216,7 +217,8 @@ p {
 .contenedorproducto {
     display: flex;
     flex-direction: column;
-    box-shadow: 0px 0px 8px black;
+   /* box-shadow: 0px 0px 8px black;*/
+   box-shadow: 0 4px 8px 0 rgba(26, 0, 0, 0.54), 0 6px 20px 0 rgba(34, 1, 1, 0.19);
     width: 100%;
     height: 100%;
 
@@ -232,7 +234,7 @@ p {
 }
 
 
-
+/*
 .button-main {
     display: flex;
     justify-content: center;
@@ -242,12 +244,29 @@ p {
     color: black;
 
 }
-
+*/
+.button-main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 40px;
+    border: none;
+    border-radius: 3px;
+    background-color: orangered;
+    color: white;
+    font-family: "Source Sans Pro", sans-serif;
+}
+/*
 .button-main:hover {
     background-color: orangered;
     cursor: pointer;
 }
-
+*/
+.button-main:hover {
+    background-color: black;
+    cursor: pointer;
+}
 .imagen-div {
     height: 100%;
     margin-left: 2%;
@@ -259,7 +278,7 @@ p {
     flex-direction: column;
     justify-content: space-between;
 
-    padding-left: 3%;
+    padding-left: 5%;
     padding-right: 3%;
 
     padding-top: 2%;
@@ -294,9 +313,10 @@ p {
     display: flex;
     justify-content: center;
     padding: 1%;
-
+    padding-left: 32%;
+    padding-right: 32%;
 }
-
+/*
 .botoncompra {
     border: 2px orangered solid;
     border-radius: 5%;
@@ -304,12 +324,37 @@ p {
     size: 15px;
     color: black;
 }
+*/
+.botoncompra{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 40px;
+    border: none;
+    border-radius: 3px;
+    background-color: black;
+    color: white;
+    font-family: "Source Sans Pro", sans-serif;
+    padding-left: 20%;
+    padding-right: 20%;
+}
 
+
+/*
 .botoncompra:hover {
     background-color: orangered;
     cursor: pointer;
 }
+*/
+.botoncompra:hover{
+    background-color: orangered;
+    opacity: 90%;
+    cursor: pointer;
+    color: black;
+    border: black 2px solid;
 
+}
 .lista-footer {
     display: flex;
     background-color: black;
@@ -359,6 +404,7 @@ p {
     display: flex;
     justify-content: center;
     align-items: center;
+    color: orangered;
 }
 
 .h3-footer {
@@ -428,9 +474,17 @@ p {
 @media (min-width: 769px) {
     .contenedor .contenedorproducto {
         width: 100%;
-        box-shadow: 0px 0px 8px black;
+        /*box-shadow: 0px 0px 8px black;*/
+        box-shadow: 0 4px 8px 0 rgba(26, 0, 0, 0.54), 0 6px 20px 0 rgba(34, 1, 1, 0.19);
+   
     }
-
+   
+    .contenedor .contenedorproducto:hover {
+        width: 100%;
+        box-shadow: 0px 0px 20px black;
+   
+    }
+   
     .todo-productos-main {
         padding: 0 10%;
         margin: 3%;
@@ -458,6 +512,50 @@ p {
         line-height: normal;
         padding-left: 1%;
     }
+    #menuc {
+
+        color: orangered;
+        border-style: none;
+        background-color: black;
+        font-size: medium;
+    }
+    #carritoc {
+
+        background-color: black;
+        color: orangered;
+        border: none;
+    }
+    .button-box {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding-left: 17%;
+        padding-right: 3%;
+        padding-top: 2%;
+        width: 35%;
+        height: 80%;
+        gap: 10%;
+
+    }
+    .comprar {
+        display: flex;
+        justify-content: center;
+        padding: 1%;
+        padding-left: 40%;
+        padding-right: 40%;
+    }
+   
+ #icono-footer:hover {
+    transition: 850ms;
+        transform: rotate(360deg);
+        opacity: 50%;
+      }
+      .botoncompra:hover{
+       transition: 850ms;
+       transform: matrix3d();
+       transform: scale(110%);
+    
+    }
 }
 
 @media (min-width: 1284px) {
@@ -468,14 +566,19 @@ p {
 
     .contenedor .contenedorproducto {
         width: 100%;
-        box-shadow: 0px 0px 8px black;
+        box-shadow: 0 4px 8px 0 rgba(26, 0, 0, 0.54), 0 6px 20px 0 rgba(34, 1, 1, 0.19);
+   
     }
-
+    .contenedor .contenedorproducto:hover {
+        width: 100%;
+        box-shadow: 0px 0px 20px black;
+   
+    }
     .button-box {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        padding-left: 3%;
+        padding-left: 20%;
         padding-right: 3%;
         padding-top: 2%;
         width: 35%;
@@ -508,7 +611,56 @@ p {
 
 
     }
+    #menuc {
 
+        color: orangered;
+        border-style: none;
+        background-color: black;
+        font-size: large;
+    }
+    #carritoc {
+
+        background-color: black;
+        color: orangered;
+        border: none;
+        font-size: medium;
+    }
+    #cart_menu_num {
+        position: absolute;
+        top: 26%;
+        background: orangered;
+        width: 17px;
+        height: 17px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        padding: 2px;
+        font-size: small;
+    }
+    #img-logo {
+        margin-top: 0.2%;
+    
+    }
+    .comprar {
+        display: flex;
+        justify-content: center;
+        padding: 1%;
+        padding-left: 40%;
+        padding-right: 40%;
+    }
+    #icono-footer:hover {
+        transition: 850ms;
+            transform: rotate(360deg);
+            opacity: 50%;
+          }
+          .botoncompra:hover{
+            transition: 850ms;
+            transform: matrix3d();
+            transform: scale(110%);
+         
+         }
 }
 
 /*---------------------------------------------- carrito ----------------------------------------------*/
@@ -548,6 +700,7 @@ p {
 
 #img-logoH {
     margin-left: 8%;
+    margin-top: 6px;
 }
 
 .footerH {
@@ -572,7 +725,6 @@ p {
 }
 
 
-
 .nav1footerH {
     text-decoration: none;
     color: orangered;
@@ -591,15 +743,25 @@ p {
     background-color: black;
     color: orangered;
     border: none;
+    margin: 5px;
 }
 
 .socialM2H {
     background-color: black;
     color: orangered;
     border: none;
+    margin-left: 4px;
 
 }
 
+.socialM2TH {
+    background-color: black;
+    color: orangered;
+    border: none;
+    margin-right: 4px;
+    
+
+}
 .boxH1 {
     display: flex;
     flex-direction: column;
@@ -623,12 +785,14 @@ p {
     flex-direction: row;
     justify-content: space-between;
     margin-right: 2%;
+    align-items: center;
 }
 
 .divH2 {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
 }
 
 .carrousel {
@@ -721,11 +885,12 @@ p {
     flex-direction: row;
     flex-wrap: wrap;
     padding: 0;
-    border: 1px solid black;
-    border-radius: 5px;
+    border: 1px  black;
+    border-radius: 10px;
     width: 100%;
     justify-content: center;
-
+    box-shadow:  0 4px 8px 0 rgba(26, 0, 0, 0.54), 0 4px 10px 0 rgba(34, 1, 1, 0.19) ;
+    
 }
 
 .div-conteinerH {
@@ -754,10 +919,11 @@ p {
     flex-direction: row;
     flex-wrap: wrap;
     padding: 0;
-    border: 1px solid black;
-    border-radius: 5px;
+    border: 1px  black;
+    border-radius: 10px;
     width: 100%;
     justify-content: center;
+    box-shadow:  0 4px 8px 0 rgba(26, 0, 0, 0.54), 0 4px 10px 0 rgba(34, 1, 1, 0.19)
 
 }
 
@@ -775,6 +941,12 @@ p {
     border: none;
     font-size: x-large;
     color: orangered;
+    
+}
+.button-sale:hover{
+    transition: 1000ms;
+    transform: scale(130%);
+
 }
 
 .section-mainH {
@@ -787,6 +959,7 @@ p {
     height: 90%;
     align-content: center;
     justify-content: space-between;
+    
 
 }
 
@@ -809,6 +982,7 @@ p {
     overflow: auto;
     justify-content: center;
     scroll-behavior: smooth;
+    
 
 
 
@@ -841,7 +1015,14 @@ p {
 
 
 }
+#menu {
 
+    color: orangered;
+    border-style: none;
+    background-color: black;
+    margin-top: 8px;
+    
+}
 @media (min-width:769px) {
 
 
@@ -1054,10 +1235,16 @@ p {
         flex-direction: row;
         flex-wrap: wrap;
         padding: 0;
-        border: 1px solid black;
+        border: 1px  black;
         border-radius: 5px;
         width: 100%;
         justify-content: center;
+        box-shadow:  0 4px 8px 0 rgba(26, 0, 0, 0.54), 0 4px 10px 0 rgba(34, 1, 1, 0.19)
+
+    }
+
+    .main-conteinerH:hover{
+        box-shadow: 0px 0px 20px black;
 
     }
 
@@ -1089,10 +1276,16 @@ p {
         flex-direction: row;
         flex-wrap: wrap;
         padding: 0;
-        border: 1px solid black;
+        border: 1px  black;
         border-radius: 5px;
         width: 100%;
         justify-content: center;
+        box-shadow:  0 4px 8px 0 rgba(26, 0, 0, 0.54), 0 4px 10px 0 rgba(34, 1, 1, 0.19)
+
+    }
+
+    .article2H:hover{
+        box-shadow: 0px 0px 20px black;
 
     }
 
@@ -1171,7 +1364,7 @@ p {
     .photos2 img {
         border: 1px black;
         border-radius: 5%;
-        width: 60%;
+        width: 100%;
         height: auto;
         object-fit: contain;
         gap: 5px;
@@ -1280,6 +1473,14 @@ p {
         border: none;
         font-size: x-large;
 
+    }
+
+    .socialM2TH {
+        background-color: black;
+        color: orangered;
+        border: none;
+        margin-right: 4px;
+        font-size: x-large;
     }
 
     .boxH1 {
@@ -1404,10 +1605,17 @@ p {
         flex-direction: row;
         flex-wrap: wrap;
         padding: 0;
-        border: 1px solid black;
+        border: 1px  black;
         border-radius: 5px;
         width: 100%;
         justify-content: center;
+        box-shadow:  0 4px 8px 0 rgba(26, 0, 0, 0.54), 0 4px 10px 0 rgba(34, 1, 1, 0.19)
+
+
+    }
+
+    .main-conteinerH:hover{
+        box-shadow: 0px 0px 20px black;
 
     }
 
@@ -1441,12 +1649,18 @@ p {
         flex-direction: row;
         flex-wrap: wrap;
         padding: 0;
-        border: 1px solid black;
+        border: 1px  black;
         border-radius: 5px;
         width: 100%;
         height: 100%;
         justify-content: center;
+        box-shadow:  0 4px 8px 0 rgba(26, 0, 0, 0.54), 0 4px 10px 0 rgba(34, 1, 1, 0.19)
 
+
+    }
+
+    .article2H:hover{
+        box-shadow: 0px 0px 20px black;
     }
 
     .divarticle2H {
@@ -1525,7 +1739,7 @@ p {
     .photos2 img {
         border: 1px black;
         border-radius: 5%;
-        width: 60%;
+        width: 100%;
         height: auto;
         object-fit: contain;
         gap: 5px;
@@ -1538,6 +1752,30 @@ p {
 /*---------------------------------------------- home ----------------------------------------------*/
 
 /*---------------------------------------------- register ----------------------------------------------*/
+
+.html_R {
+    height: 100%;
+}
+  
+.body_R {
+    position: relative;
+    margin: 0;
+    padding-bottom: 4rem;
+    min-height: 100%;
+}
+  
+  
+.footer_R {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #000000;
+    text-align: center;
+}
+
+
+
 .logo_R {
     background-color: black;
     display: flex;
@@ -1545,8 +1783,6 @@ p {
     justify-content: center;
     padding: 5px 0;
 }
-
-
 
 .register_form {
     display: flex;
@@ -1593,13 +1829,17 @@ p {
 
 .register_form button {
     font-size: 20px;
-    padding: 3.5px;
-    border-radius: 15px;
+    padding: 4.5px;
+    border: 0.5px solid black;
+    border-radius: 20px;
+    width: 25%;
+    max-width: 200px;
 }
 
 .nav_button_R {
     text-align: center;
-    margin-bottom: 60px;
+    margin-top: 10px;
+    margin-bottom: 20px;
 }
 
 .nav_button_text_R {
@@ -1609,12 +1849,19 @@ p {
 }
 
 @media (min-width: 768px) {
+
+    .Container_R {
+        height: fit-content;
+    }
+
     .register_form {
         padding: 25px 15vw;
+        padding-bottom: 25px;
         font-size: 28px;
     }
 
     .register_form button {
+        width: 100%;
         font-size: 28px;
         padding: 5px;
         margin-top: 2%;
@@ -1627,6 +1874,8 @@ p {
         font-size: 24px;
         font-weight: 700;
     }
+
+    
 }
 
 @media (min-width: 1248px) {
