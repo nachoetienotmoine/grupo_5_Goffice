@@ -545,6 +545,17 @@ p {
         padding-right: 40%;
     }
    
+ #icono-footer:hover {
+    transition: 850ms;
+        transform: rotate(360deg);
+        opacity: 50%;
+      }
+      .botoncompra:hover{
+       transition: 850ms;
+       transform: matrix3d();
+       transform: scale(110%);
+    
+    }
 }
 
 @media (min-width: 1284px) {
@@ -639,8 +650,17 @@ p {
         padding-left: 40%;
         padding-right: 40%;
     }
-    
- 
+    #icono-footer:hover {
+        transition: 850ms;
+            transform: rotate(360deg);
+            opacity: 50%;
+          }
+          .botoncompra:hover{
+            transition: 850ms;
+            transform: matrix3d();
+            transform: scale(110%);
+         
+         }
 }
 
 /*---------------------------------------------- carrito ----------------------------------------------*/
