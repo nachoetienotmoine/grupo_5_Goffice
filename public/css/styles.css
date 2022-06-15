@@ -1828,10 +1828,12 @@ p {
 }
 
 .register_form button {
+    background-color: orangered;
+    color: white;
     font-size: 20px;
     padding: 4.5px;
     border: 0.5px solid black;
-    border-radius: 20px;
+    border-radius: 15px;
     width: 25%;
     max-width: 200px;
 }
@@ -1846,6 +1848,14 @@ p {
     text-decoration: underline 1px black;
     color: black;
     font-weight: 700;
+}
+
+.nav_button_l {
+    padding: 4px 0 0 0;
+}
+
+.nav_footer_R {
+    font-size: 12px;
 }
 
 @media (min-width: 768px) {
@@ -1875,6 +1885,9 @@ p {
         font-weight: 700;
     }
 
+    .nav_footer_R {
+        font-size: 16px;
+    }
     
 }
 
@@ -1883,6 +1896,11 @@ p {
         padding: 25px 25vw;
         font-size: 30px;
     }
+
+    .nav_footer_R {
+        font-size: 20px;
+    }
+    
 }
 
 /*---------------------------------------------- register ----------------------------------------------*/
