@@ -1829,10 +1829,12 @@ p {
 }
 
 .register_form button {
+    background-color: orangered;
+    color: white;
     font-size: 20px;
     padding: 4.5px;
     border: 0.5px solid black;
-    border-radius: 20px;
+    border-radius: 15px;
     width: 25%;
     max-width: 200px;
 }
@@ -1847,6 +1849,18 @@ p {
     text-decoration: underline 1px black;
     color: black;
     font-weight: 700;
+}
+
+.nav_button_l {
+    padding: 4px 0 0 0;
+}
+
+.nav_footer_R {
+    font-size: 12px;
+}
+
+.div_R2 .nav_footer_R {
+    margin: 5px;
 }
 
 @media (min-width: 768px) {
@@ -1876,6 +1890,9 @@ p {
         font-weight: 700;
     }
 
+    .nav_footer_R {
+        font-size: 16px;
+    }
     
 }
 
@@ -1884,6 +1901,11 @@ p {
         padding: 25px 25vw;
         font-size: 30px;
     }
+
+    .nav_footer_R {
+        font-size: 20px;
+    }
+    
 }
 
 /*---------------------------------------------- register ----------------------------------------------*/
@@ -1897,7 +1919,7 @@ p {
 .main-detail-section {
     display: flex;
     flex-direction: column;
-    width: 100%;
+
     background-color: #ffff;
     padding: 2%;
     gap: 15px
@@ -1907,6 +1929,10 @@ p {
     display: flex;
     justify-content: center;
     color: orangered;
+    box-shadow: 0 4px 8px 0 rgba(26, 0, 0, 0.54), 0 6px 20px 0 rgba(34, 1, 1, 0.19);
+    border-radius: 5px;
+    padding: 10px;
+    width: auto;
 }
 
 
@@ -1947,17 +1973,24 @@ p {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     gap: 10px;
 }
 
 .description-product {
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 10px;
     text-align: center;
     padding: 2.5%;
+    width: 80%;
 }
-
+.contenedor-detail>.description-product {
+    border-radius: 10px; 
+    box-shadow: 0 4px 8px 0 rgba(26, 0, 0, 0.54), 0 6px 20px 0 rgba(34, 1, 1, 0.19);
+    
+}
 .submit-cart-detail {
     padding: auto;
 }
@@ -1983,11 +2016,14 @@ p {
 .return-cart-detail:hover {
     background-color: orangered;
     cursor: pointer;
+    box-shadow: 0 4px 8px 0 rgba(26, 0, 0, 0.54), 0 6px 20px 0 rgba(34, 1, 1, 0.19);
 }
 
 .submit-cart-detail:hover {
     background-color: black;
     cursor: pointer;
+    box-shadow: 0 4px 8px 0 rgba(26, 0, 0, 0.54), 0 6px 20px 0 rgba(34, 1, 1, 0.19);
+
 }
 
 .comprar-detail {
@@ -2011,11 +2047,33 @@ p {
         padding: 0 10%;
     }
 }
+x
 
 /*---------------------------------------------- detalle ----------------------------------------------*/
 
 
 /*---------------------------------------------- log in ----------------------------------------------*/
+
+.html_L {
+    height: 100%;
+}
+
+.body_L {
+    position:relative;
+    margin: 0;
+    padding-bottom: 4rem;
+    min-height: 100%;
+}
+
+.footer_L {
+    position: bottom;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: #000000;
+    text-align: center;
+
+}
 
 .logo_L {
     background-color: black;
@@ -2024,8 +2082,6 @@ p {
     justify-content: center;
     padding: 5px 0;
 }
-
-
 
 .login_form {
     display: flex;
@@ -2071,28 +2127,73 @@ p {
 }
 
 .login_form button {
+    background-color: orangered;
+    color: white;
     font-size: 20px;
-    padding: 3.5px;
+    padding: 4.5px;
+    border: 0.5px solid black;
     border-radius: 15px;
+    width: 25%;
+    max-width: 200px;
 }
 
-.nav_button {
+.nav_button_L {
     text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
-.nav_button_text {
+.nav_button_text_L {
     text-decoration: underline 1px black;
     color: black;
     font-weight: 700;
 }
 
+.nav_footer_L {
+    font-size: 12px;
+}
+
+.div_L2 .nav_footer_L {
+    margin: 5px;
+}
+
+@media (min-width: 320px) {
+
+    .Container_L {
+        height: fit-content;
+        background-color: black;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 5px 0;
+    }
+}
+
 @media (min-width: 768px) {
+
+    .Container_L {
+        height: fit-content;
+        background-color: black;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 5px 0;
+    }
+
+
     .login_form {
         padding: 25px 15vw;
         font-size: 28px;
     }
 
+    .login_form {
+        padding: 25px 15vw;
+        padding-bottom: 25px;
+        font-size: 28px;
+    }
+
     .login_form button {
+        width: 100%;
         font-size: 28px;
         padding: 5px;
         margin-top: 2%;
@@ -2105,6 +2206,11 @@ p {
         font-size: 24px;
         font-weight: 700;
     }
+
+    .nav_footer_L {
+        font-size: 16px;
+    }
+
 }
 
 @media (min-width: 1248px) {
@@ -2112,6 +2218,11 @@ p {
         padding: 25px 25vw;
         font-size: 30px;
     }
+
+    .nav_footer_L {
+        font-size: 16px;
+    }
+
 }
 
 /*---------------------------------------------- log in ----------------------------------------------*/
