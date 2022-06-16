@@ -1828,10 +1828,12 @@ p {
 }
 
 .register_form button {
+    background-color: orangered;
+    color: white;
     font-size: 20px;
     padding: 4.5px;
     border: 0.5px solid black;
-    border-radius: 20px;
+    border-radius: 15px;
     width: 25%;
     max-width: 200px;
 }
@@ -1846,6 +1848,18 @@ p {
     text-decoration: underline 1px black;
     color: black;
     font-weight: 700;
+}
+
+.nav_button_l {
+    padding: 4px 0 0 0;
+}
+
+.nav_footer_R {
+    font-size: 12px;
+}
+
+.div_R2 .nav_footer_R {
+    margin: 5px;
 }
 
 @media (min-width: 768px) {
@@ -1875,6 +1889,9 @@ p {
         font-weight: 700;
     }
 
+    .nav_footer_R {
+        font-size: 16px;
+    }
     
 }
 
@@ -1883,6 +1900,11 @@ p {
         padding: 25px 25vw;
         font-size: 30px;
     }
+
+    .nav_footer_R {
+        font-size: 20px;
+    }
+    
 }
 
 /*---------------------------------------------- register ----------------------------------------------*/
@@ -2031,6 +2053,27 @@ x
 
 /*---------------------------------------------- log in ----------------------------------------------*/
 
+.html_L {
+    height: 100%;
+}
+
+.body_L {
+    position:relative;
+    margin: 0;
+    padding-bottom: 4rem;
+    min-height: 100%;
+}
+
+.footer_L {
+    position: bottom;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: #000000;
+    text-align: center;
+
+}
+
 .logo_L {
     background-color: black;
     display: flex;
@@ -2038,8 +2081,6 @@ x
     justify-content: center;
     padding: 5px 0;
 }
-
-
 
 .login_form {
     display: flex;
@@ -2085,28 +2126,73 @@ x
 }
 
 .login_form button {
+    background-color: orangered;
+    color: white;
     font-size: 20px;
-    padding: 3.5px;
+    padding: 4.5px;
+    border: 0.5px solid black;
     border-radius: 15px;
+    width: 25%;
+    max-width: 200px;
 }
 
-.nav_button {
+.nav_button_L {
     text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
-.nav_button_text {
+.nav_button_text_L {
     text-decoration: underline 1px black;
     color: black;
     font-weight: 700;
 }
 
+.nav_footer_L {
+    font-size: 12px;
+}
+
+.div_L2 .nav_footer_L {
+    margin: 5px;
+}
+
+@media (min-width: 320px) {
+
+    .Container_L {
+        height: fit-content;
+        background-color: black;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 5px 0;
+    }
+}
+
 @media (min-width: 768px) {
+
+    .Container_L {
+        height: fit-content;
+        background-color: black;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 5px 0;
+    }
+
+
     .login_form {
         padding: 25px 15vw;
         font-size: 28px;
     }
 
+    .login_form {
+        padding: 25px 15vw;
+        padding-bottom: 25px;
+        font-size: 28px;
+    }
+
     .login_form button {
+        width: 100%;
         font-size: 28px;
         padding: 5px;
         margin-top: 2%;
@@ -2119,6 +2205,11 @@ x
         font-size: 24px;
         font-weight: 700;
     }
+
+    .nav_footer_L {
+        font-size: 16px;
+    }
+
 }
 
 @media (min-width: 1248px) {
@@ -2126,6 +2217,11 @@ x
         padding: 25px 25vw;
         font-size: 30px;
     }
+
+    .nav_footer_L {
+        font-size: 16px;
+    }
+
 }
 
 /*---------------------------------------------- log in ----------------------------------------------*/
