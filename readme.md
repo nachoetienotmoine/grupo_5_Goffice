@@ -11,6 +11,15 @@ Cosas qué deberían empezar a hacer: Reporte con mayor frecuencia sea sincronic
 Cosas qué deberían dejar de hacer: No desatender la comunicación interna.
 Conclución general: El sprint 1 fué accesible, pudimos completarlo en tiempo y sin mayores inconvenientes, pero eso decantó en un relajamiento en los preparativos y actividades requeridas para el segundo sprint.
 
+Retro 2:
+--------
+
+Cuestiones positivas del sprint anterior: Nuevamente pudimos complir la entrega en tiempo y forma, aumentamos el numero de reuniones, trabajamos juntos como equipo, escuchando musica y compartiendo mas que un trabajo.
+Cosas a mejorar: seguir mejorando la comunicación interna fuera de las daily, weekly y el uso de tablero de trello.
+Cosas qué deberían empezar a hacer: Pushear cambios inmediatamente de haberlos realizado para ir viendo los avances y no en la reunion previa a la entrega.
+Cosas qué deberían dejar de hacer: no hablarnos por mas de 3 días.
+Conclución general: El sprint 2 fué desafiante, nos hubiera gustado poder avanzar con una performance mejor, pero a pesar de las dificultades y falta de expriencia se pudo presentar el entregable según lo solicitado.
+
 ○ Temática del sitio y público objetivo:
 ----------------------------------------
 
