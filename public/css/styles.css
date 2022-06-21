@@ -1836,6 +1836,15 @@ p {
     border-radius: 15px;
     width: 25%;
     max-width: 200px;
+    transition: all 350ms;
+}
+
+.register_form button:hover {
+    background-color: rgb(219, 59, 0);
+}
+
+.register_form button:active {
+    transform: scale(0.90);
 }
 
 .nav_button_R {
