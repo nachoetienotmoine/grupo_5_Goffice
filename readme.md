@@ -77,3 +77,6 @@ thomas.farres@gmail.com
 Ignacio.andreozzi@hotmail.com
 
 nachoetienotmoine@gmail.com
+
+Enlace a meet: https://meet.google.com/mft-kmxj-xfy?authuser=0
+--------------
