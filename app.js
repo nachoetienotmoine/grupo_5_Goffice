@@ -13,7 +13,7 @@ app.use(express.static(publicPath));
 app.use('/registro', routersRegister);
 app.use('/detalle', routersDetalle);
 app.use('/carrito', routersCarrito);
-app.use('/', routersHome);
+/*app.use('/', routersHome);*/
 app.use('/login', routersLogin);
 app.listen(process.env.PORT || 3000, function() {
     console.log("Servidor corriendo en el puerto 3000");
