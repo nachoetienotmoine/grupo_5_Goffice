@@ -21,10 +21,10 @@ app.listen(process.env.PORT || 3000, function() {
 
 // instalandoEJS --->npm install ejs //
 app.set("view engine", "ejs"); // set entre otras cosas nos permite definir el motor de plantillas que queremos utilizar //
-app.set('views', __dirname + '/views-ejs'); //configura la carpeta views-ejs para que reemplace a la que express lee por defecto.
+//app.set('views', __dirname + ''); //configura la carpeta views-ejs para que reemplace a la que express lee por defecto.
 app.use(express.static('public')); //Con esto se le aclara a express donde están los recursos estáticos, para poder acceder a ellos desde las vistas
-app.get('/', (req, res) => { // usamos esta parte de código para renderizar la vista de index.ejs (por ahora falta el rutero y controllers)
-    res.render('index')
+app.get('/index.ejs', (req, res) => { // usamos esta parte de código para renderizar la vista de index.ejs (por ahora falta el rutero y controllers)
+    res.render('index');
     }
 )
 
