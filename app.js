@@ -4,7 +4,7 @@ const path = require('path');
 const routersRegister = require('./routers/register');
 const routersDetalle = require('./routers/detalle');
 const routersCarrito = require('./routers/carrito');
-const routersHome = require('./routers/homecopy');
+const routersHome = require('./routers/homeApi');
 const routersLogin = require('./routers/login');
 
 const publicPath = path.resolve(__dirname, './public');
