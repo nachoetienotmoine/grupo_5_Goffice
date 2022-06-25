@@ -4,7 +4,7 @@ const path = require('path');
 const routersRegister = require('./routers/register');
 const routersDetalle = require('./routers/detalle');
 const routersCarrito = require('./routers/carrito');
-const routersHome = require('./routers/home');
+const routersHome = require('./routers/homecopy');
 const routersLogin = require('./routers/login');
 
 const publicPath = path.resolve(__dirname, './public');
@@ -13,7 +13,7 @@ app.use(express.static(publicPath));
 app.use('/registro', routersRegister);
 app.use('/detalle', routersDetalle);
 app.use('/carrito', routersCarrito);
-app.get('/', (req, res) => {res.render('index');})
+app.use('/', routersHome);
 app.use('/login', routersLogin);
 app.listen(process.env.PORT || 3000, function() {
     console.log("Servidor corriendo en el puerto 3000");
