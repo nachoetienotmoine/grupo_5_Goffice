@@ -3,7 +3,7 @@ const app = express();
 const path = require('path');
 const routersRegister = require('./routers/registerApi');
 const routersDetalle = require('./routers/detalleApi');
-const routersCarrito = require('./routers/carrito');
+const routersCarrito = require('./routers/carritoApi');
 const routersHome = require('./routers/homeApi');
 const routersLogin = require('./routers/loginApi');
 
