@@ -5,7 +5,7 @@ const routersRegister = require('./routers/registerApi');
 const routersDetalle = require('./routers/detalle');
 const routersCarrito = require('./routers/carrito');
 const routersHome = require('./routers/homeApi');
-const routersLogin = require('./routers/login');
+const routersLogin = require('./routers/loginApi');
 
 const publicPath = path.resolve(__dirname, './public');
 app.use(express.static(publicPath));
