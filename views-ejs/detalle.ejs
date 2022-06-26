@@ -15,39 +15,10 @@
 </head>
 <!-- body -->
 <body>
+
 <!-- header -->
-<header class="header-carrito">
-    <nav class="box">
-        <div class="burger-menuc">
-            <button id="menuc">
-
-
-                <i class="fas fa-bars fa-2x"></i>
-            </button>
-        </div>
-        <img src="images/Gofficee.png" alt="logo" width="100px" height="42px" id="img-logo">
-        <div class="carritoc">
-            <button id="carritoc">
-                <i class="fas fa-cart-plus fa-2x"></i><span id="cart_menu_num" data-action="cart-can" class="badge rounded-circle">9</span>
-            </button>
-        </div>
-
-
-
-    </nav>
-
-    <br>
-
-    <div class="buscar">
-        <input type="text" placeholder="  Search Goffice" required>
-        <button id="lupa">
-            <i class="fas fa-search"></i>
-        </button>
-    </div>
-    <br>
-
-
-</header>
+<%- include('./partials/header.ejs')%>
+<!--</header> -->
 
 <!-- main -->
 <main class="main-detail">
@@ -104,44 +75,7 @@
     <br>
 </main>
 <!-- footer -->
-    <footer>
-        <section class="section-footer">
-            <section>
-                <br>
-                <i class="fas fa-credit-card fa-2x" style="color: orangered;" id="icono-footer"></i><br>
-                <h3 class="h3-footer">Pay with card or cash</h3><br>
-                <p class="p-footer"> With Goffice Cash, you have installments without interest with card or cash in
-                    payment points. And it's always safe!</p>
-            </section>
-            <br>
-            <section>
-                <i class="fas fa-gift fa-2x" style="color: orangered;" id="icono-footer"></i><br>
-                <h3 class="h3-footer">Free shipping over $2,500</h3><br>
-                <p class="p-footer">Just for being registered in Mercado Liebre you have free shipments in thousands of
-                    products. It is a Mercado Puntos benefit.</p>
-            </section>
-            <br>
-            <section>
-                <i class="fas fa-user-shield fa-2x" style="color: orangered;" id="icono-footer"></i><br>
-                <h3 class="h3-footer">Security, from start to finish</h3><br>
-                <p class="p-footer">You do not like? Give it back! In GOffice, there is nothing you cannot do,
-                    because you are always protected.</p>
-            </section>
-            <br>
-            <br>
-            <article class="lista-footer">
-                <nav class="nav-footer">
-                    <a class="a-footer" href="/">Home</a>
-                    <a class="a-footer" href="/registro">Register</a>
-                    <a class="a-footer" href="">Log in</a>
-                </nav>
-                <nav class="nav-footer2">
-                    <a class="a-footer" href="">Log out</a>
-                    <a class="a-footer" href="">Services</a>
-                    <a class="a-footer" href="">Contact</a>
-                </nav>
-            </article>
-    </footer>
-
+<%- include('./partials/footer')%>   
+<!-- </footer> -->
 </body>
 </html>
