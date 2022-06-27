@@ -705,6 +705,8 @@ p {
 
 .footerH {
     background-color: black;
+    position: sticky;
+    bottom: 0;
 }
 
 .arrowH {
@@ -1772,16 +1774,6 @@ p {
     left: 0;
     background-color: #000000;
     text-align: center;
-}
-
-
-
-.logo_R {
-    background-color: black;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 5px 0;
 }
 
 .register_form {
