@@ -1761,28 +1761,7 @@ p {
 .body_R {
     position: relative;
     margin: 0;
-    padding-bottom: 4rem;
     min-height: 100%;
-}
-  
-  
-.footer_R {
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background-color: #000000;
-    text-align: center;
-}
-
-
-
-.logo_R {
-    background-color: black;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 5px 0;
 }
 
 .register_form {
@@ -1791,6 +1770,7 @@ p {
     align-items: center;
     padding: 15px 20px;
     overflow: hidden;
+    height: 80vh;
 }
 
 .register_form h2 {
@@ -1837,6 +1817,15 @@ p {
     border-radius: 15px;
     width: 25%;
     max-width: 200px;
+    transition: all 350ms;
+}
+
+.register_form button:hover {
+    background-color: rgb(219, 59, 0);
+}
+
+.register_form button:active {
+    transform: scale(0.90);
 }
 
 .nav_button_R {
@@ -2226,3 +2215,45 @@ x
 }
 
 /*---------------------------------------------- log in ----------------------------------------------*/
+
+/*---------------------------------------------- prodList --------------------------------------------*/
+
+.descriptions-main{
+    display: none;
+}
+
+@media (min-width: 768px) {
+
+    .img-description-Container {
+        display: flex;
+    }
+
+    .descriptions-main {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 2%;
+    padding-left: 6px;
+    width: 50%;
+    gap: 10%;
+    font-weight: 700;
+    text-align: start;
+    }
+
+}
+
+@media (min-width: 1024px) {
+
+    .descriptions-main {
+        width: 35%;
+        max-width: 400px;
+        padding-left: 0;
+    }
+
+}
+
+
+
+
+
+/*---------------------------------------------- prodList --------------------------------------------*/
