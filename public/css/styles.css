@@ -2226,3 +2226,30 @@ x
 }
 
 /*---------------------------------------------- log in ----------------------------------------------*/
+
+/*---------------------------------------------- prodList --------------------------------------------*/
+
+@media (min-width: 768px) {
+
+    .descriptions-main {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    justify-content: space-between;
+    padding-left: 20%;
+    padding-right: 3%;
+    padding-top: 2%;
+    width: 35%;
+    gap: 10%;
+    }
+
+}
+
+.descriptions-main {
+    
+}
+
+
+
+/*---------------------------------------------- prodList --------------------------------------------*/
