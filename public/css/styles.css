@@ -705,8 +705,6 @@ p {
 
 .footerH {
     background-color: black;
-    position: sticky;
-    bottom: 0;
 }
 
 .arrowH {
@@ -2229,26 +2227,41 @@ x
 
 /*---------------------------------------------- prodList --------------------------------------------*/
 
+.descriptions-main{
+    display: none;
+}
+
 @media (min-width: 768px) {
+
+    .img-description-Container {
+        display: flex;
+    }
 
     .descriptions-main {
     display: flex;
     align-items: center;
     flex-direction: column;
-
-    justify-content: space-between;
-    padding-left: 20%;
-    padding-right: 3%;
     padding-top: 2%;
-    width: 35%;
+    padding-left: 6px;
+    width: 50%;
     gap: 10%;
+    font-weight: 700;
+    text-align: start;
     }
 
 }
 
-.descriptions-main {
-    
+@media (min-width: 1024px) {
+
+    .descriptions-main {
+        width: 35%;
+        max-width: 400px;
+        padding-left: 0;
+    }
+
 }
+
+
 
 
 
