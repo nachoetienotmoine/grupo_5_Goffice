@@ -1760,18 +1760,7 @@ p {
 .body_R {
     position: relative;
     margin: 0;
-    padding-bottom: 4rem;
     min-height: 100%;
-}
-  
-  
-.footer_R {
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background-color: #000000;
-    text-align: center;
 }
 
 .register_form {
@@ -1780,6 +1769,7 @@ p {
     align-items: center;
     padding: 15px 20px;
     overflow: hidden;
+    height: 80vh;
 }
 
 .register_form h2 {
