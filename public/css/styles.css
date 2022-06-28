@@ -448,7 +448,7 @@ p {
 .articlecarruselC {
     display: flex;
     flex-direction: column;
-    margin-top: 10%;
+    margin-top: 5%;
     height: 276px;
 }
 
@@ -723,6 +723,7 @@ p {
 
 .divcontH {
     text-align: center;
+  padding-top: 1%;
 }
 
 
