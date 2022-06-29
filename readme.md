@@ -22,11 +22,11 @@ Conclución general: El sprint 2 fué desafiante, nos hubiera gustado poder avan
 
 Retro 3:
 --------
-Cuestiones positivas del sprint anterior: Nuevamente cumplimos con la entrega a tiempo y nos organizamos de una manera mas efectiva.
-Cosas a mejorar: Consultarle más a los porfesores.
-Cosas qué deberían empezar a hacer: Consultarle a el profesor si el trabajo esta completo de manera correcta con más tiempo antes de la entrega.
-Cosas qué deberían dejar de hacer: Olvidarse de mantener la comunicacion interna frecuente.
-Conclución general: El sprint 3 fué complicado ya que durante este tiempo algunos de nuestros integrantes no tenian mucho tiempo a su dispocicion a causa de temas externos, pero a pesar de ese problema se pudo completar el trabajo a tiempo.
+Cuestiones positivas del sprint anterior: Nuevamente cumplimos con la entrega a tiempo y nos organizamos de una manera más efectiva.
+Cosas a mejorar: Consultar más a los profesores.
+Cosas qué deberían empezar a hacer: Consultarle al profesor si el trabajo está completo de manera correcta con más tiempo antes de la entrega.
+Cosas qué deberían dejar de hacer: Olvidarse de mantener la comunicación interna frecuente.
+Conclusión general: El sprint 3 fué complicado ya que durante este tiempo algunos de nuestros integrantes no tenían mucho tiempo a su disposición a causa de temas externos, pero a pesar de ese problema se pudo completar el trabajo a tiempo.
 
 ○ Temática del sitio y público objetivo:
 ----------------------------------------
