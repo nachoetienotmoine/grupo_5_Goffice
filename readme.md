@@ -22,6 +22,7 @@ Conclución general: El sprint 2 fué desafiante, nos hubiera gustado poder avan
 
 Retro 3:
 --------
+
 Cuestiones positivas del sprint anterior: Nuevamente cumplimos con la entrega a tiempo y nos organizamos de una manera más efectiva.
 Cosas a mejorar: Consultar más a los profesores.
 Cosas qué deberían empezar a hacer: Consultarle al profesor si el trabajo está completo de manera correcta con más tiempo antes de la entrega.
