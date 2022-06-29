@@ -2258,3 +2258,79 @@ x
 
 
 /*---------------------------------------------- prodList --------------------------------------------*/
+
+.boxpC{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+    color: black;
+}
+#nombrePCrud{
+text-align: center;
+align-items: center;
+padding: 1%;
+}
+.fa-edit{
+    display: flex;
+    JUSTIFY-CONTENT: RIGHT;
+    color: orangered;
+}
+.description-productPC {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    
+    padding: 2.5%;
+    width: 80%;
+}
+.contenedor-detail>.description-productPC {
+    border-radius: 10px; 
+    box-shadow: 0 4px 8px 0 rgba(26, 0, 0, 0.54), 0 6px 20px 0 rgba(34, 1, 1, 0.19);}
+    .description-productPC > #productForm{
+        width: 90%;
+
+    }
+    .title-product-detailPC {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+        color: orangered;
+        box-shadow: 0 4px 8px 0 rgba(26, 0, 0, 0.54), 0 6px 20px 0 rgba(34, 1, 1, 0.19);
+        border-radius: 5px;
+        padding: 10px;
+        width: auto;
+    }
+    #iconoPC{
+       margin-top: 100%;
+      
+    
+    }
+    .detail-imagePC {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+    }
+    .detail-imagePC>#general-detail-imagePC {
+        width: 90%;
+        height: 100%;
+    }
+    .main-detail-section > .detail-imagePC {
+        display: flex;
+width: 100%;
+    }
+
+    @media (min-width: 1024px) {
+
+        .main-detail-section {
+            display: flex;
+            flex-direction: column;
+            background-color: #ffff;
+            padding: 2%;
+            gap: 15px;
+            margin: 0 10%;
+        }
+    }
