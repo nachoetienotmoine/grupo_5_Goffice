@@ -2258,7 +2258,14 @@ x
 
 
 /*---------------------------------------------- prodList --------------------------------------------*/
+.main-detail-sectionPC {
+    display: flex;
+    flex-direction: column;
 
+    background-color: #ffff;
+    padding: 5%;
+    gap: 15px
+}
 .boxpC{
     display: flex;
     flex-direction: column;
@@ -2270,6 +2277,8 @@ x
 text-align: center;
 align-items: center;
 padding: 1%;
+border-radius: 3px;
+border: 1px solid black;
 }
 .fa-edit{
     display: flex;
@@ -2322,15 +2331,105 @@ padding: 1%;
         display: flex;
 width: 100%;
     }
-
+    .comprar-detailPC {
+        padding-left: 22%;
+        padding-right: 22%;
+        color: orangered;
+    }
+    .contenedor-detail > .precio-envio-detail{
+        width: 100%;
+        
+    }
+    #cart_menu_numPC {
+        position: absolute;
+        top: 23%;
+        background: orangered;
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        padding: 2px;
+        font-size: small;
+         }
+         #nombrePCrud:hover{
+            border:2px solid orangered ;
+            cursor: pointer;
+         }
+        .fa-edit:hover{
+            color: #000000;
+cursor: pointer;
+        }
+        #iconoPC:hover{
+            transform: scale(150%);
+        
+         
+         }
+         @media (min-width: 769px){
+            #cart_menu_numPC {
+                position: absolute;
+                top: 3%;
+                background: orangered;
+                width: 15px;
+                height: 15px;
+                border-radius: 50%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color: white;
+                padding: 2px;
+                font-size: small;
+                 }
+         }
     @media (min-width: 1024px) {
-
+        #cart_menu_numPC {
+            position: absolute;
+            top: 3%;
+            background: orangered;
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            padding: 2px;
+            font-size: small;
+             }
         .main-detail-section {
             display: flex;
             flex-direction: column;
             background-color: #ffff;
             padding: 2%;
             gap: 15px;
-            margin: 0 10%;
+            margin: 0 13%;
+        }
+        .comprar-detailPC {
+            padding-left: 35%;
+            padding-right: 35%;
+            color: orangered;
+        }
+        .contenedor-detail > .precio-envio-detail{
+            width: 100%;
+            padding-left: 25%;
+            padding-right: 25%;
         }
     }
+    @media (min-width: 1264px) {
+        #cart_menu_numPC {
+            position: absolute;
+            top: 6%;
+            background: orangered;
+            width: 23px;
+            height: 23px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            padding: 2px;
+            font-size: medium;
+             }
+            }
