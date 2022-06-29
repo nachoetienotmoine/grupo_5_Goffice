@@ -20,6 +20,14 @@ Cosas qué deberían empezar a hacer: Pushear cambios inmediatamente de haberlos
 Cosas qué deberían dejar de hacer: no hablarnos por mas de 3 días.
 Conclución general: El sprint 2 fué desafiante, nos hubiera gustado poder avanzar con una performance mejor, pero a pesar de las dificultades y falta de expriencia se pudo presentar el entregable según lo solicitado.
 
+Retro 3:
+--------
+Cuestiones positivas del sprint anterior: Nuevamente cumplimos con la entrega a tiempo y nos organizamos de una manera mas efectiva.
+Cosas a mejorar: Consultarle más a los porfesores.
+Cosas qué deberían empezar a hacer: Consultarle a el profesor si el trabajo esta completo de manera correcta con más tiempo antes de la entrega.
+Cosas qué deberían dejar de hacer: Olvidarse de mantener la comunicacion interna frecuente.
+Conclución general: El sprint 3 fué complicado ya que durante este tiempo algunos de nuestros integrantes no tenian mucho tiempo a su dispocicion a causa de temas externos, pero a pesar de ese problema se pudo completar el trabajo a tiempo.
+
 ○ Temática del sitio y público objetivo:
 ----------------------------------------
 
