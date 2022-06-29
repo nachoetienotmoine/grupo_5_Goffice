@@ -1,8 +1,8 @@
 Opiniones sobre las weeklies:
 -----------------------------
 
-Fecha: 28/06/22 - Hora: 20:00hs a 
---------------------------------------
+Fecha: 28/06/22 - Hora: 20:00hs a 22.52
+---------------------------------------
 
 Thomas Farre:
 -------------
@@ -17,8 +17,9 @@ Gonza Andreozzi:
 Nelson Patiño:
 --------------
 
-Ignacio Etienot:
+Ignacio Etienot: 
 ----------------
+Trabajamos realmente como equipo, cada unos aportando avances de ultimo momento en lo que cada cual presentaba su mayor fortaleza. Debemos consultar en los proximos sprints detalles antes de las fechas limites para no correr con las deadLines.
 
 
 
