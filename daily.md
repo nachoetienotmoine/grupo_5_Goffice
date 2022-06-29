@@ -1,7 +1,7 @@
 Opiniones sobre las weeklies:
 -----------------------------
 
-Fecha: 28/06/22 - Hora: 20:00hs a 
+Fecha: 28/06/22 - Hora: 20:47hs a 
 --------------------------------------
 
 Thomas Farre:
@@ -16,6 +16,7 @@ Gonza Andreozzi:
 
 Nelson Patiño:
 --------------
+Geniales, fue muy divertido pasarla con los chicos. A nivel técnico el feedback y el compañerismo resulto en una mezcla brutal para el aprendizaje en equipo. 
 
 Ignacio Etienot:
 ----------------
