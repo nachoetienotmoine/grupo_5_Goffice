@@ -2354,9 +2354,11 @@ width: 100%;
         padding: 2px;
         font-size: small;
          }
-         #nombrePCrud:hover{
-            border:2px solid orangered ;
+         
+         #nombrePCrud:focus{
+            border: 2px solid orangered ;
             cursor: pointer;
+           
          }
         .fa-edit:hover{
             color: #000000;
