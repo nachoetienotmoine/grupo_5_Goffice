@@ -2280,6 +2280,13 @@ padding: 1%;
 border-radius: 3px;
 border: 1px solid black;
 }
+#nombrePCrud2{
+    text-align: center;
+    align-items: center;
+    padding: 1%;
+    border-radius: 3px;
+    border: 1px solid black;
+    }
 .fa-edit{
     display: flex;
     JUSTIFY-CONTENT: RIGHT;
@@ -2312,14 +2319,15 @@ border: 1px solid black;
         padding: 10px;
         width: auto;
     }
-    #iconoPC{
-       margin-top: 100%;
-      
-    
-    }
+     
+     .iconosPC{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+     }
     .detail-imagePC {
         display: flex;
-        flex-direction: row;
+    flex-wrap: wrap;
         justify-content: space-between;
 
     }
@@ -2355,7 +2363,12 @@ width: 100%;
         font-size: small;
          }
          
-         #nombrePCrud:focus{
+        /* #nombrePCrud:hover{
+            border: 2px solid orangered ;
+            cursor: pointer;
+           
+         }*/
+         #nombrePCrud:hover{
             border: 2px solid orangered ;
             cursor: pointer;
            
@@ -2365,9 +2378,12 @@ width: 100%;
 cursor: pointer;
         }
         #iconoPC:hover{
-            transform: scale(150%);
+            transform: scale(100%);
         
          
+         }
+          .main-detail-sectionPC >.detail-imagePC {
+            max-height: 50%;
          }
          @media (min-width: 769px){
             #cart_menu_numPC {
@@ -2420,6 +2436,27 @@ cursor: pointer;
         }
     }
     @media (min-width: 1264px) {
+        .comprar-detailPC {
+            padding-left: 32%;
+            padding-right: 32%;
+            color: orangered;
+        }
+        .contenedor-detail {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin: 0 18%;
+}
+        .main-detail-sectionPC {
+            display: flex;
+            flex-direction: column;
+            background-color: #ffff;
+            padding: 2%;
+            gap: 15px;
+            margin: 0 15%;
+        }
         #cart_menu_numPC {
             position: absolute;
             top: 6%;
@@ -2434,4 +2471,9 @@ cursor: pointer;
             padding: 2px;
             font-size: medium;
              }
+             .contenedor-detail>.description-productPC {
+                border-radius: 10px;
+                box-shadow: 0 4px 8px 0 rgb(26 0 0 / 54%), 0 6px 20px 0 rgb(34 1 1 / 19%);
+                padding:2% 10%;
+            }
             }

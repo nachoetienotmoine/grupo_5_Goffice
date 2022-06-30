@@ -31,7 +31,13 @@
                 </div>
                 <div class="detail-imagePC">
                     <img id="general-detail-imagePC" src="images/Reddragon Zeus-X.jpg" alt="articulo">
-                    <i class="far fa-edit" id="iconoPC"></i>
+                    <div class="iconosPC"><i class="far fa-edit" id="iconoPC"></i><i class="far fa-edit" id="iconoPC2"></i></div>
+                    <article class="nav-image-detail">
+                        <img id="particular-detail-image" src="images/Reddragon Zeus-X.jpg" alt="articulo">
+                        <img id="particular-detail-image" src="images/Reddragon Zeus-X.jpg" alt="articulo">
+                        <img id="particular-detail-image" src="images/Reddragon Zeus-X.jpg" alt="articulo">
+                        <img id="particular-detail-image" src="images/Reddragon Zeus-X.jpg" alt="articulo">
+                    </article>
                 </div>
 
             </section>
@@ -42,6 +48,7 @@
                     <h2>Detalle de Producto</h2>
                 </div>
                 <br>
+                
                 <article class="description-productPC">
                     <form action="productoCrud" id="productForm">
                         <div class="boxpC">
@@ -77,11 +84,24 @@
                             <i class="far fa-edit"></i>
                         </div>
                         <div class="boxpC">
-                            <label for="nombre">
+                            <label for="Stock">
                                 <h2>Stock</h2>
                             </label>
 
-                            <textarea name="nombre" id="nombrePCrud" required></textarea>
+                            <select name="nombre" id="nombrePCrud2" required>
+                                <option value="0">Out of Stock</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                                
+                            </select>
                             <i class="far fa-edit"></i>
                         </div>
  <article class="precio-envio-detail">
@@ -103,6 +123,8 @@
             <br>
 
             <br>
+           
+           
         </main>
         <!-- footer -->
         <%- include('./partials/footer')%>
