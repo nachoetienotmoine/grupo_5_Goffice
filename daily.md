@@ -13,6 +13,7 @@ Ignacio Andreozzi:
 
 Gonza Andreozzi:
 ----------------
+La verdad que sirvieron mucho a lo largo del proyecto ya que entendimos a la perfeccion lo que es trabajr en equipo. Siempre hubo ayuda al compañero. Como dice Nelson nos divertimos, trabajamos, enseñamos y aprendimos del otro.
 
 Nelson Patiño:
 --------------
