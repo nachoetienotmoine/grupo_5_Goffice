@@ -31,6 +31,7 @@ Thomas Farre:
 
 Ignacio Andreozzi:
 ------------------
+Muy provechosa, logramos cumplir con todo lo necesario para la fecha estipulada.
 
 Gonza Andreozzi:
 ----------------
