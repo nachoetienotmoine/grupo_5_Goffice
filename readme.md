@@ -29,6 +29,14 @@ Cosas qué deberían empezar a hacer: Consultarle al profesor si el trabajo est�
 Cosas qué deberían dejar de hacer: Olvidarse de mantener la comunicación interna frecuente.
 Conclusión general: El sprint 3 fué complicado ya que durante este tiempo algunos de nuestros integrantes no tenían mucho tiempo a su disposición a causa de temas externos, pero a pesar de ese problema se pudo completar el trabajo a tiempo.
 
+Retro 4:
+--------
+
+Cuestiones positivas del sprint anterior: Nuevamente pudimos cumplir con la entrega en tiempo y forma.
+Cosas qué deberían empezar a hacer: Consultarle a los profesores más sobre como hacer las consignas. 
+Cosas qué deberían dejar de hacer: A causa de temas externos, nos desorganizamos con los horarios de los weeklies y ocasionalmente no los hicimos.
+Conclusión general: El sprint 4 fue confuso ya que no pudimos entender bien las consignas originalmente. Pero aunque tuvimos este problema y tuvimos menos tiempo para organizarnos, pudimos completar el trabajo ayudándonos entre nosotros. 
+
 ○ Temática del sitio y público objetivo:
 ----------------------------------------
 
