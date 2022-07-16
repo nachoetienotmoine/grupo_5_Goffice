@@ -1,202 +1,202 @@
 [
-    {
-        "id": 1,
-        "name": "Monitor",
-        "description": "vivamus in felis eu sapien cursus vestibulum proin eu mi nulla ac enim in tempor turpis nec euismod scelerisque quam turpis adipiscing lorem vitae mattis nibh ligula nec sem",
-        "price": 1459.55,
-        "discount": 42,
-        "category": "Luces",
-        "image": "teclado.jpg",
-        "stock": 6
-    },
-    {
-        "id": 2,
-        "name": "Camara",
-        "description": "cras in purus eu magna vulputate luctus cum sociis natoque penatibus et magnis dis parturient montes nascetur ridiculus mus vivamus vestibulum sagittis sapien cum sociis natoque penatibus et magnis dis parturient montes nascetur ridiculus mus etiam vel augue vestibulum",
-        "price": 2245.79,
-        "discount": 12,
-        "category": "Microfono",
-        "image": "teclado.jpg",
-        "stock": 8
-    },
-    {
-        "id": 3,
-        "name": "Monitor",
-        "description": "maecenas tincidunt lacus at velit vivamus vel nulla eget eros elementum pellentesque quisque porta volutpat erat quisque erat eros viverra eget congue eget semper rutrum nulla nunc purus phasellus in felis",
-        "price": 2101.17,
-        "discount": 0,
-        "category": "Auriculares",
-        "image": "Palante.jpg",
-        "stock": 7
-    },
-    {
-        "id": 4,
-        "name": "Luces LED",
-        "description": "turpis a pede posuere nonummy integer non velit donec diam neque vestibulum eget vulputate ut ultrices vel augue vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae donec pharetra magna vestibulum aliquet ultrices erat tortor sollicitudin mi sit amet lobortis",
-        "price": 4855.35,
-        "discount": 36,
-        "category": "Parlante",
-        "image": "monitor1.jpg",
-        "stock": 5
-    },
-    {
-        "id": 5,
-        "name": "Luces LED",
-        "description": "adipiscing molestie hendrerit at vulputate vitae nisl aenean lectus pellentesque eget nunc donec quis orci eget orci vehicula condimentum curabitur in libero ut massa volutpat convallis morbi odio odio elementum eu interdum eu tincidunt in leo",
-        "price": 2143.64,
-        "discount": 10,
-        "category": "Microfono",
-        "image": "camara.jpg",
-        "stock": 8
-    },
-    {
-        "id": 6,
-        "name": "Parlante Xinua",
-        "description": "curabitur gravida nisi at nibh in hac habitasse platea dictumst aliquam augue quam sollicitudin vitae consectetuer eget rutrum at lorem integer tincidunt ante vel ipsum praesent blandit lacinia erat vestibulum sed magna at nunc commodo placerat praesent blandit nam",
-        "price": 3579.81,
-        "discount": 45,
-        "category": "Auriculares",
-        "image": "silla.jpg",
-        "stock": 9
-    },
-    {
-        "id": 7,
-        "name": "Luces LED",
-        "description": "nulla eget eros elementum pellentesque quisque porta volutpat erat quisque erat eros viverra eget congue eget semper rutrum nulla nunc purus phasellus in felis donec semper",
-        "price": 4312.6,
-        "discount": 41,
-        "category": "Microfono",
-        "image": "camara.jpg",
-        "stock": 1
-    },
-    {
-        "id": 8,
-        "name": "Luces LED",
-        "description": "ut massa volutpat convallis morbi odio odio elementum eu interdum eu tincidunt in leo maecenas pulvinar lobortis est phasellus sit amet erat nulla tempus vivamus in felis eu sapien cursus vestibulum proin eu mi nulla ac enim in tempor turpis nec euismod scelerisque quam turpis",
-        "price": 2815.99,
-        "discount": 14,
-        "category": "Teclado",
-        "image": "silla.jpg",
-        "stock": 1
-    },
-    {
-        "id": 9,
-        "name": "Luces LED",
-        "description": "est et tempus semper est quam pharetra magna ac consequat metus sapien ut nunc vestibulum ante ipsum primis",
-        "price": 4684.14,
-        "discount": 27,
-        "category": "Luces",
-        "image": "camara.jpg",
-        "stock": 1
-    },
-    {
-        "id": 10,
-        "name": "Silla Gamer",
-        "description": "lobortis est phasellus sit amet erat nulla tempus vivamus in felis eu sapien cursus vestibulum proin eu mi nulla ac enim in tempor turpis nec euismod scelerisque quam turpis adipiscing lorem vitae mattis nibh ligula nec sem duis aliquam convallis nunc proin at",
-        "price": 1648.93,
-        "discount": 23,
-        "category": "Auriculares",
-        "image": "mouse pad.jpg",
-        "stock": 9
-    },
-    {
-        "id": 11,
-        "name": "Monitor",
-        "description": "ut nunc vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae mauris viverra diam vitae quam suspendisse potenti nullam porttitor",
-        "price": 1442.35,
-        "discount": 41,
-        "category": "Parlante",
-        "image": "silla.jpg",
-        "stock": 3
-    },
-    {
-        "id": 12,
-        "name": "Silla X Soul",
-        "description": "consequat dui nec nisi volutpat eleifend donec ut dolor morbi vel lectus in quam fringilla rhoncus mauris enim leo",
-        "price": 4798.17,
-        "discount": 45,
-        "category": "Auriculares",
-        "image": "mouse pad.jpg",
-        "stock": 7
-    },
-    {
-        "id": 13,
-        "name": "Monitor",
-        "description": "vestibulum vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae nulla dapibus dolor vel est donec odio justo",
-        "price": 1095.48,
-        "discount": 7,
-        "category": "Microfono",
-        "image": "teclado.jpg",
-        "stock": 3
-    },
-    {
-        "id": 14,
-        "name": "Microfono Hyper X",
-        "description": "odio condimentum id luctus nec molestie sed justo pellentesque viverra pede ac diam cras pellentesque volutpat dui maecenas tristique est et tempus semper est quam pharetra magna ac consequat metus sapien ut nunc vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia",
-        "price": 4229.81,
-        "discount": 36,
-        "category": "Luces",
-        "image": "camara.jpg",
-        "stock": 4
-    },
-    {
-        "id": 15,
-        "name": "Silla Gamer",
-        "description": "faucibus cursus urna ut tellus nulla ut erat id mauris vulputate elementum nullam varius nulla facilisi cras non velit nec nisi vulputate nonummy maecenas tincidunt lacus at velit vivamus vel nulla eget eros elementum pellentesque quisque porta volutpat erat quisque erat eros viverra",
-        "price": 1616.75,
-        "discount": 7,
-        "category": "Luces",
-        "image": "microfono.jpg",
-        "stock": 6
-    },
-    {
-        "id": 16,
-        "name": "Camara",
-        "description": "morbi ut odio cras mi pede malesuada in imperdiet et commodo vulputate justo in blandit ultrices enim lorem ipsum dolor sit amet consectetuer adipiscing elit proin interdum",
-        "price": 4575.57,
-        "discount": 15,
-        "category": "Mouse Pad",
-        "image": "monitor1.jpg",
-        "stock": 10
-    },
-    {
-        "id": 17,
-        "name": "Microfono Hyper X",
-        "description": "viverra dapibus nulla suscipit ligula in lacus curabitur at ipsum ac tellus semper interdum mauris",
-        "price": 2156.17,
-        "discount": 32,
-        "category": "Auriculares",
-        "image": "camara.jpg",
-        "stock": 8
-    },
-    {
-        "id": 18,
-        "name": "Luces LED",
-        "description": "dictumst morbi vestibulum velit id pretium iaculis diam erat fermentum justo nec condimentum neque sapien placerat ante",
-        "price": 3266.67,
-        "discount": 6,
-        "category": "Silla Gamer",
-        "image": "monitor1.jpg",
-        "stock": 6
-    },
-    {
-        "id": 19,
-        "name": "Microfono Hyper X",
-        "description": "tempus semper est quam pharetra magna ac consequat metus sapien ut nunc vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae mauris viverra diam vitae quam suspendisse potenti nullam porttitor lacus at turpis donec posuere metus",
-        "price": 2844.12,
-        "discount": 3,
-        "category": "Teclado",
-        "image": "Reddragon Zeus-X.jpg",
-        "stock": 1
-    },
-    {
-        "id": 20,
-        "name": "Monitor",
-        "description": "ac consequat metus sapien ut nunc vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae mauris viverra diam vitae quam",
-        "price": 2918.81,
-        "discount": 37,
-        "category": "Silla Gamer",
-        "image": "camara.jpg",
-        "stock": 0
-    }
+ {
+"id": 1,
+"name": "Monitor",
+"description": "vivamus in felis eu sapien cursus vestibulum proin eu mi nulla ac enim in tempor turpis nec euismod scelerisque quam turpis adipiscing lorem vitae mattis nibh ligula nec sem",
+"price": 1459.55,
+"discount": 42,
+"category": "Luces",
+"image": "teclado.jpg",
+"stock": 6
+},
+{
+  "id": 2,
+  "name": "Camara",
+  "description": "cras in purus eu magna vulputate luctus cum sociis natoque penatibus et magnis dis parturient montes nascetur ridiculus mus vivamus vestibulum sagittis sapien cum sociis natoque penatibus et magnis dis parturient montes nascetur ridiculus mus etiam vel augue vestibulum",
+  "price": 2245.79,
+  "discount": 12,
+  "category": "Microfono",
+  "image": "teclado.jpg",
+  "stock": 8
+ },
+ {
+  "id": 3,
+  "name": "Monitor",
+  "description": "maecenas tincidunt lacus at velit vivamus vel nulla eget eros elementum pellentesque quisque porta volutpat erat quisque erat eros viverra eget congue eget semper rutrum nulla nunc purus phasellus in felis",
+  "price": 2101.17,
+  "discount": 0,
+  "category": "Auriculares",
+  "image": "Palante.jpg",
+  "stock": 7
+ },
+ {
+  "id": 4,
+  "name": "Luces LED",
+  "description": "turpis a pede posuere nonummy integer non velit donec diam neque vestibulum eget vulputate ut ultrices vel augue vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae donec pharetra magna vestibulum aliquet ultrices erat tortor sollicitudin mi sit amet lobortis",
+  "price": 4855.35,
+  "discount": 36,
+  "category": "Parlante",
+  "image": "monitor1.jpg",
+  "stock": 5
+ },
+ {
+  "id": 5,
+  "name": "Luces LED",
+  "description": "adipiscing molestie hendrerit at vulputate vitae nisl aenean lectus pellentesque eget nunc donec quis orci eget orci vehicula condimentum curabitur in libero ut massa volutpat convallis morbi odio odio elementum eu interdum eu tincidunt in leo",
+  "price": 2143.64,
+  "discount": 10,
+  "category": "Microfono",
+  "image": "camara.jpg",
+  "stock": 8
+ },
+ {
+  "id": 6,
+  "name": "Parlante Xinua",
+  "description": "curabitur gravida nisi at nibh in hac habitasse platea dictumst aliquam augue quam sollicitudin vitae consectetuer eget rutrum at lorem integer tincidunt ante vel ipsum praesent blandit lacinia erat vestibulum sed magna at nunc commodo placerat praesent blandit nam",
+  "price": 3579.81,
+  "discount": 45,
+  "category": "Auriculares",
+  "image": "silla.jpg",
+  "stock": 9
+ },
+ {
+  "id": 7,
+  "name": "Luces LED",
+  "description": "nulla eget eros elementum pellentesque quisque porta volutpat erat quisque erat eros viverra eget congue eget semper rutrum nulla nunc purus phasellus in felis donec semper",
+  "price": 4312.6,
+  "discount": 41,
+  "category": "Microfono",
+  "image": "camara.jpg",
+  "stock": 1
+ },
+ {
+  "id": 8,
+  "name": "Luces LED",
+  "description": "ut massa volutpat convallis morbi odio odio elementum eu interdum eu tincidunt in leo maecenas pulvinar lobortis est phasellus sit amet erat nulla tempus vivamus in felis eu sapien cursus vestibulum proin eu mi nulla ac enim in tempor turpis nec euismod scelerisque quam turpis",
+  "price": 2815.99,
+  "discount": 14,
+  "category": "Teclado",
+  "image": "silla.jpg",
+  "stock": 1
+ },
+ {
+  "id": 9,
+  "name": "Luces LED",
+  "description": "est et tempus semper est quam pharetra magna ac consequat metus sapien ut nunc vestibulum ante ipsum primis",
+  "price": 4684.14,
+  "discount": 27,
+  "category": "Luces",
+  "image": "camara.jpg",
+  "stock": 1
+ },
+ {
+  "id": 10,
+  "name": "Silla Gamer",
+  "description": "lobortis est phasellus sit amet erat nulla tempus vivamus in felis eu sapien cursus vestibulum proin eu mi nulla ac enim in tempor turpis nec euismod scelerisque quam turpis adipiscing lorem vitae mattis nibh ligula nec sem duis aliquam convallis nunc proin at",
+  "price": 1648.93,
+  "discount": 23,
+  "category": "Auriculares",
+  "image": "mouse pad.jpg",
+  "stock": 9
+ },
+ {
+  "id": 11,
+  "name": "Monitor",
+  "description": "ut nunc vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae mauris viverra diam vitae quam suspendisse potenti nullam porttitor",
+  "price": 1442.35,
+  "discount": 41,
+  "category": "Parlante",
+  "image": "silla.jpg",
+  "stock": 3
+ },
+ {
+  "id": 12,
+  "name": "Silla X Soul",
+  "description": "consequat dui nec nisi volutpat eleifend donec ut dolor morbi vel lectus in quam fringilla rhoncus mauris enim leo",
+  "price": 4798.17,
+  "discount": 45,
+  "category": "Auriculares",
+  "image": "mouse pad.jpg",
+  "stock": 7
+ },
+ {
+  "id": 13,
+  "name": "Monitor",
+  "description": "vestibulum vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae nulla dapibus dolor vel est donec odio justo",
+  "price": 1095.48,
+  "discount": 7,
+  "category": "Microfono",
+  "image": "teclado.jpg",
+  "stock": 3
+ },
+ {
+  "id": 14,
+  "name": "Microfono Hyper X",
+  "description": "odio condimentum id luctus nec molestie sed justo pellentesque viverra pede ac diam cras pellentesque volutpat dui maecenas tristique est et tempus semper est quam pharetra magna ac consequat metus sapien ut nunc vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia",
+  "price": 4229.81,
+  "discount": 36,
+  "category": "Luces",
+  "image": "camara.jpg",
+  "stock": 4
+ },
+ {
+  "id": 15,
+  "name": "Silla Gamer",
+  "description": "faucibus cursus urna ut tellus nulla ut erat id mauris vulputate elementum nullam varius nulla facilisi cras non velit nec nisi vulputate nonummy maecenas tincidunt lacus at velit vivamus vel nulla eget eros elementum pellentesque quisque porta volutpat erat quisque erat eros viverra",
+  "price": 1616.75,
+  "discount": 7,
+  "category": "Luces",
+  "image": "microfono.jpg",
+  "stock": 6
+ },
+ {
+  "id": 16,
+  "name": "Camara",
+  "description": "morbi ut odio cras mi pede malesuada in imperdiet et commodo vulputate justo in blandit ultrices enim lorem ipsum dolor sit amet consectetuer adipiscing elit proin interdum",
+  "price": 4575.57,
+  "discount": 15,
+  "category": "Mouse Pad",
+  "image": "monitor1.jpg",
+  "stock": 10
+ },
+ {
+  "id": 17,
+  "name": "Microfono Hyper X",
+  "description": "viverra dapibus nulla suscipit ligula in lacus curabitur at ipsum ac tellus semper interdum mauris",
+  "price": 2156.17,
+  "discount": 32,
+  "category": "Auriculares",
+  "image": "camara.jpg",
+  "stock": 8
+ },
+ {
+  "id": 18,
+  "name": "Luces LED",
+  "description": "dictumst morbi vestibulum velit id pretium iaculis diam erat fermentum justo nec condimentum neque sapien placerat ante",
+  "price": 3266.67,
+  "discount": 6,
+  "category": "Silla Gamer",
+  "image": "monitor1.jpg",
+  "stock": 6
+ },
+ {
+  "id": 19,
+  "name": "Microfono Hyper X",
+  "description": "tempus semper est quam pharetra magna ac consequat metus sapien ut nunc vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae mauris viverra diam vitae quam suspendisse potenti nullam porttitor lacus at turpis donec posuere metus",
+  "price": 2844.12,
+  "discount": 3,
+  "category": "Teclado",
+  "image": "Reddragon Zeus-X.jpg",
+  "stock": 1
+ },
+ {
+  "id": 20,
+  "name": "Monitor",
+  "description": "ac consequat metus sapien ut nunc vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae mauris viverra diam vitae quam",
+  "price": 2918.81,
+  "discount": 37,
+  "category": "Silla Gamer",
+  "image": "camara.jpg",
+  "stock": 0
+ }
 ]

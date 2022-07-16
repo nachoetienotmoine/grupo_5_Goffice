@@ -22,8 +22,11 @@ const productos = {
     EditProducto: (req, res) => {
         res.render("prodDetalle")
     },
-    deleteProducto: (req, res) => {
-        res.render("prodDetalle")
+    delete: function (id) {
+        let allProducts = this.findAll();
+        let finalProducts = allProducts.filter(oneProduct => oneProduct.id !== id);
+        fs.writeFileSync(this.fileName, JSON.stringify(finalProducts, null, ' ')); 
+        return true;
     },
 
     // completar gonzalo//
