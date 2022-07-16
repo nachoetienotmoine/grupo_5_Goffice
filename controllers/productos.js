@@ -18,13 +18,13 @@ const productos = {
         return 1;
         
     },
-    list: (req, res) => {
+    listar: (req, res) => {
         res.render("prodList")
     },
     crearProductos: (req, res) => {
         res.render("prodC")
     },
-    DetalleProducto: function (id){
+    detalleProducto: function (id){
         let allUsers = this.findAll();
         let userFound = allUsers.find(oneUser =>
             oneUser.id === id);
@@ -42,13 +42,10 @@ const productos = {
         
     }
     ,
-    EditProducto: (req, res) => {
+    editProducto: (req, res) => {
         res.render("prodDetalle")
     },
-    deleteProducto: (req, res) => {
-        res.render("prodDetalle")
-    },
-
+   
     // completar gonzalo//
    
 }
