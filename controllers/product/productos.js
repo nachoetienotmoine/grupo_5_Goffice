@@ -1,9 +1,4 @@
 
-const fs = require('fs');
-const path = require('path');
-
-const productFilePath = path.join(__dirname, '../data/product.json');
-const product = JSON.parse(fs.readFileSync(productFilePath, 'utf-8'));
 
 const productos = {
     // listar: (req, res) => {
@@ -44,8 +39,11 @@ const productos = {
     EditProducto: (req, res) => {
         res.render("prodCrud")
     },
-    // completar nacho //
-    // completar gonzalo//
+    deleteProducto: (req, res) => {
+        let idProduct = req.params.idProduct
+        res.send(idProduct)
+    },
+    // completar gonzalo (Gonza ya instale Method-override - >nacho)//
 }
 
 module.exports = productos;
