@@ -1,9 +1,5 @@
 
-const fs = require('fs');
-const path = require('path');
 
-const productFilePath = path.join(__dirname, '../data/product.json');
-const product = JSON.parse(fs.readFileSync(productFilePath, 'utf-8'));
 
 const productos = {
     // listar: (req, res) => {
@@ -28,24 +24,23 @@ const productos = {
     // },
 
     list: (req, res) => {
-        res.render("productos", { producto : product})
+        res.render("prodList")
     },
     crearProductos: (req, res) => {
-        res.render("prodCRUD",)
+        res.render("prodC")
     },
-
-
     DetalleProducto: (req, res) => {
-        res.render("prodCrud",)
+        res.render("prodDetalle")
     },
     crearProductosPost: (req, res) => {
-        res.redirect("prodCRUD",)
+        res.redirect("prodC")
     },
     EditProducto: (req, res) => {
-        res.render("prodCrud")
+        res.render("prodDetalle")
     },
-    // completar nacho //
+    
     // completar gonzalo//
+    // completar nacho //
 }
 
 module.exports = productos;
