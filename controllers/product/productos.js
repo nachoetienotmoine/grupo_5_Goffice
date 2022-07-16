@@ -2,8 +2,8 @@
 const fs = require('fs');
 const path = require('path');
 
-const booksFilePath = path.join(__dirname, '../data/product.json');
-const product = JSON.parse(fs.readFileSync(booksFilePath, 'utf-8'));
+const productFilePath = path.join(__dirname, '../data/product.json');
+const product = JSON.parse(fs.readFileSync(productFilePath, 'utf-8'));
 
 const productos = {
     // listar: (req, res) => {
