@@ -13,7 +13,7 @@ router.get("/create", productosController.crearProductos);
 router.get("/:id", productosController.DetalleProducto)
 router.post("/", productosController.crearProductosPost);
 router.get("/:id/edit", productosController.EditProducto);
-router.delete("/delete/:idProduct", productosController.deleteProducto);
+router.get("/delete/:idProduct", productosController.deleteProducto);
 // completar  gonzalo//
 
 module.exports = router;
