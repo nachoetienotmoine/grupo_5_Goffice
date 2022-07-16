@@ -17,13 +17,13 @@ const productos = {
         }
         return 1;
     },
-    list: (req, res) => {
+    listar: (req, res) => {
         res.render("prodList")
     },
     crearProductos: (req, res) => {
         res.render("prodC")
     },
-    DetalleProducto: function (id){
+    detalleProducto: function (id){
         let allUsers = this.findAll();
         let userFound = allUsers.find(oneUser =>
             oneUser.id === id);
@@ -41,9 +41,12 @@ const productos = {
         
     }
     ,
-    EditProducto: (req, res) => {
+    editProducto: (req, res) => {
         res.render("prodDetalle")
     },
+<<<<<<< HEAD
+   
+=======
     deleteProducto: function (id) {
         let allProducts = this.findAll();
         let finalProducts = allProducts.filter(oneProduct => oneProduct.id !== id);
@@ -51,6 +54,7 @@ const productos = {
         return true;
     },
 
+>>>>>>> 6970bccb9bc6bbbfd49629f0442ee2740206f182
     // completar gonzalo//
    
 }
