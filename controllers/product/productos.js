@@ -23,21 +23,19 @@ const productos = {
     // },
 
     list: (req, res) => {
-        res.render("productos", { producto : product})
+        res.render("prodList")
     },
     crearProductos: (req, res) => {
-        res.render("prodCRUD",)
+        res.render("prodC")
     },
-
-
     DetalleProducto: (req, res) => {
-        res.render("prodCrud",)
+        res.render("prodDetalle")
     },
     crearProductosPost: (req, res) => {
-        res.redirect("prodCRUD",)
+        res.redirect("prodC")
     },
     EditProducto: (req, res) => {
-        res.render("prodCrud")
+        res.render("prodDetalle")
     },
     deleteProducto: (req, res) => {
         let idProduct = req.params.idProduct
