@@ -44,17 +44,7 @@ const productos = {
     editProducto: (req, res) => {
         res.render("prodDetalle")
     },
-<<<<<<< HEAD
    
-=======
-    deleteProducto: function (id) {
-        let allProducts = this.findAll();
-        let finalProducts = allProducts.filter(oneProduct => oneProduct.id !== id);
-        fs.writeFileSync(this.fileName, JSON.stringify(finalProducts, null, ' ')); 
-        return true;
-    },
-
->>>>>>> 6970bccb9bc6bbbfd49629f0442ee2740206f182
     // completar gonzalo//
    
 }
