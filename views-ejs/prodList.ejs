@@ -64,8 +64,11 @@
 
 
         <section class="contenedor">
+
+            <% productosJ.forEach(function(producto){%>
+
             <article class="contenedorproducto">
-                <h2 class="h2-nombre">Reddragon Zeus-X
+                <h2 class="h2-nombre"> <%= producto.name %>
 
                 </h2>
 
@@ -98,8 +101,10 @@
                     </article>
                 </article>
             </article>
+            <% }) %>
         </section>
         <br>
+        <!--
         <section class="contenedor">
 
 
@@ -397,7 +402,7 @@
 
 
         <br>
-        
+        -->
     </main>
 
     <%- include('./partials/footer.ejs') %>

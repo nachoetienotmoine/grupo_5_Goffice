@@ -1,6 +1,8 @@
 
 const fs = require("fs")
-
+const path = require('path');
+const productoFile = path.join(__dirname, '../data/product.json');
+const productosJ = JSON.parse(fs.readFileSync(productoFile, 'utf-8'));
 const productos = {
     fileName: './data/product.json',
     getData: function () {
@@ -9,53 +11,53 @@ const productos = {
     findAll: function () {
         return this.getData();
     },
-    generateId : function (){
+    generateId: function () {
         let allUsers = this.findAll();
         let lastUser = allUsers.pop();
-        if(lastUser) {
+        if (lastUser) {
             return lastUser.id + 1
         }
         return 1;
     },
     listar: (req, res) => {
-        res.render("prodList")
+        res.render("prodList" , {productosJ: productosJ})
     },
     crearProductos: (req, res) => {
         res.render("prodC")
     },
-    detalleProducto: function (id){
+    detalleProducto: function (id) {
         let allUsers = this.findAll();
         let userFound = allUsers.find(oneUser =>
             oneUser.id === id);
         return userFound;
     },
-    crearProductosPost: function(userData) {
+    crearProductosPost: function (userData) {
         let allUsers = this.findAll();
         let newUser = {
             id: this.generateId(),
             ...userData
         }
         allUsers.push(newUser);
-        fs.writeFileSync(this.fileName, JSON.stringify(allUsers , null , ' '));
+        fs.writeFileSync(this.fileName, JSON.stringify(allUsers, null, ' '));
         return "Producto agregado";
-        
-    }
-    ,
+
+    },
+
     editProducto: (req, res) => {
         res.render("prodDetalle")
     },
-   
+
     deleteProducto: function (id) {
         let allProducts = this.findAll();
         let finalProducts = allProducts.filter(oneProduct => oneProduct.id !== id);
-        fs.writeFileSync(this.fileName, JSON.stringify(finalProducts, null, ' ')); 
+        fs.writeFileSync(this.fileName, JSON.stringify(finalProducts, null, ' '));
         return true;
     },
 
     // completar gonzalo//
-   
+
 }
- 
+
 
 module.exports = productos;
 // listar: (req, res) => {
