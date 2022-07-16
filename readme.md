@@ -82,7 +82,7 @@ Diego Ignacio Etienot Moine :
 Soy de Catamarca y tengo 31 años. Contador Público por la UNC, pero con aspiraciones de llegar lejos en desarrollo de software mediante una carrera de grado o pregrado en UTN. He completado cursos formativos en JavaScript, Diseño Web, HTML y CSS como adicionales al cursado actual en DigitalHouse. 
 Entre los principales sitios de referencia para tomar ideas puedo nombrar "www.logitechstore.com.ar" y "www.gamingcity.com.ar" por la organización de contenido y presentación hacia el cliente.
 
-Mails para Dailys meet:
+Mails para Dailys meet:  =>
 -----------------------
 
 andreozzigonzalo@gmail.com
