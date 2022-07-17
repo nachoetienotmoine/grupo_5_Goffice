@@ -65,10 +65,10 @@
 
         <section class="contenedor">
 
-            <% productosJ.forEach(function(producto){%>
+            <% for (let i = 0; i < productosJ.length ; i++) {%>
 
             <article class="contenedorproducto">
-                <h2 class="h2-nombre"> <%= producto.name %>
+                <h2 class="h2-nombre"> <%= productosJ[i].name %>
 
                 </h2>
 
@@ -76,7 +76,7 @@
 
                     <article class="imagen-nombre-main">
                             <div class="imagen-div">
-                                <img src="images/Reddragon Zeus-X.jpg" alt="Producto" id="img-main">
+                                <img src="images/<%= productosJ[i].image; %>" alt="Producto" id="img-main">
                             </div>
 
                         <div class="descriptions-main">
@@ -87,11 +87,11 @@
 
                         <div class="button-box">
                             <button class="button-main" id="buttonmain">
-                                En stock
+                                <%= productosJ[i].stock; %>
                             </button>
 
                             <button class="button-main">
-                                $5000
+                                $<%= Math.round(productosJ[i].price - productosJ[i].discount/100 * productosJ[i].price); %>
                             </button>
 
                             <button class="button-main">
@@ -101,7 +101,7 @@
                     </article>
                 </article>
             </article>
-            <% }) %>
+            <% } %>
         </section>
         <br>
         <!--
