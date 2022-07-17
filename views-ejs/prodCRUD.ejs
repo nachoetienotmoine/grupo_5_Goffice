@@ -51,35 +51,42 @@
                 <br>
 
                 <article class="description-productPC">
-                    <form action="/productos" id="productForm" method="POST">
+                    <form action="/productos" id="productForm" method="POST" enctype="multipart/form-data">
 
                         <div class="boxpC">
-                            <label for="nombre">
-                                <H2>Nombre</H2>
+                            <label name="name">
+                                <H2>Name</H2>
                             </label>
 
-                            <textarea name="name" id="nombrePCrud" required minlength="6"></textarea>
+                            <input type="text" name="name" id="nombrePCrud" required minlength="6">
                             <i class="far fa-edit"></i>
                         </div>
                         <div class="boxpC">
-                            <label for="nombre">
+                            <label name="description">
                                 <h2>Descripcion</h2>
                             </label>
 
-                            <textarea name="description" id="nombrePCrud" required></textarea>
+                            <input type="text" name="description" id="nombrePCrud" required>
                             <i class="far fa-edit"></i>
                         </div>
-
                         <div class="boxpC">
-                            <label for="nombre">
+                            <label name="discount">
+                                <h2>Discount</h2>
+                            </label>
+
+                            <input type="text" name="discount" id="nombrePCrud" required>
+                            <i class="far fa-edit"></i>
+                        </div>
+                        <div class="boxpC">
+                            <label name="price">
                                 <h2>Precio</h2>
                             </label>
 
-                            <textarea name="price" id="nombrePCrud" required></textarea>
+                            <input type="text" name="price" id="nombrePCrud" required>
                             <i class="far fa-edit"></i>
                         </div>
                         <div class="boxpC">
-                            <label for="Stock">
+                            <label name="stock">
                                 <h2>Stock</h2>
                             </label>
 
