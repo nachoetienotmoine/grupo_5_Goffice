@@ -14,7 +14,7 @@ router.get("/:id", productosController.detalleProducto);
 router.post("/", productosController.crearProductosPost);
 router.get("/:id/edit", productosController.editProducto);
 router.get("/delete/:idProduct", productosController.deleteProducto);
-router.put("/:id/actualizar", productosController.actulizar);
+router.put("/:id/actualizar", productosController.actualizar);
 
 
 

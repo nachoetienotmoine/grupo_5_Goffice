@@ -1,4 +1,5 @@
 
+const res = require("express/lib/response");
 const fs = require("fs");
 const path = require('path');
 const productoFile = path.join(__dirname, '../data/product.json');
@@ -66,9 +67,14 @@ const productosController = {
         let finalProducts = allProducts.filter(oneProduct => oneProduct.id !== id);
         fs.writeFileSync(this.fileName, JSON.stringify(finalProducts, null, ' '));
         res.redirect("prodList")
-    }
+    },
 
-    // completar gonzalo//
+
+    actualizar: function (req, res){
+        res.send("actualizado");
+    },
+
+    
 
 }
 
