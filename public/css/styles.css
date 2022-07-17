@@ -2545,3 +2545,9 @@ border-style:dotted;
 .descriptions-main > .descriptionsP {
     height: 100%;
 }
+  #discount:hover {
+    transform: scale(135%);
+    cursor: pointer;
+    }
+    
+    
