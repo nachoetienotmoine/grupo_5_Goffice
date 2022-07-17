@@ -10,10 +10,12 @@ const productosController = require('../controllers/productosController')
 
 router.get('/listar', productosController.listar);
 router.get("/create", productosController.crearProductos);
-router.get("/:id", productosController.detalleProducto)
+router.get("/:id", productosController.detalleProducto);
 router.post("/", productosController.crearProductosPost);
 router.get("/:id/edit", productosController.editProducto);
 router.get("/delete/:idProduct", productosController.deleteProducto);
-// completar  gonzalo//
+router.put("/:id/actualizar", productosController.actulizar);
+
+
 
 module.exports = router;
