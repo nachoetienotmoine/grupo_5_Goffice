@@ -53,10 +53,8 @@ const productosController = {
         fs.writeFileSync(productoFile, JSON.stringify(productosJ), 'utf-8');
 
         //finally, you got kicked back to products for good.
-        res.redirect("prodList")
+        res.redirect("prodList");
     },
-
-
 
 
     editProducto: (req, res) => {
@@ -65,9 +63,9 @@ const productosController = {
 
     deleteProducto: function (id) {
         let allProducts = this.findAll();
-        let finalProducts = allProducts.filter (oneProduct => oneProduct.id !== id);
+        let finalProducts = allProducts.filter(oneProduct => oneProduct.id !== id);
         fs.writeFileSync(this.fileName, JSON.stringify(finalProducts, null, ' '));
-        return true;
+        res.redirect("prodList")
     }
 
     // completar gonzalo//
