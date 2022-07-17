@@ -24,7 +24,7 @@
   "name": "Parlante Xinua",
   "description": "este parlante suena las cumbias mas perronas del condado",
   "price": 2101.17,
-  "discount": 0,
+  "discount": 5,
   "category": "Parlante",
   "image": "Parlante.jpg",
   "stock": 7
@@ -88,14 +88,5 @@
   "category": "Microfono",
   "image": "microfono.jpg",
   "stock": 1
- },
- {
-  "id": 10
- },
- {
-  "id": 11,
-  "name": "nelson",
-  "category": "pèrron",
-  "price": 3535466
  }
 ]
