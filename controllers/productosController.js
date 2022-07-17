@@ -23,7 +23,7 @@ const productosController = {
         res.render("prodList", { productosJ: productosJ })
     },
     crearProductos: (req, res) => {
-        res.render("prodC")
+        res.render("prodCRUD")
     },
     detalleProducto: function (id) {
         let allUsers = this.findAll();
@@ -31,33 +31,46 @@ const productosController = {
             oneUser.id === id);
         return userFound;
     },
-    crearProductosPost: function (userData) {
-        let allUsers = this.findAll();
-        let newUser = {
-            id: this.generateId(),
-            ...userData
-        }
-        allUsers.push(newUser);
-        fs.writeFileSync(this.fileName, JSON.stringify(allUsers, null, ' '));
-        res.redirect("prodList");
+    crearProductosPost: (req , res) => {
 
+        // I read inputs and then store them in variables.
+        const name = req.body.name;
+        const price = req.body.price;
+        const discount = req.body.discount;
+        const category = req.body.category;
+        const description = req.body.description;
+
+
+        // got them fused in a Object Literal;
+        const fuseData = {
+            id: productosJ.length + 1,
+            name: name, price: price, discount: discount, category: category, description: description
+        };
+
+        
+        // 	Insert them, then they got sent away to the database.
+        products.push(fuseData);
+        fs.writeFileSync(productsFilePath, JSON.stringify(products), 'utf-8');
+        console.log(req.file.image, req.body.image);
+        //finally, you got kicked back to products for good.
+        res.redirect('/prodList');
     },
 
     editProducto: (req, res) => {
         res.render("prodDetalle")
     },
 
-    deleteProducto: function (id) {
-        let allProducts = this.findAll();
-        let finalProducts = allProducts.filter(oneProduct => oneProduct.id !== id);
-        fs.writeFileSync(this.fileName, JSON.stringify(finalProducts, null, ' '));
-        return true;
-    },
+deleteProducto: function (id) {
+    let allProducts = this.findAll();
+    let finalProducts = allProducts.filter(oneProduct => oneProduct.id !== id);
+    fs.writeFileSync(this.fileName, JSON.stringify(finalProducts, null, ' '));
+    return true;
+},
 
     // completar gonzalo//
 
 }
-
+console.log(productosController.crearProductosPost({ name: "nelson", category: "pèrron", price: 3535466 }))
 
 module.exports = productosController;
 // listar: (req, res) => {

@@ -50,13 +50,13 @@
                 <br>
                 
                 <article class="description-productPC">
-                    <form action="prodList" id="productForm">
+                    <form action="/productos" id="productForm" method="POST">
                         <div class="boxpC">
                             <label for="nombre">
                                 <H2>Nombre</H2>
                             </label>
 
-                            <textarea name="nombre" id="nombrePCrud" required minlength="6"></textarea>
+                            <textarea name="name" id="nombrePCrud" required minlength="6" type="text"></textarea>
                             <i class="far fa-edit"></i>
                         </div>
                         <div class="boxpC">
@@ -64,23 +64,16 @@
                                 <h2>Descripcion</h2>
                             </label>
 
-                            <textarea name="nombre" id="nombrePCrud" required></textarea>
+                            <textarea name="description" id="nombrePCrud" required></textarea>
                             <i class="far fa-edit"></i>
                         </div>
-                        <div class="boxpC">
-                            <label for="nombre">
-                                <h2>Id</h2>
-                            </label>
-
-                            <textarea name="nombre" id="nombrePCrud" required></textarea>
-                            <i class="far fa-edit"></i>
-                        </div>
+                        
                         <div class="boxpC">
                             <label for="nombre">
                                 <h2>Precio</h2>
                             </label>
 
-                            <textarea name="nombre" id="nombrePCrud" required></textarea>
+                            <textarea name="price" id="nombrePCrud" required></textarea>
                             <i class="far fa-edit"></i>
                         </div>
                         <div class="boxpC">
@@ -88,7 +81,7 @@
                                 <h2>Stock</h2>
                             </label>
 
-                            <select name="nombre" id="nombrePCrud2" required>
+                            <select name="stock" id="nombrePCrud2" required>
                                 <option value="0">Out of Stock</option>
                                 <option value="1">1</option>
                                 <option value="2">2</option>
