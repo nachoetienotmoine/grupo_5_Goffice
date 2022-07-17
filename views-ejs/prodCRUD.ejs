@@ -31,7 +31,8 @@
                 </div>
                 <div class="detail-imagePC">
                     <img id="general-detail-imagePC" src="images/Reddragon Zeus-X.jpg" alt="articulo">
-                    <div class="iconosPC"><i class="far fa-edit" id="iconoPC"></i><i class="far fa-edit" id="iconoPC2"></i></div>
+                    <div class="iconosPC"><i class="far fa-edit" id="iconoPC"></i><i class="far fa-edit"
+                            id="iconoPC2"></i></div>
                     <article class="nav-image-detail">
                         <img id="particular-detail-image" src="images/Reddragon Zeus-X.jpg" alt="articulo">
                         <img id="particular-detail-image" src="images/Reddragon Zeus-X.jpg" alt="articulo">
@@ -48,77 +49,78 @@
                     <h2>Detalle de Producto</h2>
                 </div>
                 <br>
-                
+
                 <article class="description-productPC">
                     <form action="/productos" id="productForm" method="POST">
 
-                         <div class="boxpC">
-                               <label for="nombre">
-                                  <H2>Nombre</H2>
-                              </label>
+                        <div class="boxpC">
+                            <label for="nombre">
+                                <H2>Nombre</H2>
+                            </label>
 
-                              <textarea name="name" id="nombrePCrud" required minlength="6"></textarea>
-                              <i class="far fa-edit"></i>
-                          </div>
-                           <div class="boxpC">
-                             <label for="nombre">
-                                  <h2>Descripcion</h2>
-                              </label>
+                            <textarea name="name" id="nombrePCrud" required minlength="6"></textarea>
+                            <i class="far fa-edit"></i>
+                        </div>
+                        <div class="boxpC">
+                            <label for="nombre">
+                                <h2>Descripcion</h2>
+                            </label>
 
-                              <textarea name="description" id="nombrePCrud" required></textarea>
-                              <i class="far fa-edit"></i>
-                         </div>
-                        
-                            <div class="boxpC">
-                               <label for="nombre">
-                                   <h2>Precio</h2>
-                               </label>
+                            <textarea name="description" id="nombrePCrud" required></textarea>
+                            <i class="far fa-edit"></i>
+                        </div>
 
-                               <textarea name="price" id="nombrePCrud" required></textarea>
-                               <i class="far fa-edit"></i>
-                         </div>
-                            <div class="boxpC">
-                                <label for="Stock">
-                                    <h2>Stock</h2>
-                             </label>
+                        <div class="boxpC">
+                            <label for="nombre">
+                                <h2>Precio</h2>
+                            </label>
 
-                                <select name="stock" id="nombrePCrud2" required>
-                                    <option value="0">Out of Stock</option>
-                                    <option value="1">1</option>
-                                    <option value="2">2</option>
-                                   <option value="3">3</option>
-                                    <option value="4">4</option>
-                                   <option value="5">5</option>
-                                   <option value="6">6</option>
-                                   <option value="7">7</option>
-                                   <option value="8">8</option>
-                                    <option value="9">9</option>
-                                    <option value="10">10</option>
-                                
-                               </select>
-                               <i class="far fa-edit"></i>
-                         </div>
+                            <textarea name="price" id="nombrePCrud" required></textarea>
+                            <i class="far fa-edit"></i>
+                        </div>
+                        <div class="boxpC">
+                            <label for="Stock">
+                                <h2>Stock</h2>
+                            </label>
+
+                            <select name="stock" id="nombrePCrud2" required>
+                                <option value="0">Out of Stock</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+
+                            </select>
+                            <i class="far fa-edit"></i>
+                        </div>
                         <article class="precio-envio-detail">
-                         <div class="comprar-detailPC">
-                             <button type="submit" class="submit-cart-detail">Guardar Cambios</button>
-                         </div>
-                    
+                            <div class="comprar-detailPC">
+                                <button type="submit" class="submit-cart-detail">Guardar Cambios</button>
+                            </div>
+
                         </article>
                     </form>
-                    
+
                 </article>
-                <br><article class="precio-envio-detail">
-                        <div class="return-detail">
-                            <button type="submit" class="return-cart-detail">Eliminar</button>
-                        </div>
-                    </article>
+                <br>
+                <article class="precio-envio-detail">
+                    <div class="return-detail">
+                        <button type="submit" class="return-cart-detail">Eliminar</button>
+                    </div>
+                </article>
             </section>
             <br>
             <br>
 
             <br>
-           
-           
+
+
         </main>
         <!-- footer -->
         <%- include('./partials/footer')%>

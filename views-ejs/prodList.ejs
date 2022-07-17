@@ -80,22 +80,22 @@
                         <article class="imagen-nombre-main">
                             <div class="imagen-div">
                                 <img src="images/<%= productosJ[i].image; %>" alt="Producto" id="img-main">
-<div class="descuento"><span id="discount" data-action="cart-can"
-                                    class="badge rounded-circle">
-                                    <%= productosJ[i].discount; %>%
-                                </span>
+                                <div class="descuento"><span id="discount" data-action="cart-can"
+                                        class="badge rounded-circle">
+                                        <%= productosJ[i].discount; %>%
+                                    </span>
+                                </div>
                             </div>
-                            </div>
-                            
+
                             <div class="descriptions-main">
-                                
-                                    <%= productosJ[i].description; %>
-                            
+
+                                <%= productosJ[i].description; %>
+
                             </div>
 
                             <div class="button-box">
                                 <button class="button-main" id="buttonmain">
-                                    Stock : <%= productosJ[i].stock; %>
+                                    <%= productosJ[i].category; %>
                                 </button>
 
                                 <button class="button-main">
@@ -104,7 +104,7 @@
                                 </button>
 
                                 <button class="button-main" id="buttonmain">
-                                    <%= productosJ[i].category; %>
+                                    Stock : <%= productosJ[i].stock; %>
                                 </button>
 
 
