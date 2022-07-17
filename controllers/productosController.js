@@ -21,17 +21,18 @@ const productosController = {
 
         res.redirect("prodList")
     },
+  
 
     editProducto: (req, res) => {
         res.render("prodDetalle")
     },
 
-deleteProducto: function (id) {
+    deleteProducto: function (id) {
     let allProducts = this.findAll();
     let finalProducts = allProducts.filter(oneProduct => oneProduct.id !== id);
     fs.writeFileSync(this.fileName, JSON.stringify(finalProducts, null, ' '));
     return true;
-},
+    }
 
     // completar gonzalo//
 
