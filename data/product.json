@@ -2,7 +2,7 @@
  {
   "id": 1,
   "name": "Monitor",
-  "description": "   re buenoeste monitor es re buenoeste monitor es re buenoeste monitor es re buenoeste monitor es re buenoeste monitor es re buenoeste moni ",
+  "description": "es re piola este monitor , no muestra el historial de busqueda del browser ",
   "price": 1459.55,
   "discount": 42,
   "category": "monitor",
@@ -52,7 +52,7 @@
  {
   "id": 6,
   "name": "Silla Gamer",
-  "description": " La silla mas comodota para tus nalgotas bebe",
+  "description": " La silla mas comoda para tus nalgotas bebe",
   "price": 3579.81,
   "discount": 45,
   "category": "Silla",
@@ -82,7 +82,7 @@
  {
   "id": 9,
   "name": "Microfono Hyper X",
-  "description": "El microfono con mas autotune para maria becerra",
+  "description": "El microfono con mas autotune que maria becerra",
   "price": 4684.14,
   "discount": 27,
   "category": "Microfono",
