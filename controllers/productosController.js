@@ -20,7 +20,7 @@ const productosController = {
         return 1;
     },
     listar: (req, res) => {
-        res.render("prodList" , {productosJ: productosJ})
+        res.render("prodList", { productosJ: productosJ })
     },
     crearProductos: (req, res) => {
         res.render("prodC")
@@ -39,7 +39,7 @@ const productosController = {
         }
         allUsers.push(newUser);
         fs.writeFileSync(this.fileName, JSON.stringify(allUsers, null, ' '));
-        return "Producto agregado";
+        res.redirect("prodList");
 
     },
 

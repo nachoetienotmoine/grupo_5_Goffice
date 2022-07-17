@@ -2,7 +2,7 @@
  {
   "id": 1,
   "name": "Monitor",
-  "description": "vivamus in felis eu sapien cursus vestibulum proin eu mi nulla ac enim in tempor turpis nec euismod scelerisque quam turpis adipiscing lorem vitae mattis nibh ligula nec sem",
+  "description": "   re buenoeste monitor es re buenoeste monitor es re buenoeste monitor es re buenoeste monitor es re buenoeste monitor es re buenoeste moni ",
   "price": 1459.55,
   "discount": 42,
   "category": "monitor",
@@ -12,7 +12,7 @@
  {
   "id": 2,
   "name": "Camara",
-  "description": "cras in purus eu magna vulputate luctus cum sociis natoque penatibus et magnis dis parturient montes nascetur ridiculus mus vivamus vestibulum sagittis sapien cum sociis natoque penatibus et magnis dis parturient montes nascetur ridiculus mus etiam vel augue vestibulum",
+  "description": "esta camara es mejor que la de iphone",
   "price": 2245.79,
   "discount": 12,
   "category": "camara",
@@ -22,17 +22,17 @@
  {
   "id": 3,
   "name": "Parlante Xinua",
-  "description": "maecenas tincidunt lacus at velit vivamus vel nulla eget eros elementum pellentesque quisque porta volutpat erat quisque erat eros viverra eget congue eget semper rutrum nulla nunc purus phasellus in felis",
+  "description": "este parlante suena las cumbias mas perronas del condado",
   "price": 2101.17,
   "discount": 0,
   "category": "Parlante",
-  "image": "Palante.jpg",
+  "image": "Parlante.jpg",
   "stock": 7
  },
  {
   "id": 4,
   "name": "Luces LED",
-  "description": "turpis a pede posuere nonummy integer non velit donec diam neque vestibulum eget vulputate ut ultrices vel augue vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae donec pharetra magna vestibulum aliquet ultrices erat tortor sollicitudin mi sit amet lobortis",
+  "description": "Las luces mas gamers del mercado , anti chicas",
   "price": 4855.35,
   "discount": 36,
   "category": "Luces",
@@ -42,7 +42,7 @@
  {
   "id": 5,
   "name": "mouse pad",
-  "description": "adipiscing molestie hendrerit at vulputate vitae nisl aenean lectus pellentesque eget nunc donec quis orci eget orci vehicula condimentum curabitur in libero ut massa volutpat convallis morbi odio odio elementum eu interdum eu tincidunt in leo",
+  "description": "El mouse pad mas comodo para tu muñequita bebe",
   "price": 2143.64,
   "discount": 10,
   "category": "pad",
@@ -52,7 +52,7 @@
  {
   "id": 6,
   "name": "Silla Gamer",
-  "description": "curabitur gravida nisi at nibh in hac habitasse platea dictumst aliquam augue quam sollicitudin vitae consectetuer eget rutrum at lorem integer tincidunt ante vel ipsum praesent blandit lacinia erat vestibulum sed magna at nunc commodo placerat praesent blandit nam",
+  "description": " La silla mas comodota para tus nalgotas bebe",
   "price": 3579.81,
   "discount": 45,
   "category": "Silla",
@@ -62,7 +62,7 @@
  {
   "id": 7,
   "name": "teclado",
-  "description": "nulla eget eros elementum pellentesque quisque porta volutpat erat quisque erat eros viverra eget congue eget semper rutrum nulla nunc purus phasellus in felis donec semper",
+  "description": " teclado , nada fuera de lo normal",
   "price": 4312.6,
   "discount": 41,
   "category": "teclado",
@@ -72,7 +72,7 @@
  {
   "id": 8,
   "name": "Reddragon Zeus-X",
-  "description": "ut massa volutpat convallis morbi odio odio elementum eu interdum eu tincidunt in leo maecenas pulvinar lobortis est phasellus sit amet erat nulla tempus vivamus in felis eu sapien cursus vestibulum proin eu mi nulla ac enim in tempor turpis nec euismod scelerisque quam turpis",
+  "description": "auriculares VIP del grupo 5",
   "price": 2815.99,
   "discount": 14,
   "category": "Auriculares",
@@ -82,7 +82,7 @@
  {
   "id": 9,
   "name": "Microfono Hyper X",
-  "description": "est et tempus semper est quam pharetra magna ac consequat metus sapien ut nunc vestibulum ante ipsum primis",
+  "description": "El microfono con mas autotune para maria becerra",
   "price": 4684.14,
   "discount": 27,
   "category": "Microfono",
