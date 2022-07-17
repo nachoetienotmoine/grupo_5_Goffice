@@ -1,7 +1,9 @@
 const express = require('express');
 const router = express.Router();
-const path = require('path');
 
-router.get('/', (req, res) => res.render(path.join(__dirname, '../views-ejs/detalle.ejs')));
+const detalleController = require('../controllers/detalleController');
+
+router.get('/', detalleController.index);
 
 module.exports = router;
+

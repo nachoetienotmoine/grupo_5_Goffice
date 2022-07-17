@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const productosController = require('../controllers/productos')
+const productosController = require('../controllers/productosController')
 
 
 // router.post('/', productosController.agregarProducto);
