@@ -10,14 +10,11 @@ const routersProdList = require('./routers/prodListApi');
 const routersProductos = require('./routers/productos')
 const routersProdCRUD = require('./routers/prodCRUDApi');
 const methodOverride = require('method-override');
-
 const publicPath = path.resolve(__dirname, './public');
-app.use(express.static(publicPath));
-// instalandoEJS --->npm install ejs //
 
+app.use(express.static(publicPath));
 app.set("view engine", "ejs");
 app.set('views', __dirname + '/views-ejs');
-
 app.use('/registro', routersRegister);
 app.use('/detalle', routersDetalle);
 app.use('/carrito', routersCarrito);
