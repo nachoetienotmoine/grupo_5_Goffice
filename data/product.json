@@ -1,1 +1,82 @@
-[{"id":1,"name":"Monitor","description":"es re piola este monitor , no muestra el historial de busqueda del browser ","price":1459.55,"discount":42,"category":"monitor","image":"monitor1.jpg","stock":6},{"id":2,"name":"Camara","description":"esta camara es mejor que la de iphone","price":2245.79,"discount":12,"category":"camara","image":"camara.jpg","stock":8},{"id":3,"name":"Parlante Xinua","description":"este parlante suena las cumbias mas perronas del condado","price":2101.17,"discount":5,"category":"Parlante","image":"Parlante.jpg","stock":7},{"id":4,"name":"Luces LED","description":"Las luces mas gamers del mercado , anti chicas","price":4855.35,"discount":36,"category":"Luces","image":"luces.jpg","stock":5},{"id":5,"name":"mouse pad","description":"El mouse pad mas comodo para tu muñequita bebe","price":2143.64,"discount":10,"category":"pad","image":"mouse pad.jpg","stock":8},{"id":6,"name":"Silla Gamer supergamer!!","description":" La silla mas comoda para tus nalgotas bebe","price":3579,"discount":"45","category":"Silla","image":"silla.jpg","stock":9},{"id":7,"name":"teclado","description":" teclado , nada fuera de lo normal","price":4312.6,"discount":41,"category":"teclado","image":"teclado.jpg","stock":1},{"id":8,"name":"Reddragon Zeus-X","description":"auriculares VIP del grupo 5","price":2815.99,"discount":14,"category":"Auriculares","image":"Reddragon Zeus-X.jpg","stock":1},{"id":9,"name":"Microfono Hyper X","description":"El microfono con mas autotune que maria becerra","price":4684.14,"discount":27,"category":"Microfono","image":"microfono.jpg","stock":1}]
+[{
+    "id": 1,
+    "name": "Monitor",
+    "description": "es re piola este monitor , no muestra el historial de busqueda del browser ",
+    "price": 1459.55,
+    "discount": 42,
+    "category": "monitor",
+    "image": "monitor1.jpg",
+    "stock": 6
+}, {
+    "id": 2,
+    "name": "Camara",
+    "description": "esta camara es mejor que la de iphone",
+    "price": 2245.79,
+    "discount": 12,
+    "category": "camara",
+    "image": "camara.jpg",
+    "stock": 8
+}, {
+    "id": 3,
+    "name": "Parlante Xinua",
+    "description": "este parlante suena las cumbias mas perronas del condado",
+    "price": 2101.17,
+    "discount": 5,
+    "category": "Parlante",
+    "image": "Parlante.jpg",
+    "stock": 7
+}, {
+    "id": 4,
+    "name": "Luces LED",
+    "description": "Las luces mas gamers del mercado , anti chicas",
+    "price": 4855.35,
+    "discount": 36,
+    "category": "Luces",
+    "image": "luces.jpg",
+    "stock": 5
+}, {
+    "id": 5,
+    "name": "mouse pad",
+    "description": "El mouse pad mas comodo para tu muñequita bebe",
+    "price": 2143.64,
+    "discount": 10,
+    "category": "pad",
+    "image": "mouse pad.jpg",
+    "stock": 8
+}, {
+    "id": 6,
+    "name": "Silla Gamer supergamer!!",
+    "description": " La silla mas comoda para tus nalgotas bebe",
+    "price": 3579,
+    "discount": "45",
+    "category": "Silla",
+    "image": "silla.jpg",
+    "stock": 9
+}, {
+    "id": 7,
+    "name": "teclado",
+    "description": " teclado , nada fuera de lo normal",
+    "price": 4312.6,
+    "discount": 41,
+    "category": "teclado",
+    "image": "teclado.jpg",
+    "stock": 1
+}, {
+    "id": 8,
+    "name": "Reddragon Zeus-X",
+    "description": "auriculares VIP del grupo 5",
+    "price": 2815.99,
+    "discount": 14,
+    "category": "Auriculares",
+    "image": "Reddragon Zeus-X.jpg",
+    "stock": 1
+}, {
+    "id": 9,
+    "name": "Microfono Hyper X",
+    "description": "El microfono con mas autotune que maria becerra",
+    "price": 4684.14,
+    "discount": 27,
+    "category": "Microfono",
+    "image": "microfono.jpg",
+    "stock": 1
+}]
