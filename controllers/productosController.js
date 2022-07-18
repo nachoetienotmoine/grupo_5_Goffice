@@ -1,27 +1,27 @@
 
-const res = require("express/lib/response");
+
 const fs = require("fs");
 const path = require('path');
 const productoFile = path.join(__dirname, '../data/product.json');
 const productosJ = JSON.parse(fs.readFileSync(productoFile, 'utf-8'));
 
 const productosController = {
-    // fileName: './data/product.json',
-    // getData: function () {
-    //     return JSON.parse(fs.readFileSync(this.fileName, 'utf-8'));
+    fileName: './data/product.json',
+     getData: function () {
+         return JSON.parse(fs.readFileSync(this.fileName, 'utf-8'));
 
-    // },
-    // generateId: function () {
-    //     let allUsers = this.findAll();
-    //     let lastUser = allUsers.pop();
-    //     if (lastUser) {
-    //         return lastUser.id + 1;
-    //     }
-    //     return 1;
-    // },
-    // findAll: function () {
-    //     return this.getData();
-    // },
+     },
+     generateId: function () {
+         let allUsers = this.findAll();
+    let lastUser = allUsers.pop();
+        if (lastUser) {
+             return lastUser.id + 1;
+         }
+        return 1;
+    },
+    findAll: function () {
+       return this.getData();
+     },
     listar: (req, res) => {
         res.render("prodList", { productosJ: productosJ })
     },
@@ -44,7 +44,7 @@ const productosController = {
             } else {
                 res.render('prodDetalle', {
                     prodEncontrado: productoEncontrado,
-                    sneakers: productosJ,
+                    prodcuto: productosJ,
 
                 });
             }
@@ -75,8 +75,26 @@ const productosController = {
     editProducto: (req, res) => {
         res.render('prodEdit')
     },
-    actualizar: function (req, res) {
-        res.render("prodDetalle");
+
+    update: function(req, res) {
+        let productId = parseInt(req.params.id, 10);
+        for (let i = 0; i < productosJ.length; i++){
+
+            if (productosJ[i].id === productId) {
+                productosJ[i].id = productId;
+                productosJ[i].name = req.body.name;
+                productosJ[i].description = req.body.description;
+                productosJ[i].price = req.body.price;
+                productosJ[i].discount = req.body.discount;
+                productosJ[i].category = req.body.category;
+                productosJ[i].image = req.body.image;
+                productosJ[i].stock = req.body.stock;
+            }    
+
+
+        res.send("update");
+        res.redirect("/proDetalle" + productId);
+        }
     },
 
     deleteProducto: function (id) {
