@@ -99,9 +99,10 @@ const productosController = {
 
         console.log(productoPaBorra);
 
-        const newArray = productosJ.map((productosJ, productId) => productosJ.id === productId)
+       // const newArray = productosJ.map((productosJ, productId) => productosJ.id === productId)
 
-        console.log(newArray);
+        //console.log(newArray);
+        res.redirect('/productos');
     }
 
 }
