@@ -7,22 +7,7 @@ const productoFile = path.join(__dirname, '../data/product.json');
 const productosJ = JSON.parse(fs.readFileSync(productoFile, 'utf-8'));
 
 const productosController = {
-    fileName: './data/product.json',
-    getData: function () {
-        return JSON.parse(fs.readFileSync(this.fileName, 'utf-8'));
 
-    },
-    generateId: function () {
-        let allUsers = this.findAll();
-        let lastUser = allUsers.pop();
-        if (lastUser) {
-            return lastUser.id + 1;
-        }
-        return 1;
-    },
-    findAll: function () {
-        return this.getData();
-    },
     listar: (req, res) => {
         res.render("prodList", { productosJ: productosJ })
     },
@@ -108,16 +93,16 @@ const productosController = {
 		res.redirect('/productos/' + id);
 	},
 
-    deleteProducto: function (id) {
-        let allProducts = this.findAll();
-        let finalProducts = allProducts.filter(oneProduct => oneProduct.id !== id);
-        fs.writeFileSync(this.fileName, JSON.stringify(finalProducts, null, ' '));
-        res.redirect("prodList")
+    deleteProducto: (req, res) => {
+        const productId = parseInt(req.params.id, 10);
+        const productoPaBorra = productosJ.filter(product => product.id === productId);
+
+        console.log(productoPaBorra);
+
+        const newArray = productosJ.map((productosJ, productId) => productosJ.id === productId)
+
+        console.log(newArray);
     }
-
-
-
-
 
 }
 
