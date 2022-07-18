@@ -55,7 +55,7 @@ const productos = {
         let allProducts = this.findAll();
         let finalProducts = allProducts.filter(oneProduct => oneProduct.id !== id);
         fs.writeFileSync(this.fileName, JSON.stringify(finalProducts, null, ' '));
-        return true;
+        return "Producto eliminado";
     },
 
     // completar gonzalo//
