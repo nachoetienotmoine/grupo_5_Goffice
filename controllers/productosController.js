@@ -90,6 +90,7 @@ const productosController = {
 		const discount = req.body.discount;
 		const category = req.body.category;
 		const description = req.body.description;
+        const stock = req.body.stock;
 		const productToUpdate = productosJ.filter(product => product.id === id);
 
 		productToUpdate[0].name = name;
@@ -97,7 +98,7 @@ const productosController = {
 		productToUpdate[0].discount = discount;
 		productToUpdate[0].category = category;
 		productToUpdate[0].description = description;
-
+        productToUpdate[0].stock = stock;
 		productosJ[id-1] = productosJ[id-1] = productToUpdate[0];
 
 		fs.writeFileSync(productoFile, JSON.stringify(productosJ), 'utf-8');

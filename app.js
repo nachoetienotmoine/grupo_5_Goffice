@@ -27,7 +27,7 @@ app.use('/', routersHome);
 app.use('/login', routersLogin);
 app.use('/prodList', routersProdList);
 app.use('/productos', routersProductos)
-app.use('/productos/:id?', routersProductos)
+ app.use('/productos/:id?', routersProductos)
 app.use('/prodCRUD', routersProdCRUD);
 
 
