@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GOffice</title>
+    <link rel="icon" type="image/PNG" href="../public/images/Gofficee.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<!-- body -->
+
+<body>
+
+    <!-- header -->
+    <%- include('./partials/header.ejs')%>
+        <!--</header> -->
+
+        <!-- main -->
+        <main class="main-detail">
+            <section class="main-detail-sectionPC">
+                <div class="title-product-detailPC">
+                    <h2>Reddragon Zeus-X</h2>
+                    <i class="far fa-edit"></i>
+                </div>
+                <div class="detail-imagePC">
+                    <img id="general-detail-imagePC" src="images/Reddragon Zeus-X.jpg" alt="articulo">
+                    <div class="iconosPC"><i class="far fa-edit" id="iconoPC"></i><i class="far fa-edit"
+                            id="iconoPC2"></i></div>
+                    <article class="nav-image-detail">
+                        <img id="particular-detail-image" src="images/Reddragon Zeus-X.jpg" alt="articulo">
+                        <img id="particular-detail-image" src="images/Reddragon Zeus-X.jpg" alt="articulo">
+                        <img id="particular-detail-image" src="images/Reddragon Zeus-X.jpg" alt="articulo">
+                        <img id="particular-detail-image" src="images/Reddragon Zeus-X.jpg" alt="articulo">
+                    </article>
+                </div>
+
+            </section>
+            <br>
+            </section>
+            <section class="contenedor-detail">
+                <div class="title-product-detailPC">
+                    <h2>Detalle de Producto</h2>
+                </div>
+                <br>
+
+                <article class="description-productPC">
+                    <form action="/productos" id="productForm" method="POST" enctype="multipart/form-data">
+
+                        <div class="boxpC">
+                            <label name="name">
+                                <H2>Name</H2>
+                            </label>
+
+                            <input type="text" name="name" id="nombrePCrud" required minlength="6">
+                            <i class="far fa-edit"></i>
+                        </div>
+                        <div class="boxpC">
+                            <label name="description">
+                                <h2>Descripcion</h2>
+                            </label>
+
+                            <input type="text" name="description" id="nombrePCrud" required>
+                            <i class="far fa-edit"></i>
+                        </div>
+                        <div class="boxpC">
+                            <label name="discount">
+                                <h2>Discount</h2>
+                            </label>
+
+                            <input type="text" name="discount" id="nombrePCrud" required>
+                            <i class="far fa-edit"></i>
+                        </div>
+                        <div class="boxpC">
+                            <label name="price">
+                                <h2>Precio</h2>
+                            </label>
+
+                            <input type="text" name="price" id="nombrePCrud" required>
+                            <i class="far fa-edit"></i>
+                        </div>
+                        <div class="boxpC">
+                            <label name="stock">
+                                <h2>Stock</h2>
+                            </label>
+
+                            <select name="stock" id="nombrePCrud2" required>
+                                <option value="0">Out of Stock</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+
+                            </select>
+                            <i class="far fa-edit"></i>
+                        </div>
+                        <article class="precio-envio-detail">
+                            <div class="comprar-detailPC">
+                                <button type="submit" class="submit-cart-detail">Guardar Cambios</button>
+                            </div>
+
+                        </article>
+                    </form>
+
+                </article>
+                <br>
+                <article class="precio-envio-detail">
+                    <div class="return-detail">
+                        <button type="submit" class="return-cart-detail">Eliminar</button>
+                    </div>
+                </article>
+            </section>
+            <br>
+            <br>
+
+            <br>
+
+
+        </main>
+        <!-- footer -->
+        <%- include('./partials/footer')%>
+            <!-- </footer> -->
+</body>
+
+</html>

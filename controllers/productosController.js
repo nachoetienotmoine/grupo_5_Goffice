@@ -4,62 +4,79 @@ const fs = require("fs");
 const path = require('path');
 const productoFile = path.join(__dirname, '../data/product.json');
 const productosJ = JSON.parse(fs.readFileSync(productoFile, 'utf-8'));
-const productosController = {
-    fileName: './data/product.json',
-    getData: function () {
-        return JSON.parse(fs.readFileSync(this.fileName, 'utf-8'));
 
-    },
-    generateId: function () {
-        let allUsers = this.findAll();
-        let lastUser = allUsers.pop();
-        if (lastUser) {
-            return lastUser.id + 1;
-        }
-        return 1;
-    },
-    findAll: function () {
-        return this.getData();
-    },
+const productosController = {
+    // fileName: './data/product.json',
+    // getData: function () {
+    //     return JSON.parse(fs.readFileSync(this.fileName, 'utf-8'));
+
+    // },
+    // generateId: function () {
+    //     let allUsers = this.findAll();
+    //     let lastUser = allUsers.pop();
+    //     if (lastUser) {
+    //         return lastUser.id + 1;
+    //     }
+    //     return 1;
+    // },
+    // findAll: function () {
+    //     return this.getData();
+    // },
     listar: (req, res) => {
         res.render("prodList", { productosJ: productosJ })
     },
     crearProductos: (req, res) => {
-        res.render("prodCRUD")
+        res.render("prodCrear")
     },
-    detalleProducto: function (id) {
-        let allUsers = this.findAll();
-        let userFound = allUsers.find(oneUser =>
-            oneUser.id === id);
-        return userFound;
-    },
+    detalleProducto:
+        (req, res) => {
+            const productId = parseInt(req.params.id, 10);
+            let productoEncontrado;
+
+            for (let i = 0; i < productosJ.length; i++) {
+                if (productosJ[i].id === productId) {
+                    productoEncontrado = productosJ[i];
+                }
+            }
+
+            if (!productoEncontrado) {
+                res.status(404).send("No se encuentra el producto");
+            } else {
+                res.render('prodDetalle', {
+                    prodEncontrado: productoEncontrado,
+                    sneakers: productosJ,
+
+                });
+            }
+
+        },
+
+
     crearProductosPost: (req, res) => {
-        const name = req.body.name;
-        const price = req.body.price;
-        const discount = req.body.discount;
-        const category = req.body.category;
-        const description = req.body.description;
-
-
-        // got them fused in a Object Literal;
-        const fuseData = {
-            id: productosJ.length + 1,
-            name: name, price: price, discount: discount, category: category, description: description
-        };
-
-        //
-
-        // 	Insert them, then they got sent away to the database.
-        productosJ.push(fuseData);
-        fs.writeFileSync(productoFile, JSON.stringify(productosJ), 'utf-8');
-
-        //finally, you got kicked back to products for good.
-        res.redirect("prodList");
-    },
+        
+            const body = req.body
+           
+            const newProduct = {
+                id: productosJ.length + 1,
+                name: body.name,
+                description: body.description,
+                price: body.price,
+                category_id: body.category,
+                image: body.image,
+               
+            }
+            productosJ.push(newProduct);
+            fs.writeFileSync(path.join(__dirname, '../data/product.json'), JSON.stringify(productosJ))
+            res.status(201).json(newProduct);
+            res.redirect('/product');
+        },
 
 
     editProducto: (req, res) => {
-        res.render("prodDetalle")
+        res.render('prodEdit')
+    },
+    actualizar: function (req, res) {
+        res.send("update");
     },
 
     deleteProducto: function (id) {
@@ -70,11 +87,8 @@ const productosController = {
     },
 
 
-    actualizar: function (req, res){
-        res.send("actualizado");
-    },
 
-    
+
 
 }
 
