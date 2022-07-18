@@ -95,7 +95,6 @@ const productosController = {
                 productosJ[i].stock = req.body.stock;
             }    
     
-            fs.writeFileSync(productoFile, JSON.stringify(productosJ), 'utf-8');
     
             res.send("update");
           res.redirect("/prodList" + productId);
