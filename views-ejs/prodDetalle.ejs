@@ -69,7 +69,7 @@
 
                         <article class="imagen-nombre-main">
                             <div class="imagen-div">
-                                <img src="images/<%= prodEncontrado.image; %>" alt="Producto" id="img-main">
+                                <img src="/images/<%= prodEncontrado.image; %>" alt="Producto" id="img-main">
                                 <div class="descuento"><span id="discount" data-action="cart-can"
                                         class="badge rounded-circle">
                                         <%= prodEncontrado.discount; %>%
@@ -96,7 +96,9 @@
                                 <button class="button-main" id="buttonmain">
                                     Stock : <%= prodEncontrado.stock; %>
                                 </button>
-
+                                <div>
+                                    <a href="/productos/<%= prodEncontrado.id; %>/edit"><i class="far fa-edit"></i></a>
+                                </div>
 
                             </div>
                         </article>

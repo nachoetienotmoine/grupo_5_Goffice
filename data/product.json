@@ -3,8 +3,8 @@
         "id": 1,
         "name": "Monitor",
         "description": "es re piola este monitor , no muestra el historial de busqueda del browser ",
-        "price": 1459.55,
-        "discount": 42,
+        "price": 1459,
+        "discount": "42",
         "category": "monitor",
         "image": "monitor1.jpg",
         "stock": 6
@@ -51,10 +51,10 @@
     },
     {
         "id": 6,
-        "name": "Silla Gamer",
+        "name": "Silla Gamer supergamer!!",
         "description": " La silla mas comoda para tus nalgotas bebe",
-        "price": 3579.81,
-        "discount": 45,
+        "price": 3579,
+        "discount": "45",
         "category": "Silla",
         "image": "silla.jpg",
         "stock": 9

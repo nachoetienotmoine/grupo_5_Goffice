@@ -30,14 +30,14 @@
                     <i class="far fa-edit"></i>
                 </div>
                 <div class="detail-imagePC">
-                    <img id="general-detail-imagePC" src="images/Reddragon Zeus-X.jpg" alt="articulo">
+                    <img id="general-detail-imagePC" src="/images/Reddragon Zeus-X.jpg" alt="articulo">
                     <div class="iconosPC"><i class="far fa-edit" id="iconoPC"></i><i class="far fa-edit"
                             id="iconoPC2"></i></div>
                     <article class="nav-image-detail">
-                        <img id="particular-detail-image" src="images/Reddragon Zeus-X.jpg" alt="articulo">
-                        <img id="particular-detail-image" src="images/Reddragon Zeus-X.jpg" alt="articulo">
-                        <img id="particular-detail-image" src="images/Reddragon Zeus-X.jpg" alt="articulo">
-                        <img id="particular-detail-image" src="images/Reddragon Zeus-X.jpg" alt="articulo">
+                        <img id="particular-detail-image" src="/images/Reddragon Zeus-X.jpg" alt="articulo">
+                        <img id="particular-detail-image" src="/images/Reddragon Zeus-X.jpg" alt="articulo">
+                        <img id="particular-detail-image" src="/images/Reddragon Zeus-X.jpg" alt="articulo">
+                        <img id="particular-detail-image" src="/images/Reddragon Zeus-X.jpg" alt="articulo">
                     </article>
                 </div>
 
@@ -51,7 +51,7 @@
                 <br>
 
                 <article class="description-productPC">
-                    <form action="/productos" id="productForm" method="POST" enctype="multipart/form-data">
+                    <form action="/productos" id="productForm" method="POST" >
 
                         <div class="boxpC">
                             <label name="name">
@@ -59,6 +59,14 @@
                             </label>
 
                             <input type="text" name="name" id="nombrePCrud" required minlength="6">
+                            <i class="far fa-edit"></i>
+                        </div>
+                        <div class="boxpC">
+                            <label name="category">
+                                <H2>Category</H2>
+                            </label>
+
+                            <input type="text" name="category" id="nombrePCrud" required minlength="6">
                             <i class="far fa-edit"></i>
                         </div>
                         <div class="boxpC">
@@ -74,7 +82,7 @@
                                 <h2>Discount</h2>
                             </label>
 
-                            <input type="text" name="discount" id="nombrePCrud" required>
+                            <input type="number" name="discount" id="nombrePCrud" required>
                             <i class="far fa-edit"></i>
                         </div>
                         <div class="boxpC">
@@ -82,7 +90,7 @@
                                 <h2>Precio</h2>
                             </label>
 
-                            <input type="text" name="price" id="nombrePCrud" required>
+                            <input type="number" name="price" id="nombrePCrud" required>
                             <i class="far fa-edit"></i>
                         </div>
                         <div class="boxpC">
