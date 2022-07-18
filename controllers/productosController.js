@@ -76,7 +76,7 @@ const productosController = {
         res.render('prodEdit')
     },
     actualizar: function (req, res) {
-        res.send("update");
+        res.render("prodDetalle");
     },
 
     deleteProducto: function (id) {
@@ -84,7 +84,7 @@ const productosController = {
         let finalProducts = allProducts.filter(oneProduct => oneProduct.id !== id);
         fs.writeFileSync(this.fileName, JSON.stringify(finalProducts, null, ' '));
         res.redirect("prodList")
-    },
+    }
 
 
 
