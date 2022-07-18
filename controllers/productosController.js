@@ -76,7 +76,7 @@ const productosController = {
         res.render('prodEdit')
     },
     actualizar: function (req, res) {
-        res.send("actualizado");
+        res.send("update");
     },
 
     deleteProducto: function (id) {
