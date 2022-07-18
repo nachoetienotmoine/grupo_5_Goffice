@@ -75,8 +75,29 @@ const productosController = {
     editProducto: (req, res) => {
         res.render('prodEdit')
     },
-    actualizar: function (req, res) {
+
+
+
+    
+    update: function(req, res) {
+        let productId = parseInt(req.params.id, 10);
+        for (let i = 0; i < productosJ.length; i++){
+
+            if (productosJ[i].id === productId) {
+                productId[i].id = productId;
+                productosJ[i].name = req.body.name;
+                productosJ[i].description = req.body.description;
+                productosJ[i].price = req.body.price;
+                productosJ[i].discount = req.body.discount;
+                productosJ[i].category = req.body.category;
+                productosJ[i].image = req.body.image;
+                productosJ[i].stock = req.body.stock;
+            }    
+
+
         res.send("update");
+        res.redirect("/productos" + productId);
+        }
     },
 
     deleteProducto: function (id) {
