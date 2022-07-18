@@ -54,23 +54,23 @@ const productosController = {
 
     crearProductosPost: (req, res) => {
         
-            const body = req.body
-           
-            const newProduct = {
-                id: productosJ.length + 1,
-                name: body.name,
-                description: body.description,
-                price: body.price,
-                category_id: body.category,
-                image: body.image,
-               
-            }
-            productosJ.push(newProduct);
-            fs.writeFileSync(path.join(__dirname, '../data/product.json'), JSON.stringify(productosJ))
-            res.status(201).json(newProduct);
-            res.redirect('/product');
-        },
+        const name = req.body.name;
+		const price = req.body.price;
+		const discount = req.body.discount;
+		const category = req.body.category;
+		const description = req.body.description;
+		const image = req.file.originalname;
 
+		// got them fused in a Object Literal;
+		const fuseData = { id: productosJ.length + 1,
+			name: name, price: price, discount: discount, category: category, description: description, image: image};
+// 	Insert them, then they got sent away to the database.
+productosJ.push(fuseData);
+fs.writeFileSync(productoFile, JSON.stringify(productosJ), 'utf-8');
+
+//finally, you got kicked back to products for good.
+res.redirect('/products');
+},
 
     editProducto: (req, res) => {
         res.render('prodEdit')
