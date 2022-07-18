@@ -64,13 +64,13 @@ const productosController = {
 		// got them fused in a Object Literal;
 		const fuseData = { id: productosJ.length + 1,
 			name: name, price: price, discount: discount, category: category, description: description, stock: stock};
-// 	Insert them, then they got sent away to the database.
-productosJ.push(fuseData);
-fs.writeFileSync(productoFile, JSON.stringify(productosJ), 'utf-8');
+        // 	Insert them, then they got sent away to the database.
+        productosJ.push(fuseData);
+        fs.writeFileSync(productoFile, JSON.stringify(productosJ), 'utf-8');
 
-//finally, you got kicked back to products for good.
-res.redirect('prodList');
-},
+        //finally, you got kicked back to products for good.
+        res.redirect('prodList');
+    },
 
     editProducto: (req, res) => {
         const productId = parseInt(req.params.id, 10);
@@ -83,22 +83,22 @@ res.redirect('prodList');
     update: function(req, res) {
         let productId = parseInt(req.params.id, 10);
         for (let i = 0; i < productosJ.length; i++){
-
-            if (productosJ[i].id === productId) {
-                productosJ[i].id = productId;
-                productosJ[i].name = req.body.name;
-                productosJ[i].description = req.body.description;
-                productosJ[i].price = req.body.price;
-                productosJ[i].discount = req.body.discount;
-                productosJ[i].category = req.body.category;
-                productosJ[i].image = req.body.image;
+    
+        if (productosJ[i].id === productId) {
+            productosJ[i].id = productId;
+            productosJ[i].name = req.body.name;
+            productosJ[i].description = req.body.description;
+            productosJ[i].price = req.body.price;
+            productosJ[i].discount = req.body.discount;
+            
+    productosJ[i].category = req.body.category;
                 productosJ[i].stock = req.body.stock;
             }    
-
+    
             fs.writeFileSync(productoFile, JSON.stringify(productosJ), 'utf-8');
-
-        res.send("update");
-        res.redirect("/prodList" + productId);
+    
+            res.send("update");
+          res.redirect("/prodList" + productId);
         }
     },
 
