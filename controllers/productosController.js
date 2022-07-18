@@ -59,17 +59,17 @@ const productosController = {
 		const discount = req.body.discount;
 		const category = req.body.category;
 		const description = req.body.description;
-		const image = req.file.originalname;
+		
 
 		// got them fused in a Object Literal;
 		const fuseData = { id: productosJ.length + 1,
-			name: name, price: price, discount: discount, category: category, description: description, image: image};
+			name: name, price: price, discount: discount, category: category, description: description};
 // 	Insert them, then they got sent away to the database.
 productosJ.push(fuseData);
 fs.writeFileSync(productoFile, JSON.stringify(productosJ), 'utf-8');
 
 //finally, you got kicked back to products for good.
-res.redirect('/products');
+res.redirect('prodList');
 },
 
     editProducto: (req, res) => {

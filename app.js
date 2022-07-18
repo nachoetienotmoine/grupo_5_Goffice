@@ -16,6 +16,7 @@ const logMiddleware = require("./Middlewares/logMiddlewares")
 app.use(express.static(publicPath));
 app.set("view engine", "ejs");
 app.set('views', __dirname + '/views-ejs');
+app.use(express.urlencoded({extended:false}));
 app.use(logMiddleware);
 app.use('/registro', routersRegister);
 app.use('/detalle', routersDetalle);
