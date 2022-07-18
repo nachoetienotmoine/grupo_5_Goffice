@@ -34,8 +34,8 @@ Retro 4:
 
 Cuestiones positivas del sprint anterior: Nuevamente pudimos cumplir con la entrega en tiempo y forma.
 Cosas qué deberían empezar a hacer: Consultarle a los profesores más sobre como hacer las consignas. 
-Cosas qué deberían dejar de hacer: A causa de temas externos, nos desorganizamos con los horarios de los weeklies y ocasionalmente no los hicimos.
-Conclusión general: El sprint 4 fue confuso ya que no pudimos entender bien las consignas originalmente. Pero aunque tuvimos este problema y tuvimos menos tiempo para organizarnos, pudimos completar el trabajo ayudándonos entre nosotros. 
+Cosas qué deberían dejar de hacer: Mejorar nuestra organización sobre las tareas y asignarlas de una forma más equitativa. 
+Conclusión general: El sprint 4 fue confuso ya que no pudimos entender bien las consignas originalmente. También tuvimos problemas organizandonos en las tareas. Aunque tuvimos estos problemas, pudimos completar el trabajo ayudándonos entre nosotros. 
 
 ○ Temática del sitio y público objetivo:
 ----------------------------------------
