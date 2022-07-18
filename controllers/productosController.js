@@ -59,11 +59,11 @@ const productosController = {
 		const discount = req.body.discount;
 		const category = req.body.category;
 		const description = req.body.description;
-		
+		const stock = req.body.stock;
 
 		// got them fused in a Object Literal;
 		const fuseData = { id: productosJ.length + 1,
-			name: name, price: price, discount: discount, category: category, description: description};
+			name: name, price: price, discount: discount, category: category, description: description, stock: stock};
 // 	Insert them, then they got sent away to the database.
 productosJ.push(fuseData);
 fs.writeFileSync(productoFile, JSON.stringify(productosJ), 'utf-8');
@@ -91,9 +91,10 @@ res.redirect('prodList');
                 productosJ[i].stock = req.body.stock;
             }    
 
+            fs.appendFileSync(productoFile, JSON.stringify(productosJ), 'utf-8');
 
         res.send("update");
-        res.redirect("/proDetalle" + productId);
+        res.redirect("/prodList" + productId);
         }
     },
 
