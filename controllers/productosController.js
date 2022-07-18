@@ -80,26 +80,29 @@ const productosController = {
         res.render('prodEdit', {productoEncontrado:productoEncontrado});
     },
 
-    update: function(req, res) {
-        let productId = parseInt(req.params.id, 10);
-        for (let i = 0; i < productosJ.length; i++){
-    
-        if (productosJ[i].id === productId) {
-            productosJ[i].id = productId;
-            productosJ[i].name = req.body.name;
-            productosJ[i].description = req.body.description;
-            productosJ[i].price = req.body.price;
-            productosJ[i].discount = req.body.discount;
-            
-    productosJ[i].category = req.body.category;
-                productosJ[i].stock = req.body.stock;
-            }    
-    
-    
-            res.send("update");
-          res.redirect("/prodList" + productId);
-        }
-    },
+    update: (req, res) => {
+		const id = parseInt(req.params.id);
+		const name = req.body.name;
+		const price = parseInt(req.body.price);
+		const discount = req.body.discount;
+		const category = req.body.category;
+		const description = req.body.description;
+		const productToUpdate = productosJ.filter(product => product.id === id);
+
+		productToUpdate[0].name = name;
+		productToUpdate[0].price = price;
+		productToUpdate[0].discount = discount;
+		productToUpdate[0].category = category;
+		productToUpdate[0].description = description;
+
+		productosJ[id-1] = productosJ[id-1] = productToUpdate[0];
+
+		fs.writeFileSync(productoFile, JSON.stringify(productosJ), 'utf-8');
+		
+
+
+		res.redirect('/productos/' + id);
+	},
 
     deleteProducto: function (id) {
         let allProducts = this.findAll();
