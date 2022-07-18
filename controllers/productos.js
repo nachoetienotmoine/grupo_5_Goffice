@@ -1,69 +1,69 @@
 
-const fs = require('fs');
+// const fs = require('fs');
 
-const path = require('path');
+// const path = require('path');
 
-const productoFile = path.join(__dirname, '../data/product.json');
+// const productoFile = path.join(__dirname, '../data/product.json');
 
-const productosJ = JSON.parse(fs.readFileSync(productoFile, 'utf-8'));
+// const productosJ = JSON.parse(fs.readFileSync(productoFile, 'utf-8'));
 
-const productos = {
-    fileName: './data/product.json',
-    getData: function () {
-        return JSON.parse(fs.readFileSync(this.fileName, 'utf-8'))
-    },
-    findAll: function () {
-        return this.getData();
-    },
-    generateId: function () {
-        let allUsers = this.findAll();
-        let lastUser = allUsers.pop();
-        if (lastUser) {
-            return lastUser.id + 1
-        }
-        return 1;
-    },
-    listar: (req, res) => {
-        res.render("prodList" , {productosJ: productosJ})
-    },
-    crearProductos: (req, res) => {
-        res.render("prodC")
-    },
-    detalleProducto: function (id) {
-        let allUsers = this.findAll();
-        let userFound = allUsers.find(oneUser =>
-            oneUser.id === id);
-        return userFound;
-    },
-    crearProductosPost: function (userData) {
-        let allUsers = this.findAll();
-        let newUser = {
-            id: this.generateId(),
-            ...userData
-        }
-        allUsers.push(newUser);
-        fs.writeFileSync(this.fileName, JSON.stringify(allUsers, null, ' '));
-        return "Producto agregado";
+// const productos = {
+//     fileName: './data/product.json',
+//     getData: function () {
+//         return JSON.parse(fs.readFileSync(this.fileName, 'utf-8'))
+//     },
+//     findAll: function () {
+//         return this.getData();
+//     },
+//     generateId: function () {
+//         let allUsers = this.findAll();
+//         let lastUser = allUsers.pop();
+//         if (lastUser) {
+//             return lastUser.id + 1
+//         }
+//         return 1;
+//     },
+//     listar: (req, res) => {
+//         res.render("prodList" , {productosJ: productosJ})
+//     },
+//     crearProductos: (req, res) => {
+//         res.render("prodC")
+//     },
+//     detalleProducto: function (id) {
+//         let allUsers = this.findAll();
+//         let userFound = allUsers.find(oneUser =>
+//             oneUser.id === id);
+//         return userFound;
+//     },
+//     crearProductosPost: function (userData) {
+//         let allUsers = this.findAll();
+//         let newUser = {
+//             id: this.generateId(),
+//             ...userData
+//         }
+//         allUsers.push(newUser);
+//         fs.writeFileSync(this.fileName, JSON.stringify(allUsers, null, ' '));
+//         return "Producto agregado";
 
-    },
+//     },
 
-    editProducto: (req, res) => {
-        res.render("prodDetalle")
-    },
+//     editProducto: (req, res) => {
+//         res.render("prodDetalle")
+//     },
 
-    deleteProducto: function (id) {
-        let allProducts = this.findAll();
-        let finalProducts = allProducts.filter(oneProduct => oneProduct.id !== id);
-        fs.writeFileSync(this.fileName, JSON.stringify(finalProducts, null, ' '));
-        return true;
-    },
+//     deleteProducto: function (id) {
+//         let allProducts = this.findAll();
+//         let finalProducts = allProducts.filter(oneProduct => oneProduct.id !== id);
+//         fs.writeFileSync(this.fileName, JSON.stringify(finalProducts, null, ' '));
+//         return true;
+//     },
 
-    // completar gonzalo//
+//     // completar gonzalo//
 
-}
+// }
 
 
-module.exports = productos;
+// module.exports = productos;
 // listar: (req, res) => {
     //     res.status(200).send(productosData);
     // },
