@@ -125,9 +125,13 @@
                 </article>
                 <br>
                 <article class="precio-envio-detail">
-                    <div class="return-detail">
-                        <button type="submit" class="return-cart-detail">Eliminar</button>
-                    </div>
+
+                    <form action="/productos/<%= productoEncontrado[0].id; %>/?_method=DELETE" method="POST"> 
+                        <div class="return-detail">
+                            <button type="submit" class="return-cart-detail">Eliminar</button>
+                        </div>
+                    </form>
+
                 </article>
             </section>
             <br>
