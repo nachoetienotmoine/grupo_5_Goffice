@@ -26,7 +26,8 @@
             <img src="images/Gofficee.png" alt="logo" width="100px" height="42px" id="img-logo">
             <div class="carritoc">
                 <button id="carritoc">
-                    <i class="fas fa-cart-plus fa-2x"></i><span id="cart_menu_num" data-action="cart-can" class="badge rounded-circle">9</span>
+                    <i class="fas fa-cart-plus fa-2x"></i><span id="cart_menu_num" data-action="cart-can"
+                        class="badge rounded-circle">9</span>
                 </button>
             </div>
         </nav>
@@ -51,345 +52,59 @@
         </button>
     </div>
     <main class="todo-productos-main">
-        <section class="contenedor">
-            <% productosJ.forEach(function(producto){%>
 
-            <article class="contenedorproducto">
-                <h2 class="h2-nombre"> <%= producto.name %>
+        <% for (let i=0; i < productosJ.length ; i++) {%>
+            <br>
+            <section class="contenedor">
 
-                </h2>
 
-                <article class="article-main">
 
-                    <article class="imagen-nombre-main">
+                <article class="contenedorproducto">
+                    <h2 class="h2-nombre">
+                        <%= productosJ[i].name %>
+
+                    </h2>
+
+                    <article class="article-main">
+
+                        <article class="imagen-nombre-main">
                             <div class="imagen-div">
-                                <img src="images/Reddragon Zeus-X.jpg" alt="Producto" id="img-main">
+                                <img src="images/<%= productosJ[i].image; %>" alt="Producto" id="img-main">
+                                <div class="descuento"><span id="discount" data-action="cart-can"
+                                        class="badge rounded-circle">
+                                        <%= productosJ[i].discount; %>%
+                                    </span>
+                                </div>
                             </div>
 
-                        <div class="descriptions-main">
-                            <p>Sample text. Click to select the text box.
-                               Click again or double click to start editing the text.
-                            </p>
-                        </div>
+                            <div class="descriptions-main">
 
-                        <div class="button-box">
-                            <button class="button-main" id="buttonmain">
-                                En stock
-                            </button>
+                                <%= productosJ[i].description; %>
 
-                            <button class="button-main">
-                                $5000
-                            </button>
+                            </div>
 
-                            <button class="button-main">
-                                <i class="fas fa-cart-plus"></i>
-                            </button>
-                        </div>
+                            <div class="button-box">
+                                <button class="button-main" id="buttonmain">
+                                    <%= productosJ[i].category; %>
+                                </button>
+
+                                <button class="button-main">
+                                    $<%= Math.round(productosJ[i].price - productosJ[i].discount/100 *
+                                        productosJ[i].price); %>
+                                </button>
+
+                                <button class="button-main" id="buttonmain">
+                                    Stock : <%= productosJ[i].stock; %>
+                                </button>
+
+
+                            </div>
+                        </article>
                     </article>
                 </article>
-            </article>
-            <% }) %>
-        </section>
-        <br>
-        <!--
-        <section class="contenedor">
-
-
-            <article class="contenedorproducto">
-                <h2 class="h2-nombre">Smart Monitor M5 27
-                </h2>
-                <article class="article-main">
-                    <article class="imagen-nombre-main">
-
-                        <div class="imagen-div">
-                            <img src="images/monitor1.jpg" alt="Producto" id="img-main">
-                        </div>
-
-                        <div class="descriptions-main">
-                            <p>Sample text. Click to select the text box.
-                               Click again or double click to start editing the text.
-                            </p>
-                        </div>
-
-                        <div class="button-box">
-                            <button class="button-main" id="buttonmain">
-                                En stock
-                            </button>
-
-                            <button class="button-main">
-                                10000$
-                            </button>
-
-                            <button class="button-main">
-                                <i class="fas fa-cart-plus"></i>
-                            </button>
-                        </div>
-                    </article>
-                </article>
-            </article>
-        </section>
-        <br>
-        <section class="contenedor">
-            <article class="contenedorproducto">
-                <h2 class="h2-nombre">Silla Orcus Ergonómica
-                </h2>
-                <article class="article-main">
-                    <article class="imagen-nombre-main">
-
-
-                        <div class="imagen-div">
-                            <img src="images/silla.jpg" alt="Producto" id="img-main">
-                        </div>
-
-                        <div class="descriptions-main">
-                            <p>Sample text. Click to select the text box.
-                               Click again or double click to start editing the text.
-                            </p>
-                        </div>
-
-                        <div class="button-box">
-                            <button class="button-main" id="buttonmain">
-                                En stock
-                            </button>
-
-                            <button class="button-main">
-                                7000$
-                            </button>
-
-                            <button class="button-main">
-                                <i class="fas fa-cart-plus"></i>
-                            </button>
-                        </div>
-                    </article>
-
-                </article>
-            </article>
-        </section>
-        <br>
-        <section class="contenedor">
-            <article class="contenedorproducto">
-                <h2 class="h2-nombre">Teclado Gamer Soul</h2>
-
-                <article class="article-main">
-
-                    <article class="imagen-nombre-main">
-                        <div class="imagen-div">
-                            <img src="images/teclado.jpg" alt="Producto" id="img-main">
-                        </div>
-
-                        <div class="descriptions-main">
-                            <p>Sample text. Click to select the text box.
-                               Click again or double click to start editing the text.
-                            </p>
-                        </div>
-
-                        <div class="button-box">
-                            <button class="button-main" id="buttonmain">
-                                En stock
-                            </button>
-
-                            <button class="button-main">
-                                5500$
-                            </button>
-
-                            <button class="button-main">
-                                <i class="fas fa-cart-plus"></i>
-                            </button>
-                        </div>
-                    </article>
-                </article>
-            </article>
-        </section>
-        <br>
-        <section class="contenedor">
-
-
-            <article class="contenedorproducto">
-                <h2 class="h2-nombre">Mouse pad Reddragon
-                </h2>
-                <article class="article-main">
-                    <article class="imagen-nombre-main">
-
-                        <div class="imagen-div">
-                            <img src="images/mouse pad.jpg" alt="Producto" id="img-main">
-                        </div>
-
-                        <div class="descriptions-main">
-                            <p>Sample text. Click to select the text box.
-                               Click again or double click to start editing the text.
-                            </p>
-                        </div>
-
-                        <div class="button-box">
-                            <button class="button-main" id="buttonmain">
-                                Sin stock
-                            </button>
-
-                            <button class="button-main">
-                                1200$
-                            </button>
-
-                            <button class="button-main">
-                                <i class="fas fa-cart-plus"></i>
-                            </button>
-                        </div>
-                    </article>
-                </article>
-            </article>
-        </section>
-        <br>
-        <section class="contenedor">
-            <article class="contenedorproducto">
-                <h2 class="h2-nombre">Parlante Gamer Xinua</h2>
-                
-                <article class="article-main">
-                    <article class="imagen-nombre-main">
-
-
-                        <div class="imagen-div">
-                            <img src="images/Parlante.jpg" alt="Producto" id="img-main">
-                        </div>
-
-                        <div class="descriptions-main">
-                            <p>Sample text. Click to select the text box.
-                               Click again or double click to start editing the text.
-                            </p>
-                        </div>
-
-                        <div class="button-box">
-                            <button class="button-main" id="buttonmain">
-                                En stock
-                            </button>
-
-                            <button class="button-main">
-                                8200$
-                            </button>
-
-                            <button class="button-main">
-                                <i class="fas fa-cart-plus"></i>
-                            </button>
-                        </div>
-                    </article>
-
-                </article>
-            </article>
-        </section>
-        <br>
-        <section class="contenedor">
-            <article class="contenedorproducto">
-                <h2 class="h2-nombre">Cámara Web Sinovision
-
-                </h2>
-
-                <article class="article-main">
-
-                    <article class="imagen-nombre-main">
-                        <div class="imagen-div">
-                            <img src="images/camara.jpg" alt="Producto" id="img-main">
-                        </div>
-
-                        <div class="descriptions-main">
-                            <p>Sample text. Click to select the text box.
-                               Click again or double click to start editing the text.
-                            </p>
-                        </div>
-
-                        <div class="button-box">
-                            <button class="button-main" id="buttonmain">
-                                En stock
-                            </button>
-
-                            <button class="button-main">
-                                6700$
-                            </button>
-
-                            <button class="button-main">
-                                <i class="fas fa-cart-plus"></i>
-                            </button>
-                        </div>
-                    </article>
-                </article>
-            </article>
-        </section>
-        <br>
-        <section class="contenedor">
-
-
-            <article class="contenedorproducto">
-                <h2 class="h2-nombre">Micrófono Hyperx Qc
-                </h2>
-                <article class="article-main">
-                    <article class="imagen-nombre-main">
-
-                        <div class="imagen-div">
-                            <img src="images/microfono.jpg" alt="Producto" id="img-main">
-                        </div>
-
-
-                        <div class="descriptions-main">
-                            <p>Sample text. Click to select the text box.
-                               Click again or double click to start editing the text.
-                            </p>
-                        </div>
-
-                        <div class="button-box">
-                            <button class="button-main" id="buttonmain">
-                                En stock
-                            </button>
-
-                            <button class="button-main">
-                                6000$
-                            </button>
-
-                            <button class="button-main">
-                                <i class="fas fa-cart-plus"></i>
-                            </button>
-                        </div>
-                    </article>
-                </article>
-            </article>
-        </section>
-        <br>
-        <section class="contenedor">
-            <article class="contenedorproducto">
-                <h2 class="h2-nombre">Tira Luces Led Rgb 
-                </h2>
-                <article class="article-main">
-                    <article class="imagen-nombre-main">
-
-
-                        <div class="imagen-div">
-                            <img src="images/luces.jpg" alt="Producto" id="img-main">
-                        </div>
-
-                        <div class="descriptions-main">
-                            <p>Sample text. Click to select the text box.
-                               Click again or double click to start editing the text.
-                            </p>
-                        </div>
-
-                        <div class="button-box">
-                            <button class="button-main" id="buttonmain">
-                                En stock
-                            </button>
-
-                            <button class="button-main">
-                                1800$
-                            </button>
-
-                            <button class="button-main">
-                                <i class="fas fa-cart-plus"></i>
-                            </button>
-                        </div>
-                    </article>
-
-                </article>
-            </article>
-        </section>
-
-
-        <br>
-        -->
+                <br>
+            </section>
+            <% } %>
     </main>
 
     <%- include('./partials/footer.ejs') %>
