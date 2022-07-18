@@ -73,7 +73,11 @@ res.redirect('prodList');
 },
 
     editProducto: (req, res) => {
-        res.render('prodEdit')
+        const productId = parseInt(req.params.id, 10);
+            const productoEncontrado = productosJ.filter(product => product.id === productId);
+
+            console.log(productoEncontrado);
+        res.render('prodEdit', {productoEncontrado:productoEncontrado});
     },
 
     update: function(req, res) {

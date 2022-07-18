@@ -30,14 +30,14 @@
                     <i class="far fa-edit"></i>
                 </div>
                 <div class="detail-imagePC">
-                    <img id="general-detail-imagePC" src="images/Reddragon Zeus-X.jpg" alt="articulo">
+                    <img id="general-detail-imagePC" src="/images/<%= productoEncontrado[0].image; %>" alt="articulo">
                     <div class="iconosPC"><i class="far fa-edit" id="iconoPC"></i><i class="far fa-edit"
                             id="iconoPC2"></i></div>
                     <article class="nav-image-detail">
-                        <img id="particular-detail-image" src="images/Reddragon Zeus-X.jpg" alt="articulo">
-                        <img id="particular-detail-image" src="images/Reddragon Zeus-X.jpg" alt="articulo">
-                        <img id="particular-detail-image" src="images/Reddragon Zeus-X.jpg" alt="articulo">
-                        <img id="particular-detail-image" src="images/Reddragon Zeus-X.jpg" alt="articulo">
+                        <img id="particular-detail-image" src="/images/<%= productoEncontrado[0].image; %>" alt="articulo">
+                        <img id="particular-detail-image" src="/images/<%= productoEncontrado[0].image; %>" alt="articulo">
+                        <img id="particular-detail-image" src="/images/<%= productoEncontrado[0].image; %>" alt="articulo">
+                        <img id="particular-detail-image" src="/images/<%= productoEncontrado[0].image; %>" alt="articulo">
                     </article>
                 </div>
 
@@ -58,7 +58,7 @@
                                 <H2>Name</H2>
                             </label>
 
-                            <input type="text" name="name" id="nombrePCrud" required minlength="6">
+                            <input type="text" name="name" id="nombrePCrud" required minlength="6" value="<%= productoEncontrado[0].name; %>">
                             <i class="far fa-edit"></i>
                         </div>
                         <div class="boxpC">
@@ -66,7 +66,7 @@
                                 <H2>Category</H2>
                             </label>
 
-                            <input type="text" name="category" id="nombrePCrud" required minlength="6">
+                            <input type="text" name="category" id="nombrePCrud" required minlength="6" value="<%= productoEncontrado[0].category; %>">
                             <i class="far fa-edit"></i>
                         </div>
                         <div class="boxpC">
@@ -74,7 +74,7 @@
                                 <h2>Descripcion</h2>
                             </label>
 
-                            <input type="text" name="description" id="nombrePCrud" required>
+                            <input type="text" name="description" id="nombrePCrud" required value="<%= productoEncontrado[0].description; %>">
                             <i class="far fa-edit"></i>
                         </div>
                         <div class="boxpC">
@@ -82,7 +82,7 @@
                                 <h2>Discount</h2>
                             </label>
 
-                            <input type="text" name="discount" id="nombrePCrud" required>
+                            <input type="text" name="discount" id="nombrePCrud" required value="<%= productoEncontrado[0].discount; %>">
                             <i class="far fa-edit"></i>
                         </div>
                         <div class="boxpC">
@@ -90,7 +90,7 @@
                                 <h2>Precio</h2>
                             </label>
 
-                            <input type="text" name="price" id="nombrePCrud" required>
+                            <input type="text" name="price" id="nombrePCrud" required value="$<%= productoEncontrado[0].price; %>">
                             <i class="far fa-edit"></i>
                         </div>
                         <div class="boxpC">
