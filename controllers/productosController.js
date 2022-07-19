@@ -48,11 +48,13 @@ const productosController = {
         const category = req.body.category;
         const description = req.body.description;
         const stock = req.body.stock;
+        const image = req.file.originalname;
 
         // got them fused in a Object Literal;
         const fuseData = {
             id: productosJ.length + 1,
-            name: name, price: price, discount: discount, category: category, description: description, stock: stock
+            name: name, price: price, discount: discount, category: category, description: description, stock: stock, 
+            image: image
         };
         // 	Insert them, then they got sent away to the database.
         productosJ.push(fuseData);
@@ -78,7 +80,6 @@ const productosController = {
 		const category = req.body.category;
 		const description = req.body.description;
         const stock = req.body.stock;
-        const image = req.file.originalname;
 		const productToUpdate = productosJ.filter(product => product.id === id);
 
 		productToUpdate[0].name = name;
@@ -87,7 +88,6 @@ const productosController = {
 		productToUpdate[0].category = category;
 		productToUpdate[0].description = description;
         productToUpdate[0].stock = stock;
-        productToUpdate[0].image = image;
 
 		productosJ[id-1] = productosJ[id-1] = productToUpdate[0];
 
