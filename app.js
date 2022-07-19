@@ -8,7 +8,7 @@ const routersHome = require('./routers/homeApi');
 const routersLogin = require('./routers/loginApi');
 const routersProdList = require('./routers/prodListApi');
 const routersProductos = require('./routers/productos');
-const routersProdCRUD = require('./routers/prodCRUDApi');
+
 const methodOverride = require('method-override');
 const publicPath = path.resolve(__dirname, './public');
 const logMiddleware = require("./Middlewares/logMiddlewares")
@@ -28,7 +28,7 @@ app.use('/login', routersLogin);
 app.use('/prodList', routersProdList);
 app.use('/productos', routersProductos);
 app.use('/productos/:id?', routersProductos);
-app.use('/prodCRUD', routersProdCRUD);
+
 
 
 app.listen(process.env.PORT || 3000, function() {

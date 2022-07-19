@@ -9,6 +9,8 @@ const productosJ = JSON.parse(fs.readFileSync(productoFile, 'utf-8'));
 const productosController = {
 
     listar: (req, res) => {
+        const productoFile = path.join(__dirname, '../data/product.json');
+        const productosJ = JSON.parse(fs.readFileSync(productoFile, 'utf-8'));
         res.render("prodList", { productosJ: productosJ })
     },
     crearProductos: (req, res) => {
@@ -64,7 +66,7 @@ const productosController = {
         const productId = parseInt(req.params.id, 10);
         const productoEncontrado = productosJ.filter(product => product.id === productId);
 
-        console.log(productoEncontrado);
+        
         res.render('prodEdit', { productoEncontrado: productoEncontrado });
     },
 
@@ -95,14 +97,14 @@ const productosController = {
 
     deleteProducto: (req, res) => {
         const productId = parseInt(req.params.id, 10);
-        const productoPaBorra = productosJ.filter(product => product.id === productId);
+        const productoPaBorra = productosJ.filter(product => product.id !== productId);
 
-        console.log(productoPaBorra);
+       fs.writeFileSync(productoFile, JSON.stringify(productoPaBorra), 'utf-8');
 
-       // const newArray = productosJ.map((productosJ, productId) => productosJ.id === productId)
+res.redirect("/productos")
+        // const newArray = productosJ.map((productosJ, productId) => productosJ.id === productId)
 
-        //console.log(newArray);
-        res.redirect('/productos');
+        // console.log(newArray);
     }
 
 }

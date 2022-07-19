@@ -2546,7 +2546,8 @@ border-style:dotted;
     height: 100%;
 }
   #discount:hover {
-    transform: scale(135%);
+    transform: scale(120%);
+    transition: 850ms;
     cursor: pointer;
     }
     
