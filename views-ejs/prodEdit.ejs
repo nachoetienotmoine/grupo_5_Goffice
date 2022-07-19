@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GOffice</title>
+    <title>EDIT PRODUCT</title>
     <link rel="icon" type="image/PNG" href="../public/images/Gofficee.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -27,7 +27,7 @@
             <section class="main-detail-sectionPC">
                 <div class="title-product-detailPC">
                     <h2>Reddragon Zeus-X</h2>
-                    <i class="far fa-edit"></i>
+                    
                 </div>
                 <div class="detail-imagePC">
                     <img id="general-detail-imagePC" src="/images/<%= productoEncontrado[0].image; %>" alt="articulo">
@@ -95,11 +95,19 @@
                             <i class="far fa-edit"></i>
                         </div>
                         <div class="boxpC">
+                            <label name="image">
+                                <h2>Image</h2>
+                            </label>
+                            <input type="file" class="buy-now-button" name="image">
+                            
+                            <i class="far fa-edit"></i>
+                        </div>
+                        <div class="boxpC">
                             <label name="stock">
                                 <h2>Stock</h2>
                             </label>
 
-                            <input type="file" class="buy-now-button" name="image">
+                            
 
                             <select name="stock" id="nombrePCrud2" required>
                                 <option value="0">Out of Stock</option>
