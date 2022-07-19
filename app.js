@@ -1,6 +1,7 @@
 const express = require('express');
 const app = express();
 const path = require('path');
+
 const routersRegister = require('./routers/registerApi');
 const routersDetalle = require('./routers/detalleApi');
 const routersCarrito = require('./routers/carritoApi');
