@@ -80,6 +80,7 @@ const productosController = {
 		const category = req.body.category;
 		const description = req.body.description;
         const stock = req.body.stock;
+        const image = req.file.originalname;
 		const productToUpdate = productosJ.filter(product => product.id === id);
 
 		productToUpdate[0].name = name;
@@ -88,6 +89,7 @@ const productosController = {
 		productToUpdate[0].category = category;
 		productToUpdate[0].description = description;
         productToUpdate[0].stock = stock;
+        productToUpdate[0].image = image;
 
 		productosJ[id-1] = productosJ[id-1] = productToUpdate[0];
 
