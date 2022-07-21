@@ -689,6 +689,13 @@ p {
 
 /*---------------------------------------------- home ----------------------------------------------*/
 
+.videoPublicidad {
+    
+width: 100%;
+height: 30%;
+}
+
+
 .headerHome {
     background-color: black;
     position: sticky;
