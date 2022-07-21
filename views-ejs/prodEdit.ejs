@@ -19,26 +19,18 @@
 <body>
 
     <!-- header -->
-    <%- include('./partials/header.ejs')%>
+    <%- include('./header.ejs')%>
         <!--</header> -->
 
         <!-- main -->
         <main class="main-detail">
             <section class="main-detail-sectionPC">
                 <div class="title-product-detailPC">
-                    <h2>Reddragon Zeus-X</h2>
+                    <h2><%= productoEncontrado[0].name; %></h2>
                     
                 </div>
                 <div class="detail-imagePC">
                     <img id="general-detail-imagePC" src="/images/<%= productoEncontrado[0].image; %>" alt="articulo">
-                    <div class="iconosPC"><i class="far fa-edit" id="iconoPC"></i><i class="far fa-edit"
-                            id="iconoPC2"></i></div>
-                    <article class="nav-image-detail">
-                        <img id="particular-detail-image" src="/images/<%= productoEncontrado[0].image; %>" alt="articulo">
-                        <img id="particular-detail-image" src="/images/<%= productoEncontrado[0].image; %>" alt="articulo">
-                        <img id="particular-detail-image" src="/images/<%= productoEncontrado[0].image; %>" alt="articulo">
-                        <img id="particular-detail-image" src="/images/<%= productoEncontrado[0].image; %>" alt="articulo">
-                    </article>
                 </div>
 
             </section>
@@ -153,7 +145,7 @@
 
         </main>
         <!-- footer -->
-        <%- include('./partials/footer')%>
+        <%- include('./footer')%>
             <!-- </footer> -->
 </body>
 

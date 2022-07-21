@@ -16,7 +16,7 @@
 
 <body>
 
-    <%- include('./partials/header.ejs')%>
+    <%- include('./header.ejs')%>
 
     <div class="e-address">
         <button class="address">
@@ -79,10 +79,21 @@
                 </article>
                 <br>
             </section>
+            <div class="detail-imagePC">
+                <br><br>
+                <section class="main-detail-section2">
+            <article class="nav-image-detail">
+                <img id="particular-detail-image" src="/images/<%= prodEncontrado.image; %>" alt="articulo">
+                <img id="particular-detail-image" src="/images/<%= prodEncontrado.image; %>" alt="articulo">
+                <img id="particular-detail-image" src="/images/<%= prodEncontrado.image; %>" alt="articulo">
+                <img id="particular-detail-image" src="/images/<%= prodEncontrado.image; %>" alt="articulo">
+            </article>
            
+        </section>
+           </div> <br>
     </main>
 
-    <%- include('./partials/footer.ejs') %>
+    <%- include('./footer.ejs') %>
 
 </body>
 
