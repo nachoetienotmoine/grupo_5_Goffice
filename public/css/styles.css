@@ -1797,7 +1797,7 @@ height: 10%;
     align-items: center;
     padding: 15px 20px;
     overflow: hidden;
-    height: 80vh;
+    
 }
 
 .register_form h2 {
@@ -1862,7 +1862,7 @@ height: 10%;
 }
 
 .nav_button_text_R {
-    text-decoration: underline 1px black;
+    text-decoration:  1px black;
     color: black;
     font-weight: 700;
 }

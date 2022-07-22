@@ -1,56 +1,80 @@
 <!DOCTYPE html>
 <html lang="en" class="html_R">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="/css/styles.css">
-    <title>Registro</title>
+    <title>REGISTER</title>
 </head>
-<body class="body_R">
+
+<body >
+    <main class="body_R">
     <div class="Container_R">
-        
+
         <%- include('./header.ejs') %>
 
-        <form class="register_form" action="" method="">
+            <form class="register_form" action="/users"  method="POST">
 
-            <h2>Crear Cuenta</h2>
-            
-            <div class="field name_field">
-                <label class="register_label" for="name">Nombre</label>
-                <input type="text" name="nombre" id="name" required minlength="5" maxlength="18">
-            </div>
-            <div class="error_field">Ingrese su nombre</div>
-            
-            <div class="field lastName_field">
-                <label class="register_label" for="lastName">Apellido</label>
-                <input type="text" name="apellido" id="lastName" required minlength="5" maxlength="18">
-            </div>
-            <div class="error_field">Ingrese su apellido</div>
+                <h2>Crear Cuenta</h2>
 
-            <div class="field email_field">
-                <label class="register_label" for="email">Email</label>
-                <input type="email" name="email" id="email" required maxlength="28">
-            </div>
-            <div class="error_field">Ingrese su correo electrónico</div>
+                <div class="field name_field">
+                    <label class="register_label" name="firstname">First Name</label>
+                    <input type="text" name="firstname" id="name" required minlength="5" maxlength="18">
+                </div>
+                <div class="error_field">Ingrese su nombre</div>
 
-            <div class="field password_field">
-                <label class="register_label" for="password">Password</label>
-                <input type="password" name="password" id="password" required pattern="[A-Za-z0-9]+" maxlength="20" minlength="10">
-            </div>
-            <div class="error_field">Ingrese su contraseña</div>
+                <div class="field lastName_field">
+                    <label class="register_label" name="lastname">Last Name</label>
+                    <input type="text" name="lastname" id="lastname" required minlength="5" maxlength="18">
+                </div>
+                <div class="error_field">Ingrese su apellido</div>
 
-            <button type="submit">Enviar</button> 
-            
-            <div class="nav_button_R">
-                <a class="nav_button_text_R" href="">¿Ya tienes una cuenta? <br> <div class="nav_button_l">Logeate</div></a>
-            </div>
-        </form>
+                <div class="field email_field">
+                    <label class="register_label" name="email">Email</label>
+                    <input type="email" name="email" id="email" required >
+                </div>
+                <div class="error_field">Ingrese su correo electrónico</div>
+
+                <div class="field password_field">
+                    <label class="register_label" name="password">Password</label>
+                    <input type="password" name="password" id="password" required>
+                </div>
+                <div class="field name_field">
+                    <label class="register_label" name="name">Phonenumber</label>
+                    <input type="number" name="phonenumber" id="name" required minlength="5" maxlength="18">
+                </div>
+              
+                <div class="field name_field">
+                    
+                    <label class="register_label" name="name">Image</label>
+                   
+                    <input type="file" name="image" id="name"  >
+                    
+                </div>
+
+                <div class="field name_field">
+                    <label class="register_label" name="name">Gender</label>
+                    <input type="text" name="gender" id="name" required >
+                </div>
+                
+                <div class="error_field">Ingrese su contraseña</div>
+
+                <button type="submit">Enviar</button>
+
+                <div class="nav_button_R">
+                    <a class="nav_button_text_R" href="">¿Ya tienes una cuenta? <br>
+                        <div class="nav_button_l">Logeate</div>
+                    </a>
+                </div>
+            </form>
 
     </div>
-
+</main>
     <%- include('./footer.ejs') %>
 
 </body>
+
 </html>
