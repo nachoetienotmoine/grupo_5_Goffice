@@ -2595,6 +2595,9 @@ border-style:dotted;
     }
 
     /* users */
+    .todo-productos-main2{
+        background-color: grey;
+    }
     .h2-nombre2{
         color: orangered;
         text-align: center;
@@ -2658,6 +2661,7 @@ border-style:dotted;
         margin: 10%;
         gap: 5px;
         background-color: beige;
+        border-radius: 2%;
         }
         
         .article-main2{
