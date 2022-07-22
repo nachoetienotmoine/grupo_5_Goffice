@@ -88,5 +88,15 @@
         "category": "Microfono",
         "image": "microfono.jpg",
         "stock": "0"
+    },
+    {
+        "id": 10,
+        "name": "GONZALO ANDREOZZI",
+        "price": "0",
+        "discount": "25",
+        "category": "nnnnjhjh",
+        "description": "twetwete",
+        "stock": "5",
+        "image": "11111.jpeg"
     }
 ]
