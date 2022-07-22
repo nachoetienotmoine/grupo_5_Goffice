@@ -48,13 +48,13 @@ const productosController = {
         const category = req.body.category;
         const description = req.body.description;
         const stock = req.body.stock;
-        const image = req.file.originalname;
+        const image = req.body.image;
 
         // got them fused in a Object Literal;
         const fuseData = {
             id: productosJ.length + 1,
             name: name, price: price, discount: discount, category: category, description: description, stock: stock, 
-            image: image
+           image : image
         };
         // 	Insert them, then they got sent away to the database.
         productosJ.push(fuseData);
