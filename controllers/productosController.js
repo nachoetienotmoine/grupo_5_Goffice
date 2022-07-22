@@ -48,7 +48,9 @@ const productosController = {
         const category = req.body.category;
         const description = req.body.description;
         const stock = req.body.stock;
-        const image = req.body.image;
+        const image = req.file.originalname;
+
+     
 
         // got them fused in a Object Literal;
         const fuseData = {
