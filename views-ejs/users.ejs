@@ -23,10 +23,40 @@
         <!--</header> -->
 
         <!-- main -->
-     
-            <main class="todo-productos-main">
 
+        <main class="todo-productos-main2">
+            
+            <section class="contenedor2">
                 <% for (let i=0; i < usersJ.length ; i++) {%>
+                <article class="contenedorproducto2">
+                    <h2 class="h2-nombre2"><%= usersJ[i].firstname %> <%= usersJ[i].lastname %>
+                    </h2>
+
+                    <article class="article-main2">
+
+                        <article class="imagen-nombre-main2">
+                            <div class="imagen-div2">
+                                <img src="images/users/<%= usersJ[i].image; %>" alt="Producto" id="img-main2">
+                            </div>
+
+
+                        </article>
+                    </article>
+                    <div class="button-box2">
+                        <div class="passwordUser"><%= usersJ[i].password; %></div>
+                        <div class="datoUser"><%= usersJ[i].email; %></div>
+                        <div class="datoUser"><%= usersJ[i].gender; %></div>
+                        <div class="datoUser"><%= usersJ[i].phonenumber; %></div>
+                    </div>
+                </article> 
+                 <% } %>
+            </section>
+          
+
+
+
+
+            <!-- <% for (let i=0; i < usersJ.length ; i++) {%>
                     <br>
                     <section class="contenedor">
         
@@ -80,9 +110,9 @@
                             </article>
                         </article>
                         <br>
-                    </section>
-                    <% } %>
-            </main>
+                    </section> 
+                    <% } %>-->
+        </main>
 
 
         <!-- footer -->
