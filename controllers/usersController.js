@@ -22,7 +22,7 @@ const usersController = {
         const password = bcrypt.hashSync(req.body.password, 10);
         const phonenumber = req.body.phonenumber;
         const gender = req.body.gender;
-        const image = req.body.image;
+        const image = req.file.originalname;
        
 
         // got them fused in a Object Literal;
