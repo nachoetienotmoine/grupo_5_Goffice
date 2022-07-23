@@ -9,18 +9,21 @@ const loginController = {
 
 
     loginProces: (req, res) => {
-        let userToLogin = userJ.findByField("email", req.body.email);
-        if (userToLogin) {
-            let itsOkeyThePassword = bcryptjs.compareSync(req.body.password, userToLogin.password);
-            return res.redirect("index");
-        }
-        return res.sender("login", {
-            errors: {
-                email: {
-                    msg: "Las Credenciales Son Invalidas"
-                }
-            }
-        })
+
+        res.send(req.body)
+        // console.log(req.body)
+        // let userToLogin = userJ.findByField("email", req.body.email);
+        // if (userToLogin) {
+        //     let itsOkeyThePassword = bcryptjs.compareSync(req.body.password, userToLogin.password);
+        //     res.redirect("index");
+        // }
+        // res.sender("login", {
+        //     errors: {
+        //         email: {
+        //             msg: "Las Credenciales Son Invalidas"
+        //         }
+        //     }
+        // })
     }
 
 }

@@ -22,6 +22,7 @@ app.use(express.static(publicPath));
 app.set("view engine", "ejs");
 app.set('views', __dirname + '/views-ejs');
 app.use(express.urlencoded({extended:false}));
+app.use(express.json());
 app.use(methodOverride('_method'));
 
 app.use('/registro', routersRegister);
