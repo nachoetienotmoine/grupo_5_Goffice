@@ -15,7 +15,26 @@
             <img src="images/Gofficee.png" alt="logo">
         </div>
         
-        <form class="login_form" action="" method="">
+
+        <form class="login_form" action="/index"  method="POST" enctype="multipart/form-data" >
+
+            
+
+            <div class="field email_field">
+                <label class="register_label" name="email">Email</label>
+                <input type="email" name="email" id="email" required >
+            </div>
+            <div class="error_field">Ingrese su correo electrónico</div>
+
+            <div class="field password_field">
+                <label class="register_label" name="password">Password</label>
+                <input type="password" name="password" id="password" required>
+            
+        </form>
+
+
+
+        <!-- <form class="login_form" action="/index" method="POST">
 
             <h2>Login</h2>
 
@@ -42,7 +61,7 @@
                 <a class="nav_button_text_L" href="">No tienes una cuenta? Registrate!</a>
             </div>
 
-        </form>
+        </form> -->
     
         
     </div>

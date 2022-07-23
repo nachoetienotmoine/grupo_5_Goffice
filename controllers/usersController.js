@@ -37,5 +37,8 @@ const usersController = {
         //finally, you got kicked back to products for good.
         res.redirect('users');
     },
+
+
+    
 }
 module.exports= usersController;
