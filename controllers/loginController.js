@@ -1,9 +1,9 @@
 const fs = require("fs");
-const { parse } = require("path");
+// const { parse } = require("path");
 const path = require('path');
-const usersFile = path.join(__dirname, '../data/users.json');
-const usersJ = JSON.parse(fs.readFileSync(usersFile, 'utf-8'));
-const bcryptjs = require("bcryptjs");
+// const usersFile = path.join(__dirname, '../data/users.json');
+// const usersJ = JSON.parse(fs.readFileSync(usersFile, 'utf-8'));
+// const bcryptjs = require("bcryptjs");
 
 const loginController = {
     
@@ -12,7 +12,7 @@ const loginController = {
         
         const usersFile = path.join(__dirname, '../data/users.json');
         const usersJ = JSON.parse(fs.readFileSync(usersFile, 'utf-8'));
-        res.render("login", { usersJ: usersJ })
+        res.render("index", { usersJ: usersJ }) //para enviar la info de users al home y mostrar info del usuario
     },
 
     index: (req, res) => {
@@ -20,10 +20,6 @@ const loginController = {
         res.render('login');
     },
     loginProces: (req, res) => {
-        console.log(usersJ)
-        console.log(req.body.email)
-        res.render(req.body.email)
-
         let userToLogin = usersJ.findByField("email", req.body.email);
         if (userToLogin) {
             let isOkeyThePassword = bcryptjs.compareSync(req.body.password, userToLogin.password);
