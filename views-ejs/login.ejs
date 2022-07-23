@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" class="html_L">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,6 +9,7 @@
     <link rel="stylesheet" href="/css/styles.css">
     <title>Login</title>
 </head>
+
 <body class="body_L">
     <div class="Container_L"
 
@@ -24,30 +26,51 @@
                 <input type="email" name="email" id="email" required>
             </div>
             <div class="error_field">Ingrese su correo electronico</div>
+            
+            <!-- 
+<div class="field email_field">
+    <label class="register_label" name="email">Email</label>
+    <input type="email" name="email" id="email" required >
+</div>
+<div class="error_field">Ingrese su correo electrónico</div>
+
+<div class="field password_field">
+    <label class="register_label" name="password">Password</label>
+    <input type="password" name="password" id="password" required>
+</div> -->
 
             <div class="field password_field">
-                <label class="login_label" for="password">Contraseña</label>
+                <label class="login_label" for="password">Password</label>
                 <input type="password" name="password" id="password" required>
             </div>
             <div class="error_field">Ingrese su contraseña</div>
 
-            <div class="nav_button_L">
-                <a class="nav_button_text_L" href="">¿Te olvidaste tu contraseña? </a>
-            </div>
-
             <button type="submit">Login</button>
             </div>
+            <br>
 
             <div class="nav_button_L">
-                <a class="nav_button_text_L" href="">No tienes una cuenta? Registrate!</a>
+                <a class="nav_button_text_L" href="">¿Olvidaste tu contraseña? </a>
+            </div>
+
+            <div class="nav_button_L">
+                <a class="nav_button_text_L" href="">¿Aún no tienes una cuenta? ¡Registrate!</a>
             </div>
 
         </form>
     
         
     </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br><br><br><br><br><br>
 
     <%- include('./footer.ejs') %>
 
 </body>
 </html>
+
