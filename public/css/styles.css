@@ -2640,7 +2640,7 @@ border-style:dotted;
         border-radius: 100%;
         }
         .imagen-div2 > #img-main2:hover {
-        border: 2px solid orangered;
+        border: 5px solid orangered;
         }
         .todo-productos-main2 .contenedor2{
         display: flex;
