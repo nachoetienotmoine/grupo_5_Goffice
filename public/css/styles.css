@@ -2596,7 +2596,8 @@ border-style:dotted;
 
     /* users */
     .todo-productos-main2{
-        background-color: grey;
+       
+        background-image: url("../images/users/luces led.webp");;
     }
     .h2-nombre2{
         color: orangered;
@@ -2635,7 +2636,7 @@ border-style:dotted;
         .imagen-div2 > #img-main2 {
             display: flex;
         max-width: 100%;
-        border: 2px solid grey;
+        border: 5px solid orangered;
         border-radius: 100%;
         }
         .imagen-div2 > #img-main2:hover {
@@ -2660,7 +2661,7 @@ border-style:dotted;
         box-shadow: 0px 0px 10px black;
         margin: 10%;
         gap: 5px;
-        background-color: beige;
+        background-color: #0b0126;
         border-radius: 2%;
         }
         
@@ -2728,7 +2729,7 @@ border-style:dotted;
                 box-shadow: 0px 0px 10px black;
                 margin: 2.5%;
                 gap: 5px;
-                background-color: beige;
+                background-color: #0b0126;
                 }
             }
           
@@ -2749,7 +2750,7 @@ border-style:dotted;
                 box-shadow: 0px 0px 10px black;
                margin: 2.5%;
                 gap: 5px;
-                background-color: beige;
+                background-color: #0b0126;
                 }
              /* .passwordUser{
                 display: inline;
