@@ -2167,7 +2167,7 @@ x
 }
 
 .nav_button_text_L {
-    text-decoration: underline 1px black;
+    text-decoration: solid 1px black;
     color: black;
     font-weight: 700;
 }

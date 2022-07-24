@@ -9,55 +9,47 @@
     <link rel="stylesheet" href="/css/styles.css">
     <title>Login</title>
 </head>
-
+<%- include('./header.ejs') %>
 <body class="body_L">
-    <div class="Container_L">
-            <img src="images/Gofficee.png" alt="logo">
-    </div>
-        
-        <form class="login_form" action="/login"  method="POST" enctype="multipart/form-data">
-
-            <h2>Login</h2>
-
-            <div class="field email_field">
-                <label class="login_label" for="email">Email</label>
-                <input type="email" name="email" id="email" required>
-            </div>
-            <div class="error_field">Ingrese su correo electronico</div>
-            
-            
-            <div class="field password_field">
-                <label class="login_label" for="password">Password</label>
-                <input type="password" name="password" id="password" required>
-            </div>
-            <div class="error_field">Ingrese su contraseña</div>
-
-            <button type="submit">Login</button>
-            </div>
-            <br>
-
-            <div class="nav_button_L">
-                <a class="nav_button_text_L" href="">¿Olvidaste tu contraseña? </a>
-            </div>
-
-            <div class="nav_button_L">
-                <a class="nav_button_text_L" href="">¿Aún no tienes una cuenta? ¡Registrate!</a>
-            </div>
-
-        </form>
     
-        
-    </div>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br><br><br><br><br><br>
+<main></main>
+    <form class="login_form" action="/login" method="POST" enctype="multipart/form-data">
 
-    <%- include('./footer.ejs') %>
+        <h2>Login</h2>
+
+        <div class="field email_field">
+            <label class="login_label" for="email">Email</label>
+            <input type="email" name="email" id="email" required>
+        </div>
+        <div class="error_field">Ingrese su correo electronico</div>
+
+
+        <div class="field password_field">
+            <label class="login_label" for="password">Password</label>
+            <input type="password" name="password" id="password" required>
+        </div>
+        <div class="error_field">Ingrese su contraseña</div>
+
+        <button type="submit">Login</button>
+        </div>
+        <br>
+
+        <div class="nav_button_L">
+            <a class="nav_button_text_L" href="">¿Olvidaste tu contraseña? </a>
+        </div>
+
+        <div class="nav_button_L">
+            <a class="nav_button_text_L" href="/registro">¿Aún no tienes una cuenta? ¡Registrate!</a>
+        </div>
+
+    </form>
+
+
+</main>
+   
+
+ 
 
 </body>
+   <%- include('./footer.ejs') %>
 </html>
-
