@@ -2714,20 +2714,18 @@ border-style:dotted;
          input[type=checkbox] {
             visibility: hidden;
           }
-          
-        
-         .checkbox-example {
+          .checkbox-example {
             width: 45px;
             height: 15px;
             background: orangered;
-            margin: 20px 10px;
+           margin-bottom: 30px;
             position: relative;
             border-radius: 5px;
           }
           .checkbox-example label {
             display: block;
-            width: 18px;
-            height: 18px;
+            width: 20px;
+            height: 20px;
             border-radius: 50%;
             transition: all .5s ease;
             cursor: pointer;
@@ -2780,8 +2778,7 @@ border-style:dotted;
                 gap: 5px;
                 background-color: #0b0126;
                 }
-
-               
+                
              /* .passwordUser{
                 display: inline;
                 color: orangered;
