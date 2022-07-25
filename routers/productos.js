@@ -4,6 +4,10 @@ const productosController = require('../controllers/productosController')
 const multer = require('multer');
 const path = require('path');
 
+
+
+const userLoginMiddleWare = require('../middlewares/userLogin');
+
 // ************ multer Configuration ************
 const storage = multer.diskStorage({
     destination: function (req, file, cb) {
@@ -23,12 +27,12 @@ const storage = multer.diskStorage({
 
 
 router.get('/', productosController.listar);
-router.get("/create", productosController.crearProductos);
+router.get("/create", /*userLoginMiddleWare,*/productosController.crearProductos);
 router.get("/:id", productosController.detalleProducto);
-router.post("/", upload.single('image'), productosController.crearProductosPost);
-router.get("/:id/edit", productosController.editProducto);
-router.put("/:id", upload.single('image'), productosController.update);
-router.delete("/:id", productosController.deleteProducto);
+router.post("/", /*userLoginMiddleWare,*/ upload.single('image'), productosController.crearProductosPost);
+router.get("/:id/edit", /*userLoginMiddleWare,*/ productosController.editProducto);
+router.put("/:id", /*userLoginMiddleWare,*/ upload.single('image'), productosController.update);
+router.delete("/:id", /*userLoginMiddleWare,*/ productosController.deleteProducto);
 
 
 
