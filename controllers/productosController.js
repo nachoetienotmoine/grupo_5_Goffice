@@ -14,7 +14,7 @@ const productosController = {
         res.render("prodList", { productosJ: productosJ })
     },
     crearProductos: (req, res) => {
-        res.render("prodCrear")
+        res.render("admin/prodCrear")
     },
     detalleProducto:
         (req, res) => {
@@ -30,7 +30,7 @@ const productosController = {
             if (!productoEncontrado) {
                 res.status(404).send("No se encuentra el producto");
             } else {
-                res.render('prodDetalle', {
+                res.render('admin/prodDetalle', {
                     prodEncontrado: productoEncontrado,
                     prodcuto: productosJ,
 
@@ -71,7 +71,7 @@ const productosController = {
         const productoEncontrado = productosJ.filter(product => product.id === productId);
 
         
-        res.render('prodEdit', { productoEncontrado: productoEncontrado });
+        res.render('admin/prodEdit', { productoEncontrado: productoEncontrado });
     },
 
     update: (req, res) => {

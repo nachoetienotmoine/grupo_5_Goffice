@@ -10,7 +10,7 @@ const routersLogin = require('./routers/loginApi');
 const routersProdList = require('./routers/prodListApi');
 const routersUsers = require('./routers/users');
 const routersProductos = require('./routers/productos');
-
+const routersAdmin = require('./routers/admin')
 const bcrypt =  require ( 'bcryptjs');
 
 
@@ -34,7 +34,7 @@ app.use('/prodList', routersProdList);
 app.use('/productos', routersProductos);
 app.use('/productos/:id?', routersProductos);
 app.use('/users', routersUsers);
-
+app.use('/admin', routersAdmin);
 app.listen(process.env.PORT || 3000, function() {
     console.log("Servidor corriendo en el puerto 3000");
 });

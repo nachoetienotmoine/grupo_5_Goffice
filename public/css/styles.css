@@ -2737,6 +2737,7 @@ border-style:dotted;
           .checkbox-example input[type=checkbox]:checked + label {
             left: 27px;
           }
+         
         @media (min-width: 769px){
             .contenedor2 .contenedorproducto2{
              width: 40%;
