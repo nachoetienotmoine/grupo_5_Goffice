@@ -9,13 +9,13 @@
     "image": "Gonzalo Andreozzi.jpg"
 }, {
     "id": 2,
-    "firstname": "",
-    "lastname": "la bella",
-    "email": "dsgsd@dfsdgsdg.com",
+    "firstname": "Ignacio",
+    "lastname": "Andreozzi",
+    "email": "ignacio.andreozzi@hotmail.com",
     "password": "$2a$04$YQAxVeALqZ8Jf3D.MUy9XOZ25lgpOxscDMhCAqPr2N5DqhlpORHaa",
-    "phonenumber": "43646",
+    "phonenumber": "5493815186646",
     "gender": "male",
-    "image": "luces led.webp"
+    "image": "Ignacio Andreozzi.jpg"
 }, {
     "id": 3,
     "firstname": "ignacio",
@@ -25,4 +25,13 @@
     "phonenumber": "47848714",
     "gender": "gay",
     "image": "descarga (5).jpg"
+}, {
+    "id": 4,
+    "firstname": "Nelson",
+    "lastname": "Patiño",
+    "email": "nelson227@hotmail.es",
+    "password": "$2a$04$2BhK6VO6HsFO4lbpmWyaVuJGwhTnvEcU0P9CQiRO4Zk1XJSuiTSXm",
+    "phonenumber": "289189198",
+    "gender": "male",
+    "image": "pp (1).jpg"
 }]
