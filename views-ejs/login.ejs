@@ -12,21 +12,27 @@
 <%- include('./header.ejs') %>
 <body class="body_L">
     
-<main></main>
-    <form class="login_form" action="/login" method="POST" enctype="multipart/form-data">
+<main>
+    <form class="login_form" action="/login" method="POST">
 
         <h2>Login</h2>
 
         <div class="field email_field">
             <label class="login_label" for="email">Email</label>
-            <input type="email" name="email" id="email" required>
+            <input type="text" name="email" id="email" value="<%= locals.old && old.email %>">
+            <% if (locals.errors && errors.email) { %>
+                <p class="feedback"><%= errors.email.msg %></p>
+            <% } %>
         </div>
         <div class="error_field">Ingrese su correo electronico</div>
 
 
         <div class="field password_field">
             <label class="login_label" for="password">Password</label>
-            <input type="password" name="password" id="password" required>
+            <input type="password" name="password" id="password" value="<%= locals.old && old.password %>">
+            <% if (locals.errors && errors.password) { %>
+                <p class="feedback"><%= errors.password.msg %></p>
+            <% } %>
             <ion-icon onclick="toggle()" class="password-icon"	id ="eye-icon" name="eye-off" size="large" ></ion-icon>
         </div>
         <div class="field password_field">

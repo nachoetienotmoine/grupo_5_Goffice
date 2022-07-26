@@ -1,9 +1,7 @@
 const fs = require("fs");
-// const { parse } = require("path");
 const path = require('path');
-// const usersFile = path.join(__dirname, '../data/users.json');
-// const usersJ = JSON.parse(fs.readFileSync(usersFile, 'utf-8'));
-// const bcryptjs = require("bcryptjs");
+var { validationResult } = require('express-validator');
+
 
 const loginController = {
     
@@ -19,21 +17,17 @@ const loginController = {
 
         res.render('login');
     },
-    loginProces: (req, res) => {
-        let userToLogin = usersJ.findByField("email", req.body.email);
-        if (userToLogin) {
-            let isOkeyThePassword = bcryptjs.compareSync(req.body.password, userToLogin.password);
-            if (isOkeyThePassword) {
-                return res.send ('ok puedes ingresar')
-            }
+    loginProcess: (req, res) => {
+        let errors = validationResult(req);
+
+        if (errors.isEmpty()) {
+            res.redirect('/');
+
+        }else {
+        
+            res.render('login', { errors: errors.mapped(), old: req.body });
         }
-        res.sender("login", {
-            errors: {
-                email: {
-                    msg: "Las Credenciales Son Invalidas"
-                }
-            }
-        })
+        
     }
 
 }
