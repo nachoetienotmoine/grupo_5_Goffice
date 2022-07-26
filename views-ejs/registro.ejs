@@ -18,7 +18,7 @@
 
             <form class="register_form" action="/users"  method="POST" enctype="multipart/form-data" >
 
-                <h2>Crear Cuenta</h2>
+                <i class="fas fa-user-edit fa-2x"></i>
 
                 <div class="field name_field">
                     <label class="register_label" name="firstname">First Name</label>
@@ -41,6 +41,7 @@
                 <div class="field password_field">
                     <label class="register_label" name="password">Password</label>
                     <input type="password" name="password" id="password" required>
+                    <ion-icon onclick="toggle()" class="password-icon"	id ="eye-icon" name="eye-off" size="large" ></ion-icon>
                 </div>
                 <div class="field name_field">
                     <label class="register_label" name="name">Phonenumber</label>
@@ -74,7 +75,15 @@
     </div>
 </main>
     <%- include('./footer.ejs') %>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+<script type="text/javascript">
+function toggle() {
+    document.querySelector("#eye-icon").name === "eye" ? document.querySelector("#eye-icon").name = "eye-off" : document.querySelector("#eye-icon").name = "eye"
+    document.querySelector("#password").type === "password" ? document.querySelector("#password").type = "text" : document.querySelector("#password").type = "password"
+}
 
+</script>
 </body>
 
 </html>

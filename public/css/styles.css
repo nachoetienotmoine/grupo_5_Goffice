@@ -2202,6 +2202,11 @@ x
 }
 .fa-sign-in-alt{
     color: orangered;
+    margin-bottom: 15px;
+}
+.fa-user-edit{
+    color: orangered;
+    margin-bottom: 15px;
 }
 @media (min-width: 320px) {
 
