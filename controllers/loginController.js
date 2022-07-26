@@ -18,7 +18,9 @@ const loginController = {
 
     index: (req, res) => {
 
-        res.render('login');
+        res.render('login', {email: {
+            msg: ''
+        }});
     },
     loginProcess: (req, res) => {
         let errors = validationResult(req);
@@ -43,7 +45,10 @@ const loginController = {
             res.redirect('/');
 
         }else {
-            res.render('login', { errors: errors.mapped(), old: req.body });
+            //res.render('login', { errors: errors.mapped(), old: req.body });
+            res.render('login', {errors: errors.mapped(), old: req.body, email: {
+                msg: 'Las credenciales son inválidas'
+            }});
         }
         
     }

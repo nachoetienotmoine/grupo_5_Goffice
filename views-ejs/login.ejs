@@ -49,6 +49,12 @@
         </div>
         <br>
 
+        <% if (email.msg != '' && !errors.password && !errors.email) { %>
+            <p class="feedbackTotal"><%= email.msg %></p>
+        <% } %>
+
+        <br>
+
         <div class="nav_button_L">
             <a class="nav_button_text_L" href="">¿Olvidaste tu contraseña? </a>
         </div>

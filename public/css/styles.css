@@ -2200,6 +2200,13 @@ x
     font-size: medium;
     color: orangered;
 }
+
+.feedbackTotal {
+    font-size: x-large;
+    color: orangered;
+    text-align: center;
+}
+
 .fa-sign-in-alt{
     color: orangered;
     margin-bottom: 15px;
