@@ -2196,6 +2196,10 @@ x
 	cursor: pointer;
 	align-self: center;
 }
+.feedback {
+    font-size: medium;
+    color: orangered;
+}
 @media (min-width: 320px) {
 
     .Container_L {

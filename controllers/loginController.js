@@ -1,7 +1,10 @@
 const fs = require("fs");
 const path = require('path');
-var { validationResult } = require('express-validator');
+const bcrypt = require('bcryptjs');
 
+var { validationResult } = require('express-validator');
+const usersFile = path.join(__dirname, '../data/users.json');
+const usersJ = JSON.parse(fs.readFileSync(usersFile, 'utf-8'));
 
 const loginController = {
     
@@ -19,12 +22,27 @@ const loginController = {
     },
     loginProcess: (req, res) => {
         let errors = validationResult(req);
+        let userEmail = req.body.email;
+        let esEmail = false;
+        let userPassword = req.body.password;
+        let esPassword = false;
 
-        if (errors.isEmpty()) {
+        //for password//
+
+        for (let i = 0; i < usersJ.length; i++){
+            bcrypt.compareSync(userPassword, usersJ[i].password) ? esPassword = true : false;
+        }
+
+        //for email//
+
+        for (let i = 0; i < usersJ.length; i++){
+            usersJ[i].email === userEmail ? esEmail = true : false;
+        }
+
+        if (errors.isEmpty() && esEmail && esPassword) {
             res.redirect('/');
 
         }else {
-        
             res.render('login', { errors: errors.mapped(), old: req.body });
         }
         
