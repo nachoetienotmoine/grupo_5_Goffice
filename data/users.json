@@ -1,12 +1,1 @@
-[
-    {
-        "id": 1,
-        "firstname": "Gonzalo",
-        "lastname": "Andreozzi",
-        "email": "andreozzigonzalo@gmail.com",
-        "password": "$2a$04$tQOMHdF1uRoXI2kz2k844uoyYulaw6kL121TliwbRt8StmK1QX5UO",
-        "phonenumber": "5493815302514",
-        "gender": "male",
-        "image": "Gonzalo Andreozzi.jpg"
-    }
-]
+[{"id":1,"firstname":"Gonzalo","lastname":"Andreozzi","email":"andreozzigonzalo@gmail.com","password":"$2a$04$tQOMHdF1uRoXI2kz2k844uoyYulaw6kL121TliwbRt8StmK1QX5UO","phonenumber":"5493815302514","gender":"male","image":"Gonzalo Andreozzi.jpg"},{"id":2,"firstname":"","lastname":"la bella","email":"dsgsd@dfsdgsdg.com","password":"$2a$04$YQAxVeALqZ8Jf3D.MUy9XOZ25lgpOxscDMhCAqPr2N5DqhlpORHaa","phonenumber":"43646","gender":"male","image":"luces led.webp"}]

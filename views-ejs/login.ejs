@@ -27,6 +27,7 @@
         <div class="field password_field">
             <label class="login_label" for="password">Password</label>
             <input type="password" name="password" id="password" required>
+            <ion-icon onclick="toggle()" class="password-icon"	id ="eye-icon" name="eye-off" size="large" ></ion-icon>
         </div>
         <div class="field password_field">
             <label class="login_label" for="password">Recordar usuario</label>
@@ -60,4 +61,15 @@
 
 </body>
    <%- include('./footer.ejs') %>
+   
+        
+        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+   <script type="text/javascript">
+    function toggle() {
+        document.querySelector("#eye-icon").name === "eye" ? document.querySelector("#eye-icon").name = "eye-off" : document.querySelector("#eye-icon").name = "eye"
+        document.querySelector("#password").type === "password" ? document.querySelector("#password").type = "text" : document.querySelector("#password").type = "password"
+    }
+
+</script>
 </html>

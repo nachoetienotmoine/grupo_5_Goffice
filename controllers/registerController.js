@@ -1,3 +1,5 @@
+
+
 const registerController = {
 
     index: (req, res) => {

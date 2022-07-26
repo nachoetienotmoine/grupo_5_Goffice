@@ -2179,7 +2179,23 @@ x
 .div_L2 .nav_footer_L {
     margin: 5px;
 }
+.password-icon {
+	cursor: pointer;
+	color: orangered;
 
+	align-items: center;
+	content: icon;
+	
+	
+	/* opacity: 60%; */
+}
+.password-icon {
+	position: absolute;
+
+	height: '100%';
+	cursor: pointer;
+	align-self: center;
+}
 @media (min-width: 320px) {
 
     .Container_L {
