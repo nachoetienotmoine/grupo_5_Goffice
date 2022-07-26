@@ -2200,6 +2200,9 @@ x
     font-size: medium;
     color: orangered;
 }
+.fa-sign-in-alt{
+    color: orangered;
+}
 @media (min-width: 320px) {
 
     .Container_L {
