@@ -35,10 +35,9 @@ const loginController = {
             if (usersJ[i].email === userEmail) {
                 esEmail = true;
                 userId = usersJ[i];
+                bcrypt.compareSync(userPassword, userId.password) ? esPassword = true : false;
             }
         }
-
-        bcrypt.compareSync(userPassword, userId.password) ? esPassword = true : false;
 
         if (errors.isEmpty() && esEmail && esPassword) {
             res.redirect('/');
