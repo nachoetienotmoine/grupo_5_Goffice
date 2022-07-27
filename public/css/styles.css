@@ -574,6 +574,7 @@ p {
     .todo-productos-main {
         padding: 0 10%;
         margin: 3%;
+   
     }
 
     .contenedor .contenedorproducto {
@@ -697,7 +698,7 @@ height: 10%;
 
 
 .headerHome {
-    background-color: black;
+    background-color: #0b0126;
     position: sticky;
     top: 0;
     
@@ -705,7 +706,7 @@ height: 10%;
 
 #carritoH {
 
-    background-color: black;
+    background-color: #0b0126;
     color: orangered;
     border: none;
 
@@ -713,7 +714,7 @@ height: 10%;
 }
 
 #carritoH2 {
-    background-color: black;
+    background-color: #0b0126;
     color: orangered;
     border: none;
     padding-top: 20%;
@@ -734,13 +735,13 @@ height: 10%;
 }
 
 .footerH {
-    background-color: black;
+    background-color: #0b0126;
 }
 
 .arrowH {
     color: orangered;
     border: none;
-    background-color: black;
+    background-color: #0b0126;
 
 }
 
@@ -771,14 +772,14 @@ height: 10%;
 }
 
 .socialM1H {
-    background-color: black;
+    background-color: #0b0126;
     color: orangered;
     border: none;
     margin: 5px;
 }
 
 .socialM2H {
-    background-color: black;
+    background-color: #0b0126;
     color: orangered;
     border: none;
     margin-left: 4px;
@@ -786,7 +787,7 @@ height: 10%;
 }
 
 .socialM2TH {
-    background-color: black;
+    background-color: #0b0126;
     color: orangered;
     border: none;
     margin-right: 4px;
@@ -1061,7 +1062,7 @@ height: 10%;
 
 
     .headerHome {
-        background-color: black;
+        background-color: #0b0126;
         position: static;
         top: 0;
 
@@ -1070,7 +1071,7 @@ height: 10%;
 
     #carritoH {
 
-        background-color: black;
+        background-color: #0b0126;
         color: orangered;
         border: none;
 
@@ -1078,7 +1079,7 @@ height: 10%;
     }
 
     #carritoH2 {
-        background-color: black;
+        background-color: #0b0126;
         color: orangered;
         border: none;
         padding-top: 20%;
@@ -1098,13 +1099,13 @@ height: 10%;
     }
 
     .footerH {
-        background-color: black;
+        background-color: #0b0126;
     }
 
     .arrowH {
         color: orangered;
         border: none;
-        background-color: black;
+        background-color: #0b0126;
 
     }
 
@@ -1136,13 +1137,13 @@ height: 10%;
     }
 
     .socialM1H {
-        background-color: black;
+        background-color: #0b0126;
         color: orangered;
         border: none;
     }
 
     .socialM2H {
-        background-color: black;
+        background-color: #0b0126;
         color: orangered;
         border: none;
 
@@ -1204,7 +1205,7 @@ height: 10%;
     }
 
     .photos img {
-        border: 3px black;
+        border: 3px #0b0126;
         width: 110%;
         height: auto;
         object-fit: contain;
@@ -1288,7 +1289,7 @@ height: 10%;
     }
 
     .div-photoH {
-        border: 3px black;
+        border: 3px #0b0126;
         width: 100px;
 
 
@@ -1309,7 +1310,7 @@ height: 10%;
         flex-direction: row;
         flex-wrap: wrap;
         padding: 0;
-        border: 1px black;
+        border: 1px #0b0126;
         border-radius: 5px;
         width: 100%;
         justify-content: center;
@@ -1361,7 +1362,7 @@ height: 10%;
 
     .img1 {
         width: 80%;
-        border: 3px solid black;
+        border: 3px solid #0b0126;
 
     }
 
@@ -1394,7 +1395,7 @@ height: 10%;
     }
 
     .photos2 img {
-        border: 1px black;
+        border: 1px #0b0126;
         border-radius: 5%;
         width: 100%;
         height: auto;
@@ -1411,7 +1412,7 @@ height: 10%;
 
 
     .headerHome {
-        background-color: black;
+        background-color: #0b0126;
         position: static;
         top: 0;
     }
@@ -1420,20 +1421,20 @@ height: 10%;
 
         color: orangered;
         border-style: none;
-        background-color: black;
+        background-color: #0b0126;
         font-size: x-large;
     }
 
     #carritoH {
 
-        background-color: black;
+        background-color: #0b0126;
         color: orangered;
         border: none;
         font-size: x-large;
     }
 
     #carritoH2 {
-        background-color: black;
+        background-color: #0b0126;
         color: orangered;
         border: none;
         padding-top: 20%;
@@ -1454,14 +1455,14 @@ height: 10%;
     }
 
     .footerH {
-        background-color: black;
+        background-color: #0b0126;
 
     }
 
     .arrowH {
         color: orangered;
         border: none;
-        background-color: black;
+        background-color: #0b0126;
         font-size: x-large;
 
     }
@@ -1493,14 +1494,14 @@ height: 10%;
     }
 
     .socialM1H {
-        background-color: black;
+        background-color: #0b0126;
         color: orangered;
         border: none;
         font-size: x-large;
     }
 
     .socialM2H {
-        background-color: black;
+        background-color: #0b0126;
         color: orangered;
         border: none;
         font-size: x-large;
@@ -1508,7 +1509,7 @@ height: 10%;
     }
 
     .socialM2TH {
-        background-color: black;
+        background-color: #0b0126;
         color: orangered;
         border: none;
         margin-right: 4px;
@@ -1570,7 +1571,7 @@ height: 10%;
     }
 
     .photos img {
-        border: 3px black;
+        border: 3px #0b0126;
         width: 110%;
         height: auto;
         object-fit: contain;
@@ -1656,7 +1657,7 @@ height: 10%;
     }
 
     .div-photoH {
-        border: 3px black;
+        border: 3px #0b0126;
         width: 190px;
         gap: 5px;
 
@@ -1789,6 +1790,8 @@ height: 10%;
     position: relative;
     margin: 0;
     min-height: 100%;
+  
+
 }
 
 .register_form {
@@ -1862,8 +1865,8 @@ height: 10%;
 }
 
 .nav_button_text_R {
-    text-decoration:  1px black;
-    color: black;
+    text-decoration:  1px #0b0126;
+    color: #0b0126;
     font-weight: 700;
 }
 
@@ -1900,8 +1903,8 @@ height: 10%;
     }
 
     .nav_button_text {
-        text-decoration: underline 1px black;
-        color: black;
+        text-decoration: underline 1px #0b0126;
+        color: #0b0126;
         font-size: 24px;
         font-weight: 700;
     }
@@ -2032,7 +2035,7 @@ height: 10%;
     height: 40px;
     border: none;
     border-radius: 3px;
-    background-color: black;
+    background-color: #0b0126;
     color: white;
 }
 
@@ -2043,7 +2046,7 @@ height: 10%;
 }
 
 .submit-cart-detail:hover {
-    background-color: black;
+    background-color: #0b0126;
     cursor: pointer;
     box-shadow: 0 4px 8px 0 rgba(26, 0, 0, 0.54), 0 6px 20px 0 rgba(34, 1, 1, 0.19);
 
@@ -2058,7 +2061,7 @@ height: 10%;
 .return-detail {
     padding-left: 25%;
     padding-right: 25%;
-    color: black;
+    color: #0b0126;
 }
 
 .destacado {
@@ -2093,13 +2096,13 @@ x
     right: 0;
     left: 0;
     bottom: 0;
-    background-color: #000000;
+    background-color: #0b0126;
     text-align: center;
 
 }
 
 .logo_L {
-    background-color: black;
+    background-color: #0b0126;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -2136,7 +2139,7 @@ x
 }
 
 .field input:hover {
-    border-bottom: black solid 1px;
+    border-bottom: #0b0126 solid 1px;
 
 }
 
@@ -2154,7 +2157,7 @@ x
     color: white;
     font-size: 20px;
     padding: 4.5px;
-    border: 0.5px solid black;
+    border: 0.5px solid #0b0126;
     border-radius: 15px;
     width: 25%;
     max-width: 200px;
@@ -2167,8 +2170,8 @@ x
 }
 
 .nav_button_text_L {
-    text-decoration: solid 1px black;
-    color: black;
+    text-decoration: solid 1px #0b0126;
+    color: #0b0126;
     font-weight: 700;
 }
 
@@ -2219,7 +2222,7 @@ x
 
     .Container_L {
         height: fit-content;
-        background-color: black;
+        background-color: #0b0126;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -2231,7 +2234,7 @@ x
 
     .Container_L {
         height: fit-content;
-        background-color: black;
+        background-color: #0b0126;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -2259,8 +2262,8 @@ x
     }
 
     .nav_button_text {
-        text-decoration: underline 1px black;
-        color: black;
+        text-decoration: underline 1px #0b0126;
+        color: #0b0126;
         font-size: 24px;
         font-weight: 700;
     }
@@ -2341,7 +2344,7 @@ x
     flex-direction: column;
     gap: 10px;
     margin-top: 10px;
-    color: black;
+    color: #0b0126;
 }
 
 #nombrePCrud {
@@ -2349,7 +2352,7 @@ x
     align-items: center;
     padding: 1%;
     border-radius: 3px;
-    border: 1px solid black;
+    border: 1px solid #0b0126;
 }
 
 #nombrePCrud2 {
@@ -2357,7 +2360,7 @@ x
     align-items: center;
     padding: 1%;
     border-radius: 3px;
-    border: 1px solid black;
+    border: 1px solid #0b0126;
 }
 
 .fa-edit {
@@ -2459,7 +2462,7 @@ x
 }
 
 .fa-edit:hover {
-    color: #000000;
+    color: #0b0126;
     cursor: pointer;
 }
 
@@ -2822,4 +2825,7 @@ border-style:dotted;
                 font-weight: bold;
 
             } */
+         }
+         .h2{
+            color: #0b0126;
          }
