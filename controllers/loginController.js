@@ -31,24 +31,14 @@ const loginController = {
 
         let userId;
 
-        //for email//
-
-        /*for (let i = 0; i < usersJ.length; i++){
-            usersJ[i].email === userEmail ? esEmail = true : false;
-        }*/
-
         for (let i = 0; i < usersJ.length; i++){
             if (usersJ[i].email === userEmail) {
                 esEmail = true;
                 userId = usersJ[i];
-            }else{
-                esEmail = false;
             }
         }
 
         bcrypt.compareSync(userPassword, userId.password) ? esPassword = true : false;
-
-        console.log(errors.isEmpty() + " " + esEmail + " " + esPassword);
 
         if (errors.isEmpty() && esEmail && esPassword) {
             res.redirect('/');
