@@ -1,19 +1,53 @@
-[{
-    "id": 1,
-    "firstname": "orggerge",
-    "lastname": "sussyAss",
-    "email": "ajsoidjsaa2@hotmail.es",
-    "password": "$2a$04$vd.3hWv2LahCpTglGYXV3u1YEASVknmOP4lu6uk2RMQRxYyyJbgTe",
-    "phonenumber": "456456456",
-    "gender": "er",
-    "image": "4f09ca2a-7554-41df-9197-f564ba36f6a3.jfif"
-}, {
-    "id": 2,
-    "firstname": "putamadre",
-    "lastname": "diosElChupachichis",
-    "email": "chupachichis229@hotmail.com",
-    "password": "$2a$04$DvReyfhFIzRpPW8PhOhb7.y80jl1PRxlizTJmhAn55.t.J5U//fWu",
-    "phonenumber": "15818918989",
-    "gender": "none",
-    "image": "descarga (1).jpg"
-}]
+[
+    {
+        "id": 1,
+        "firstname": "Ignacio",
+        "lastname": "Andreozzi",
+        "email": "ignacio.andreozzi@hotmail.com",
+        "password": "$2a$04$fjnirznw/Ow5dyOxtVxE8e0ZLxCzvOjvyU0AYD3j.6V4.pqSLflOe",
+        "phonenumber": "5493815186646",
+        "gender": "male",
+        "image": "Ignacio Andreozzi.jpg"
+    },
+    {
+        "id": 2,
+        "firstname": "Gonzalo",
+        "lastname": "Andreozzi",
+        "email": "andreozzigonzalo@gmail.com",
+        "password": "$2a$04$FmbwcJcBXrBIB.i1VpRWqeUSRLgd5HS.PNK1a3UlMl5E4rl4GErOu",
+        "phonenumber": "5493815302514",
+        "gender": "male",
+        "image": "Gonzalo Andreozzi.jpg"
+    },
+    {
+        "id": 3,
+        "firstname": "Ignacio",
+        "lastname": "Etienot",
+        "email": "nachoetienotmoine@gmail.com",
+        "password": "$2a$04$wBCL3VILWHzpPUZc6k61ZuasP4iKr3HHNeJshpO6cOSl5kVDkYgNO",
+        "phonenumber": "5493512056946",
+        "gender": "male",
+        "image": "Ignacio Etionet.jpg"
+    },
+    {
+        "id": 4,
+        "firstname": "Nelson ",
+        "lastname": "Patiño",
+        "email": "nelson227@hotmail.es",
+        "password": "$2a$04$YtB2Pp1rcBRr/JpW642pgeBrMe1UA9AVwAg5GQOW/2SmXr2vvPchO",
+        "phonenumber": "5491151410473",
+        "gender": "male",
+        "image": "pp (1).jpg"
+    },
+    {
+        "id": 5,
+        "firstname": "Thomas",
+        "lastname": "Farre",
+        "email": "thomas.farres@gmail.com",
+        "password": "$2a$04$MnOyKRfKgNCGZnmjqB8kcOy0rENhA4fJmX6TmUAIJIap3UeXEwxlm",
+        "phonenumber": "5491123018662",
+        "gender": "male",
+        "image": "Thomas Farre.jpg"
+       
+    }
+]
