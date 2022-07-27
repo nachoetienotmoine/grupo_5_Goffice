@@ -29,17 +29,26 @@ const loginController = {
         let userPassword = req.body.password;
         let esPassword = false;
 
-        //for password//
-
-        for (let i = 0; i < usersJ.length; i++){
-            bcrypt.compareSync(userPassword, usersJ[i].password) ? esPassword = true : false;
-        }
+        let userId;
 
         //for email//
 
-        for (let i = 0; i < usersJ.length; i++){
+        /*for (let i = 0; i < usersJ.length; i++){
             usersJ[i].email === userEmail ? esEmail = true : false;
+        }*/
+
+        for (let i = 0; i < usersJ.length; i++){
+            if (usersJ[i].email === userEmail) {
+                esEmail = true;
+                userId = usersJ[i];
+            }else{
+                esEmail = false;
+            }
         }
+
+        bcrypt.compareSync(userPassword, userId.password) ? esPassword = true : false;
+
+        console.log(errors.isEmpty() + " " + esEmail + " " + esPassword);
 
         if (errors.isEmpty() && esEmail && esPassword) {
             res.redirect('/');
