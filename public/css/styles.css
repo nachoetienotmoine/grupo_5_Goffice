@@ -129,7 +129,7 @@
     text-align: left;
     border: none;
     height: 100%;
-    padding-top: 7px;
+    padding-top: 5px;
     background-color: transparent;
 
 }
@@ -175,7 +175,7 @@ p {
 .h2-nombre {
     text-align: center;
     height: 20%;
-
+color:#0b0126;
     font-family: "Source Sans Pro", sans-serif;
 }
 
@@ -266,7 +266,7 @@ p {
 }
 */
 .button-main:hover {
-    background-color: black;
+    background-color: #0b0126;;
     cursor: pointer;
 }
 
@@ -283,7 +283,7 @@ p {
     flex-direction: column;
     justify-content: space-between;
 
-    padding-left: 5%;
+   
     padding-right: 3%;
 
     padding-top: 2%;
@@ -301,7 +301,7 @@ p {
     padding-left: 1%;
     padding-right: 1%;
     font-family: "Source Sans Pro", sans-serif;
-
+height: 100%;
 
 
 }
@@ -317,9 +317,9 @@ p {
 .comprar {
     display: flex;
     justify-content: center;
-    padding: 1%;
-    padding-left: 32%;
-    padding-right: 32%;
+    padding: 3%;
+    padding-left: 28%;
+    padding-right: 28%;
 }
 
 /*
@@ -339,11 +339,10 @@ p {
     height: 40px;
     border: none;
     border-radius: 3px;
-    background-color: black;
+    background-color: orangered;
     color: white;
     font-family: "Source Sans Pro", sans-serif;
-    padding-left: 20%;
-    padding-right: 20%;
+
 }
 
 
@@ -354,17 +353,17 @@ p {
 }
 */
 .botoncompra:hover {
-    background-color: orangered;
+    background-color: #0b0126;
     opacity: 90%;
     cursor: pointer;
-    color: black;
-    border: black 2px solid;
+    color: white;
+    border: orangered 2px solid;
 
 }
 
 .lista-footer {
     display: flex;
-    background-color: black;
+    background-color: #0b0126;
     color: orangered;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -392,7 +391,7 @@ p {
 
 .lista-footer2 {
     display: flex;
-    background-color: black;
+    background-color: #0b0126;
     color: orangered;
 }
 
@@ -415,7 +414,7 @@ p {
 }
 
 .h3-footer {
-    color: black;
+    color: #0b0126;;
     text-align: center;
 }
 
@@ -425,7 +424,7 @@ p {
 }
 
 .copyright {
-    background-color: black;
+    background-color: #0b0126;;
 }
 
 .carrouselC {
@@ -469,7 +468,7 @@ p {
     height: 40px;
     border: none;
     border-radius: 3px;
-    background-color: black;
+    background-color: #0b0126;;
     color: white;
 }
 
@@ -477,6 +476,19 @@ p {
     background-color: orangered;
     cursor: pointer;
 }
+.productoCheckout{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 3%;
+    color: #0b0126;
+
+}
+.nombreProductoAgregado{
+    display: flex;
+    color: #0b0126;
+}
+
 
 @media (min-width: 769px) {
     .contenedor .contenedorproducto {
@@ -510,7 +522,7 @@ p {
         display: inline;
         height: 25px;
         font-size: small;
-        color: black;
+        color: #0b0126;
         outline: #03264c;
         border: 1px solid grey;
         border-radius: 20px;
@@ -524,13 +536,13 @@ p {
 
         color: orangered;
         border-style: none;
-        background-color: black;
+        background-color: #0b0126;
         font-size: medium;
     }
 
     #carritoc {
 
-        background-color: black;
+        background-color: #0b0126;
         color: orangered;
         border: none;
     }
@@ -542,7 +554,7 @@ p {
         
         padding-right: 3%;
         padding-top: 2%;
-        width: 25%;
+        
         height: 80%;
         gap: 10%;
 
@@ -551,9 +563,8 @@ p {
     .comprar {
         display: flex;
         justify-content: center;
-        padding: 1%;
-        padding-left: 40%;
-        padding-right: 40%;
+        
+       
     }
 
     #icono-footer:hover {
@@ -567,6 +578,29 @@ p {
         transform: matrix3d();
         transform: scale(110%);
 
+    }
+    .precio-envio {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        box-shadow: 0px 0px 8px black;
+        padding-left: 1%;
+        padding-right: 1%;
+        font-family: "Source Sans Pro", sans-serif;
+    width: 35%;
+    
+    
+    }
+    .contenedortotalCarrito{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+       
+    }
+    .contendedordeloscontendoresdelCarrito{
+        display: flex;
+        flex-direction: column;
+        width: 50%;
     }
 }
 
@@ -596,7 +630,7 @@ p {
         
         padding-right: 3%;
         padding-top: 2%;
-        width: 20%;
+       
         height: 80%;
         gap: 10%;
 
@@ -615,7 +649,7 @@ p {
         display: inline;
         height: 25px;
         font-size: small;
-        color: black;
+        color: #0b0126;;
         outline: #03264c;
         border: 1px solid grey;
         border-radius: 20px;
@@ -631,13 +665,13 @@ p {
 
         color: orangered;
         border-style: none;
-        background-color: black;
+        background-color: #0b0126;;
         font-size: large;
     }
 
     #carritoc {
 
-        background-color: black;
+        background-color: #0b0126;;
         color: orangered;
         border: none;
         font-size: medium;
@@ -666,9 +700,8 @@ p {
     .comprar {
         display: flex;
         justify-content: center;
-        padding: 1%;
-        padding-left: 40%;
-        padding-right: 40%;
+        
+       
     }
 
     #icono-footer:hover {
@@ -682,6 +715,29 @@ p {
         transform: matrix3d();
         transform: scale(110%);
 
+    }
+    .precio-envio {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        box-shadow: 0px 0px 8px black;
+        padding-left: 1%;
+        padding-right: 1%;
+        font-family: "Source Sans Pro", sans-serif;
+    width: 35%;
+    
+    
+    }
+    .contenedortotalCarrito{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+       
+    }
+    .contendedordeloscontendoresdelCarrito{
+        display: flex;
+        flex-direction: column;
+        width: 50%;
     }
 
 }
@@ -2282,7 +2338,7 @@ x
     text-align: center;
 }
 
-.fa-sign-in-alt{
+#loginIcono{
     color: orangered;
     margin-bottom: 15px;
 }
@@ -2901,3 +2957,200 @@ border-style:dotted;
          .h2{
             color: #0b0126;
          }
+         /*---------------------------------------------- header nuevo --------------------------------------------*/
+         .header-bar2 {
+            width: 100vw;
+            height: auto;
+            background-color: #0b0126;
+        }
+        
+        .box-header2 {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            padding: 15px;
+        }
+        
+        
+        .box-header2 .logo2 {
+            width: 50%;
+        }
+        
+        .box-header2 .logo2>img {
+            width: 100%;
+        
+        }
+        
+        .box-header2 .buscar2 {
+            display: flex;
+            width: 50%;
+            justify-content: center;
+            align-items: center;
+        
+        }
+        
+        .buscar2 .buscar-input2 {
+            width: 100%;
+            height: 25px;
+            color: #0b0126;
+            font-size: small;
+            border: 2px solid #03264c;
+            border-radius: 20px;
+            display: block;
+        }
+        
+        .buscar2 .lupa2 {
+            width: 20px;
+            height: 20px;
+            border-radius: 1px;
+            border: none;
+            background-color: transparent;
+            text-decoration: none;
+            cursor: pointer;
+            margin-left: -23px;
+        
+        }
+        
+        .header-bar2 .compracuotas2 {
+            width: 100%;
+            display: flex;
+            padding: 10px;
+        
+        }
+        
+        .compracuotas2 .compra2 {
+            display: flex;
+            margin: auto;
+        }
+        
+        .lista12 {
+            display: none;
+            align-items: center;
+            justify-content: space-between;
+           margin-left: 15px;
+        }
+        
+        .box-item2 {
+            gap: 5%;
+        }
+        
+        .lista12 .info2 {
+        
+            list-style: none;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+        }
+        
+        .lista12 .info2 li a {
+            margin: 10px;
+            text-decoration: none;
+            color: orangered;
+        }
+        
+        .lista12 .lista22 {
+        
+            list-style: none;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+        }
+        
+        .lista12 .lista22 .cuenta2 {
+            margin: 0px;
+            display: flex;
+            align-content: center;
+            align-items: center;
+        }
+        
+        .lista12 .cuenta2 li a {
+            text-decoration: none;
+            color: orangered;
+            margin: 0 20px 0 0;
+        }
+        
+        .burger-menu2 {
+            text-align: center;
+        
+        }
+        
+        .footer i {
+            color: #03264c
+        }
+        
+        #menu2 {
+            margin: 0 auto;
+            color: white;
+            background-color: orangered;
+            border-radius: 6px;
+            border: #03264c;
+            padding: 10px;
+            margin-bottom: 5px;
+        }
+       #iconosheader2{
+        color: orangered;
+        margin: 10px;
+       }
+      .h5header2{
+        color: orangered;
+        margin-right: 1px;
+
+      }
+      .fa-hand-holding-usd{
+        color: orangered;
+        padding-left: 1px;
+      }
+        @media (min-width : 769px) {
+            .address {
+                width: 100%;
+                padding-left: 1%;
+                text-align: left;
+                border: none;
+                height: 100%;
+                padding-top: 0px;
+                background-color: transparent;
+            padding-top: 15px;
+            }
+            .texto2 {
+                font-size: 10px;
+               text-align: center;
+               margin: 0;
+            }
+        
+            .burger-menu2 {
+                display: none;
+            }
+        
+            
+            .header-bar2 .compracuotas2 {
+                width: 30%;
+            }
+        
+            .lista12 {
+                display: flex;
+            }
+        
+            .box-header2 .logo2 {
+                width: 30%;
+            }
+        
+            .box-header2 .logo2>img {
+                width: 100%;
+            }
+        
+            .box-header2 .buscar2 {
+                width: 30%;
+            }
+        
+            
+        
+             
+        
+        
+          
+          
+            
+            
+        }
+        
