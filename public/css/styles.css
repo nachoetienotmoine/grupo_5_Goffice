@@ -859,6 +859,54 @@ height: 10%;
     object-fit: contain;
 }
 
+.box-item {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.titulares {
+    font-size: 24px;
+    width: 100%;
+    text-align: left;
+}
+
+.precio {
+    font-size: 18px;
+    padding: 0%;
+    margin: 0%;
+}
+
+.dyc {
+    font-size: 16px;
+    color: orangered;
+    padding: 5%;
+    margin: 0%;
+
+}
+
+.dyd {
+    font-size: 16px;
+}
+
+
+
+.articulo-detail {
+    border-top: solid 1px #ebebeb;
+    background-color: white;
+    padding: 15px;
+    margin: 0;
+    position: relative;
+    text-align: left;
+}
+
+#imagen.size {
+    width: 0px;
+
+}
+
+
+
 
 @keyframes slide {
     0% {
@@ -959,6 +1007,17 @@ height: 10%;
     box-shadow: 0 4px 8px 0 rgba(26, 0, 0, 0.54), 0 4px 10px 0 rgba(34, 1, 1, 0.19)
 }
 
+.article3H {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 0;
+    border: 1px black;
+    border-radius: 10px;
+    width: 100%;
+    justify-content: center;
+    
+}
 .divarticle2H {
     width: 75px;
     margin: 10px;
@@ -1055,7 +1114,20 @@ height: 10%;
     border-style: none;
     background-color: black;
     margin-top: 8px;
+}
 
+#discountH {
+border-style:dotted;
+    background: orangered;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    color: white;
+
+}
+
+hr {
+    border: 0; height: 0; box-shadow: 0 1px 5px 1px purple;
 }
 
 @media (min-width:769px) {
