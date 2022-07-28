@@ -2766,7 +2766,7 @@ border-style:dotted;
         /* background-image: url("../images/users/luces led.webp");; */
     }
     .h2-nombre2{
-        color: #0b0126;
+        color: rgb(104 104 104);
         text-align: center;
         margin-top: 2%;
     
@@ -2865,7 +2865,7 @@ border-style:dotted;
         
         }
      .datoUser{
-        color: #0b0126;
+        color: rgb(104 104 104);
         font-size: medium;
         font-weight: bold;
      }
@@ -2911,7 +2911,7 @@ border-style:dotted;
             }
             
             .datoUser{
-                color: #0b0126;
+                color: rgb(104 104 104);
                 font-size: large;
                 font-weight: bold;
              }
@@ -2932,7 +2932,7 @@ border-style:dotted;
                 box-shadow: 0px 0px 20px #0b0126;
             }
             .datoUser{
-                color: #0b0126;
+                color: rgb(104 104 104);
                 font-size: large;
                 font-weight: bold;
              }
