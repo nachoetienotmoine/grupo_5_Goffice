@@ -2875,7 +2875,7 @@ border-style:dotted;
         
         .contenedor2 .contenedorproducto2{
             width: 100%;
-            box-shadow: 0px 0px 11px black;
+            box-shadow: 0px 0px 15px #0b0126;
          }
          input[type=checkbox] {
             visibility: hidden;
@@ -2907,7 +2907,7 @@ border-style:dotted;
         @media (min-width: 769px){
             .contenedor2 .contenedorproducto2{
              width: 40%;
-               box-shadow: 0px 0px 11px black;
+               box-shadow: 0px 0px 15px #0b0126;
             }
             
             .datoUser{
@@ -2919,7 +2919,7 @@ border-style:dotted;
                 display: flex;
                 flex-direction: column;
                 justify-content: space-around;
-                box-shadow: 0px 0px 10px black;
+                box-shadow: 0px 0px 25px #0b0126;
                 margin: 2.5%;
                 gap: 5px;
                 /* background-color: #0b0126; */
@@ -2929,7 +2929,7 @@ border-style:dotted;
             @media  (min-width: 1284px) {
             .contenedor2 .contenedorproducto2{
                width: 20%;
-                box-shadow: 0px 0px 12px black;
+                box-shadow: 0px 0px 20px #0b0126;
             }
             .datoUser{
                 color: #0b0126;
@@ -2940,7 +2940,7 @@ border-style:dotted;
                 display: flex;
                 flex-direction: column;
                 justify-content: space-around;
-                box-shadow: 0px 0px 10px black;
+                box-shadow: 0px 0px 20px #0b0126;
                margin: 2.5%;
                 gap: 5px;
                 /* background-color: #0b0126; */
