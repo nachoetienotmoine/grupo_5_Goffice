@@ -3212,6 +3212,7 @@ input[type=checkbox] {
 
     .box-header2 .logo2>img {
         width: 100%;
+        max-height: 110px;
     }
 
     .box-header2 .buscar2 {
