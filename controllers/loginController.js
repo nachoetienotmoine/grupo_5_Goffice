@@ -40,7 +40,7 @@ const loginController = {
         }
 
         if (errors.isEmpty() && esEmail && esPassword) {
-            res.redirect('/');
+            res.redirect('/', { usersJ: usersJ });
 
         }else {
             //res.render('login', { errors: errors.mapped(), old: req.body });
