@@ -16,8 +16,7 @@ const loginController = {
     },
 
     login: (req, res) => {
-
-        console.log(req.session);
+        
         res.render('login', {email: {
             msg: ''
         }});
@@ -42,6 +41,11 @@ const loginController = {
         if (errors.isEmpty() && esEmail && esPassword) {
             //delete userId.password;
             req.session.userLogged = userId;
+
+            if (req.body.remember_user) {
+                res.cookie('userEmail', req.body.email, {maxAge: (1000 * 60) * 2});
+                
+            }
 
             res.redirect('/users/profile');
 

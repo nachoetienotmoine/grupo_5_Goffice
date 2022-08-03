@@ -6,6 +6,9 @@ function userLoggedMiddleware(req, res, next) {
         res.locals.userLogged = req.session.userLogged;
     }
 
+    let emailInCookie = req.cookies.userEmail;
+    console.log(emailInCookie);
+
     next();
 }
 
