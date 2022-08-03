@@ -32,10 +32,13 @@
 
             <div class="lista22">
                 <ul class="cuenta2" type="none">
-                    <li> <a href="/users/profile">User<i class="fas fa-address-card" id="iconosheader2"></i></a> </li>
+                    <% if (locals.isLogged) { %>
+                        <li> <a href="/users/profile">User<i class="fas fa-address-card" id="iconosheader2"></i></a> </li>
+                        <li> <a href="/logout">Log out<i class="fas fa-shopping-basket" id="iconosheader2"></i></a></i></li>
+                    <% } else {%>
                     <li> <a href="/registro">Register<i class="fas fa-sign-in-alt" id="iconosheader2"></i></a></li>
                     <li> <a href="/login">Log in<i class="fas fa-shopping-basket" id="iconosheader2"></i></a></i></li>
-                    <li> <a href="/logout">Log out<i class="fas fa-shopping-basket" id="iconosheader2"></i></a></i></li>
+                    <% } %>
                 </ul>
             </div>
         </div>

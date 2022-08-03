@@ -18,6 +18,7 @@ const bcrypt =  require ( 'bcryptjs');
 
 const guestMiddleware = require('./middlewares/guestMiddleware');
 const authMiddleware = require('./middlewares/authMiddleware');
+const userLoggedMiddleware = require('./middlewares/userLoggedMiddleware');
 
 
 const methodOverride = require('method-override');
@@ -35,6 +36,7 @@ app.use(session({
     resave: false,
     saveUninitialized: false,
 }));
+app.use(userLoggedMiddleware); 
 
 app.use('/registro', guestMiddleware, routersRegister);
 app.use('/detalle', routersDetalle);
