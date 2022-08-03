@@ -3466,6 +3466,15 @@ input[type=checkbox] {
     margin: auto;
     justify-content: center;
 }
+.NombrePerfil{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+font-size: large;
+color: grey;
+
+}
 
 @media (min-width : 769px) {
     .address {
@@ -3526,7 +3535,7 @@ input[type=checkbox] {
         justify-content: space-evenly;
         text-align: center;
     font-size: large;
-    color: grey;
+    color: orangered;
     
     }
 }
@@ -3535,15 +3544,7 @@ input[type=checkbox] {
     max-height: 20%;
     border-radius: 50%;
 }
-.NombrePerfil{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-font-size: large;
-color: grey;
 
-}
 #fotoPerfil2{
     max-width: 20%;
     max-height: 20%;
