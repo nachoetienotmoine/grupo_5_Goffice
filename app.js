@@ -2,6 +2,7 @@ const express = require('express');
 const app = express();
 const path = require('path');
 const session = require('express-session');
+const cookies = require('cookie-parser');
 
 const routersRegister = require('./routers/registerApi');
 const routersDetalle = require('./routers/detalleApi');
@@ -36,7 +37,8 @@ app.use(session({
     resave: false,
     saveUninitialized: false,
 }));
-app.use(userLoggedMiddleware); 
+app.use(userLoggedMiddleware);
+app.use(cookies()); 
 
 app.use('/registro', guestMiddleware, routersRegister);
 app.use('/detalle', routersDetalle);
