@@ -3378,7 +3378,7 @@ input[type=checkbox] {
 .compracuotas2 .compra2 {
     display: flex;
     margin: auto;
-    justify-content: center;
+    justify-content: end;
 }
 
 .lista12 {
