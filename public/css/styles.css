@@ -3461,6 +3461,11 @@ input[type=checkbox] {
     color: orangered;
     padding-left: 1px;
 }
+.compracuotas2 .compra3 {
+    display: flex;
+    margin: auto;
+    justify-content: center;
+}
 
 @media (min-width : 769px) {
     .address {
@@ -3510,6 +3515,11 @@ input[type=checkbox] {
         margin: auto;
         justify-content: space-evenly;
     }
+    .compracuotas2 .compra3 {
+        display: flex;
+        margin: auto;
+        justify-content: end;
+    }
     .NombrePerfil{
         display: flex;
         flex-direction: column;
@@ -3533,4 +3543,9 @@ input[type=checkbox] {
 font-size: large;
 color: grey;
 
+}
+#fotoPerfil2{
+    max-width: 20%;
+    max-height: 20%;
+    border-radius: 50%;
 }
