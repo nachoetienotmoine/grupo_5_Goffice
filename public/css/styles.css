@@ -3378,6 +3378,7 @@ input[type=checkbox] {
 .compracuotas2 .compra2 {
     display: flex;
     margin: auto;
+    justify-content: center;
 }
 
 .lista12 {
@@ -3503,4 +3504,9 @@ input[type=checkbox] {
     .box-header2 .buscar2 {
         width: 30%;
     }
+}
+#fotoPerfil{
+    max-width: 20%;
+    max-height: 20%;
+    border-radius: 50%;
 }
