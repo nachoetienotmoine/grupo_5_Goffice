@@ -40,7 +40,7 @@ const loginController = {
         }
 
         if (errors.isEmpty() && esEmail && esPassword) {
-            delete userId.password;
+            //delete userId.password;
             req.session.userLogged = userId;
 
             res.redirect('/users/profile');
