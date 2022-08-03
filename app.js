@@ -1,6 +1,7 @@
 const express = require('express');
 const app = express();
 const path = require('path');
+const session = require('express-session');
 
 const routersRegister = require('./routers/registerApi');
 const routersDetalle = require('./routers/detalleApi');
@@ -13,6 +14,7 @@ const routersProductos = require('./routers/productos');
 const routersAdmin = require('./routers/admin')
 const bcrypt =  require ( 'bcryptjs');
 
+const guestMiddleware = require('./middlewares/guestMiddleware');
 
 
 const methodOverride = require('method-override');
@@ -25,12 +27,17 @@ app.set('views', __dirname + '/views-ejs');
 app.use(express.urlencoded({extended:false}));
 app.use(express.json());
 app.use(methodOverride('_method'));
+app.use(session({
+    secret: "Shhh, It's a secret",
+    resave: false,
+    saveUninitialized: false,
+}));
 
-app.use('/registro', routersRegister);
+app.use('/registro', guestMiddleware, routersRegister);
 app.use('/detalle', routersDetalle);
 app.use('/carrito', routersCarrito);
 app.use('/', routersHome);
-app.use('/login', routersLogin);
+app.use('/login', guestMiddleware, routersLogin);
 app.use('/prodList', routersProdList);
 app.use('/productos', routersProductos);
 app.use('/productos/:id?', routersProductos);

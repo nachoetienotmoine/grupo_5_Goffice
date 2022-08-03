@@ -10,14 +10,14 @@ const loginController = {
     
     users: (req, res) => {
      
-        
         const usersFile = path.join(__dirname, '../data/users.json');
         const usersJ = JSON.parse(fs.readFileSync(usersFile, 'utf-8'));
         res.render("index", { usersJ: usersJ }) //para enviar la info de users al home y mostrar info del usuario
     },
 
-    index: (req, res) => {
+    login: (req, res) => {
 
+        console.log(req.session);
         res.render('login', {email: {
             msg: ''
         }});
@@ -40,7 +40,10 @@ const loginController = {
         }
 
         if (errors.isEmpty() && esEmail && esPassword) {
-            res.redirect('/');
+            delete userId.password;
+            req.session.userLogged = userId;
+
+            res.redirect('/users/profile');
 
         }else {
             //res.render('login', { errors: errors.mapped(), old: req.body });

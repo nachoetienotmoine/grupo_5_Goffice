@@ -38,6 +38,11 @@ const usersController = {
         //finally, you got kicked back to products for good.
         res.redirect('users');
     },
+    profile: (req, res) => {
+        res.render("profile", {
+            user: req.session.userLogged
+        });
+    }
    
 }
 module.exports= usersController;
