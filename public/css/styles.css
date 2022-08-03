@@ -808,28 +808,7 @@ p {
 .footerH {
     background-color: #0b0126;
 }
-/* boton de arriba en el index*/
-#button-up{
-    width: 60px;
-    height: 60px;
-    background-color: #03264c;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #FFF;
-    border-radius: 50%;
-    font-size: 20px;
-    position: fixed;
-    bottom: 200px;
-    right: 50px;
-    cursor: pointer;
-    transition: all 300ms ease;
 
-}
-
-#button-up:hover{
-    transform: scale(1.1);
-}
 
 #arrowH {
     color: orangered;
@@ -843,68 +822,7 @@ p {
     transform: scale(1.1)
 }
 
-.go-top-cointener{
-    position: fixed;
-    bottom:4rem ;
-    right: 4rem;
-    width: 6.6rem;
-    height: 6.6rem;
-    z-index: -1;
-}
-.go-top-button{
-    width: 0rem;
-    height: 0rem;
-    background-color: #03264c;
-    border-radius: 50%;
-    cursor: pointer;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) ;
-    z-index: -1;
-}
 
-.go-top-button i {
-    position: absolute;
-    font-size: large;
-    top: 48%;
-    left: 50%;
-    transform: translate(-50%, -50%) scale(0);
-    color: #FFF;
-    transition: .2s;
-
-}
-
-.show{
-    z-index: 10;
-}
-
-.show .go-top-button{
- animation: popup .3s ease-in-out;
- width: 6.6rem;
- height: 6.6rem;
- z-index: 11;
-
-}
-
-.show i {
-    transform: translate(-50%, -50%) scale(1);
-}
-
-@keyframes popup{
-    0%{
-        width: 0%;
-        height: 0%;
-    }
-    50%{
-        width: 3;
-        height: 8rem;
-    }
-    100%{
-        width: 6.6rem;
-        height: 6.6rem;
-    }
-
-}
 
 .pHfooter {
     color: orangered;
@@ -1791,10 +1709,30 @@ color: orangered;
         color: #f33f3f;
         font-weight: 500;
     }
-    
-    
 
+    /* boton de arriba en el index*/
+#button-up{
+    width: 60px;
+    height: 60px;
+    background-color: #03264c;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #FFF;
+    border-radius: 50%;
+    font-size: 20px;
+    position: fixed;
+    bottom: 200px;
+    right: 50px;
+    cursor: pointer;
+    transition: all 300ms ease;
+    transform: scale(0);
 
+}
+
+#button-up:hover{
+    transform: scale(1.1);
+}
 }
 
 
@@ -2223,8 +2161,36 @@ color: orangered;
         font-size: 13px;
         color: #f33f3f;
         font-weight: 500;
-    }  
+
+
+    }
+    
+    /* boton de arriba en el index*/
+#button-up{
+    width: 60px;
+    height: 60px;
+    background-color: #03264c;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #FFF;
+    border-radius: 50%;
+    font-size: 20px;
+    position: fixed;
+    bottom: 200px;
+    right: 50px;
+    cursor: pointer;
+    transition: all 300ms ease;
+    transform: scale(0);
+
 }
+
+#button-up:hover{
+    transform: scale(1.1);
+}
+
+}
+
 
 /*---------------------------------------------- home ----------------------------------------------*/
 
