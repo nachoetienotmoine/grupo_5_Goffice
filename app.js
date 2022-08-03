@@ -11,10 +11,13 @@ const routersLogin = require('./routers/loginApi');
 const routersProdList = require('./routers/prodListApi');
 const routersUsers = require('./routers/users');
 const routersProductos = require('./routers/productos');
-const routersAdmin = require('./routers/admin')
+const routersAdmin = require('./routers/admin');
+const routersLogout = require('./routers/logoutApi');
 const bcrypt =  require ( 'bcryptjs');
 
+
 const guestMiddleware = require('./middlewares/guestMiddleware');
+const authMiddleware = require('./middlewares/authMiddleware');
 
 
 const methodOverride = require('method-override');
@@ -37,11 +40,12 @@ app.use('/registro', guestMiddleware, routersRegister);
 app.use('/detalle', routersDetalle);
 app.use('/carrito', routersCarrito);
 app.use('/', routersHome);
+app.use('/logout', routersLogout);
 app.use('/login', guestMiddleware, routersLogin);
 app.use('/prodList', routersProdList);
 app.use('/productos', routersProductos);
 app.use('/productos/:id?', routersProductos);
-app.use('/users', routersUsers);
+app.use('/users',authMiddleware, routersUsers);
 app.use('/admin', routersAdmin);
 app.listen(process.env.PORT || 3000, function() {
     console.log("Servidor corriendo en el puerto 3000");
