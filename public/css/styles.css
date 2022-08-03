@@ -3101,7 +3101,7 @@ x
 }
 
 .h2-nombre2 {
-    color: rgb(104 104 104);
+    color: #0b0126;
     text-align: center;
     margin-top: 2%;
 
@@ -3211,7 +3211,7 @@ x
 }
 
 .datoUser {
-    color: rgb(104 104 104);
+    color: #0b0126;
     font-size: medium;
     font-weight: bold;
 }
@@ -3285,7 +3285,7 @@ input[type=checkbox] {
     }
 
     .datoUser {
-        color: rgb(104 104 104);
+        color: #0b0126;
         font-size: large;
         font-weight: bold;
     }
@@ -3403,7 +3403,7 @@ input[type=checkbox] {
 .lista12 .info2 li a {
     margin: 10px;
     text-decoration: none;
-    color: orangered;
+    color: grey;
 }
 
 .lista12 .lista22 {
@@ -3423,7 +3423,7 @@ input[type=checkbox] {
 
 .lista12 .cuenta2 li a {
     text-decoration: none;
-    color: orangered;
+    color: grey;
     margin: 0 20px 0 0;
 }
 
@@ -3447,7 +3447,7 @@ input[type=checkbox] {
 }
 
 #iconosheader2 {
-    color: grey;
+    color: orangered;
     margin: 10px;
 }
 
