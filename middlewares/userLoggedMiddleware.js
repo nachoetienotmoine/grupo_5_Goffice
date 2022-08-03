@@ -8,7 +8,7 @@ function userLoggedMiddleware(req, res, next) {
 
     //let emailInCookie = req.cookies.userEmail;
     //console.log(emailInCookie);
-
+// cambiar , por error //
     next();
 }
 
