@@ -3378,7 +3378,7 @@ input[type=checkbox] {
 .compracuotas2 .compra2 {
     display: flex;
     margin: auto;
-    justify-content: end;
+    justify-content: space-evenly;
 }
 
 .lista12 {
@@ -3508,11 +3508,29 @@ input[type=checkbox] {
     .compracuotas2 .compra2 {
         display: flex;
         margin: auto;
-        justify-content: end;
+        justify-content: space-evenly;
+    }
+    .NombrePerfil{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        text-align: center;
+    font-size: large;
+    color: grey;
+    
     }
 }
 #fotoPerfil{
     max-width: 20%;
     max-height: 20%;
     border-radius: 50%;
+}
+.NombrePerfil{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+font-size: large;
+color: grey;
+
 }
