@@ -493,9 +493,44 @@ p {
 .nombreProductoAgregado {
     display: flex;
     color: #0b0126;
+    text-align: center;
 }
+.quantity{
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+}
+ .cantidad{
+    font-size: large;
+    border: none;
+width: 80%;
+    text-align: center;
+    color: orangered;
 
+}
+ .cantidadMenos{
+   
+    font-size: large;
+    color: orangered;
+    width: 25px;
+    
+}
+ .cantidadMas{
+    
+    font-size: large;
+color: orangered;
+    width: 25px;
+  
+}
+.PrecioenCarrito{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    font-size: large;
+    color: #0b0126;
 
+}
 @media (min-width: 769px) {
     .contenedor .contenedorproducto {
         width: 100%;
@@ -615,9 +650,20 @@ p {
         background-color: none;
         display: flex;
     }
+    
 }
 
 @media (min-width: 1284px) {
+    .cantidadMenos{
+        
+        width: 35px;
+        
+    }
+     .cantidadMas{
+   
+        width: 35px;
+      
+    }
     .todo-productos-main {
         padding: 0 10%;
         margin: 3%;
@@ -762,6 +808,7 @@ p {
         background-color: none;
         display: flex;
     }
+    
 
 }
 
