@@ -611,6 +611,10 @@ p {
         flex-direction: column;
         width: 50%;
     }
+    .section-footer {
+        background-color: none;
+        display: flex;
+    }
 }
 
 @media (min-width: 1284px) {
@@ -753,6 +757,10 @@ p {
         display: flex;
         flex-direction: column;
         width: 50%;
+    }
+    .section-footer {
+        background-color: none;
+        display: flex;
     }
 
 }
