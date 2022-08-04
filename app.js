@@ -37,8 +37,10 @@ app.use(session({
     resave: false,
     saveUninitialized: false,
 }));
+
+app.use(cookies());
 app.use(userLoggedMiddleware);
-app.use(cookies()); 
+ 
 
 app.use('/registro', guestMiddleware, routersRegister);
 app.use('/detalle', routersDetalle);
