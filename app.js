@@ -50,9 +50,9 @@ app.use('/logout', routersLogout);
 app.use('/login', guestMiddleware, routersLogin);
 app.use('/prodList', routersProdList);
 app.use('/productos', routersProductos);
-app.use('/productos/:id?', routersProductos);
+app.use('/productos/:id?',authMiddleware, routersProductos);
 app.use('/users',authMiddleware, routersUsers);
-app.use('/admin', routersAdmin);
+app.use('/admin',authMiddleware, routersAdmin);
 app.listen(process.env.PORT || 3000, function() {
     console.log("Servidor corriendo en el puerto 3000");
 });

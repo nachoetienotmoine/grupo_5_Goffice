@@ -6,7 +6,7 @@ const path = require('path');
 
 
 
-const userLoginMiddleWare = require('../middlewares/userLogin');
+const authMiddleware = require('../middlewares/authMiddleware');
 
 // ************ multer Configuration ************
 const storage = multer.diskStorage({
@@ -27,12 +27,12 @@ const storage = multer.diskStorage({
 
 
 router.get('/', productosController.listar);
-router.get("/create", /*userLoginMiddleWare,*/productosController.crearProductos);
+router.get("/create", authMiddleware, productosController.crearProductos);
 router.get("/:id", productosController.detalleProducto);
-router.post("/", /*userLoginMiddleWare,*/ upload.single('image'), productosController.crearProductosPost);
-router.get("/:id/edit", /*userLoginMiddleWare,*/ productosController.editProducto);
-router.put("/:id", /*userLoginMiddleWare,*/ upload.single('image'), productosController.update);
-router.delete("/:id", /*userLoginMiddleWare,*/ productosController.deleteProducto);
+router.post("/", authMiddleware, upload.single('image'), productosController.crearProductosPost);
+router.get("/:id/edit", authMiddleware, productosController.editProducto);
+router.put("/:id", authMiddleware, upload.single('image'), productosController.update);
+router.delete("/:id", authMiddleware, productosController.deleteProducto);
 
 
 
