@@ -1,8 +1,8 @@
 const homeController = {
 
     logout: (req, res) => {
+        res.clearCookie('userEmail');
         req.session.destroy();
-        console.log(req.session);
         return res.redirect('/');
     }
 

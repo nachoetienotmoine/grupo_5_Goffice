@@ -40,8 +40,6 @@ const usersController = {
     },
     profile: (req, res) => {
 
-        console.log(req.cookies.userEmail);
-
         res.render("profile", {
             user: req.session.userLogged
         });
