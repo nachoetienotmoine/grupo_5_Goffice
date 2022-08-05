@@ -1,4 +1,4 @@
-const homeController = {
+const logoutController = {
 
     logout: (req, res) => {
         res.clearCookie('userEmail');
@@ -8,4 +8,4 @@ const homeController = {
 
 }
 
-module.exports = homeController;
+module.exports = logoutController;
