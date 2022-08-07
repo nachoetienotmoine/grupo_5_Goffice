@@ -864,17 +864,9 @@ color: orangered;
     background-color: #0b0126;
 }
 
+#button-up{
 
-#arrowH {
-    color: orangered;
-    border: none;
-    background-color: #0b0126;
-    font-size: x-large;
-    cursor: pointer;
-    transition: all 200ms ease;
-}
-#arrowH:hover{
-    transform: scale(1.1)
+display: none;    
 }
 
 
