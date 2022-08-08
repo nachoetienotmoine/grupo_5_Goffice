@@ -3573,7 +3573,7 @@ color: grey;
     font-family: "Sonodeurce Sans Pro", sans-serif;
 }
 
-body {
+.bodyBurger {
     position: relative;
     min-height: 100vh;
     width: 100%;
