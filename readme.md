@@ -37,6 +37,14 @@ Cosas qué deberían empezar a hacer: Consultarle a los profesores más sobre co
 Cosas qué deberían dejar de hacer: Mejorar nuestra organización sobre las tareas y asignarlas de una forma más equitativa. 
 Conclusión general: El sprint 4 fue confuso ya que no pudimos entender bien las consignas originalmente. También tuvimos problemas organizandonos en las tareas. Aunque tuvimos estos problemas, pudimos completar el trabajo ayudándonos entre nosotros. 
 
+Retro 5:
+--------
+
+Cuestiones positivas del sprint anterior: Nuevamente pudimos cumplir con la entrega en tiempo y forma.
+Cosas qué deberían empezar a hacer: Organizar las dailies con más tiempo.
+Cosas qué deberían dejar de hacer: Mejorar nuestra organización sobre las tareas y asignarlas de una forma más equitativa. 
+Conclusión general: Nos organizamos bien con el sprint aunque ocacionalmente tuvimos complicaciones.
+
 ○ Temática del sitio y público objetivo:
 ----------------------------------------
 
