@@ -2225,7 +2225,7 @@ color: orangered;
     font-size: 20px;
     position: fixed;
     bottom: 200px;
-    right: 50px;
+    right: 20px;
     cursor: pointer;
     transition: all 300ms ease;
     transform: scale(0);
@@ -2241,6 +2241,77 @@ color: orangered;
 
 /*---------------------------------------------- home ----------------------------------------------*/
 
+/*---------------------------------------------- home nuevo----------------------------------------------*/
+
+.rating span{
+    font-size: 1rem;
+    color: gold;
+}
+.productos{
+    padding: 1rem ;
+}
+.productos__center{
+    padding: 0 5rem;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    gap: 3rem 1rem;
+}
+.producto{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 .5rem 1.5rem rgba(0, 0, 0, .2);
+}
+.image__container img{
+    width: 300px;
+}
+.producto__footer{
+    padding: 1rem;
+    width: 100%;
+}
+.productos__footer h1{
+    height: 28px;
+    overflow: hidden;
+    font-size: 2rem;
+    font-weight: 700;
+}
+.rating{
+    margin: 1rem 0;
+}
+.bottom{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+}
+.btn{
+    display: inline-block;
+    border: 1px solid #ccc;
+    padding: 1rem 1.8rem;
+    color: black;
+    font-weight: 500;
+    font-size: 1.7rem;
+    cursor: pointer;
+    transition: all 300ms ease-in-out;
+    
+}
+.btn:hover{
+    background-color:#1a6692 ;
+    color: white;
+    border: 1px solid #1a6692;
+}
+.price{
+    font-weight: 700;
+    font-size: 1.8rem;
+}
+
+
+
+
+
+
+/*---------------------------------------------- home  nuevo fin----------------------------------------------*/
 /*---------------------------------------------- register ----------------------------------------------*/
 
 .html_R {
