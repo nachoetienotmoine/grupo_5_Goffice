@@ -2243,16 +2243,26 @@ color: orangered;
 
 /*---------------------------------------------- home nuevo----------------------------------------------*/
 
-.rating span{
-    font-size: 1rem;
-    color: gold;
+
+hr{
+    width: 50%;
+    margin-left: 30%;
+    height: 10px; 
+    text-align: center; 
+    background-color: coral;
+    border-radius: 50%; 
 }
+
+.rating span{
+    font-size: 10px;
+    color: gold;
+
+}
+
 .productos{
     padding: 1rem ;
 }
 .productos__center{
-    padding: 0 5rem;
-    margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
     gap: 3rem 1rem;
@@ -2262,6 +2272,7 @@ color: orangered;
     flex-direction: column;
     align-items: center;
     box-shadow: 0 .5rem 1.5rem rgba(0, 0, 0, .2);
+    border-radius: 5%;
 }
 .image__container img{
     width: 300px;
@@ -2271,10 +2282,10 @@ color: orangered;
     width: 100%;
 }
 .productos__footer h1{
-    height: 28px;
+    height: 15px;
     overflow: hidden;
-    font-size: 2rem;
-    font-weight: 700;
+    font-size: 1rem;
+    font-weight: 500;
 }
 .rating{
     margin: 1rem 0;
@@ -2290,8 +2301,8 @@ color: orangered;
     border: 1px solid #ccc;
     padding: 1rem 1.8rem;
     color: black;
-    font-weight: 500;
-    font-size: 1.7rem;
+    font-weight: 200;
+    font-size: 1rem;
     cursor: pointer;
     transition: all 300ms ease-in-out;
     
@@ -2303,7 +2314,7 @@ color: orangered;
 }
 .price{
     font-weight: 700;
-    font-size: 1.8rem;
+    font-size: 1rem;
 }
 
 
