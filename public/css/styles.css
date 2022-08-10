@@ -493,9 +493,44 @@ p {
 .nombreProductoAgregado {
     display: flex;
     color: #0b0126;
+    text-align: center;
 }
+.quantity{
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+}
+ .cantidad{
+    font-size: large;
+    border: none;
+width: 80%;
+    text-align: center;
+    color: orangered;
 
+}
+ .cantidadMenos{
+   
+    font-size: large;
+    color: orangered;
+    width: 25px;
+    
+}
+ .cantidadMas{
+    
+    font-size: large;
+color: orangered;
+    width: 25px;
+  
+}
+.PrecioenCarrito{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    font-size: large;
+    color: #0b0126;
 
+}
 @media (min-width: 769px) {
     .contenedor .contenedorproducto {
         width: 100%;
@@ -611,9 +646,24 @@ p {
         flex-direction: column;
         width: 50%;
     }
+    .section-footer {
+        background-color: none;
+        display: flex;
+    }
+    
 }
 
 @media (min-width: 1284px) {
+    .cantidadMenos{
+        
+        width: 35px;
+        
+    }
+     .cantidadMas{
+   
+        width: 35px;
+      
+    }
     .todo-productos-main {
         padding: 0 10%;
         margin: 3%;
@@ -754,6 +804,11 @@ p {
         flex-direction: column;
         width: 50%;
     }
+    .section-footer {
+        background-color: none;
+        display: flex;
+    }
+    
 
 }
 
@@ -809,12 +864,12 @@ p {
     background-color: #0b0126;
 }
 
-.arrowH {
-    color: orangered;
-    border: none;
-    background-color: #0b0126;
+#button-up{
 
+display: none;    
 }
+
+
 
 .pHfooter {
     color: orangered;
@@ -1701,10 +1756,30 @@ color: orangered;
         color: #f33f3f;
         font-weight: 500;
     }
-    
-    
 
+    /* boton de arriba en el index*/
+#button-up{
+    width: 60px;
+    height: 60px;
+    background-color: #03264c;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #FFF;
+    border-radius: 50%;
+    font-size: 20px;
+    position: fixed;
+    bottom: 200px;
+    right: 50px;
+    cursor: pointer;
+    transition: all 300ms ease;
+    transform: scale(0);
 
+}
+
+#button-up:hover{
+    transform: scale(1.1);
+}
 }
 
 
@@ -2133,8 +2208,36 @@ color: orangered;
         font-size: 13px;
         color: #f33f3f;
         font-weight: 500;
-    }  
+
+
+    }
+    
+    /* boton de arriba en el index*/
+#button-up{
+    width: 60px;
+    height: 60px;
+    background-color: #03264c;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #FFF;
+    border-radius: 50%;
+    font-size: 20px;
+    position: fixed;
+    bottom: 200px;
+    right: 50px;
+    cursor: pointer;
+    transition: all 300ms ease;
+    transform: scale(0);
+
 }
+
+#button-up:hover{
+    transform: scale(1.1);
+}
+
+}
+
 
 /*---------------------------------------------- home ----------------------------------------------*/
 
@@ -2683,7 +2786,7 @@ x
 @media (min-width: 1024px) {
 
     .descriptions-main {
-        width: 55%;
+        width: 48%;
         height: 100%;
         padding-left: 0;
     }
@@ -3011,7 +3114,7 @@ x
 }
 
 .h2-nombre2 {
-    color: rgb(104 104 104);
+    color: #0b0126;
     text-align: center;
     margin-top: 2%;
 
@@ -3121,7 +3224,7 @@ x
 }
 
 .datoUser {
-    color: rgb(104 104 104);
+    color: #0b0126;
     font-size: medium;
     font-weight: bold;
 }
@@ -3195,7 +3298,7 @@ input[type=checkbox] {
     }
 
     .datoUser {
-        color: rgb(104 104 104);
+        color: #0b0126;
         font-size: large;
         font-weight: bold;
     }
@@ -3288,6 +3391,7 @@ input[type=checkbox] {
 .compracuotas2 .compra2 {
     display: flex;
     margin: auto;
+    justify-content: space-evenly;
 }
 
 .lista12 {
@@ -3312,7 +3416,7 @@ input[type=checkbox] {
 .lista12 .info2 li a {
     margin: 10px;
     text-decoration: none;
-    color: orangered;
+    color: grey;
 }
 
 .lista12 .lista22 {
@@ -3332,7 +3436,7 @@ input[type=checkbox] {
 
 .lista12 .cuenta2 li a {
     text-decoration: none;
-    color: orangered;
+    color: grey;
     margin: 0 20px 0 0;
 }
 
@@ -3369,6 +3473,20 @@ input[type=checkbox] {
 .fa-hand-holding-usd {
     color: orangered;
     padding-left: 1px;
+}
+.compracuotas2 .compra3 {
+    display: flex;
+    margin: auto;
+    justify-content: center;
+}
+.NombrePerfil{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+font-size: large;
+color: grey;
+
 }
 
 @media (min-width : 769px) {
@@ -3413,4 +3531,35 @@ input[type=checkbox] {
     .box-header2 .buscar2 {
         width: 30%;
     }
+
+    .compracuotas2 .compra2 {
+        display: flex;
+        margin: auto;
+        justify-content: space-evenly;
+    }
+    .compracuotas2 .compra3 {
+        display: flex;
+        margin: auto;
+        justify-content: end;
+    }
+    .NombrePerfil{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        text-align: center;
+    font-size: large;
+    color: orangered;
+    
+    }
+}
+#fotoPerfil{
+    max-width: 20%;
+    max-height: 20%;
+    border-radius: 50%;
+}
+
+#fotoPerfil2{
+    max-width: 20%;
+    max-height: 20%;
+    border-radius: 50%;
 }

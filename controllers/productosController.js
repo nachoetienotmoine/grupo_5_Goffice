@@ -69,9 +69,8 @@ const productosController = {
     editProducto: (req, res) => {
         const productId = parseInt(req.params.id, 10);
         const productoEncontrado = productosJ.filter(product => product.id === productId);
-
-        
-        res.render('admin/prodEdit', { productoEncontrado: productoEncontrado });
+        let productImage = path.format({root: '/ignored', dir: path.join(__dirname, '..', '/public/images') , base: 'IMG_2546.jpg'});
+        res.render('admin/prodEdit', { productoEncontrado: productoEncontrado, productImage: productImage });
     },
 
     update: (req, res) => {

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GOffice</title>
+    <link rel="icon" type="image/PNG" href="../public/images/Gofficee.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<!-- body -->
+<body>
+    <!-- header -->
+    <%- include('./header2.ejs')%>
+        <!--</header> -->
+        <!-- main -->
+        <main class="todo-productos-main2">
+            <section class="contenedor2">
+                <article class="contenedorproducto2">
+                    <h2 class="h2-nombre2"><%= user.firstname  %> </h2>
+                    <article class="article-main2">
+                        <article class="imagen-nombre-main2">
+                            <div class="imagen-div2">
+                                <img src="/images/users/<%= user.image  %>" alt="Producto" id="img-main2">
+                            </div>
+                        </article>
+                    </article>
+                    <div class="button-box2">
+                        <div class="datoUser"><%= user.email  %></div>
+                        <div class="datoUser"><%= user.phonenumber  %></div>
+                        <div class="datoUser"><%= user.gender  %></div>
+                    </div>
+                </article>
+            </section>
+          
+        </main>
+        <!-- footer -->
+        <%- include('./footer')%>
+            <!-- </footer> -->
+</body>
+</html>

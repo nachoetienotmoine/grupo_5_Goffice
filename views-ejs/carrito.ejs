@@ -48,13 +48,26 @@
                                     </div>
 
                                     <div class="button-box">
-                                        <button class="button-main" id="buttonmain">
-                                            Cantidad
-                                        </button>
+                                        <div class="quantity" data-quantity="conteiner">
+                                           
+                                                <form  action="" method="POST">
+                                                    <input class="cantidadMenos" data-quantity="pop" type="submit" value="-" name="pop">
+                                                </form>
 
-                                        <button class="button-main">
-                                            Precio
-                                        </button>
+                                                <input  class="cantidad" autocomplete="off" data-quantity="input" type="tel" value="7"
+                                                    name="quantity">
+
+                                                <form  action="/" method="POST">
+                                                    <input class="cantidadMas" data-quantity="push" type="submit" value="+" name="push">
+                                                </form>
+                                                <div class="cart-inline-loading__quantity-selector"
+                                                    data-region="quantity-loading"></div>
+                                         
+                                        </div>
+
+                                     <p class="PrecioenCarrito"> $121616</p>
+                                           
+                                     
 
                                         <button class="button-main">
                                             Delete
@@ -322,15 +335,15 @@
 
                     <article class="productoCheckout">
                         <div class="nombreProductoAgregado"> nombre del producto </div>
-                        <div class="" nombreProductoAgregado> precio del producto </div>
+                        <div class="nombreProductoAgregado" > precio del producto </div>
                     </article>
                     <article class="productoCheckout">
                         <div class="nombreProductoAgregado"> nombre del producto </div>
-                        <div class="" nombreProductoAgregado> precio del producto </div>
+                        <div class="nombreProductoAgregado" > precio del producto </div>
                     </article>
                     <article class="productoCheckout">
                         <div class="nombreProductoAgregado"> nombre del producto </div>
-                        <div class="" nombreProductoAgregado> precio del producto </div>
+                        <div class="nombreProductoAgregado" > precio del producto </div>
                     </article>
                     <div class="preciofinal">
                         <h3>Total price</h3>

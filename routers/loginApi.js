@@ -15,7 +15,7 @@ const validateLogin = [
 ];
 
 
-router.get('/', loginController.index);
+router.get('/', loginController.login);
 router.post('/', validateLogin, loginController.loginProcess);
 
 module.exports = router;

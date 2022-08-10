@@ -5,7 +5,7 @@
 
         <div class="box-header2">
             <div class="logo2">
-                <img src="/images/Goffice.png">
+                <img src="/images/Gofficeqva.png">
             </div>
             <form class="buscar2" action="#" method="POST">
                 <input class="buscar-input2" type="text" placeholder="  Buscar..." required>
@@ -13,13 +13,23 @@
                     <i class="fas fa-search"></i>
                 </button>
             </form>
-            
+            <% if (locals.isLogged) { %>
             <div class="compracuotas2">
-                <div class="compra2"><i class="fas fa-hand-holding-usd"></i>
-                    <h5 class="h5header2"> Compra guacho!! tengo que mantener los crios </h5>
+                <div class="compra2">
+                    <p class="NombrePerfil"> Hi, <%= locals.userLogged.firstname %> <%=locals.userLogged.lastname %></p>
+                   
+                    <img src="/images/users/<%= locals.userLogged.image %>" id="fotoPerfil" alt="">
                 </div>
             </div>
-           
+            <% } else {%>
+
+                <div class="compracuotas2">
+                    <div class="compra3">
+                        <img src="/images/users/usuariovacio.png" id="fotoPerfil2" alt="">
+                    </div>
+                </div>
+
+            <% } %>
          
         </div>
         <div class="lista12">
@@ -32,21 +42,18 @@
 
             <div class="lista22">
                 <ul class="cuenta2" type="none">
-                    <li> <a href="/users">User<i class="fas fa-address-card" id="iconosheader2"></i></a> </li>
-                    <li> <a href="/registro">Register<i class="fas fa-sign-in-alt" id="iconosheader2"></i></a></li>
-                    <li> <a href="/login">Log in<i class="fas fa-shopping-basket" id="iconosheader2"></i></a></i></li>
-                    <li> <a href="/">Log out<i class="fas fa-shopping-basket" id="iconosheader2"></i></a></i></li>
+                    <% if (locals.isLogged) { %>
+                        <li> <a href="/users/profile">User<i class="fas fa-user" id="iconosheader2"></i></a> </li>
+                        <li> <a href="/logout">Log out<i  class="fas fa-sign-out-alt" id="iconosheader2"></i></a></li>
+                    <% } else {%>
+                    <li> <a href="/registro">Register<i class="fas fa-address-card" id="iconosheader2"></i></a></li>
+                    <li> <a href="/login">Log in<i class="fas fa-sign-in-alt" id="iconosheader2"></i></a></li>
+                    <% } %>
                 </ul>
             </div>
         </div>
 
-        <div class="burger-menu2">
-            <button id="menu2">
-                <i class="fas fa-bars"></i>
-            </button>
-
-        </div>
-      
+        <%- include('./burgerMenu.ejs') %>
 
     </nav>
 </header>
