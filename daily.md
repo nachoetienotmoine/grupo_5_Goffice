@@ -17,6 +17,8 @@ La verdad que sirvieron mucho a lo largo del proyecto ya que entendimos a la per
 
 Nelson Patiño:
 --------------
+Las weeklies fueron como leña para el carbón, sin ellas, no se puede proceder al fuego. Siendo el mismo ejemplificación
+de nuestro sprint. 
 
 Ignacio Etienot: 
 ----------------
