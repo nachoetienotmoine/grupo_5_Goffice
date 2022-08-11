@@ -1,95 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GOffice</title>
-    <link rel="icon" type="image/PNG" href="../public/images/Gofficee.png">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/css/styles.css">
-</head>
-<!-- body -->
+<%- include('./head.ejs')%>
+<%- include('./header2.ejs') %>
 
 <body>
+<br><br>
+    <main class="mainD">
 
-    <!-- header -->
-    <%- include('./header2.ejs')%>
-        <!--</header> -->
+    
 
-        <!-- main -->
-        <main class="main-detail">
-            <section class="main-detail-section">
-                <div class="title-product-detail">
-                    <h2>Reddragon Zeus-X</h2>
+    <div class="carrusel">
+        <ul class="carrusel-fotos">
+          <li id="foto1"><img src="images/teclado.jpg" alt="" ></li>
+          <li id="foto2"><img src="images/silla.jpg" alt=""></li>
+          <li id="foto3"><img src="images/silla.jpg" alt=""></li>
+          <li id="foto4"><img src="images/silla.jpg" alt=""></li>
+          <li id="foto5"><img src="images/silla.jpg" alt=""></li>
+          <li id="foto6"><img src="images/silla.jpg" alt=""></li>
+        </ul>
+        <ul class="carrusel-menu">
+            <li><a href="#foto1"><img src="images/teclado.jpg" alt=""></a></li>
+            <li><a href="#foto2"><img src="images/silla.jpg" alt=""></a></li>
+            <li><a href="#foto3"><img src="images/silla.jpg" alt=""></a></li>
+            <li><a href="#foto4"><img src="images/silla.jpg" alt=""></a></li>
+            <li><a href="#foto5"><img src="images/silla.jpg" alt=""></a></li>
+            <li><a href="#foto6"><img src="images/silla.jpg" alt=""></a></li>
+          </ul>
+    
+         <article class="detalle-grid">
+            <div class="detalles-content">
+                <h3>producto</h3>
+                <div class="rating">
+                    <span>
+                        <i class="fa fa-star"></i>
+                    </span>
+                    <span>
+                        <i class="fa fa-star"></i>
+                    </span>
+                    <span>
+                        <i class="fa fa-star"></i>
+                    </span>
+                    <span>
+                        <i class="fa fa-star"></i>
+                    </span>
+                    <span>
+                        <i class="fa fa-star"></i>
+                    </span>
                 </div>
-                <div class="detail-image">
-                    <img id="general-detail-image" src="images/Reddragon Zeus-X.jpg" alt="articulo">
-                </div>
-                <article class="nav-image-detail">
-                    <div class="imagenes-detalle-nuevo">
-                        <img id="particular-detail-image" src="images/Reddragon Zeus-X.jpg" alt="articulo">
+                    <p class="price"><b>Precio: </b> $55.00</p>
+                    <p class="description">
+                        <b>Descripcion: </b> <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta quae ad ex sint expedita perspiciatis odit eligendi! Et quia ex aperiam dolorum sunt omnis maiores. Repudiandae delectus iste exercitationem vel?</span>
+                    </p>
+                    <p class="description">
+                        <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque voluptates consequuntur in assumenda odit hic, aut cupiditate dolorem aspernatur! Quibusdam iusto magnam vero maxime quisquam voluptatibus minima aliquam molestias, iure ratione commodi, reiciendis quasi.</span>
+                    </p>
+                    <div class="bottom">
+                        <div class="btn__group">
+                            <a href="" class="btn addToCart">Añadir carrito</a>
+                        </div>
                     </div>
-                    <div class="imagenes-detalle-nuevo">
-                        <img id="particular-detail-image" src="images/Reddragon Zeus-X.jpg" alt="articulo">
-                    </div>
-                    <div class="imagenes-detalle-nuevo">
-                        <img id="particular-detail-image" src="images/Reddragon Zeus-X.jpg" alt="articulo">
-                    </div>
-                    <div class="imagenes-detalle-nuevo">
-                        <img id="particular-detail-image" src="images/Reddragon Zeus-X.jpg" alt="articulo">
-                    </div>
-
-                </article>
-            </section>
-            <br>
-            </section>
-            <section class="contenedor-detail">
-                <div class="title-product-detail">
-                    <h2>Detalle de Producto</h2>
-                </div>
-                <br>
-                <article class="description-product">
-                    <p class="destacado">Seven Electronics Auriculares Gamer Gaming Master Sound XH 1000 Soul Micrófono
-                        Desmontable</p>
-                    <p class="destacado">El sonido que estabas buscando, los nuevos Master Sound XH1000 tienen un sonido
-                        envolvente 7.1.</p>
-                    <p class="destacado">¡Jugá esas partidas sin que nadie te moleste, sé el mejor!</p>
-                    <p>Auricular Master Sound XH 1000</p>
-                    <p>Auricular: Sonido envolvente 7.1</p>
-                    <p>Compatible con PC: Si</p>
-                    <p>Compatible con PS4: Si</p>
-                    <p>Conector/es: USB</p>
-                    <p>Frecuencia: 20Hz a 20KHz</p>
-                    <p>Largo del cable: 2 metros reforzado (Mallado)</p>
-                    <p>Micrófono: Si, desmontable (Incluye cancelación de ruido)</p>
-                    <p>Resistencia: 64 +/- 15%</p>
-                    <p>Sensibilidad: 115dB +/- 3dB</p>
-                    <p>Diafragma: 50 mm</p>
-                    <p>Ecualizador: Si, Funciones de control de Sonido/Volumen (Silencio ON/OFF)</p>
-                </article>
-            </section>
-            <br>
-            <br>
-            <article class="precio-envio-detail">
-                <div class="comprar-detail">
-                    <button type="submit" class="submit-cart-detail">Agregar a carrito</button>
-                </div>
-                <br>
-                <div class="return-detail">
-                    <button type="submit" class="return-cart-detail">Volver a menú</button>
-                </div>
-            </article>
-            <br>
-        </main>
-        <!-- footer -->
-        <%- include('./footer')%>
-            <!-- </footer> -->
+            </div>
+        </article> 
+    </main>
+    <br><br>
 </body>
+<%- include('./footer.ejs') %>
 
 </html>
