@@ -1364,7 +1364,7 @@ hr {
 
 .productos__center {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 15px 20px;
 }
 
@@ -1378,6 +1378,7 @@ hr {
 
 .image__container img {
     width: 100px;
+    padding-top: 20px;
 }
 
 .producto__footer {
@@ -1444,7 +1445,7 @@ hr {
 
     .productos__center {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
         gap: 15px 15px;
     }
 
@@ -1983,7 +1984,7 @@ hr {
 
     .productos__center {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
         gap: 3rem 1rem;
     }
 
@@ -1996,7 +1997,7 @@ hr {
     }
 
     .image__container img {
-        width: 300px;
+        width: 150px;
     }
 
     .producto__footer {
