@@ -3851,6 +3851,9 @@ input[type=checkbox] {
     padding: 15px;
 }
 
+.box-header2 a {
+    display: contents;
+}
 
 .box-header2 .logo2 {
     width: 50%;
