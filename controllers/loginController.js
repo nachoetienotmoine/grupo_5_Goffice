@@ -39,15 +39,7 @@ const loginController = {
         }
 
         if (errors.isEmpty() && esEmail && esPassword) {
-            //delete userId.password;
-            req.session.userLogged = userId;
-
-            if (req.body.remember_user) {
-                res.cookie('userEmail', req.body.email, {maxAge: (1000 * 60) * 60});
-                
-            }
-
-            res.redirect('/users/profile');
+            res.redirect('/', { usersJ: usersJ });
 
         }else {
             //res.render('login', { errors: errors.mapped(), old: req.body });
