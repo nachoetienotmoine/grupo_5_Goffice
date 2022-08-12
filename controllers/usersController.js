@@ -36,7 +36,7 @@ const usersController = {
         fs.writeFileSync(usersFile, JSON.stringify(usersJ), 'utf-8');
 
         //finally, you got kicked back to products for good.
-        res.redirect('users');
+        res.redirect('login');
     },
     profile: (req, res) => {
 
