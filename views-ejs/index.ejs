@@ -16,7 +16,7 @@
         </video>
     </section>
     <br>
-    <h1>Productos <button class="button-HOffice"> <i class="fas fa-arrow-circle-right"></i></button></h1>
+    <h1 class="productosIndex">Productos <button class="button-HOffice"> <i class="fas fa-arrow-circle-right"></i></button></h1>
     <br>
 
     <section class="productos">
@@ -53,7 +53,6 @@
                     </div>
                 </div>
             </div>
-
             <% } %>
         </div>
     </section>
@@ -73,7 +72,7 @@
 <br>
     <br>
     <br>
-
+    <h1 class="productosIndex">Ofertas <button class="button-HOffice"> <i class="fas fa-arrow-circle-right"></i></button></h1>
 <section class="productos">
     <div class="productos__center"><% for (let i=0; i < productosJ.length ; i++) {%>
         <div class="producto">
@@ -82,24 +81,13 @@
             </div>
             <div class="producto__footer">
                 <h1><%= productosJ[i].name %></h1>
-                <div class="rating">
-                    <span>
-                        <i class="fa fa-star"></i>
-                    </span>
-                    <span>
-                        <i class="fa fa-star"></i>
-                    </span>
-                    <span>
-                        <i class="fa fa-star"></i>
-                    </span>
-                    <span>
-                        <i class="fa fa-star"></i>
-                    </span>
-                    <span>
-                        <i class="fa fa-star"></i>
-                    </span>
-                </div>
-                <div class="price">$<%= productosJ[i].price %></div>
+                <div class="descuento"><span id="discount" data-action="cart-can"
+                    class="badge rounded-circle">
+                    <%= productosJ[i].discount %>%
+                </span>
+            </div>
+                <div class="price">$<%= Math.round(productosJ[i].price - productosJ[i].discount/100 *
+                    productosJ[i].price); %></div>
             </div>
             <div class="bottom">
                 <div class="btn__group">
@@ -108,14 +96,13 @@
                 </div>
             </div>
         </div>
-
         <% } %>
     </div>
 </section>
 
-<br>
 
 
+<br><br>
     
     <%- include('./footer.ejs') %>
 
