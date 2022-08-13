@@ -82,24 +82,13 @@
             </div>
             <div class="producto__footer">
                 <h1><%= productosJ[i].name %></h1>
-                <div class="rating">
-                    <span>
-                        <i class="fa fa-star"></i>
-                    </span>
-                    <span>
-                        <i class="fa fa-star"></i>
-                    </span>
-                    <span>
-                        <i class="fa fa-star"></i>
-                    </span>
-                    <span>
-                        <i class="fa fa-star"></i>
-                    </span>
-                    <span>
-                        <i class="fa fa-star"></i>
-                    </span>
-                </div>
-                <div class="price">$<%= productosJ[i].price %></div>
+                <div class="descuento"><span id="discount" data-action="cart-can"
+                    class="badge rounded-circle">
+                    <%= productosJ[i].discount %>%
+                </span>
+            </div>
+                <div class="price">$<%= Math.round(productosJ[i].price - productosJ[i].discount/100 *
+                    productosJ[i].price); %></div>
             </div>
             <div class="bottom">
                 <div class="btn__group">
