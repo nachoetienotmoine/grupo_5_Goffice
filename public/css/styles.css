@@ -1445,7 +1445,9 @@ hr {
    
     
 }
-
+.productosIndex{
+    margin-left: 1rem;
+}
 
 @media (min-width:769px) {
     hr {
