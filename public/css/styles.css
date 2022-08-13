@@ -1437,7 +1437,7 @@ hr {
     }
 
     .productos {
-        padding: 10px;
+        padding: 1rem 100px;
         display: grid;
         flex-direction: wrap;
 
@@ -1979,7 +1979,7 @@ hr {
     }
 
     .productos {
-        padding: 1rem;
+        padding: 1rem 150px;
     }
 
     .productos__center {
