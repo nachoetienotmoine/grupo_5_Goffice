@@ -1132,7 +1132,7 @@ p {
     height: 40px;
     background-color: white;
     border: none;
-    font-size: large;
+    font-size: 25px;
     color: orangered;
 
 }
@@ -1382,8 +1382,11 @@ hr {
 }
 
 .producto__footer {
-    padding: 10px;
+    padding: 1rem;
     width: 100%;
+    gap: 1.2rem;
+    display: flex;
+    flex-direction: column;
 }
 
 .productos__footer h1 {
@@ -1403,13 +1406,16 @@ hr {
     align-items: center;
     padding: 10px 5px;
 }
-
+.fa-star{
+    color: #1a6692;
+}
 .btn {
     display: inline-block;
     padding: 10px 5px;
     color: black;
     font-weight: 200;
     font-size: 16px;
+    text-decoration: none;
 
 
 }
@@ -1419,6 +1425,29 @@ hr {
     font-size: 1rem;
 }
 
+.imagen1 {
+    width: 70%;
+    margin: 25px;
+    margin-left: 15%;
+    opacity: 0;
+    border: 1px solid snow;
+    -webkit-transition: all 2s ease;
+    -moz-transition: all 2s ease;
+    -o-transition: all 1s ease;
+    opacity: 2;
+    -webkit-box-shadow: 0px 0px 20px rgba(255,255,255,0.8);
+    -moz-box-shadow: 0px 0px 20px rgba(255,255,255,0.8);
+    box-shadow: 0px 0px 20px rgba(255,255,255,0.8);
+    
+}
+ .section1H{
+    background-color: #0b0126;
+   
+    
+}
+.productosIndex{
+    margin-left: 1rem;
+}
 
 @media (min-width:769px) {
     hr {
@@ -1464,6 +1493,9 @@ hr {
     .producto__footer {
         padding: 1rem;
         width: 100%;
+        gap: 1.2rem;
+        display: flex;
+        flex-direction: column;
     }
 
     .productos__footer h1 {
@@ -1495,7 +1527,7 @@ hr {
     }
 
     .price {
-        font-weight: 500;
+        font-weight: 700;
         font-size: 15px;
     }
 
@@ -1752,7 +1784,7 @@ hr {
         height: 40px;
         background-color: white;
         border: none;
-        font-size: large;
+        font-size: 30px;
         color: orangered;
 
     }
@@ -1938,7 +1970,7 @@ hr {
         font-size: 20px;
         position: fixed;
         bottom: 200px;
-        right: 50px;
+        right: 15px;
         cursor: pointer;
         transition: all 300ms ease;
         transform: scale(0);
@@ -2003,6 +2035,9 @@ hr {
     .producto__footer {
         padding: 1rem;
         width: 100%;
+        gap: 1.2rem;
+        display: flex;
+        flex-direction: column;
     }
 
     .productos__footer h1 {
@@ -2307,7 +2342,7 @@ hr {
         height: 40px;
         background-color: white;
         border: none;
-        font-size: 40px;
+        font-size: 30px;
         color: orangered;
 
     }
@@ -3682,7 +3717,7 @@ x
 
 #discount {
     border-style: dotted;
-    background: orangered;
+    background: #1a6692;
     width: 40px;
     height: 40px;
     border-radius: 50%;
