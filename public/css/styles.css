@@ -2526,69 +2526,7 @@ hr {
         
     }
 
-
-
-    .asus{
-        width: 40%;
-        transform: scale(-1);
-        
-    }
-    .asus:hover{
-        transform: scale(1);
-    }
-
-    .intel{
-        width: 10%;
-        transform: scale(-1);
-        margin-left: 20%;
-        
-    
-    }
-    .intel:hover{
-        width: 20%;
-        transform: scale(1);
-
-    }
-    .lenovo{
-        width: 50%;
-        transform: scale(-1);
-        
-    }
-    .lenovo:hover{
-        transform: scale(1);
-    }
-    .logitech{
-        width: 20%;
-        transform: scale(-1);
-        
-    }
-    .logitech:hover{
-        transform: scale(1);
-    }
-    .apple{
-        width: 20%;
-        transform: scale(1);
-        
-
-        
-    }
-    .apple:hover{
-        transform: scale(1);
-    }
-   .logos{
-       
-       display: grid;
-    }
-       
-    .partners{
-        text-align: center;
-        padding: auto;
-        margin: 5%;
-    }
-       
    
-
-    
 }
 
 
@@ -4378,4 +4316,3 @@ input[type=checkbox] {
 .botonEdit {
     text-align: end;
 }
-
