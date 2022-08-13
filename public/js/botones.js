@@ -21,7 +21,7 @@ window.onscroll = function(){
 
    let scroll = document.documentElement.scrollTop;
 
-    if (scroll > 2000){
+    if (scroll > 1000){
         buttonUp.style.transform = "scale(1)";
     }else if(scroll < 2000){
         buttonUp.style.transform = "scale(0)";
