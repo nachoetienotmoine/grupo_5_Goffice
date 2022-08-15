@@ -1448,6 +1448,60 @@ hr {
     margin-left: 1rem;
 }
 
+
+
+.asus{
+    width: 20%;
+    height: 3rem;
+    
+}
+
+
+.intel{
+    width: 20%;
+    
+    height: 3rem;
+    
+
+}
+
+.lenovo{
+    width: 20%;
+    
+    height: 3rem;
+}
+
+
+.logitech{
+    width: 20%;
+    
+    height: 3rem;
+}
+
+
+.apple{
+    width: 20%;
+    height: 3rem;
+}
+
+.logos{
+   display: flex;
+ text-align: center;
+ justify-content: center;
+ margin: 0 1rem;
+  
+}
+   
+.partners{
+    text-align: center;
+    padding: 2rem;
+  
+}
+  .contenedorLogosIndex{
+    display: flex;
+    gap: 1rem;
+    justify-content: space-evenly;
+  } 
 @media (min-width:769px) {
     hr {
         width: 50%;
@@ -1979,6 +2033,58 @@ hr {
     #button-up:hover {
         transform: scale(1.1);
     }
+    .asus{
+        width: 15%;
+        height: 6rem;
+        
+    }
+    
+
+    .intel{
+        width: 15%;
+        
+        height: 6rem;
+        
+    
+    }
+    
+    .lenovo{
+        width: 15%;
+        
+        height: 6rem;
+    }
+   
+    
+    .logitech{
+        width: 15%;
+        
+        height: 6rem;
+    }
+    
+    
+    .apple{
+        width: 15%;
+        height: 6rem;
+    }
+   
+   .logos{
+       display: flex;
+     text-align: center;
+     justify-content: center;
+      
+    }
+       
+    .partners{
+        text-align: center;
+        padding: 2rem;
+      
+    }
+      .contenedorLogosIndex{
+        display: flex;
+        gap: 1rem;
+        justify-content: space-evenly;
+      } 
+
 
 }
 
@@ -2584,7 +2690,7 @@ hr {
 
     .asus{
         width: 15%;
-        
+        height: 6rem;
         
     }
     
@@ -2592,7 +2698,7 @@ hr {
     .intel{
         width: 15%;
         
-       
+        height: 6rem;
         
     
     }
@@ -2600,33 +2706,39 @@ hr {
     .lenovo{
         width: 15%;
         
-        
+        height: 6rem;
     }
    
     
     .logitech{
         width: 15%;
         
-        
+        height: 6rem;
     }
     
     
     .apple{
         width: 15%;
+        height: 6rem;
     }
    
    .logos{
        display: flex;
-       margin-left: 20%;
+     text-align: center;
+     justify-content: center;
       
     }
        
     .partners{
         text-align: center;
-        padding: auto;
-        margin: 5%;
+        padding: 2rem;
+      
     }
-       
+      .contenedorLogosIndex{
+        display: flex;
+        gap: 1rem;
+        justify-content: space-evenly;
+      } 
 
    
 }
