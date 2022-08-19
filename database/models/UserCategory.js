@@ -1,5 +1,5 @@
 module.exports = (sequelize, dataTypes) => {
-    let alias = "userCategory";
+    let alias = "usersCategory";
     let config = {
 
         id_category_products: {
@@ -16,7 +16,7 @@ module.exports = (sequelize, dataTypes) => {
     };
 
 
-    const usercategory = sequelize.define(alias, cols, config);
+    const userCategory = sequelize.define(alias, cols, config);
 
-    return usercategory;
+    return userCategory;
 }
