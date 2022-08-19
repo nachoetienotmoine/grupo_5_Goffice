@@ -1,5 +1,5 @@
 module.exports = (sequelize, dataTypes) => {
-    let alias = "usersCategory";
+    let alias = "UserCategory";
     let cols = {
 
         id_category_products: {
@@ -19,7 +19,13 @@ tableName:"user_category",
 timestamps: false
     };
 
-    const userCategory = sequelize.define(alias, cols, config);
-
-    return userCategory;
+    const UserCategory = sequelize.define(alias, cols, config);
+    UserCategory.associate = function(models){
+        UserCategory.hasMany(models.Users, {
+            as: "Users",
+            foreignKey: "id_category_user"
+        })
+    }
+    
+    return UserCategory;
 }

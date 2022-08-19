@@ -40,13 +40,13 @@ module.exports = (sequelize, dataTypes) => {
 
 
 
-    const Product = sequelize.define(alias, cols, config);
+    const Products = sequelize.define(alias, cols, config);
 
-    Product.associate = function (models) {
-        Product.belongsTo(models.ProductCategory, {
-            as: "categoryProducts",
+    Products.associate = function (models) {
+        Products.belongsTo(models.ProductCategory, {
+            as: "ProductCategory",
             foreignkey: "id_products"
         })
-        return Product;
+        return Products;
     }
 }

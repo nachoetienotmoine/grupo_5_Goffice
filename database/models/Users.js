@@ -38,14 +38,14 @@ module.exports = (sequelize, dataTypes) => {
     };
 
 
-    const User = sequelize.define(alias, cols, config);
+    const Users = sequelize.define(alias, cols, config);
 
-    User.associate = function (models) {
-        Usuario.belongsTo(models.UserCategory, {
-            as: "categoryUser",
+    Users.associate = function (models) {
+        Users.belongsTo(models.UserCategory, {
+            as: "UsersCategory",
             foreignkey: "id_users"
         })
-        return User;
+        return Users;
     }
-    return User;
+    return Users;
 }
