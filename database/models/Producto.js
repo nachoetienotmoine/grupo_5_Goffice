@@ -3,7 +3,10 @@ module.exports = (sequelize, dataTypes) => {
     let config = {
 
         id: {
-            type: dataTypes.INTEGER
+            type: dataTypes.INTEGER,
+            primaryKey: true,
+            autoIncrement: true,
+
         },
         products_name: {
             type: dataTypes.VARCHAR,
@@ -13,7 +16,7 @@ module.exports = (sequelize, dataTypes) => {
             type: dataTypes.VARCHAR,
 
         },
-       price: {
+        price: {
             type: dataTypes.INTEGER,
 
         },
@@ -21,7 +24,7 @@ module.exports = (sequelize, dataTypes) => {
             type: dataTypes.INTEGER,
 
         },
-      image: {
+        image: {
             type: dataTypes.VARCHAR,
 
         },
@@ -34,5 +37,11 @@ module.exports = (sequelize, dataTypes) => {
 
     const Producto = sequelize.define(alias, cols, config);
 
-    return Producto;
+    Producto.associate = function (models) {
+        Producto.belongsTo(models.Category, {
+            as: "categoryProducts",
+            foreignkey: "id_products"
+        })
+        return Producto;
+    }
 }

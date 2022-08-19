@@ -1,8 +1,10 @@
 module.exports = (sequelize, dataTypes) => {
-    let alias = "Usuarios";
+    let alias = "Users";
     let config = {
         id: {
-            type: dataTypes.INTEGER
+            type: dataTypes.INTEGER,
+            primaryKey: true,
+            autoIncrement: true
         },
         first_name: {
             type: dataTypes.VARCHAR,
@@ -32,7 +34,14 @@ module.exports = (sequelize, dataTypes) => {
     };
 
 
-    const Usuario = sequelize.define(alias, cols, config);
+    const User = sequelize.define(alias, cols, config);
 
-    return Usuario;
+    User.associate = function (models) {
+        Usuario.belongsTo(models.Category, {
+            as: "categoryUser",
+            foreignkey: "id_users"
+        })
+        return User;
+    }
+    return User;
 }
