@@ -1,6 +1,7 @@
 module.exports = (sequelize, dataTypes) => {
-    let alias = "Usuarios";
+    let alias = "Category";
     let config = {
+
         id: {
             type: dataTypes.INTEGER
         },
@@ -28,11 +29,10 @@ module.exports = (sequelize, dataTypes) => {
             type: dataTypes.VARCHAR,
 
         }
-
     };
 
 
-    const Usuario = sequelize.define(alias, cols, config);
+    const Category = sequelize.define(alias, cols, config);
 
-    return Usuario;
+    return Category;
 }
