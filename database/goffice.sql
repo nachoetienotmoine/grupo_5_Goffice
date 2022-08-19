@@ -1,54 +1,46 @@
 CREATE SCHEMA `goffice` ;
 
-CREATE TABLE `goffice`.`users` (
-  `idusers` INT NOT NULL AUTO_INCREMENT,
-  `First Name` VARCHAR(100) NOT NULL,
-  `Last Name` VARCHAR(45) NOT NULL,
-  `Email` VARCHAR(45) NOT NULL,
-  `Password` VARCHAR(45) NOT NULL,
-  `Gender` VARCHAR(45) NOT NULL,
-  `Image` VARCHAR(45) NOT NULL,
-  PRIMARY KEY (`idusers`),
-  UNIQUE INDEX `idusers_UNIQUE` (`idusers` ASC) VISIBLE);
+CREATE TABLE `users` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `first_name` varchar(100) NOT NULL,
+  `last_name` varchar(45) NOT NULL,
+  `email` varchar(45) NOT NULL,
+  `password` varchar(45) NOT NULL,
+  `gender` varchar(45) NOT NULL,
+  `image` varchar(45) NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `idusers_UNIQUE` (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci
 
-  CREATE TABLE `goffice`.`Products` (
-  `idProducts` INT NOT NULL AUTO_INCREMENT,
-  `Products Name` VARCHAR(45) NOT NULL,
-  `Description` VARCHAR(500) NOT NULL,
-  `Price` INT NOT NULL,
-  `Discount` INT NOT NULL,
-  `Image` VARCHAR(500) NOT NULL,
-  `Stock` INT NOT NULL,
-  PRIMARY KEY (`idProducts`),
-  UNIQUE INDEX `idProducts_UNIQUE` (`idProducts` ASC) VISIBLE,
-  UNIQUE INDEX `Products Name_UNIQUE` (`Products Name` ASC) VISIBLE,
-  UNIQUE INDEX `Description_UNIQUE` (`Description` ASC) VISIBLE);
+CREATE TABLE `Products` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `products_name` varchar(45) NOT NULL,
+  `description` varchar(500) NOT NULL,
+  `price` int NOT NULL,
+  `discount` int NOT NULL,
+  `image` varchar(500) NOT NULL,
+  `stock` int NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `idProducts_UNIQUE` (`id`),
+  UNIQUE KEY `Products Name_UNIQUE` (`products_name`),
+  UNIQUE KEY `Description_UNIQUE` (`description`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci
 
+CREATE TABLE `category_products` (
+  `id_category_products` int NOT NULL AUTO_INCREMENT,
+  `id_products` int DEFAULT NULL,
+  `Category` varchar(45) NOT NULL,
+  PRIMARY KEY (`id_category_products`),
+  UNIQUE KEY `idCategory Productos_UNIQUE` (`id_category_products`),
+  KEY `Id products_idx` (`id_products`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci
 
-CREATE TABLE `goffice`.`Category Products` (
-  `idCategory Products` INT NOT NULL AUTO_INCREMENT,
-  `Id Products` INT NULL,
-  PRIMARY KEY (`idCategory Products`),
-  UNIQUE INDEX `idCategory Productos_UNIQUE` (`idCategory Products` ASC) VISIBLE,
-  INDEX `Id products_idx` (`Id Products` ASC) VISIBLE,
-  CONSTRAINT `Id products`
-    FOREIGN KEY (`Id Products`)
-    REFERENCES `goffice`.`Products` (`idProducts`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION);
-ALTER TABLE `goffice`.`Category Products` 
-ADD COLUMN `Category` VARCHAR(45) NOT NULL AFTER `Id Products`;
-
-CREATE TABLE `goffice`.`Users Category` (
-  `idUsers Category` INT NOT NULL AUTO_INCREMENT,
-  `Id Users` INT NOT NULL,
-  `Category Users` VARCHAR(45) NOT NULL,
-  PRIMARY KEY (`idUsers Category`),
-  UNIQUE INDEX `idUsers Category_UNIQUE` (`idUsers Category` ASC) VISIBLE,
-  INDEX `Id Users_idx` (`Id Users` ASC) VISIBLE,
-  UNIQUE INDEX `Id Users_UNIQUE` (`Id Users` ASC) VISIBLE,
-  CONSTRAINT `Id Users`
-    FOREIGN KEY (`Id Users`)
-    REFERENCES `goffice`.`users` (`idusers`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION);
+CREATE TABLE `user_category` (
+  `id_users_category` int NOT NULL AUTO_INCREMENT,
+  `Id_users` int NOT NULL,
+  `category_users` varchar(45) NOT NULL,
+  PRIMARY KEY (`id_users_category`),
+  UNIQUE KEY `idUsers Category_UNIQUE` (`id_users_category`),
+  UNIQUE KEY `Id Users_UNIQUE` (`Id_users`),
+  KEY `Id Users_idx` (`Id_users`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci
