@@ -1,6 +1,6 @@
 module.exports = (sequelize, dataTypes) => {
     let alias = "Users";
-    let config = {
+    let cols = {
         id: {
             type: dataTypes.INTEGER,
             primaryKey: true,
@@ -32,12 +32,16 @@ module.exports = (sequelize, dataTypes) => {
         }
 
     };
+    let config = {
+        tableName:"users",
+        timestamps: false
+    };
 
 
     const User = sequelize.define(alias, cols, config);
 
     User.associate = function (models) {
-        Usuario.belongsTo(models.Category, {
+        Usuario.belongsTo(models.UserCategory, {
             as: "categoryUser",
             foreignkey: "id_users"
         })

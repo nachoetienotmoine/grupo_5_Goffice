@@ -1,6 +1,6 @@
 module.exports = (sequelize, dataTypes) => {
     let alias = "Category";
-    let config = {
+    let cols = {
 
         id_category_products: {
             type: dataTypes.INTEGER
@@ -13,6 +13,10 @@ module.exports = (sequelize, dataTypes) => {
             type: dataTypes.VARCHAR,
 
         }
+    };
+    let config = {
+        tableName:"category_products",
+        timestamps: false
     };
 
 
