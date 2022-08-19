@@ -1,22 +1,22 @@
 module.exports = (sequelize, dataTypes) => {
-    let alias = "Category";
+    let alias = "userCategory";
     let config = {
 
         id_category_products: {
             type: dataTypes.INTEGER
         },
-        id_products: {
+        id_users: {
             type: dataTypes.INTEGER,
 
         },
-        Category: {
+        category_users: {
             type: dataTypes.VARCHAR,
 
         }
     };
 
 
-    const Category = sequelize.define(alias, cols, config);
+    const usercategory = sequelize.define(alias, cols, config);
 
-    return Category;
+    return usercategory;
 }

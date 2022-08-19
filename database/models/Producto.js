@@ -5,28 +5,28 @@ module.exports = (sequelize, dataTypes) => {
         id: {
             type: dataTypes.INTEGER
         },
-        first_name: {
+        products_name: {
             type: dataTypes.VARCHAR,
 
         },
-        last_name: {
+        description: {
             type: dataTypes.VARCHAR,
 
         },
-        email: {
+       price: {
+            type: dataTypes.INTEGER,
+
+        },
+        discount: {
+            type: dataTypes.INTEGER,
+
+        },
+      image: {
             type: dataTypes.VARCHAR,
 
         },
-        password: {
-            type: dataTypes.VARCHAR,
-
-        },
-        gender: {
-            type: dataTypes.VARCHAR,
-
-        },
-        image: {
-            type: dataTypes.VARCHAR,
+        stock: {
+            type: dataTypes.INTEGER,
 
         }
     };

@@ -37,7 +37,7 @@ CREATE TABLE `category_products` (
 
 CREATE TABLE `user_category` (
   `id_users_category` int NOT NULL AUTO_INCREMENT,
-  `Id_users` int NOT NULL,
+  `id_users` int NOT NULL,
   `category_users` varchar(45) NOT NULL,
   PRIMARY KEY (`id_users_category`),
   UNIQUE KEY `idUsers Category_UNIQUE` (`id_users_category`),
