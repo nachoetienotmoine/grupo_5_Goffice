@@ -23,7 +23,7 @@ timestamps: false
     UserCategory.associate = function(models){
         UserCategory.hasMany(models.Users, {
             as: "Users",
-            foreignKey: "id_category_user"
+            foreignKey: "id_users"
         })
     }
     
