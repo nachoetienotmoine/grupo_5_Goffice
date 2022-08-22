@@ -5,31 +5,38 @@ module.exports = (sequelize, dataTypes) => {
         id: {
             type: dataTypes.INTEGER,
             primaryKey: true,
-            autoIncrement: true,
+            allowNull: false,
+            autoIncrement: true
 
         },
         products_name: {
             type: dataTypes.VARCHAR,
+            allowNull: false
 
         },
         description: {
             type: dataTypes.VARCHAR,
+            allowNull: false
 
         },
         price: {
             type: dataTypes.INTEGER,
+            allowNull: false
 
         },
         discount: {
             type: dataTypes.INTEGER,
+            allowNull: false
 
         },
         image: {
             type: dataTypes.VARCHAR,
+            allowNull: false
 
         },
         stock: {
             type: dataTypes.INTEGER,
+            allowNull: false
 
         }
     };

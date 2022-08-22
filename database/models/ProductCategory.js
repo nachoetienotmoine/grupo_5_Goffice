@@ -3,15 +3,17 @@ module.exports = (sequelize, dataTypes) => {
     let cols = {
 
         id_category_products: {
-            type: dataTypes.INTEGER
+            type: dataTypes.INTEGER,
+            primaryKey: true,
+            allowNull: false
         },
         id_products: {
             type: dataTypes.INTEGER,
-
+            allowNull: false
         },
         Category: {
             type: dataTypes.VARCHAR,
-
+            allowNull: false
         }
     };
     let config = {

@@ -4,31 +4,33 @@ module.exports = (sequelize, dataTypes) => {
         id: {
             type: dataTypes.INTEGER,
             primaryKey: true,
-            autoIncrement: true
+            autoIncrement: true,
+            allowNull: false
         },
         first_name: {
             type: dataTypes.VARCHAR,
+            allowNull: false
 
         },
         last_name: {
             type: dataTypes.VARCHAR,
-
+            allowNull: false
         },
         email: {
             type: dataTypes.VARCHAR,
-
+            allowNull: false
         },
         password: {
             type: dataTypes.VARCHAR,
-
+            allowNull: false
         },
         gender: {
             type: dataTypes.VARCHAR,
-
+            allowNull: false
         },
         image: {
             type: dataTypes.VARCHAR,
-
+            allowNull: false
         }
 
     };
@@ -45,7 +47,7 @@ module.exports = (sequelize, dataTypes) => {
             as: "UsersCategory",
             foreignkey: "id_category_users"
         })
-        return Users;
+       
     }
     return Users;
 }

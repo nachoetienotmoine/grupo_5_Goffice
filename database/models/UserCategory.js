@@ -2,15 +2,19 @@ module.exports = (sequelize, dataTypes) => {
     let alias = "UserCategory";
     let cols = {
 
-        id_category_products: {
-            type: dataTypes.INTEGER
+        id_category_users: {
+            type: dataTypes.INTEGER,
+            primaryKey: true,
+            allowNull: false
         },
         id_users: {
             type: dataTypes.INTEGER,
+            allowNull: false
 
         },
         category_users: {
             type: dataTypes.VARCHAR,
+            allowNull: false
 
         }
     };
