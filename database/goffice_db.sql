@@ -25,7 +25,7 @@ DROP TABLE IF EXISTS `goffice_db`.`user_category` ;
 
 CREATE TABLE IF NOT EXISTS `goffice_db`.`user_category` (
   `id_category_users` INT NOT NULL AUTO_INCREMENT,
-  `category_user` VARCHAR(45) NOT NULL,
+  `category` VARCHAR(45) NOT NULL,
   PRIMARY KEY (`id_category_users`))
 ENGINE = InnoDB;
 
@@ -44,8 +44,10 @@ CREATE TABLE IF NOT EXISTS `goffice_db`.`users` (
   `image` VARCHAR(45) NOT NULL,
   `gender` VARCHAR(45) NOT NULL,
   `id_category_users` INT NOT NULL,
-  PRIMARY KEY (`id_users`)
-  )
+  PRIMARY KEY (`id_users`),
+    FOREIGN KEY (`id_category_users`)
+    REFERENCES `goffice_db`.`user_category` (`id_category_users`)
+    )
 ENGINE = InnoDB;
 
 
@@ -75,12 +77,14 @@ CREATE TABLE IF NOT EXISTS `goffice_db`.`Products` (
   `image` VARCHAR(45) NOT NULL,
   `stock` INT NOT NULL,
   `id_ category_products` INT NOT NULL,
-  PRIMARY KEY (`id_products`)
- )
+  PRIMARY KEY (`id_products`),
+ 
+    FOREIGN KEY (`id_ category_products`)
+    REFERENCES `goffice_db`.`category_products` (`id_category_products`)
+   )
 ENGINE = InnoDB;
 
 
 SET SQL_MODE=@OLD_SQL_MODE;
 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
-

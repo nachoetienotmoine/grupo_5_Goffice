@@ -12,7 +12,7 @@ module.exports = (sequelize, dataTypes) => {
             allowNull: false
 
         },
-        category_users: {
+        category: {
             type: dataTypes.VARCHAR,
             allowNull: false
 

@@ -9,7 +9,7 @@ module.exports = (sequelize, dataTypes) => {
             autoIncrement: true
 
         },
-        products_name: {
+        name: {
             type: dataTypes.VARCHAR,
             allowNull: false
 
