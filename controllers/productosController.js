@@ -16,8 +16,7 @@ const productosController = {
     listar: async (req, res) => {
         
         const products = await Products.findAll()
-        console.log(products);
-        // res.render("prodList", { productosJ: productosJ })
+        res.render("prodList", { productosJ: products })
     },
     crearProductos: (req, res) => {
         res.render("admin/prodCrear")
