@@ -1,10 +1,8 @@
 module.exports = {
-
-  //esto es lo que hay que configurar con la base de datos.
   "development": {
     "username": "root",
     "password": null,
-    "database": "database_development",
+    "database": "goffice_db",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },

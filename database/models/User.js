@@ -1,5 +1,5 @@
 module.exports = (sequelize, dataTypes) => {
-    let alias = "Users";
+    let alias = "User";
     let cols = {
         id: {
             type: dataTypes.INTEGER,
@@ -8,28 +8,28 @@ module.exports = (sequelize, dataTypes) => {
             allowNull: false
         },
         first_name: {
-            type: dataTypes.VARCHAR,
+            type: dataTypes.STRING(45),
             allowNull: false
 
         },
         last_name: {
-            type: dataTypes.VARCHAR,
+            type: dataTypes.STRING(45),
             allowNull: false
         },
         email: {
-            type: dataTypes.VARCHAR,
+            type: dataTypes.STRING(45),
             allowNull: false
         },
         password: {
-            type: dataTypes.VARCHAR,
+            type: dataTypes.STRING(45),
             allowNull: false
         },
         gender: {
-            type: dataTypes.VARCHAR,
+            type: dataTypes.STRING(45),
             allowNull: false
         },
         image: {
-            type: dataTypes.VARCHAR,
+            type: dataTypes.STRING(45),
             allowNull: false
         }
 
@@ -40,14 +40,14 @@ module.exports = (sequelize, dataTypes) => {
     };
 
 
-    const Users = sequelize.define(alias, cols, config);
+    const User = sequelize.define(alias, cols, config);
 
-    Users.associate = function (models) {
-        Users.belongsTo(models.UserCategory, {
+    User.associate = function (models) {
+        User.belongsTo(models.UserCategory, {
             as: "UsersCategory",
             foreignkey: "id_category_users"
         })
        
     }
-    return Users;
+    return User;
 }

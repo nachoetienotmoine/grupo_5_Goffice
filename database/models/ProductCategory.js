@@ -3,16 +3,12 @@ module.exports = (sequelize, dataTypes) => {
     let cols = {
 
         id_category_products: {
-            type: dataTypes.INTEGER,
+            type: dataTypes.BIGINT(11).UNSIGNED,
             primaryKey: true,
             allowNull: false
         },
-        id_products: {
-            type: dataTypes.INTEGER,
-            allowNull: false
-        },
         Category: {
-            type: dataTypes.VARCHAR,
+            type: dataTypes.STRING(45),
             allowNull: false
         }
     };
@@ -27,7 +23,7 @@ module.exports = (sequelize, dataTypes) => {
     ProductCategory.associate = function(models){
         ProductCategory.hasMany(models.Product, {
             as: "Products",
-           
+            foreignkey: "id_category_products"
         })
     }
     return ProductCategory;

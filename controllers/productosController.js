@@ -3,15 +3,21 @@
 const fs = require("fs");
 const { parse } = require("path");
 const path = require('path');
+const db = require('../database/models');
+const sequelize = db.sequelize;
+const { Op } = require("sequelize");
 const productoFile = path.join(__dirname, '../data/product.json');
 const productosJ = JSON.parse(fs.readFileSync(productoFile, 'utf-8'));
 
+const Products = db.Product;
+
 const productosController = {
 
-    listar: (req, res) => {
-        const productoFile = path.join(__dirname, '../data/product.json');
-        const productosJ = JSON.parse(fs.readFileSync(productoFile, 'utf-8'));
-        res.render("prodList", { productosJ: productosJ })
+    listar: async (req, res) => {
+        
+        const products = await Products.findAll()
+        console.log(products);
+        // res.render("prodList", { productosJ: productosJ })
     },
     crearProductos: (req, res) => {
         res.render("admin/prodCrear")

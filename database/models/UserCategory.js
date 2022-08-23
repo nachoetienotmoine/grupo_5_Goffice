@@ -7,13 +7,8 @@ module.exports = (sequelize, dataTypes) => {
             primaryKey: true,
             allowNull: false
         },
-        id_users: {
-            type: dataTypes.INTEGER,
-            allowNull: false
-
-        },
         category: {
-            type: dataTypes.VARCHAR,
+            type: dataTypes.STRING(45),
             allowNull: false
 
         }
@@ -25,9 +20,9 @@ timestamps: false
 
     const UserCategory = sequelize.define(alias, cols, config);
     UserCategory.associate = function(models){
-        UserCategory.hasMany(models.Users, {
-            as: "Users",
-            
+        UserCategory.hasMany(models.User, {
+            as: "User",
+            foreignkey: "id_category_users"
         })
     }
     
