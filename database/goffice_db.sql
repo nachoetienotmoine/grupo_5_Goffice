@@ -70,7 +70,7 @@ DROP TABLE IF EXISTS `goffice_db`.`Products` ;
 
 CREATE TABLE IF NOT EXISTS `goffice_db`.`Products` (
   `id_products` INT NOT NULL AUTO_INCREMENT,
-  `product_name` VARCHAR(45) NOT NULL,
+  `name` VARCHAR(45) NOT NULL,
   `description` VARCHAR(45) NOT NULL,
   `price` INT NOT NULL,
   `discount` INT NOT NULL,
