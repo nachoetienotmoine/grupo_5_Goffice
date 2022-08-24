@@ -77,19 +77,15 @@ const productosController = {
 
    
 
-    deleteProducto: (req, res) => {
-        const productId = parseInt(req.params.id, 10);
-        const productoPaBorra = productosJ.filter(product => product.id !== productId);
-
-       fs.writeFileSync(productoFile, JSON.stringify(productoPaBorra), 'utf-8');
-
+    deleteProducto: async (req, res) => {
+        Products.destroy(
+            {
+                where: {id: req.params.id}
+            }
+        )
 res.redirect("/productos")
-        // const newArray = productosJ.map((productosJ, productId) => productosJ.id === productId)
 
-        // console.log(newArray);
-    }
-
-}
+}}
 
 
 module.exports = productosController;
