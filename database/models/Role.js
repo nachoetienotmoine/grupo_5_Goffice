@@ -22,7 +22,7 @@ timestamps: false
     Role.associate = function(models){
         Role.hasMany(models.User, {
             as: "Users",
-            foreignkey: "id_roles"
+            foreignKey: "id_roles"
         })
     }
     
