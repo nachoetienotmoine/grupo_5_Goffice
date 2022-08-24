@@ -2,42 +2,44 @@ module.exports = (sequelize, dataTypes) => {
     let alias = "Product";
     let cols = {
 
-        id_products: {
-            type: dataTypes.BIGINT(11).UNSIGNED,
+        id: {
+            type: dataTypes.INTEGER,
             primaryKey: true,
-            allowNull: false,
             autoIncrement: true
 
         },
         name: {
-            type: dataTypes.STRING(45),
-            allowNull: false
+            type: dataTypes.STRING(225),
+            
 
         },
         description: {
-            type: dataTypes.STRING(200),
-            allowNull: false
+            type: dataTypes.STRING(400),
+          
 
         },
         price: {
-            type: dataTypes.BIGINT(11).UNSIGNED,
-            allowNull: false
+            type: dataTypes.INTEGER,
+           
 
         },
         discount: {
-            type: dataTypes.BIGINT(11).UNSIGNED,
-            allowNull: false
+            type: dataTypes.INTEGER,
+            
 
         },
         image: {
-            type: dataTypes.STRING(45),
-            allowNull: false
+            type: dataTypes.STRING(200),
+            
 
         },
         stock: {
-            type: dataTypes.BIGINT(11).UNSIGNED,
-            allowNull: false
+            type: dataTypes.INTEGER,
+           
 
+        },
+        id_products_category: {
+            type: dataTypes.INTEGER
         }
     };
     let config = {
@@ -49,13 +51,13 @@ module.exports = (sequelize, dataTypes) => {
 
     const Product = sequelize.define(alias, cols, config);
 
-    // Product.associate = function (models) {
-    //     Product.belongsTo(models.ProductCategory, {
-    //         as: "category_products",
-    //         foreignKey: "id_category_products"
-    //     });
+    Product.associate = function (models) {
+        Product.belongsTo(models.ProductCategory, {
+            as: "ProductCategorys",
+            foreignKey: "id_products_category"
+        });
         
-    // }
+    }
 
     return Product;
 };

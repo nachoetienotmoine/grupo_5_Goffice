@@ -2,18 +2,18 @@ module.exports = (sequelize, dataTypes) => {
     let alias = "ProductCategory";
     let cols = {
 
-        id_category_products: {
-            type: dataTypes.BIGINT(11).UNSIGNED,
-            primaryKey: true,
-            allowNull: false
+        id: {
+            type: dataTypes.INTEGER,
+            primaryKey: true
+          
         },
-        Category: {
-            type: dataTypes.STRING(45),
-            allowNull: false
+        category: {
+            type: dataTypes.STRING(100),
+          
         }
     };
     let config = {
-        tableName:"category_products",
+        tableName:"products_category",
         timestamps: false
     };
 
@@ -23,7 +23,7 @@ module.exports = (sequelize, dataTypes) => {
     ProductCategory.associate = function(models){
         ProductCategory.hasMany(models.Product, {
             as: "Products",
-            foreignKey: "id_products"
+            foreignKey: "id_products_category"
         });
     }
     return ProductCategory;
