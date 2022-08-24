@@ -1,10 +1,12 @@
 const fs = require("fs");
 const path = require('path');
 const bcrypt = require('bcryptjs');
-
 var { validationResult } = require('express-validator');
-const usersFile = path.join(__dirname, '../data/users.json');
-const usersJ = JSON.parse(fs.readFileSync(usersFile, 'utf-8'));
+const db = require('../database/models');
+const sequelize = db.sequelize;
+const { Op } = require("sequelize");
+
+const Users = db.User;
 
 const loginController = {
     
@@ -21,40 +23,41 @@ const loginController = {
             msg: ''
         }});
     },
-    loginProcess: (req, res) => {
+    loginProcess: async (req, res) => {
         let errors = validationResult(req);
-        let userEmail = req.body.email;
         let esEmail = false;
         let userPassword = req.body.password;
         let esPassword = false;
 
         let userId;
 
-        for (let i = 0; i < usersJ.length; i++){
-            if (usersJ[i].email === userEmail) {
-                esEmail = true;
-                userId = usersJ[i];
-                bcrypt.compareSync(userPassword, userId.password) ? esPassword = true : false;
-            }
-        }
+        let elEmail = await Users.findAll();
 
-        if (errors.isEmpty() && esEmail && esPassword) {
-            //delete userId.password;
-            req.session.userLogged = userId;
+        // for (let i = 0; i < usersJ.length; i++){
+        //     if (usersJ[i].email === userEmail) {
+        //         esEmail = true;
+        //         userId = usersJ[i];
+        //         bcrypt.compareSync(userPassword, userId.password) ? esPassword = true : false;
+        //     }
+        // }
 
-            if (req.body.remember_user) {
-                res.cookie('userEmail', req.body.email, {maxAge: (1000 * 60) * 60});
+        // if (errors.isEmpty() && esEmail && esPassword) {
+        //     //delete userId.password;
+        //     req.session.userLogged = userId;
+
+        //     if (req.body.remember_user) {
+        //         res.cookie('userEmail', req.body.email, {maxAge: (1000 * 60) * 60});
                 
-            }
+        //     }
 
-            res.redirect('/users/profile');
+        //     res.redirect('/users/profile');
 
-        }else {
-            //res.render('login', { errors: errors.mapped(), old: req.body });
-            res.render('login', {errors: errors.mapped(), old: req.body, email: {
-                msg: 'Las credenciales son inválidas'
-            }});
-        }
+        // }else {
+        //     //res.render('login', { errors: errors.mapped(), old: req.body });
+        //     res.render('login', {errors: errors.mapped(), old: req.body, email: {
+        //         msg: 'Las credenciales son inválidas'
+        //     }});
+        // }
         
     }
 
