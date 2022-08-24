@@ -10,6 +10,7 @@ const productoFile = path.join(__dirname, '../data/product.json');
 const productosJ = JSON.parse(fs.readFileSync(productoFile, 'utf-8'));
 
 const Products = db.Product;
+const CategoryProducts = db.ProductCategory;
 
 const productosController = {
 
@@ -18,8 +19,9 @@ const productosController = {
         const products = await Products.findAll()
         res.render("prodList", { productosJ: products })
     },
-    crearProductos: (req, res) => {
-        res.render("admin/prodCrear")
+    crearProductos: async (req, res) => {
+        const categoryProducts = await CategoryProducts.findAll();
+        res.render("admin/prodCrear", {categoryProducts: categoryProducts})
     },
     detalleProducto:
         (req, res) => {
@@ -45,30 +47,20 @@ const productosController = {
         },
 
 
-    crearProductosPost: (req, res) => {
+    crearProductosPost: async (req, res) => {
+        let {name, category, description, discount, price, stock} = req.body;
+        
+        await Products.create({
+            name: name,
+            description: description,
+            discount: discount,
+            price: price,
+            image: req.file.originalname,
+            stock: stock,
+            id_products_category: category
+        });
 
-        const name = req.body.name;
-        const price = req.body.price;
-        const discount = req.body.discount;
-        const category = req.body.category;
-        const description = req.body.description;
-        const stock = req.body.stock;
-        const image = req.file.originalname;
-
-     
-
-        // got them fused in a Object Literal;
-        const fuseData = {
-            id: productosJ.length + 1,
-            name: name, price: price, discount: discount, category: category, description: description, stock: stock, 
-           image : image
-        };
-        // 	Insert them, then they got sent away to the database.
-        productosJ.push(fuseData);
-        fs.writeFileSync(productoFile, JSON.stringify(productosJ), 'utf-8');
-
-        //finally, you got kicked back to products for good.
-        res.redirect('prodList');
+        res.redirect('/prodList');
     },
 
     editProducto: (req, res) => {

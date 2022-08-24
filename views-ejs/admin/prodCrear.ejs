@@ -45,7 +45,7 @@
                                 <H2>Name</H2>
                             </label>
 
-                            <input type="text" name="name" id="nombrePCrud" required minlength="6">
+                            <input type="text" name="name" id="nombrePCrud"  minlength="6">
                             <i class="far fa-edit"></i>
                         </div>
                         <div class="boxpC">
@@ -55,18 +55,11 @@
 
                             
 
-                            <select name="category" id="nombrePCrud2" required>
+                            <select name="category" id="nombrePCrud2" >
                                 
-                                <option value="1">1</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
-                                <option value="4">4</option>
-                                <option value="5">5</option>
-                                <option value="6">6</option>
-                                <option value="7">7</option>
-                                <option value="8">8</option>
-                                <option value="9">9</option>
-                                <option value="10">10</option>
+                                <% categoryProducts.forEach(category => { %>
+                                    <option value="<%= category.id %>"><%= category.category %></option>
+                                    <% }); %>
 
                             </select>
                             <i class="far fa-edit"></i>
@@ -76,7 +69,7 @@
                                 <h2>Descripcion</h2>
                             </label>
 
-                            <input type="text" name="description" id="nombrePCrud" required>
+                            <input type="text" name="description" id="nombrePCrud" >
                             <i class="far fa-edit"></i>
                         </div>
                         <div class="boxpC">
@@ -84,7 +77,7 @@
                                 <h2>Discount</h2>
                             </label>
 
-                            <input type="number" name="discount" id="nombrePCrud" required>
+                            <input type="number" name="discount" id="nombrePCrud" >
                             <i class="far fa-edit"></i>
                         </div>
                         <div class="boxpC">
@@ -92,7 +85,7 @@
                                 <h2>Precio</h2>
                             </label>
 
-                            <input type="number" name="price" id="nombrePCrud" required>
+                            <input type="number" name="price" id="nombrePCrud" >
                             <i class="far fa-edit"></i>
                         </div>
                         <div class="boxpC">
@@ -110,7 +103,7 @@
 
                             
 
-                            <select name="stock" id="nombrePCrud2" required>
+                            <select name="stock" id="nombrePCrud2" >
                                 <option value="0">Out of Stock</option>
                                 <option value="1">1</option>
                                 <option value="2">2</option>
