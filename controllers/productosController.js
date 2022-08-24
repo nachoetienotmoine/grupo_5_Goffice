@@ -63,11 +63,11 @@ const productosController = {
         res.redirect('/prodList');
     },
 
-    editProducto: (req, res) => {
-        const productId = parseInt(req.params.id, 10);
-        const productoEncontrado = productosJ.filter(product => product.id === productId);
+    editProducto: async (req, res) => {
+        const products = await Products.findByPk(req.params.id);
+        const categoryProducts = await CategoryProducts.findAll();
         let productImage = path.format({root: '/ignored', dir: path.join(__dirname, '..', '/public/images') , base: 'IMG_2546.jpg'});
-        res.render('admin/prodEdit', { productoEncontrado: productoEncontrado, productImage: productImage });
+        res.render('admin/prodEdit', { productoEncontrado: products, productImage: productImage, categoryProducts: categoryProducts });
     },
 
     update: (req, res) => {
