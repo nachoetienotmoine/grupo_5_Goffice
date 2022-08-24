@@ -23,26 +23,13 @@ const productosController = {
         const categoryProducts = await CategoryProducts.findAll();
         res.render("admin/prodCrear", {categoryProducts: categoryProducts})
     },
-    detalleProducto:
-        (req, res) => {
-            const productId = parseInt(req.params.id, 10);
-            let productoEncontrado;
+    detalleProducto: async (req, res) => {
+            const products = await Products.findByPk(req.params.id);
 
-            for (let i = 0; i < productosJ.length; i++) {
-                if (productosJ[i].id === productId) {
-                    productoEncontrado = productosJ[i];
-                }
-            }
-
-            if (!productoEncontrado) {
-                res.status(404).send("No se encuentra el producto");
-            } else {
                 res.render('admin/prodDetalle', {
-                    prodEncontrado: productoEncontrado,
-                    prodcuto: productosJ,
+                    prodEncontrado: products
 
                 });
-            }
 
         },
 
