@@ -25,11 +25,11 @@ module.exports = (sequelize, dataTypes) => {
            
         },
         phone_number: {
-            type: dataTypes.INTEGER,
+            type: dataTypes.STRING(200),
             
         },
         gender: {
-            type: dataTypes.STRING(1),
+            type: dataTypes.STRING(10),
             
         },
         image: {
