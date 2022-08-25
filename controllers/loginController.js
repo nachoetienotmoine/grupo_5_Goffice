@@ -1,17 +1,10 @@
-const fs = require("fs");
-const path = require('path');
 const bcrypt = require('bcryptjs');
 var { validationResult } = require('express-validator');
 const db = require('../database/models');
-const sequelize = db.sequelize;
-const { Op } = require("sequelize");
+
 const Users = db.User;
 const loginController = {
-    users: (req, res) => {
-        const usersFile = path.join(__dirname, '../data/users.json');
-        const usersJ = JSON.parse(fs.readFileSync(usersFile, 'utf-8'));
-        res.render("index", { usersJ: usersJ }) //para enviar la info de users al home y mostrar info del usuario
-    },
+  
     login: (req, res) => {
         res.render('login', {email: {
             msg: ''
