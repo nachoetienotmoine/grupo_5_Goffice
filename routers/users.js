@@ -26,5 +26,5 @@ router.get('/', authMiddleware,usersController.users);
 router.post("/", upload.single('image'), usersController.crearUsers);
 router.get('/profile',authMiddleware ,usersController.profile);
 router.get('/profile/Edit',authMiddleware ,usersController.profileEdit);
-router.put('/profile/update/:id?',authMiddleware ,usersController.profileUpdate)
+router.put('/profile/update/:id?', upload.single('image'), usersController.profileUpdate)
 module.exports = router;
