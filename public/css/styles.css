@@ -3633,13 +3633,14 @@ x
 .detail-imagePC {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
 
 }
 
 .detail-imagePC>#general-detail-imagePC {
-    width: 100%;
+    width: 50%;
     height: 100%;
+    border-radius: 50%;
 }
 
 .main-detail-section>.detail-imagePC {
