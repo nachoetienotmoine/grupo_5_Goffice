@@ -51,7 +51,7 @@ const productosController = {
             id_products_category: category
         });
 
-        res.redirect('/prodList');
+        res.redirect('admin/productos');
     },
 
     editProducto: async (req, res) => {
