@@ -26,5 +26,6 @@ router.get('/', authMiddleware,usersController.users);
 router.post("/", upload.single('image'), usersController.crearUsers);
 router.get('/profile',authMiddleware ,usersController.profile);
 router.get('/profile/Edit',authMiddleware ,usersController.profileEdit);
-router.put('/profile/update/:id?', upload.single('image'), usersController.profileUpdate)
+router.put('/profile/update/:id?', upload.single('image'), usersController.profileUpdate);
+router.delete("/profile/delete/:id?", authMiddleware, usersController.deleteUser);
 module.exports = router;

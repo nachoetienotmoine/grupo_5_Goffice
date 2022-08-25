@@ -57,7 +57,18 @@ const usersController = {
             }
         );
         res.redirect('/users/profile');
-    }
+    }, 
+    deleteUser: async (req, res) => {
+        Users.destroy(
+            {
+                where: {id: req.params.id}
+            }
+        )
+        res.clearCookie('userEmail');
+        req.session.destroy();
+res.redirect("/")
+
+}
    
 }
 module.exports= usersController;
