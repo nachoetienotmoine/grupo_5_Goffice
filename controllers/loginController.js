@@ -29,7 +29,7 @@ const loginController = {
         }
         if (errors.isEmpty() && esEmail && esPassword) {
             //delete userId.password;
-            req.session.userLogged = esEmail;
+            req.session.userLogged = elEmail;
             if (req.body.remember_user) {
                 res.cookie('userEmail', req.body.email, {maxAge: (1000 * 60) * 60});
             }
