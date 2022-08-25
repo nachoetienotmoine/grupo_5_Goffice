@@ -41,6 +41,23 @@ const usersController = {
         res.render("profileEdit", {
             user: req.session.userLogged
         });
+    },
+    profileUpdate: async (req, res) => {
+        let {name, lastname, phonenumber, gender} = req.body;
+        // Users.update(
+        //     {
+        //         first_name: first_name,
+        //         phone_number: phone_number,
+        //         gender: gender,
+        //         price: price,
+        //         image: req.file.originalname
+        //     },
+        //     {
+        //         where: {id: req.params.id}
+        //     }
+        // );
+        // res.redirect('/users/profile');
+        console.log(req.params.id);
     }
    
 }

@@ -41,35 +41,33 @@
                     <h2>USER DETAILS</h2>
                 </div>
                 <article class="description-productPC">
-                    <form action="/productos/<%= user.id; %>/?_method=PUT" id="productForm" method="POST"
+                    <form action="/users/profile/update/<%= user.id; %>/?_method=PUT" id="productForm" method="POST"
                         enctype="multipart/form-data">
                 
                         <div class="boxpC">
                             <label name="name">
-                                <H2>Name</H2>
+                                <H2>First Name</H2>
                             </label>
                 
-                            <input type="text" name="name" id="nombrePCrud" required minlength="6" value="<%= user.first_name; %> <%= user.last_name; %>">
+                            <input type="text" name="name" id="nombrePCrud" required minlength="6" value="<%= user.first_name; %>">
                             <i class="far fa-edit"></i>
                         </div>
+
                         <div class="boxpC">
-                            <label name="category">
-                                <H2>Category</H2>
+                            <label name="lastname">
+                                <H2>Last Name</H2>
                             </label>
                 
-                            <select name="category" id="nombrePCrud2" >
-                                
-                
-                            </select>
+                            <input type="text" name="lastname" id="nombrePCrud" required minlength="6" value="<%= user.last_name; %>">
                             <i class="far fa-edit"></i>
                         </div>
                         
                         <div class="boxpC">
                             <label name="phone_number">
-                                <h2>Phonenumber</h2>
+                                <h2>Phone Number</h2>
                             </label>
                 
-                            <input type="text" name="phone_number" id="nombrePCrud" required value="<%= user.phone_number; %>">
+                            <input type="text" name="phonenumber" id="nombrePCrud" required value="<%= user.phone_number; %>">
                             <i class="far fa-edit"></i>
                         </div>
                         <div class="boxpC">
@@ -78,8 +76,9 @@
                             </label>
                 
                             <select name="gender" id="nombrePCrud2" >
-                                
-                
+                                <option value="x" selected>x</option>
+                                <option value="male">male</option>
+                                <option value="female">female</option>
                             </select>
                             <i class="far fa-edit"></i>
                         </div>
