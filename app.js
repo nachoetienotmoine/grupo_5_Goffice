@@ -4,12 +4,11 @@ const path = require('path');
 const session = require('express-session');
 const cookies = require('cookie-parser');
 
-const routersRegister = require('./routers/registerApi');
+
 const routersDetalle = require('./routers/detalleApi');
 const routersCarrito = require('./routers/carritoApi');
 const routersHome = require('./routers/homeApi');
 const routersLogin = require('./routers/loginApi');
-const routersProdList = require('./routers/prodListApi');
 const routersUsers = require('./routers/users');
 const routersProductos = require('./routers/productos');
 const routersAdmin = require('./routers/admin');
@@ -42,13 +41,12 @@ app.use(cookies());
 app.use(userLoggedMiddleware);
  
 
-app.use('/registro', guestMiddleware, routersRegister);
+
 app.use('/detalle', routersDetalle);
 app.use('/carrito', routersCarrito);
 app.use('/', routersHome);
 app.use('/logout', routersLogout);
 app.use('/login', guestMiddleware, routersLogin);
-app.use('/prodList', routersProdList);
 app.use('/productos', routersProductos);
 app.use('/productos/:id?',authMiddleware, routersProductos);
 app.use('/users', routersUsers);

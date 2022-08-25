@@ -13,7 +13,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/styles.css">
 </head>
-<%- include('./header2.ejs') %>
+<%- include('../header2.ejs') %>
 <body>
 
     
@@ -42,7 +42,7 @@
 
                         <article class="imagen-nombre-main">
                             <div class="imagen-div">
-                                <img src="images/<%= productosJ[i].image; %>" alt="Producto" id="img-main">
+                                <img src="/images/<%= productosJ[i].image; %>" alt="Producto" id="img-main">
                                 <div class="descuento"><span id="discount" data-action="cart-can"
                                         class="badge rounded-circle">
                                         <%= productosJ[i].discount; %>%
@@ -89,7 +89,7 @@
             <% } %>
     </main>
 
-    <%- include('./footer.ejs') %>
+    <%- include('../footer.ejs') %>
 
 </body>
 

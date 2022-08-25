@@ -22,7 +22,7 @@ const storage = multer.diskStorage({
 
 
 
-
+router.get("/productos", productosController.listar);
 router.get("/create", productosController.crearProductos);
 router.get("/:id", productosController.detalleProducto);
 router.post("/", upload.single('image'), productosController.crearProductosPost);

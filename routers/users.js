@@ -1,7 +1,9 @@
 const express = require('express');
 const router = express.Router();
-const usersController = require('../controllers/usersController')
+const usersController = require('../controllers/usersController');
 const authMiddleware = require('../middlewares/authMiddleware');
+const validations = require('../middlewares/validationsRegister');
+const guestMiddleware = require('../middlewares/guestMiddleware');
 const multer = require('multer');
 const path = require('path');
 
@@ -19,7 +21,9 @@ const storage = multer.diskStorage({
 
 
 
-
+////registro///
+router.get('/registro',validations,guestMiddleware, usersController.registro);
+///////////////
 
 
 router.get('/', authMiddleware,usersController.users);
@@ -28,4 +32,5 @@ router.get('/profile',authMiddleware ,usersController.profile);
 router.get('/profile/Edit',authMiddleware ,usersController.profileEdit);
 router.put('/profile/update/:id?', upload.single('image'), usersController.profileUpdate);
 router.delete("/profile/delete/:id?", authMiddleware, usersController.deleteUser);
+
 module.exports = router;
