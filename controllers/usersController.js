@@ -1,6 +1,3 @@
-const fs = require("fs");
-const { parse } = require("path");
-const path = require('path');
 const bcrypt = require('bcryptjs');
 const db = require('../database/models');
 const sequelize = db.sequelize;
@@ -10,13 +7,9 @@ const Users = db.User;
 
 const usersController = {
 
-    users: (req, res) => {
-     
-        
-            const usersFile = path.join(__dirname, '../data/users.json');
-            const usersJ = JSON.parse(fs.readFileSync(usersFile, 'utf-8'));
-            res.render("users", { usersJ: usersJ })
-        
+    users: async (req, res) => {
+        const usersJ = await Users.findAll();
+        res.render("users", { usersJ: usersJ })
     } ,
     crearUsers: async (req, res) => {
 

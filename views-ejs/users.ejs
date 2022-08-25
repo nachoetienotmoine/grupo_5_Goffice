@@ -29,7 +29,7 @@
             <section class="contenedor2">
                 <% for (let i=0; i < usersJ.length ; i++) {%>
                 <article class="contenedorproducto2">
-                    <h2 class="h2-nombre2"><%= usersJ[i].firstname %> <%= usersJ[i].lastname %>
+                    <h2 class="h2-nombre2"><%= usersJ[i].first_name %> <%= usersJ[i].last_name %>
                     </h2>
 
                     <article class="article-main2">
@@ -46,7 +46,7 @@
                         <div class="passwordUser"><%= usersJ[i].password; %></div>
                         <div class="datoUser"><%= usersJ[i].email; %></div>
                         <div class="datoUser"><%= usersJ[i].gender; %></div>
-                        <div class="datoUser"><%= usersJ[i].phonenumber; %></div>
+                        <div class="datoUser"><%= usersJ[i].phone_number; %></div>
                     </div>
                 </article> 
                  <% } %>
