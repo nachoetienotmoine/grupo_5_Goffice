@@ -35,6 +35,12 @@ const usersController = {
         res.render("profile", {
             user: req.session.userLogged
         });
+    },
+    profileEdit: (req, res) => {
+
+        res.render("profileEdit", {
+            user: req.session.userLogged
+        });
     }
    
 }
