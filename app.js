@@ -19,6 +19,7 @@ const bcrypt =  require ( 'bcryptjs');
 const guestMiddleware = require('./middlewares/guestMiddleware');
 const authMiddleware = require('./middlewares/authMiddleware');
 const userLoggedMiddleware = require('./middlewares/userLoggedMiddleware');
+const adminMiddleware = require('./middlewares/adminMiddleware');
 
 
 const methodOverride = require('method-override');
@@ -45,9 +46,8 @@ app.use(userLoggedMiddleware);
 app.use('/detalle', routersDetalle);
 app.use('/carrito', routersCarrito);
 app.use('/', routersHome);
-
 app.use('/users', routersUsers);
-app.use('/admin', routersAdmin);
+app.use('/admin',authMiddleware,adminMiddleware ,routersAdmin);
 app.listen(process.env.PORT || 3000, function() {
     console.log("Servidor corriendo en el puerto 3000");
 });

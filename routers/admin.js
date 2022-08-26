@@ -22,19 +22,19 @@ const storage = multer.diskStorage({
 
 
 ///lista usuarios/////
-router.get('/users', adminMiddleware,usersController.users);
+router.get('/users',usersController.users);
 ///lista usuarios/////
 
 
 
 ////todo productos/////
-router.get("/productos", authMiddleware,productosController.listar);
-router.get("/productos/create", authMiddleware,productosController.crearProductos);
-router.get("/productos/:id", authMiddleware,productosController.detalleProducto);
-router.post("/productos", authMiddleware,upload.single('image'), productosController.crearProductosPost);
-router.get("/productos/:id/edit", authMiddleware,productosController.editProducto);
-router.put("/productos/:id", authMiddleware,upload.single('image'), productosController.update);
-router.delete("/productos/:id", authMiddleware,productosController.deleteProducto);
+router.get("/productos",productosController.listar);
+router.get("/productos/create", productosController.crearProductos);
+router.get("/productos/:id",productosController.detalleProducto);
+router.post("/productos", upload.single('image'), productosController.crearProductosPost);
+router.get("/productos/:id/edit", productosController.editProducto);
+router.put("/productos/:id",upload.single('image'), productosController.update);
+router.delete("/productos/:id", productosController.deleteProducto);
 ////todo productos/////
 
 
