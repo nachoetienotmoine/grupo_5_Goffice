@@ -1,4 +1,3 @@
-
 <header>
 
     <nav class="header-bar2">
@@ -6,7 +5,7 @@
         <div class="box-header2">
             <a href="/">
                 <div class="logo2">
-                 <img src="/images/Gofficeqva.png">
+                    <img src="/images/Gofficeqva.png">
                 </div>
             </a>
             <form class="buscar2" action="#" method="POST">
@@ -16,23 +15,25 @@
                 </button>
             </form>
             <% if (locals.isLogged) { %>
-            <div class="compracuotas2">
-                <div class="compra2">
-                    <p class="NombrePerfil"> Hi, <%= locals.userLogged.first_name %> <%=locals.userLogged.last_name %></p>
-                   
-                    <img src="/images/users/<%= locals.userLogged.image %>" id="fotoPerfil" alt="">
-                </div>
-            </div>
-            <% } else {%>
-
                 <div class="compracuotas2">
-                    <div class="compra3">
-                        <img src="/images/users/usuariovacio.png" id="fotoPerfil2" alt="">
+                    <div class="compra2">
+                        <p class="NombrePerfil"> Hi, <%= locals.userLogged.first_name %>
+                                <%=locals.userLogged.last_name %>
+                        </p>
+
+                        <img src="/images/users/<%= locals.userLogged.image %>" id="fotoPerfil" alt="">
                     </div>
                 </div>
+                <% } else {%>
 
-            <% } %>
-         
+                    <div class="compracuotas2">
+                        <div class="compra3">
+                            <img src="/images/users/usuariovacio.png" id="fotoPerfil2" alt="">
+                        </div>
+                    </div>
+
+                    <% } %>
+
         </div>
         <div class="lista12">
             <ul class="info2" type="none">
@@ -45,12 +46,16 @@
             <div class="lista22">
                 <ul class="cuenta2" type="none">
                     <% if (locals.isLogged) { %>
+                        <li> <a href="/carrito">Cart<i class="fas fa-shopping-cart" id="iconosheader2"></i></a> </li>
                         <li> <a href="/users/profile">User<i class="fas fa-user" id="iconosheader2"></i></a> </li>
-                        <li> <a href="/users/logout">Log out<i  class="fas fa-sign-out-alt" id="iconosheader2"></i></a></li>
-                    <% } else {%>
-                    <li> <a href="/users/registro">Register<i class="fas fa-address-card" id="iconosheader2"></i></a></li>
-                    <li> <a href="/users/login">Log in<i class="fas fa-sign-in-alt" id="iconosheader2"></i></a></li>
-                    <% } %>
+                        <li> <a href="/users/logout">Log out<i class="fas fa-sign-out-alt" id="iconosheader2"></i></a>
+                        </li>
+                        <% } else {%>
+                            <li> <a href="/users/registro">Register<i class="fas fa-address-card"
+                                        id="iconosheader2"></i></a></li>
+                            <li> <a href="/users/login">Log in<i class="fas fa-sign-in-alt" id="iconosheader2"></i></a>
+                            </li>
+                            <% } %>
                 </ul>
             </div>
         </div>
