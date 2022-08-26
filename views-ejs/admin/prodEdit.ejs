@@ -43,7 +43,7 @@
                 <br>
 
                 <article class="description-productPC">
-                    <form action="/productos/<%= productoEncontrado.id; %>/?_method=PUT" id="productForm" method="POST"
+                    <form action="/admin/productos/<%= productoEncontrado.id; %>/?_method=PUT" id="productForm" method="POST"
                         enctype="multipart/form-data">
 
                         <div class="boxpC">
@@ -135,7 +135,7 @@
                 <br>
                 <article class="precio-envio-detail">
 
-                    <form action="/?_method=DELETE" method="POST"> 
+                    <form action="/admin/productos/<%= productoEncontrado.id; %>/?_method=DELETE" method="POST"> 
                         <div class="return-detail">
                             <button type="submit" class="return-cart-detail">Eliminar</button>
                         </div>

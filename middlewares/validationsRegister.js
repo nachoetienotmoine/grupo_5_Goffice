@@ -8,4 +8,5 @@ module.exports = [
 	check('password').notEmpty().withMessage('Tienes que escribir una contraseña'),
     check('phonenumber').notEmpty().withMessage('Tienes que escribir un numero de telefono'),
     check('gender').notEmpty().withMessage('Tienes que escribir un genero'),
+    check('image').notEmpty().withMessage('Tienes que subir una imagen'),
 ];

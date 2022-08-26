@@ -51,7 +51,7 @@ const productosController = {
             id_products_category: category
         });
 
-        res.redirect('admin/productos');
+        res.redirect('/admin/productos');
     },
 
     editProducto: async (req, res) => {
@@ -76,7 +76,7 @@ const productosController = {
                 where: { id: req.params.id }
             }
         );
-        res.redirect('/productos/' + req.params.id);
+        res.redirect('/admin/productos/' + req.params.id);
     },
 
 
@@ -87,7 +87,7 @@ const productosController = {
                 where: { id: req.params.id }
             }
         )
-        res.redirect("/productos")
+        res.redirect("/admin/productos")
 
     }
 }

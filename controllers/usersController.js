@@ -30,7 +30,7 @@ const usersController = {
             id_roles: 2
         });
 
-        res.redirect('login');
+        res.redirect('/users/login');
     },
     profile: (req, res) => {
 

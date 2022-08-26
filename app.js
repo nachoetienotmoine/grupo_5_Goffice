@@ -10,7 +10,7 @@ const routersCarrito = require('./routers/carritoApi');
 const routersHome = require('./routers/homeApi');
 
 const routersUsers = require('./routers/users');
-const routersProductos = require('./routers/productos');
+
 const routersAdmin = require('./routers/admin');
 
 const bcrypt =  require ( 'bcryptjs');
@@ -45,8 +45,7 @@ app.use(userLoggedMiddleware);
 app.use('/detalle', routersDetalle);
 app.use('/carrito', routersCarrito);
 app.use('/', routersHome);
-app.use('/productos', routersProductos);
-app.use('/productos/:id?',authMiddleware, routersProductos);
+
 app.use('/users', routersUsers);
 app.use('/admin',authMiddleware, routersAdmin);
 app.listen(process.env.PORT || 3000, function() {
