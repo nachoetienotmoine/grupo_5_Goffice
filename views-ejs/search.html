@@ -5,19 +5,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="search.css">
-    <script src="script.js" defer></script>
+    <script src="../public/js/script.js" defer></script>
     <title>searchExample</title>
 </head>
 <body>
-    <div class="search-wrapper">
+    <div class="buscar_search-wrapper">
         <label for="search">Search Users</label>
-        <input type="search" id="search" data-search>
+        <input type="search" id="search" class="buscar_input" data-search>
     </div>
-    <div class="user-cards" data-user-cards-container></div>
+    <div class="buscar_user-cards" data-user-cards-container></div>
     <template data-user-template>
-        <div class="card">
-            <div class="header" data-header></div>
-            <div class="body" data-body></div>
+        <div class="buscar_card">
+            <div class="buscar_header" data-header></div>
+            <div class="buscar_body" data-body></div>
         </div>
     </template>
 </body>

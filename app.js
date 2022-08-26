@@ -8,6 +8,7 @@ const cookies = require('cookie-parser');
 const routersDetalle = require('./routers/detalleApi');
 const routersCarrito = require('./routers/carritoApi');
 const routersHome = require('./routers/homeApi');
+const routersBaseDeDatosInfo = require('./routers/baseDeDatosInfo');
 
 const routersUsers = require('./routers/users');
 
@@ -42,7 +43,7 @@ app.use(cookies());
 app.use(userLoggedMiddleware);
  
 
-
+app.use('/baseDeDatosInfo', routersBaseDeDatosInfo)
 app.use('/detalle', routersDetalle);
 app.use('/carrito', routersCarrito);
 app.use('/', routersHome);
