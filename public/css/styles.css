@@ -1405,9 +1405,11 @@ hr {
     align-items: center;
     padding: 10px 5px;
 }
-.fa-star{
+
+.fa-star {
     color: #1a6692;
 }
+
 .btn {
     display: inline-block;
     padding: 10px 5px;
@@ -1434,74 +1436,78 @@ hr {
     -moz-transition: all 2s ease;
     -o-transition: all 1s ease;
     opacity: 2;
-    -webkit-box-shadow: 0px 0px 20px rgba(255,255,255,0.8);
-    -moz-box-shadow: 0px 0px 20px rgba(255,255,255,0.8);
-    box-shadow: 0px 0px 20px rgba(255,255,255,0.8);
-    
+    -webkit-box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.8);
+    -moz-box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.8);
+    box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.8);
+
 }
- .section1H{
+
+.section1H {
     background-color: #0b0126;
-   
-    
+
+
 }
-.productosIndex{
+
+.productosIndex {
     margin-left: 1rem;
 }
 
 
 
-.asus{
+.asus {
     width: 20%;
     height: 3rem;
-    
+
 }
 
 
-.intel{
+.intel {
     width: 20%;
-    
+
     height: 3rem;
-    
+
 
 }
 
-.lenovo{
+.lenovo {
     width: 20%;
-    
-    height: 3rem;
-}
 
-
-.logitech{
-    width: 20%;
-    
     height: 3rem;
 }
 
 
-.apple{
+.logitech {
+    width: 20%;
+
+    height: 3rem;
+}
+
+
+.apple {
     width: 20%;
     height: 3rem;
 }
 
-.logos{
-   display: flex;
- text-align: center;
- justify-content: center;
- margin: 0 1rem;
-  
+.logos {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    margin: 0 1rem;
+
 }
-   
-.partners{
+
+.partners {
     text-align: center;
     padding: 2rem;
-  
+
 }
-  .contenedorLogosIndex{
+
+.contenedorLogosIndex {
     display: flex;
     gap: 1rem;
     justify-content: space-evenly;
-  } 
+}
+
 @media (min-width:769px) {
     hr {
         width: 50%;
@@ -2033,57 +2039,59 @@ hr {
     #button-up:hover {
         transform: scale(1.1);
     }
-    .asus{
-        width: 15%;
-        height: 6rem;
-        
-    }
-    
 
-    .intel{
-        width: 15%;
-        
-        height: 6rem;
-        
-    
-    }
-    
-    .lenovo{
-        width: 15%;
-        
-        height: 6rem;
-    }
-   
-    
-    .logitech{
-        width: 15%;
-        
-        height: 6rem;
-    }
-    
-    
-    .apple{
+    .asus {
         width: 15%;
         height: 6rem;
+
     }
-   
-   .logos{
-       display: flex;
-     text-align: center;
-     justify-content: center;
-      
+
+
+    .intel {
+        width: 15%;
+
+        height: 6rem;
+
+
     }
-       
-    .partners{
+
+    .lenovo {
+        width: 15%;
+
+        height: 6rem;
+    }
+
+
+    .logitech {
+        width: 15%;
+
+        height: 6rem;
+    }
+
+
+    .apple {
+        width: 15%;
+        height: 6rem;
+    }
+
+    .logos {
+        display: flex;
+        text-align: center;
+        justify-content: center;
+
+    }
+
+    .partners {
         text-align: center;
         padding: 2rem;
-      
+
     }
-      .contenedorLogosIndex{
+
+    .contenedorLogosIndex {
         display: flex;
         gap: 1rem;
         justify-content: space-evenly;
-      } 
+    }
 
 
 }
@@ -2638,13 +2646,13 @@ hr {
         transform: scale(1.1);
     }
 
-    .section1H{
+    .section1H {
         background-color: #0b0126;
-       
-        
+
+
     }
 
-   
+
     .imagen1 {
         width: 70%;
         margin: 25px;
@@ -2654,17 +2662,18 @@ hr {
         -webkit-transition: all 2s ease;
         -moz-transition: all 2s ease;
         -o-transition: all 1s ease;
-        
-        
+
+
     }
-     
+
     .imagen1:hover {
         opacity: 2;
-        -webkit-box-shadow: 0px 0px 20px rgba(255,255,255,0.8);
-        -moz-box-shadow: 0px 0px 20px rgba(255,255,255,0.8);
-        box-shadow: 0px 0px 20px rgba(255,255,255,0.8);
-        
+        -webkit-box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.8);
+        -moz-box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.8);
+        box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.8);
+
     }
+
     .imagen1 {
         width: 70%;
         margin: 25px;
@@ -2674,73 +2683,74 @@ hr {
         -webkit-transition: all 2s ease;
         -moz-transition: all 2s ease;
         -o-transition: all 1s ease;
-        
-        
+
+
     }
-     
+
     .imagen1:hover {
         opacity: 2;
-        -webkit-box-shadow: 0px 0px 20px rgba(255,255,255,0.8);
-        -moz-box-shadow: 0px 0px 20px rgba(255,255,255,0.8);
-        box-shadow: 0px 0px 20px rgba(255,255,255,0.8);
-        
+        -webkit-box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.8);
+        -moz-box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.8);
+        box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.8);
+
     }
 
 
 
-    .asus{
+    .asus {
         width: 15%;
         height: 6rem;
-        
-    }
-    
 
-    .intel{
-        width: 15%;
-        
-        height: 6rem;
-        
-    
     }
-    
-    .lenovo{
+
+
+    .intel {
         width: 15%;
-        
+
         height: 6rem;
+
+
     }
-   
-    
-    .logitech{
+
+    .lenovo {
         width: 15%;
-        
+
         height: 6rem;
     }
-    
-    
-    .apple{
+
+
+    .logitech {
+        width: 15%;
+
+        height: 6rem;
+    }
+
+
+    .apple {
         width: 15%;
         height: 6rem;
     }
-   
-   .logos{
-       display: flex;
-     text-align: center;
-     justify-content: center;
-      
+
+    .logos {
+        display: flex;
+        text-align: center;
+        justify-content: center;
+
     }
-       
-    .partners{
+
+    .partners {
         text-align: center;
         padding: 2rem;
-      
+
     }
-      .contenedorLogosIndex{
+
+    .contenedorLogosIndex {
         display: flex;
         gap: 1rem;
         justify-content: space-evenly;
-      } 
+    }
 
-   
+
 }
 
 
@@ -4110,11 +4120,17 @@ input[type=checkbox] {
 }
 
 .box-header2 .buscar2 {
-    display: flex;
+
     width: 50%;
     justify-content: center;
     align-items: center;
+    display: flex;
+    flex-direction: row-reverse;
 
+}
+
+.buscar2 {
+    width: 100%;
 }
 
 .buscar2 .buscar-input2 {
@@ -4128,14 +4144,15 @@ input[type=checkbox] {
 }
 
 .buscar2 .lupa2 {
-    width: 20px;
-    height: 20px;
-    border-radius: 1px;
-    border: none;
-    background-color: transparent;
+    width: 25px;
+    height: 25px;
+    background-color: white;
     text-decoration: none;
     cursor: pointer;
-    margin-left: -23px;
+    border-radius: 20px;
+    border: 2px solid #03264c;
+
+
 
 }
 
@@ -4147,6 +4164,7 @@ input[type=checkbox] {
     display: flex;
     flex-direction: column;
     gap: .25rem;
+    width: 100%;
 }
 
 .buscar_input {
@@ -4166,11 +4184,11 @@ input[type=checkbox] {
     padding: .5rem;
 }
 
-.buscar_card > .buscar_header {
+.buscar_card>.buscar_header {
     margin-bottom: .25rem;
 }
 
-.buscar_card > .buscar_price {
+.buscar_card>.buscar_price {
     font-size: .8rem;
     color: #777;
 }
@@ -4180,11 +4198,8 @@ input[type=checkbox] {
 }
 
 
-/*---------------------------------------SearchBarMadeByMe!----------------------------------------------------*/s
-
-
-
-.header-bar2 .compracuotas2 {
+/*---------------------------------------SearchBarMadeByMe!----------------------------------------------------*/
+s .header-bar2 .compracuotas2 {
     width: 100%;
     display: flex;
     padding: 10px;
