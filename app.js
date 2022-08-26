@@ -47,7 +47,7 @@ app.use('/carrito', routersCarrito);
 app.use('/', routersHome);
 
 app.use('/users', routersUsers);
-app.use('/admin',authMiddleware, routersAdmin);
+app.use('/admin', routersAdmin);
 app.listen(process.env.PORT || 3000, function() {
     console.log("Servidor corriendo en el puerto 3000");
 });
