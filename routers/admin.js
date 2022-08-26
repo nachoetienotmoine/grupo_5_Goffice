@@ -4,6 +4,7 @@ const productosController = require('../controllers/productosController')
 const multer = require('multer');
 const path = require('path');
 const authMiddleware = require('../middlewares/authMiddleware');
+const adminMiddleware = require('../middlewares/adminMiddleware');
 const usersController = require('../controllers/usersController');
 
 // ************ multer Configuration ************
@@ -21,7 +22,7 @@ const storage = multer.diskStorage({
 
 
 ///lista usuarios/////
-router.get('/users', authMiddleware,usersController.users);
+router.get('/users', adminMiddleware,usersController.users);
 ///lista usuarios/////
 
 
