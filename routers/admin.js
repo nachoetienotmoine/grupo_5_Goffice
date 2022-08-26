@@ -4,6 +4,7 @@ const productosController = require('../controllers/productosController')
 const multer = require('multer');
 const path = require('path');
 const authMiddleware = require('../middlewares/authMiddleware');
+const usersController = require('../controllers/usersController');
 
 // ************ multer Configuration ************
 const storage = multer.diskStorage({
@@ -19,9 +20,13 @@ const storage = multer.diskStorage({
 
 
 
+///lista usuarios/////
+router.get('/users', authMiddleware,usersController.users);
+///lista usuarios/////
 
 
 
+////todo productos/////
 router.get("/productos", authMiddleware,productosController.listar);
 router.get("/productos/create", authMiddleware,productosController.crearProductos);
 router.get("/productos/:id", authMiddleware,productosController.detalleProducto);
@@ -29,7 +34,7 @@ router.post("/productos", authMiddleware,upload.single('image'), productosContro
 router.get("/productos/:id/edit", authMiddleware,productosController.editProducto);
 router.put("/productos/:id", authMiddleware,upload.single('image'), productosController.update);
 router.delete("/productos/:id", authMiddleware,productosController.deleteProducto);
-
+////todo productos/////
 
 
 module.exports = router;
