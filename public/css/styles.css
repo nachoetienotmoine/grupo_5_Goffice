@@ -4197,9 +4197,9 @@ right:3%;
     color: #0b0126;
 }
 
-/* .hide {
+.hide {
     display: none;
-} */
+}
 @media (min-width : 769px) {
     .buscar_search-wrapper {
         display: flex;
@@ -4216,9 +4216,9 @@ right:3%;
         grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
        
     }
-    /* .hide {
+    .hide {
         display: none;
-    } */
+    }
     .buscar_card {
         border: 1px solid black;
         background-color: white;
