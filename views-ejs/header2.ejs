@@ -12,17 +12,19 @@
                 </div>
             </a>
             <form class="buscar2" action="#" method="POST">
-                <div class="buscar_search-wrapper">
-                    <input type="search" id="search" class="buscar_input buscar-input2" data-search placeholder="  Buscar..." required>
-                    <button class="lupa2">
+                <button class="lupa2">
                            <i class="fas fa-search"></i>
                     </button>
+                <div class="buscar_search-wrapper">
+                    <input type="search" id="search" class="buscar_input buscar-input2" data-search placeholder="  Buscar..." required>
+                    
                 </div>
                 <div class="buscar_user-cards" data-user-cards-container></div>
                 <template data-user-template>
                     <div class="buscar_card">
                         <div class="buscar_header" data-header></div>
                         <div class="buscar_price" data-price></div>
+                        <img class="buscar_image" data-image  src="/image/" width="50px">
                     </div>
                 </template>
             </form>
@@ -32,18 +34,15 @@
                         <p class="NombrePerfil"> Hi, <%= locals.userLogged.first_name %>
                                 <%=locals.userLogged.last_name %>
                         </p>
-
                         <img src="/images/users/<%= locals.userLogged.image %>" id="fotoPerfil" alt="">
                     </div>
                 </div>
                 <% } else {%>
-
                     <div class="compracuotas2">
                         <div class="compra3">
                             <img src="/images/users/usuariovacio.png" id="fotoPerfil2" alt="">
                         </div>
                     </div>
-
                     <% } %>
 
         </div>
