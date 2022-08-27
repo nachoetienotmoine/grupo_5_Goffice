@@ -4172,6 +4172,9 @@ input[type=checkbox] {
 }
 
 .buscar_user-cards {
+    position: absolute;
+right:3%;
+    top: 1.5%;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
     gap: .25rem;
@@ -4185,18 +4188,53 @@ input[type=checkbox] {
 }
 
 .buscar_card>.buscar_header {
+    color: orangered;
     margin-bottom: .25rem;
 }
 
 .buscar_card>.buscar_price {
     font-size: .8rem;
-    color: #777;
+    color: #0b0126;
 }
 
-.hide {
+/* .hide {
     display: none;
+} */
+@media (min-width : 769px) {
+    .buscar_search-wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: .25rem;
+        width: 100%;
+    }
+    .buscar_user-cards {
+        width: 20%;
+        position: absolute;
+    left:35%;
+        top: 2%;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+       
+    }
+    /* .hide {
+        display: none;
+    } */
+    .buscar_card {
+        border: 1px solid black;
+        background-color: white;
+        padding: .5rem;
+    }
+    
+    .buscar_card>.buscar_header {
+        margin-bottom: .25rem;
+    }
+    
+    .buscar_card>.buscar_price {
+        font-size: .8rem;
+        color: #0b0126;
+    }
+    
 }
-
 
 /*---------------------------------------SearchBarMadeByMe!----------------------------------------------------*/
 s .header-bar2 .compracuotas2 {
