@@ -35,10 +35,10 @@ fetch('/baseDeDatosInfo')
             const card = userCardTemplate.content.cloneNode(true).children[0];
             const header = card.querySelector("[data-header]");
             const price = card.querySelector("[data-price]");
-            const image = card.querySelector("[data-image]");
+            const image = card.querySelector("[data-image]")
             header.textContent = user.name;
             price.textContent = user.price;
-            image.textContent = user.image
+            image.src = "/images/" + user.image;
             userCardContainer.append(card);
             return {name: user.name, price: user.price, image: user.image, element: card}
             
