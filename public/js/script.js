@@ -7,21 +7,12 @@ userCardContainer.classList.add('hide')
 
 let users = []
 
-// searchInput.addEventListener('click', () => {
-//     userCardContainer.classList.remove('hide')
-// })
-
-// searchInput.addEventListener('blur', () => {
-//     userCardContainer.classList.add('hide')
-// })
-
 fetch('/baseDeDatosInfo')
     .then(res => res.json())
     .then(data => {
         users = data.map(user => {
             
             const card = userCardTemplate.content.cloneNode(true).children[0];
-            console.log(card);
             const header = card.querySelector("[data-header]");
             const price = card.querySelector("[data-price]");
             const image = card.querySelector("[data-image]")
@@ -49,7 +40,6 @@ searchInput.addEventListener('input', (e) => {
 body.addEventListener('click', (e) => {
     const input = e.path[0] == searchInput;
     const productCardContainer = e.path[2] == userCardContainer;
-    console.log(e.path[2]);
     if (input && !productCardContainer) {
         userCardContainer.classList.remove('hide')
     }
@@ -58,21 +48,3 @@ body.addEventListener('click', (e) => {
     }
     
 })
-
-
-
-
-// fetch('https://jsonplaceholder.typicode.com/users')
-//     .then(res => res.json())
-//     .then(data => {
-//     users = data.map(user => {
-
-//             const card = userCardTemplate.content.cloneNode(true).children[0];
-//             const header = card.querySelector("[data-header]");
-//             const body = card.querySelector("[data-body]");
-//             header.textContent = user.name;
-//             body.textContent = user.email;
-//             userCardContainer.append(card);
-//             return {name: user.name, email: user.email, element: card}
-//         });
-// });
