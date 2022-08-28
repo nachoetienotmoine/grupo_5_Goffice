@@ -15,29 +15,18 @@ let users = []
 //     userCardContainer.classList.add('hide')
 // })
 
-searchInput.addEventListener('input', (e) => {
-    console.log(users);
-    userCardContainer.classList.remove('hide')
-    const value = e.target.value.toLowerCase()
-    users.forEach(user => {
-        console.log(user);
-        const isVisible =
-        user.name.toLowerCase().includes(value) 
-        user.element.classList.toggle("hide", !isVisible)
-    })
-});
-
 fetch('/baseDeDatosInfo')
     .then(res => res.json())
     .then(data => {
         users = data.map(user => {
             
             const card = userCardTemplate.content.cloneNode(true).children[0];
+            console.log(card);
             const header = card.querySelector("[data-header]");
             const price = card.querySelector("[data-price]");
             const image = card.querySelector("[data-image]")
             header.textContent = user.name;
-            price.textContent = user.price;
+            price.textContent = '$ ' + user.price;
             image.src = "/images/" + user.image;
             userCardContainer.append(card);
             return {name: user.name, price: user.price, image: user.image, element: card}
@@ -45,13 +34,22 @@ fetch('/baseDeDatosInfo')
         });
 });
 
-
+searchInput.addEventListener('input', (e) => {
+    userCardContainer.classList.remove('hide')
+    const value = e.target.value.toLowerCase()
+    users.forEach(user => {
+        const isVisible =
+        user.name.toLowerCase().includes(value) 
+        user.element.classList.toggle("hide", !isVisible)
+    })
+});
 
 
 
 body.addEventListener('click', (e) => {
     const input = e.path[0] == searchInput;
     const productCardContainer = e.path[2] == userCardContainer;
+    console.log(e.path[2]);
     if (input && !productCardContainer) {
         userCardContainer.classList.remove('hide')
     }
