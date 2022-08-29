@@ -2889,24 +2889,29 @@ hr {
     }
 
     .carrusel-fotos {
-
-        overflow: hidden;
+    overflow: hidden;
+    gap: 10%;
+    width: 80%;
     }
 
     .carrusel-fotos img {
-        width: 700px;
+        width: 800px;
         height: 400px;
+        margin-right: 5%;
     }
 
     .carrusel-menu {
         display: flex;
+        
     }
 
     .carrusel-menu img {
         box-sizing: border-box;
         width: 50px;
         height: 40px;
-        border: 10px solid rgb(245, 245, 245);
+        border: 1px solid black;
+       
+        
     }
 
     .carrusel-menu img:hover {
@@ -2917,7 +2922,7 @@ hr {
         list-style: none;
         margin: 0;
         padding: 0;
-        max-width: 1100px;
+        max-width: 2100px;
         /* max-width: 510px; */
         scroll-behavior: smooth;
     }
@@ -2938,7 +2943,7 @@ hr {
     .detalle-grid {
         display: grid;
         grid-template-columns: 4.5fr .8fr;
-        gap: 2rem;
+        gap: 1rem;
     }
 
     .detalles-content {
@@ -2957,7 +2962,7 @@ hr {
     }
 
     .detalles-content .description {
-        padding-top: 10px;
+        padding-top: 5px;
     }
 
     .detalles-content .description span {
@@ -2965,14 +2970,17 @@ hr {
     }
 
     .carrusel-fotos {
-        width: 100%;
+        width: 40%;
         overflow: hidden;
+       
+        
     }
 
     .carrusel-fotos img {
         width: 500px;
         height: 400px;
-        margin-left: 1%;
+        justify-content: center;
+        
     }
 
     .carrusel-menu {
@@ -2982,8 +2990,8 @@ hr {
 
     .carrusel-menu img {
         box-sizing: border-box;
-        width: 80px;
-        height: 80px;
+        width: 70px;
+        height: 70px;
         border: 1px solid black;
     }
 
@@ -2993,17 +3001,19 @@ hr {
 
     .carrusel ul {
         list-style: none;
-        margin: 0;
+        margin: 1%;
         padding: 0;
-        max-width: 2100px;
-        /* max-width: 510px; */
+        max-width: 2200px;
+
         scroll-behavior: smooth;
     }
 
     .carrusel {
         display: flex;
-        margin-left: 5%;
+        margin-left: 10%;
     }
+
+
 }
 
 /*---------------------------------------------- register ----------------------------------------------*/
