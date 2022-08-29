@@ -4175,7 +4175,7 @@ input[type=checkbox] {
 .buscar_user-cards {
     position: absolute;
     right:3%;
-    top: 1.5%;
+    top: 75px;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
     gap: .25rem;
@@ -4188,7 +4188,10 @@ input[type=checkbox] {
     background-color: white;
     padding: .5rem;
 }
-
+.buscar_card:hover {
+   transform: scale(110%);
+ transition:10ms;
+}
 .buscar_card>.buscar_header {
     color: orangered;
     margin-bottom: .25rem;
@@ -4198,10 +4201,10 @@ input[type=checkbox] {
     font-size: .8rem;
     color: #0b0126;
 }
-
+/* 
 .hide {
     display: none;
-}
+} */
 @media (min-width : 769px) {
     .buscar_search-wrapper {
         display: flex;
@@ -4213,7 +4216,7 @@ input[type=checkbox] {
         width: 20%;
         position: absolute;
     left:35%;
-        top: 2%;
+        top: 90px;
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
        

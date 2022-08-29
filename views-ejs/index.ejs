@@ -4,123 +4,134 @@
 
 
 <%- include('./head.ejs')%>
-<%- include('./header2.ejs') %>
 
-<body>
-    <section>
 
-        <video class="videoPublicidad" autoplay loop>
+    <body>
+        <%- include('./header2.ejs') %>
+            <section>
 
-            <source src="video/Sech - 911 (Video Oficial).mp4" type="video/mp4">
+                <video class="videoPublicidad" autoplay loop>
 
-        </video>
-    </section>
-    <br>
-    <h1 class="productosIndex">Productos <button class="button-HOffice"> <i class="fas fa-arrow-circle-right"></i></button></h1>
-    <br>
+                    <source src="video/Sech - 911 (Video Oficial).mp4" type="video/mp4">
 
-    <section class="productos">
-        <div class="productos__center"><% for (let i=0; i < productosJ.length ; i++) {%>
-            <div class="producto">
-                <div class="image__container">
-                    <img src="images/<%= productosJ[i].image; %>" alt="">
+                </video>
+            </section>
+            <br>
+            <h1 class="productosIndex">Productos <button class="button-HOffice"> <i
+                        class="fas fa-arrow-circle-right"></i></button></h1>
+            <br>
+
+            <section class="productos">
+                <div class="productos__center">
+                    <% for (let i=0; i < productosJ.length ; i++) {%>
+                        <div class="producto">
+                            <div class="image__container">
+                                <img src="images/<%= productosJ[i].image; %>" alt="">
+                            </div>
+                            <div class="producto__footer">
+                                <h1>
+                                    <%= productosJ[i].name %>
+                                </h1>
+                                <div class="rating">
+                                    <span>
+                                        <i class="fa fa-star"></i>
+                                    </span>
+                                    <span>
+                                        <i class="fa fa-star"></i>
+                                    </span>
+                                    <span>
+                                        <i class="fa fa-star"></i>
+                                    </span>
+                                    <span>
+                                        <i class="fa fa-star"></i>
+                                    </span>
+                                    <span>
+                                        <i class="fa fa-star"></i>
+                                    </span>
+                                </div>
+                                <div class="price">$<%= productosJ[i].price %>
+                                </div>
+                            </div>
+                            <div class="bottom">
+                                <div class="btn__group">
+                                    <a href="/carrito" class="btn addToCart">Añadir carrito</a>
+                                    <a href="/detalle" class="btn view">Vista</a>
+                                </div>
+                            </div>
+                        </div>
+                        <% } %>
                 </div>
-                <div class="producto__footer">
-                    <h1><%= productosJ[i].name %></h1>
-                    <div class="rating">
-                        <span>
-                            <i class="fa fa-star"></i>
-                        </span>
-                        <span>
-                            <i class="fa fa-star"></i>
-                        </span>
-                        <span>
-                            <i class="fa fa-star"></i>
-                        </span>
-                        <span>
-                            <i class="fa fa-star"></i>
-                        </span>
-                        <span>
-                            <i class="fa fa-star"></i>
-                        </span>
-                    </div>
-                    <div class="price">$<%= productosJ[i].price %></div>
+            </section>
+
+            <br>
+
+            <div id="button-up">
+                <i class="fas fa-angle-double-up fa-lg"></i>
+            </div>
+
+
+
+
+            <section class="section1H">
+                <img src="images/banner.png" class="imagen1">
+            </section>
+            <br>
+            <br>
+            <br>
+            <h1 class="productosIndex">Ofertas <button class="button-HOffice"> <i
+                        class="fas fa-arrow-circle-right"></i></button></h1>
+            <section class="productos">
+                <div class="productos__center">
+                    <% for (let i=0; i < productosJ.length ; i++) {%>
+                        <div class="producto">
+                            <div class="image__container">
+                                <img src="images/<%= productosJ[i].image; %>" alt="">
+                            </div>
+                            <div class="producto__footer">
+                                <h1>
+                                    <%= productosJ[i].name %>
+                                </h1>
+                                <div class="descuento"><span id="discount" data-action="cart-can"
+                                        class="badge rounded-circle">
+                                        <%= productosJ[i].discount %>%
+                                    </span>
+                                </div>
+                                <div class="price">$<%= Math.round(productosJ[i].price - productosJ[i].discount/100 *
+                                        productosJ[i].price); %>
+                                </div>
+                            </div>
+                            <div class="bottom">
+                                <div class="btn__group">
+                                    <a href="/carrito" class="btn addToCart">Añadir carrito</a>
+                                    <a href="/detalle" class="btn view">Vista</a>
+                                </div>
+                            </div>
+                        </div>
+                        <% } %>
                 </div>
-                <div class="bottom">
-                    <div class="btn__group">
-                        <a href="/carrito" class="btn addToCart">Añadir carrito</a>
-                        <a href="/detalle" class="btn view">Vista</a>
-                    </div>
+            </section>
+            <br><br>
+            <h1 class="partners"> Our partners</h1>
+            <section class="logos">
+
+
+
+                <div class="contenedorLogosIndex">
+                    <img src="images/asus-logo.png" class="asus">
+                    <img src="images/intel-logo.png" class="intel">
+                    <img src="images/lenovo-logo.png" class="lenovo">
+                    <img src="images/logitech-logo.png" class="logitech">
+                    <img src="images/apple.png" class="apple">
                 </div>
-            </div>
-            <% } %>
-        </div>
-    </section>
-
-<br>
-   
-    <div id="button-up">
-        <i class="fas fa-angle-double-up fa-lg"></i>
-    </div>
+            </section>
 
 
 
+            <br><br>
 
-<section class="section1H" >
-    <img src="images/banner.png" class="imagen1" >
-</section>
-<br>
-    <br>
-    <br>
-    <h1 class="productosIndex">Ofertas <button class="button-HOffice"> <i class="fas fa-arrow-circle-right"></i></button></h1>
-<section class="productos">
-    <div class="productos__center"><% for (let i=0; i < productosJ.length ; i++) {%>
-        <div class="producto">
-            <div class="image__container">
-                <img src="images/<%= productosJ[i].image; %>" alt="">
-            </div>
-            <div class="producto__footer">
-                <h1><%= productosJ[i].name %></h1>
-                <div class="descuento"><span id="discount" data-action="cart-can"
-                    class="badge rounded-circle">
-                    <%= productosJ[i].discount %>%
-                </span>
-            </div>
-                <div class="price">$<%= Math.round(productosJ[i].price - productosJ[i].discount/100 *
-                    productosJ[i].price); %></div>
-            </div>
-            <div class="bottom">
-                <div class="btn__group">
-                    <a href="/carrito" class="btn addToCart">Añadir carrito</a>
-                    <a href="/detalle" class="btn view">Vista</a>
-                </div>
-            </div>
-        </div>
-        <% } %>
-    </div>
-</section>
-<br><br>
-<h1 class="partners"> Our partners</h1>
-    <section class="logos">
-        
-        
-        
-        <div class="contenedorLogosIndex">
-            <img src="images/asus-logo.png" class="asus">
-            <img src="images/intel-logo.png" class="intel">
-            <img src="images/lenovo-logo.png" class="lenovo">
-            <img src="images/logitech-logo.png" class="logitech">
-            <img src="images/apple.png" class="apple">
-        </div>
-    </section>
+            <%- include('./footer.ejs') %>
 
-
-
-<br><br>
-    
-    <%- include('./footer.ejs') %>
-
-    <script src="js/botones.js"></script>
-</body>
+                <script src="js/botones.js"></script>
+    </body>
 
 </html>

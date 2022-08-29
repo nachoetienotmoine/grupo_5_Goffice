@@ -1,20 +1,14 @@
 <!DOCTYPE html>
 <html lang="en" class="html_R">
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
-    <link rel="stylesheet" href="/css/styles.css">
-    <title>REGISTER</title>
-</head>
+    <%- include('./head.ejs')%>
 
 <body >
+     <%- include('./header2.ejs') %>
     <main class="body_R">
     <div class="Container_R">
 
-        <%- include('./header2.ejs') %>
+       
 
             <form class="register_form" action="/users"  method="POST" enctype="multipart/form-data" >
 

@@ -1,87 +1,89 @@
 <!DOCTYPE html>
 <html lang="en" class="html_L">
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
-    <link rel="stylesheet" href="/css/styles.css">
-    <title>Login</title>
-</head>
-<%- include('./header2.ejs') %>
-<body class="body_L">
-    
-<main>
-    <form class="login_form" action="/users/login" method="POST">
+<%- include('./head.ejs')%>
 
-        <i class="fas fa-sign-in-alt fa-2x" id="loginIcono"></i>
+    <body class="body_L">
+        <%- include('./header2.ejs') %>
+            <main>
+                <form class="login_form" action="/users/login" method="POST">
 
-        <div class="field email_field">
-            <label class="login_label" for="email">Email</label>
-            <input type="text" name="email" id="email" value="<%= locals.old && old.email %>">
-            <% if (locals.errors && errors.email) { %>
-                <p class="feedback"><%= errors.email.msg %></p>
-            <% } %>
-        </div>
-        <div class="error_field">Ingrese su correo electronico</div>
+                    <i class="fas fa-sign-in-alt fa-2x" id="loginIcono"></i>
+
+                    <div class="field email_field">
+                        <label class="login_label" for="email">Email</label>
+                        <input type="text" name="email" id="email" value="<%= locals.old && old.email %>">
+                        <% if (locals.errors && errors.email) { %>
+                            <p class="feedback">
+                                <%= errors.email.msg %>
+                            </p>
+                            <% } %>
+                    </div>
+                    <div class="error_field">Ingrese su correo electronico</div>
 
 
-        <div class="field password_field">
-            <label class="login_label" for="password">Password</label>
-            <input type="password" name="password" id="password" value="<%= locals.old && old.password %>">
-            <% if (locals.errors && errors.password) { %>
-                <p class="feedback"><%= errors.password.msg %></p>
-            <% } %>
-            <ion-icon onclick="toggle()" class="password-icon"	id ="eye-icon" name="eye-off" size="large" ></ion-icon>
-        </div>
-        <div class="field password_field">
-            <label class="login_label" for="password">Recordar usuario</label>
-            
-        </div>
-        <div class="checkbox-example">
-            <input type="checkbox" value="on" id="checkboxOneInput" name="remember_user"/>
-            <label for="checkboxOneInput"></label>
-          </div>
-        <div class="error_field">Ingrese su contraseña</div>
+                    <div class="field password_field">
+                        <label class="login_label" for="password">Password</label>
+                        <input type="password" name="password" id="password" value="<%= locals.old && old.password %>">
+                        <% if (locals.errors && errors.password) { %>
+                            <p class="feedback">
+                                <%= errors.password.msg %>
+                            </p>
+                            <% } %>
+                                <ion-icon onclick="toggle()" class="password-icon" id="eye-icon" name="eye-off"
+                                    size="large"></ion-icon>
+                    </div>
+                    <div class="field password_field">
+                        <label class="login_label" for="password">Recordar usuario</label>
 
-        <button type="submit">Login</button>
-        </div>
-        <br>
+                    </div>
+                    <div class="checkbox-example">
+                        <input type="checkbox" value="on" id="checkboxOneInput" name="remember_user" />
+                        <label for="checkboxOneInput"></label>
+                    </div>
+                    <div class="error_field">Ingrese su contraseña</div>
 
-        <% if (email.msg != '' && !errors.password && !errors.email) { %>
-            <p class="feedbackTotal"><%= email.msg %></p>
-        <% } %>
+                    <button type="submit">Login</button>
+                    </div>
+                    <br>
 
-        <br>
+                    <% if (email.msg !='' && !errors.password && !errors.email) { %>
+                        <p class="feedbackTotal">
+                            <%= email.msg %>
+                        </p>
+                        <% } %>
 
-        <div class="nav_button_L">
-            <a class="nav_button_text_L" href="">¿Olvidaste tu contraseña? </a>
-        </div>
+                            <br>
 
-        <div class="nav_button_L">
-            <a class="nav_button_text_L" href="/registro">¿Aún no tienes una cuenta? ¡Registrate!</a>
-        </div>
+                            <div class="nav_button_L">
+                                <a class="nav_button_text_L" href="">¿Olvidaste tu contraseña? </a>
+                            </div>
 
-    </form>
+                            <div class="nav_button_L">
+                                <a class="nav_button_text_L" href="/registro">¿Aún no tienes una cuenta?
+                                    ¡Registrate!</a>
+                            </div>
+
+                </form>
 
 
-</main>
-   
+            </main>
 
- 
 
-</body>
-   <%- include('./footer.ejs') %>
-   
-        
+
+
+    </body>
+    <%- include('./footer.ejs') %>
+
+
         <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
         <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-   <script type="text/javascript">
-    function toggle() {
-        document.querySelector("#eye-icon").name === "eye" ? document.querySelector("#eye-icon").name = "eye-off" : document.querySelector("#eye-icon").name = "eye"
-        document.querySelector("#password").type === "password" ? document.querySelector("#password").type = "text" : document.querySelector("#password").type = "password"
-    }
+        <script type="text/javascript">
+            function toggle() {
+                document.querySelector("#eye-icon").name === "eye" ? document.querySelector("#eye-icon").name = "eye-off" : document.querySelector("#eye-icon").name = "eye"
+                document.querySelector("#password").type === "password" ? document.querySelector("#password").type = "text" : document.querySelector("#password").type = "password"
+            }
 
-</script>
+        </script>
+
 </html>
