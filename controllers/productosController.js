@@ -13,8 +13,10 @@ const productosController = {
         res.render("index", { productosJ: products })
     },
     ////detalle///
-    Detalle: (req, res) => {
-        res.render('detalle');
+    Detalle: async (req, res) => {
+        const id = parseInt(req.params.id);
+        const product = await Products.findByPk(id)
+        res.render('detalle', {user: product});
     },
     ////////
     

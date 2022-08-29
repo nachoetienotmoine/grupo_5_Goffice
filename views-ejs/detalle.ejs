@@ -12,24 +12,24 @@
 
     <div class="carrusel">
         <ul class="carrusel-fotos">
-          <li id="foto1"><img src="images/teclado.jpg" alt="" ></li>
-          <li id="foto2"><img src="images/silla.jpg" alt=""></li>
-          <li id="foto3"><img src="images/silla.jpg" alt=""></li>
-          <li id="foto4"><img src="images/silla.jpg" alt=""></li>
-          <li id="foto5"><img src="images/silla.jpg" alt=""></li>
-          <li id="foto6"><img src="images/silla.jpg" alt=""></li>
+          <li id="foto1"><img src="/images/<%= user.image  %>" alt="" ></li>
+          <li id="foto2"><img src="/images/<%= user.image  %>" alt=""></li>
+          <li id="foto3"><img src="/images/<%= user.image  %>" alt=""></li>
+          <li id="foto4"><img src="/images/<%= user.image  %>" alt=""></li>
+          <li id="foto5"><img src="/images/<%= user.image  %>" alt=""></li>
+          <li id="foto6"><img src="/images/<%= user.image  %>" alt=""></li>
         </ul>
         <ul class="carrusel-menu">
-            <li><a href="#foto1"><img src="images/teclado.jpg" alt=""></a></li>
-            <li><a href="#foto2"><img src="images/silla.jpg" alt=""></a></li>
-            <li><a href="#foto3"><img src="images/silla.jpg" alt=""></a></li>
-            <li><a href="#foto4"><img src="images/silla.jpg" alt=""></a></li>
+            <li><a href="#foto1"><img src="/images/<%= user.image  %>" alt=""></a></li>
+            <li><a href="#foto2"><img src="/images/<%= user.image  %>" alt=""></a></li>
+            <li><a href="#foto3"><img src="/images/<%= user.image  %>" alt=""></a></li>
+            <li><a href="#foto4"><img src="/images/<%= user.image  %>" alt=""></a></li>
             
           </ul>
     
          <article class="detalle-grid">
             <div class="detalles-content">
-                <h3>producto</h3>
+                <h3><%= user.name  %></h3>
                 <div class="rating">
                     <span>
                         <i class="fa fa-star"></i>
@@ -47,12 +47,12 @@
                         <i class="fa fa-star"></i>
                     </span>
                 </div>
-                    <p class="price"><b>Precio: </b> $55.00</p>
+                    <p class="price"><b>Precio: </b> $<%= user.price  %></p>
                     <p class="description">
-                        <b>Descripcion: </b> <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta quae ad ex sint expedita perspiciatis odit eligendi! Et quia ex aperiam dolorum sunt omnis maiores. Repudiandae delectus iste exercitationem vel?</span>
+                        <b>Descripcion: </b> <span><%= user.description  %></span>
                     </p>
                     <p class="description">
-                        <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque voluptates consequuntur in assumenda odit hic, aut cupiditate dolorem aspernatur! Quibusdam iusto magnam vero maxime quisquam voluptatibus minima aliquam molestias, iure ratione commodi, reiciendis quasi.</span>
+                        <span><%= user.description  %></span>
                     </p>
                     <div class="bottom">
                         <div class="btn__group">

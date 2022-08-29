@@ -5,22 +5,23 @@ const searchInput = document.querySelector("[data-search]");
 
 userCardContainer.classList.add('hide')
 
-let users = []
+let productos = []
 
 fetch('/baseDeDatosInfo')
     .then(res => res.json())
     .then(data => {
-        users = data.map(user => {
+        productos = data.map(producto => {
             
             const card = userCardTemplate.content.cloneNode(true).children[0];
             const header = card.querySelector("[data-header]");
             const price = card.querySelector("[data-price]");
-            const image = card.querySelector("[data-image]")
-            header.textContent = user.name;
-            price.textContent = '$ ' + user.price;
-            image.src = "/images/" + user.image;
+            const image = card.querySelector("[data-image]");
+            header.textContent = producto.name;
+            price.textContent = '$ ' + producto.price;
+            image.src = "/images/" + producto.image;
+            card.children[0].href  = "/detalle/" + producto.id;
             userCardContainer.append(card);
-            return {name: user.name, price: user.price, image: user.image, element: card}
+            return {name: producto.name, price: producto.price, image: producto.image, element: card}
             
         });
 });
@@ -28,10 +29,10 @@ fetch('/baseDeDatosInfo')
 searchInput.addEventListener('input', (e) => {
     userCardContainer.classList.remove('hide')
     const value = e.target.value.toLowerCase()
-    users.forEach(user => {
+    productos.forEach(producto => {
         const isVisible =
-        user.name.toLowerCase().includes(value) 
-        user.element.classList.toggle("hide", !isVisible)
+        producto.name.toLowerCase().includes(value) 
+        producto.element.classList.toggle("hide", !isVisible)
     })
 });
 
