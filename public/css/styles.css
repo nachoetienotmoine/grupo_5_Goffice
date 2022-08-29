@@ -2820,15 +2820,15 @@ hr {
     list-style: none;
     margin: 0;
     padding: 0;
-    max-width: 1050px;
+    max-width: 250px;
     /* max-width: 510px; */
     scroll-behavior: smooth;
 }
 
 .carrusel-fotos {
     display: flex;
-    gap: 10px;
     overflow: auto;
+    width: 80%;
 
 }
 
