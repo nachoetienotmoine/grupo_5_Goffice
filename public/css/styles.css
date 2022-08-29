@@ -4201,10 +4201,10 @@ input[type=checkbox] {
     font-size: .8rem;
     color: #0b0126;
 }
-/* 
+
 .hide {
     display: none;
-} */
+}
 @media (min-width : 769px) {
     .buscar_search-wrapper {
         display: flex;
