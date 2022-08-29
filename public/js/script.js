@@ -2,6 +2,7 @@ const body = document.querySelector('body');
 const userCardTemplate = document.querySelector("[data-user-template]");
 const userCardContainer = document.querySelector("[data-user-cards-container]");
 const searchInput = document.querySelector("[data-search]");
+const aHref = document.querySelector("a")
 
 userCardContainer.classList.add('hide')
 
@@ -16,10 +17,13 @@ fetch('/baseDeDatosInfo')
             const header = card.querySelector("[data-header]");
             const price = card.querySelector("[data-price]");
             const image = card.querySelector("[data-image]");
+            const a = card.querySelector("a");
             header.textContent = producto.name;
             price.textContent = '$ ' + producto.price;
             image.src = "/images/" + producto.image;
             card.children[0].href  = "/detalle/" + producto.id;
+            a.children[0].style.color = 'orangered';
+            a.style.color = '#0b0126';
             userCardContainer.append(card);
             return {name: producto.name, price: producto.price, image: producto.image, element: card}
             
