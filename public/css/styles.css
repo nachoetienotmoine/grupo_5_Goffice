@@ -220,7 +220,7 @@ p {
     flex-direction: column;
     /* box-shadow: 0px 0px 8px black;*/
     box-shadow: 0 0.5rem 1.5rem rgb(0 0 0 / 20%);
-    
+    border-radius: 1rem;
     width: 100%;
     height: 100%;
 
@@ -298,9 +298,10 @@ p {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    box-shadow: 0px 0px 8px black;
+    box-shadow: 0 0.5rem 1.5rem rgb(0 0 0 / 20%);
     padding-left: 1%;
     padding-right: 1%;
+    border-radius: 1rem;
     font-family: "Source Sans Pro", sans-serif;
     height: 100%;
 
@@ -313,6 +314,7 @@ p {
     flex-wrap: wrap;
     justify-content: space-between;
     padding-top: 1%;
+    color:#0b0126
 }
 
 .comprar {
@@ -340,9 +342,15 @@ p {
     height: 40px;
     border: none;
     border-radius: 3px;
-    background-color: orangered;
-    color: white;
+ 
     font-family: "Source Sans Pro", sans-serif;
+
+}
+.botoncompra:hover {
+  
+ color: white;
+ background-color:#1a6692;
+   cursor: pointer; 
 
 }
 
@@ -353,14 +361,7 @@ p {
     cursor: pointer;
 }
 */
-.botoncompra:hover {
-    background-color: #0b0126;
-    opacity: 90%;
-    cursor: pointer;
-    color: white;
-    border: orangered 2px solid;
 
-}
 
 .lista-footer {
     display: flex;
@@ -431,7 +432,7 @@ p {
 }
 
 .carrouselC {
-    overflow: auto;
+    overflow: hidden;
     justify-content: center;
     height: 100%;
 }
@@ -440,33 +441,38 @@ p {
     list-style: none;
     margin: 0;
     padding: 0;
+    overflow: hidden;
+    animation: changes 20s infinite alternate;
 }
 
 .photosC {
     display: flex;
-    gap: 10px;
+    gap: 2.5rem;
     height: 100%;
 }
 
 .photosC img {
     width: 200px;
-    height: 42%;
+    height: 35%;
     object-fit: contain;
 }
 .namecarrousel{
     text-align: center;
     font-weight: 700;
     font-size: 1rem;
+    margin-top: 1rem;
 }
 .rating2{
     margin: 0.5rem 0;
     font-size: small;
+    margin-left: 1rem;
 }
 .articlecarruselC {
     display: flex;
     flex-direction: column;
     margin-top: 5%;
-    height: 335px;
+    height: 400px;
+    gap: 2rem;
 }
 
 .titulocarruselC {
@@ -475,21 +481,27 @@ p {
 }
 .carrouselList{
     box-shadow: 0 0.5rem 1.5rem rgb(0 0 0 / 20%);
-    border-radius: 5%
+    border-radius: 5%;
+    height: 90%;
+    margin-left: 1rem;
+    
 }
 .submit-cart {
-    width: 100%;
-    height: 40px;
-    border: none;
-    border-radius: 3px;
-    background-color: #0b0126;
-    ;
-    color: white;
+    border: 1px solid rgb(248, 245, 245);
+    padding: 1rem 1.8rem;
+    color: black;
+    font-weight: 200;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 300ms ease-in-out;
+    text-decoration: none;
+    margin-left: 2rem;
 }
 
 .submit-cart:hover {
-    background-color: orangered;
+    background-color: #1a6692;
     cursor: pointer;
+    color: white;
 }
 
 .productoCheckout {
@@ -642,7 +654,7 @@ p {
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;
-        box-shadow: 0px 0px 8px black;
+        box-shadow: 0 0.5rem 1.5rem rgb(0 0 0 / 20%);
         padding-left: 1%;
         padding-right: 1%;
         font-family: "Source Sans Pro", sans-serif;
@@ -803,7 +815,7 @@ p {
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;
-        box-shadow: 0px 0px 8px black;
+        box-shadow: 0 0.5rem 1.5rem rgb(0 0 0 / 20%);
         padding-left: 1%;
         padding-right: 1%;
         font-family: "Source Sans Pro", sans-serif;
@@ -1437,7 +1449,11 @@ hr {
     font-weight: 500;
     font-size: 1rem;
 }
-
+.price2 {
+    font-weight: 500;
+    font-size: 1rem;
+    margin-left: 1rem;
+}
 .imagen1 {
     width: 70%;
     margin: 25px;
@@ -1600,6 +1616,11 @@ hr {
     .price {
         font-weight: 700;
         font-size: 15px;
+    }
+    .price2 {
+        font-weight: 700;
+        font-size: 15px;
+        margin-left: 1rem;
     }
 
     .headerHome {
@@ -2203,6 +2224,11 @@ hr {
     }
 
     .price {
+        font-weight: 700;
+        font-size: 1rem;
+    }
+    .price2 {
+        margin-left: 1rem;
         font-weight: 700;
         font-size: 1rem;
     }

@@ -1,31 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sprint2</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/css/styles.css">
-
-</head>
+    <%- include('./head.ejs')%>
 
 <body>
 
     <%- include('./header2.ejs') %>
 
-
+<!-- 
         <div class="e-address">
             <button class="address">
                 <i class="fas fa-map-marker-alt fa-lg"> </i>
                 <p class="Send"> London HA9 0WS, Reino Unido</p>
             </button>
-        </div>
+        </div> -->
 
 
 
@@ -119,7 +107,7 @@
 
             <article class="articlecarruselC">
                 <h4 class="titulocarruselC">Featured items you may like</h4>
-                <br>
+              
                 <div class="carrouselC">
                     <ul class="photosC">
                         <% for (let i=0; i < productosJ.length ; i++) {%>
@@ -146,7 +134,7 @@
                                     </span>
                                 </div>
                                 <br>
-                                <div class="price">$<%= productosJ[i].price %>
+                                <div class="price2">$<%= productosJ[i].price %>
                                 </div>
                                 <br>
                                 <button type="submit" class="submit-cart">Add to
@@ -159,7 +147,7 @@
             </article>
             <br>
 <br><br>
-            <section class="section-footer">
+            <!-- <section class="section-footer">
                 <section>
 
                     <i class="fas fa-credit-card fa-2x" style="color: orangered;" id="icono-footer"></i><br>
@@ -184,7 +172,7 @@
                     <p class="p-footer">You do not like? Give it back! In Mercado Liebre, there is nothing you cannot
                         do,
                         because you are always protected.</p>
-                </section>
+                </section> -->
         </main>
         <br>
         <%- include('./footer.ejs') %>
