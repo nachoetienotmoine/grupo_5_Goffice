@@ -22,9 +22,10 @@
 
             <section class="contenedortotalCarrito">
                 <section class="contendedordeloscontendoresdelCarrito">
+                    <% for (let i=0; i < productosJ.length ; i++) {%>
                     <section class="contenedor">
                         <article class="contenedorproducto">
-                            <h2 class="h2-nombre">Reddragon Zeus-X
+                            <h2 class="h2-nombre"><%= productosJ[i].name; %>
 
                             </h2>
 
@@ -32,7 +33,7 @@
 
                                 <article class="imagen-nombre-main">
                                     <div class="imagen-div">
-                                        <img src="images/Reddragon Zeus-X.jpg" alt="Producto" id="img-main">
+                                        <img src="images/<%= productosJ[i].image; %>" alt="Producto" id="img-main">
                                     </div>
 
                                     <div class="button-box">
@@ -55,7 +56,7 @@
 
                                         </div>
 
-                                        <p class="PrecioenCarrito"> $121616</p>
+                                        <p class="PrecioenCarrito"> $<%= productosJ[i].price; %></p>
 
 
 
@@ -68,25 +69,19 @@
                         </article>
                     </section>
                     <br>
-
+                    <% } %>
 
                 </section>
                 <br>
 
                 <article class="precio-envio">
-
+                    <% for (let i=0; i < productosJ.length ; i++) {%>
                     <article class="productoCheckout">
-                        <div class="nombreProductoAgregado"> nombre del producto </div>
-                        <div class="nombreProductoAgregado"> precio del producto </div>
+                        <div class="nombreProductoAgregado"> <%= productosJ[i].name; %></div>
+                        <div class="nombreProductoAgregado"> $<%= productosJ[i].price; %></div>
                     </article>
-                    <article class="productoCheckout">
-                        <div class="nombreProductoAgregado"> nombre del producto </div>
-                        <div class="nombreProductoAgregado"> precio del producto </div>
-                    </article>
-                    <article class="productoCheckout">
-                        <div class="nombreProductoAgregado"> nombre del producto </div>
-                        <div class="nombreProductoAgregado"> precio del producto </div>
-                    </article>
+                    <% } %>
+                    
                     <div class="preciofinal">
                         <h3>Total price</h3>
 
@@ -101,6 +96,7 @@
                             Check-Out
                         </button>
                     </div>
+                    
                 </article>
 
             </section>
