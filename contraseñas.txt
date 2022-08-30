@@ -1,5 +1,10 @@
-nacho A : 123456
-gonzalo A : 1234567
-nacho E : 12345678
-nelson: 123456789
-tomas : 12345678910
+
+ignacio.andreozzi@hotmail.com : 123456
+
+andreozzigonzalo@gmail.com : 1234567
+
+nachoetienotmoine@gmail.com : 12345678
+
+nelson227@hotmail.es : 123456789
+
+thomas.farres@gmail.com : 12345678910
