@@ -123,11 +123,31 @@ INSERT INTO users (`id`, `first_name`, `last_name`, `email`, `password`, `phone_
 INSERT INTO users (`id`, `first_name`, `last_name`, `email`, `password`, `phone_number`, `gender`, `image`, `id_roles`) VALUES (5, 'Thomas', 'farre', 'thomas.farres@gmail.com', '$2a$04$MnOyKRfKgNCGZnmjqB8kcOy0rENhA4fJmX6TmUAIJIap3UeXEwxlm', '5491123018662', 'male', 'Thomas Farre.jpg', 2);
 
 
+CREATE TABLE payment_methods (
+    id INT NOT NULL AUTO_INCREMENT,
+    method VARCHAR(20) NOT NULL,
+    
+    PRIMARY KEY (id)
+);
 
+CREATE TABLE carts (
+    id INT NOT NULL AUTO_INCREMENT,
+    total_products INT NOT NULL,
+    total_price INT NOT NULL,
+    payment_methods_id INT NOT NULL,
+    users_id INT NOT NULL,
+    
+    PRIMARY KEY (id),
+    FOREIGN KEY (payment_methods_id) REFERENCES payment_methods(id),
+    FOREIGN KEY (users_id) REFERENCES users(id)
+);
 
+CREATE TABLE carts_products (
+    id INT NOT NULL AUTO_INCREMENT,
+    carts_id INT NOT NULL,
+    products_id INT NOT NULL,
 
-
-
-
-
-
+	PRIMARY KEY (id),
+    FOREIGN KEY (carts_id) REFERENCES carts(id),
+    FOREIGN KEY (products_id) REFERENCES products(id)
+);
