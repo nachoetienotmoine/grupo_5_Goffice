@@ -5,5 +5,6 @@ const carritoController = require('../controllers/carritoController');
 const authMiddleware = require('../middlewares/authMiddleware');
 
 router.get('/',authMiddleware ,carritoController.carrito);
+router.get('/checkout',authMiddleware ,carritoController.checkout);
 
 module.exports = router;

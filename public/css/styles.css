@@ -447,7 +447,7 @@ p {
 
 .photosC {
     display: flex;
-    gap: 2.5rem;
+    
     height: 100%;
 }
 

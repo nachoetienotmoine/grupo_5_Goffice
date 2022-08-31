@@ -12,6 +12,12 @@ const carritoController = {
 
             const products = await Products.findAll()
             res.render("carrito", { productosJ: products })
+        },
+
+        checkout:  async (req, res) => {
+
+           
+            res.render("checkout")
         }
 }
 
