@@ -151,3 +151,8 @@ CREATE TABLE carts_products (
     FOREIGN KEY (carts_id) REFERENCES carts(id),
     FOREIGN KEY (products_id) REFERENCES products(id)
 );
+
+INSERT INTO payment_methods (method)  VALUES ('efectivo');
+INSERT INTO payment_methods (method)  VALUES ('crédito');
+INSERT INTO payment_methods (method)  VALUES ('débito');
+INSERT INTO payment_methods (method)  VALUES ('transferencia');
