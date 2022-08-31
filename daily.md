@@ -44,3 +44,22 @@ Nelson Patiño:
 
 Ignacio Etienot:
 ----------------
+
+
+Fecha: 25/08/22 - Hora: 20:00hs a 
+--------------------------------------
+
+Thomas Farre:
+-------------
+
+Ignacio Andreozzi:
+------------------
+
+Gonza Andreozzi:
+----------------
+
+Nelson Patiño:
+--------------
+
+Ignacio Etienot: Mantuvimos una reunión de seguimiento de objetivos donde se distribuyeron las tareas pendientes para completar el sprint, se debatieron planes de acción para los items a desarrollar, se plantearon los bloqueos de cada miembro y se trabajó para superarlos. Fué una reuni+on muy positiva donde los integrantes mas experimentados brindaron su apoyo a los uqe disponen de menor tiempo y/o presentaron bloqueos.
+----------------
