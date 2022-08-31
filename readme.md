@@ -45,6 +45,14 @@ Cosas qué deberían empezar a hacer: Organizar las dailies con más tiempo.
 Cosas qué deberían dejar de hacer: Mejorar nuestra organización sobre las tareas y asignarlas de una forma más equitativa. 
 Conclusión general: Nos organizamos bien con el sprint aunque ocacionalmente tuvimos complicaciones.
 
+Retro 6:
+--------
+
+Cuestiones positivas del sprint anterior: Se logró dominar la implementación de la base de datos, la creaciópn y vinculación con todos los metodos necesarios, dando cumplimiento a las entregas obligatorias del sprint.
+Cosas qué deberían empezar a hacer: Dejar reflejadas las dailys en el momento de reunirnos, organizarnos para avanzar con propuestas optativas
+Cosas qué deberían dejar de hacer: Mejorar nuestra organización sobre los desarrollos de tareas, trabajo cohesionado y avance.
+Conclusión general: Lo positivo es el cumplimiento en torno a la entrega, existen muchas oportunidades de mejora en la forma en que se llega a la entrega.
+
 ○ Temática del sitio y público objetivo:
 ----------------------------------------
 
