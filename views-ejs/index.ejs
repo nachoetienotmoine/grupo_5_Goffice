@@ -53,10 +53,12 @@
                                 </div>
                             </div>
                             <div class="bottom">
-                                <div class="btn__group">
-                                    <a href="/carrito" class="btn addToCart">Añadir carrito</a>
-                                    <a href="/detalle/<%= productosJ[i].id %>" class="btn view">Vista</a>
-                                </div>
+                                <form action="/carrito/agregar/<%= productosJ[i].id %>" method="post">
+                                    <div class="btn__group">
+                                        <button type="submit" class="btn addToCart">Añadir carrito</button>
+                                        <a href="/detalle/<%= productosJ[i].id %>" class="btn view">Vista</a>
+                                    </div>
+                                </form>
                             </div>
                         </div>
                         <% } %>
