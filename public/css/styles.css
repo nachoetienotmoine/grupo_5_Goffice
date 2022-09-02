@@ -115,7 +115,7 @@
     display: inline;
     font-size: medium;
     border: none;
-    color: orangered;
+    color: #1a6692;
 }
 
 .e-address {
@@ -135,7 +135,7 @@
 }
 
 .fa-map-marker-alt {
-    color: orangered;
+    color: #1a6692;
 
 }
 
@@ -154,18 +154,18 @@ p {
 }
 
 .fa-shipping-fast {
-    color: orangered;
+    color: #1a6692;
     font-size: 20px;
     padding: 5px;
     width: 30px;
     height: 30px;
-    border: 2px solid orangered;
+    border: 2px solid #1a6692;
     background-color: #FFF;
     border-radius: 40%;
 }
 
 .a-footer {
-    color: orangered;
+    color: #1a6692;
     text-decoration: none;
     display: flex;
     padding: 2%;
@@ -3136,7 +3136,8 @@ hr {
 }
 
 .register_form button:hover {
-    background-color: rgb(219, 59, 0);
+    background-color: #1a6692
+    ;
 }
 
 .register_form button:active {
@@ -3472,7 +3473,7 @@ x
 
 .password-icon {
     cursor: pointer;
-    color: orangered;
+    color: grey;
 
     align-items: center;
     content: icon;
@@ -4070,7 +4071,7 @@ input[type=checkbox] {
 .checkbox-example {
     width: 45px;
     height: 15px;
-    background: #1a6692;
+    background: grey;
     margin-bottom: 30px;
     position: relative;
     border-radius: 5px;
