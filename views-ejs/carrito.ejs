@@ -59,10 +59,11 @@
                                         <p class="PrecioenCarrito"> $<%= productosJ[i].price; %></p>
 
 
-
-                                        <button class="button-main">
-                                            Delete
-                                        </button>
+                                        <form action="/carrito/delete/<%= productosJ[i].id %>/?_method=DELETE" method="post">
+                                            <button class="button-main">
+                                                Delete
+                                            </button>
+                                        </form>
                                     </div>
                                 </article>
                             </article>

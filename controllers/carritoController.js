@@ -88,6 +88,13 @@ const carritoController = {
                 });
         }
     },
+    delete: async (req, res) => {
+        const id = parseInt(req.params.id);
+        const userId = parseInt(req.session.userLogged.id);
+        const userCart = await cart.findOne({where: {users_id: userId}});
+        // console.log(await cart.findAll({include: [{model: Products, as: 'Products'}]}));
+        await userCart.removeProducts([id]);
+    },
 
     checkout:  async (req, res) => {
         res.render("checkout")

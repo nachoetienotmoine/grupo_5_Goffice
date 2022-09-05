@@ -7,5 +7,6 @@ const authMiddleware = require('../middlewares/authMiddleware');
 router.get('/',authMiddleware ,carritoController.carrito);
 router.post('/agregar/:id', authMiddleware, carritoController.agregar)
 router.get('/checkout',authMiddleware ,carritoController.checkout);
+router.delete('/delete/:id', authMiddleware, carritoController.delete)
 
 module.exports = router;
