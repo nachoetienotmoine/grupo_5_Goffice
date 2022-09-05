@@ -6,8 +6,36 @@ const carritoController = {
 
     
     carrito: async (req, res) => {
-        const products = await Products.findAll()
-        res.render("carrito", { productosJ: products })
+
+        const id = parseInt(req.params.id);
+        const userId = parseInt(req.session.userLogged.id);
+        const userCart = await cart.findOne({where: {users_id: userId}});
+
+        if (!userCart) {
+            await cart.create({
+                total_products: 0,
+                total_price: 0,
+                payment_methods_id: 2,
+                users_id: userId
+                });
+
+            const cartsProducts = await cart.findOne({where: {users_id: userId}});
+
+            res.render("carritoVacio", { productosJ: cartsProducts });
+
+        }else{
+            const cartsProducts = await userCart.getProducts();
+
+            if(cartsProducts.length != 0){
+                res.render("carrito", { productosJ: cartsProducts, userCart });
+            }else{
+                res.render("carritoVacio");
+            }
+            
+            
+        }
+
+        
     },
 
     agregar: async (req, res) => {
