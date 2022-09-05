@@ -72,6 +72,8 @@ const carritoController = {
                     where: { users_id: userId }
                 });
 
+
+
         }else {
             await existeCarrito.addProducts([id]);
             const cartsProducts = await existeCarrito.getProducts();
@@ -87,6 +89,8 @@ const carritoController = {
                     where: { users_id: userId }
                 });
         }
+    
+        res.redirect("/carrito");
     },
     delete: async (req, res) => {
         const id = parseInt(req.params.id);
@@ -94,6 +98,7 @@ const carritoController = {
         const userCart = await cart.findOne({where: {users_id: userId}});
         // console.log(await cart.findAll({include: [{model: Products, as: 'Products'}]}));
         await userCart.removeProducts([id]);
+        res.redirect('/carrito')
     },
 
     checkout:  async (req, res) => {
