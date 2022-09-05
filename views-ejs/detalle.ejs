@@ -53,9 +53,12 @@
                     </p>
                    
                     <div class="bottom">
-                        <div class="btn__group">
-                            <a href="" class="btn addToCart">Añadir carrito</a>
-                        </div>
+                        <form action="/carrito/agregar/<%= user.id %>" method="post">
+                            <div class="btn__group">
+                                <button type="submit" class="btn addToCart">Añadir carrito</button>
+                                
+                            </div>
+                        </form>
                     </div>
             </div>
         </article> 
