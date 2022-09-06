@@ -40,7 +40,7 @@ const carritoController = {
 
     agregar: async (req, res) => {
         const id = parseInt(req.params.id);
-        const userId = parseInt(req.session.userLogged.dataValues.id);
+        const userId = parseInt(req.session.userLogged.id);
 
         const existeCarrito = await cart.findOne({where: {users_id: userId}});
 
