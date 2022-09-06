@@ -516,7 +516,7 @@ p {
 
 .submit-cart {
     border: 1px solid rgb(248, 245, 245);
-    padding: 0.65rem 1.8rem;
+    padding: 0.35rem 1.8rem;
     color: black;
     font-weight: 200;
     font-size: 1rem;
@@ -708,7 +708,17 @@ p {
         background-color: none;
         display: flex;
     }
-
+    .submit-cart {
+        border: 1px solid rgb(248, 245, 245);
+        padding: 0.65rem 1.8rem;
+        color: black;
+        font-weight: 200;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: all 300ms ease-in-out;
+        text-decoration: none;
+        margin-left: 2rem;
+    }
 }
 
 @media (min-width: 1284px) {
