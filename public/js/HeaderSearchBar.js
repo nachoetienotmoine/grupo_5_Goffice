@@ -47,6 +47,10 @@ body.addEventListener('click', (e) => {
     const productCardContainer = e.path[2] == userCardContainer;
     if (input && !productCardContainer) {
         userCardContainer.classList.remove('hide')
+        let card = document.querySelectorAll(".buscar_card");
+        for (let i = 5; i < card.length; i++){
+            card[i].classList.add('hide')
+        }
     }
     if (!input && !productCardContainer){
         userCardContainer.classList.add('hide')
