@@ -29,6 +29,7 @@ const carritoController = {
             if(cartsProducts.length != 0){
                 res.render("carrito", { productosJ: cartsProducts, userCart });
             }else{
+                await userCart.destroy()
                 res.render("carritoVacio");
             }
             
