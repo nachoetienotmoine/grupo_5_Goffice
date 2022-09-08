@@ -9,6 +9,7 @@ const routersDetalle = require('./routers/detalleApi');
 const routersCarrito = require('./routers/carritoApi');
 const routersHome = require('./routers/homeApi');
 const routersBaseDeDatosInfo = require('./routers/baseDeDatosInfo');
+const routersSoporte = require ('./routers/soporte');
 
 const routersUsers = require('./routers/users');
 
@@ -46,6 +47,8 @@ app.use(userLoggedMiddleware);
 app.use('/baseDeDatosInfo', routersBaseDeDatosInfo)
 app.use('/detalle', routersDetalle);
 app.use('/carrito', routersCarrito);
+app.use('/contacto', routersSoporte);
+app.use('/ayuda', routersSoporte);
 app.use('/', routersHome);
 app.use('/users', routersUsers);
 app.use('/admin',authMiddleware,adminMiddleware ,routersAdmin);
