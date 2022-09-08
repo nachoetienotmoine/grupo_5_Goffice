@@ -47,8 +47,8 @@ app.use(userLoggedMiddleware);
 app.use('/baseDeDatosInfo', routersBaseDeDatosInfo)
 app.use('/detalle', routersDetalle);
 app.use('/carrito', routersCarrito);
-app.use('/contacto', routersSoporte);
-app.use('/ayuda', routersSoporte);
+app.use('/soporte', routersSoporte);
+
 app.use('/', routersHome);
 app.use('/users', routersUsers);
 app.use('/admin',authMiddleware,adminMiddleware ,routersAdmin);
