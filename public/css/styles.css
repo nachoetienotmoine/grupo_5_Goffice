@@ -218,6 +218,21 @@ p {
 
 
 }
+ .box-checkout{
+    width: 100%;
+    height: 100%;
+    border-radius: 1rem;
+    margin-left: 1rem;
+}
+.formcheckout{
+    margin: 3rem;
+}
+.resumen{
+  text-align:  center;
+}
+.box-checkout:hover{
+    box-shadow: 0px 0px 20px black;
+}
 .todo-productos-main .contenedor {
     display: flex;
     flex-wrap: wrap;
@@ -325,6 +340,9 @@ p {
     transform: scale(125%);
 
 }
+.hrefcheckout{
+    text-decoration: none;
+}
 .precio-envio {
     display: flex;
     flex-direction: column;
@@ -334,11 +352,24 @@ p {
     padding-right: 1%;
     border-radius: 1rem;
     font-family: "Source Sans Pro", sans-serif;
-    height: 100%;
+   justify-content: center;
+   gap: 1rem;
 
 
 }
+.precio-envio-checkout {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    box-shadow: 0 0.5rem 1.5rem rgb(0 0 0 / 20%);
+    padding-left: 1%;
+    padding-right: 1%;
+    border-radius: 1rem;
+    font-family: "Source Sans Pro", sans-serif;
+   justify-content: space-between;
 
+
+}
 .preciofinal {
     display: flex;
     flex-direction: row;
@@ -351,7 +382,7 @@ p {
 .comprar {
     display: flex;
     justify-content: center;
-    padding: 3%;
+    padding-bottom: 1rem;
     padding-left: 28%;
     padding-right: 28%;
 }
@@ -696,10 +727,24 @@ p {
         padding-right: 1%;
         font-family: "Source Sans Pro", sans-serif;
         width: 35%;
+        height: 80%;
 
 
     }
+    .precio-envio-checkout {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        box-shadow: 0 0.5rem 1.5rem rgb(0 0 0 / 20%);
+        padding-left: 1%;
+        padding-right: 1%;
+        font-family: "Source Sans Pro", sans-serif;
+        width: 35%;
+        height: 80%;
+        gap: 1rem;
 
+
+    }
     .contenedortotalCarrito {
         display: flex;
         flex-direction: row;
@@ -870,12 +915,30 @@ p {
 
 
     }
+    .precio-envio-checkout {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        flex-wrap: wrap;
+        box-shadow: 0 0.5rem 1.5rem rgb(0 0 0 / 20%);
+        padding-left: 1%;
+        padding-right: 1%;
+        font-family: "Source Sans Pro", sans-serif;
+        width: 35%;
+      height: 70%;
+
+
+    }
     .precio-envio:hover {
      
         box-shadow: 0px 0px 20px black;
 
     }
+    .precio-envio-checkout:hover {
+     
+        box-shadow: 0px 0px 20px black;
 
+    }
     .contenedortotalCarrito {
         display: flex;
         flex-direction: row;

@@ -11,75 +11,77 @@
                     <section class="contendedordeloscontendoresdelCarrito">
 
                         <section class="contenedor2">
-                            <article class="contenedorproducto">
-                                <h2 class="h2-nombre">Forma de pago
+                            <article class="box-checkout">
+                                <article class="contenedorproducto">
+                                    <h2 class="h2-nombre">
+                                       
+                                        Forma de pago
 
-                                </h2>
-
-
-                                <form action="">
-
-                                    <select name="pagosMetodo">
-
-                                        <% pagos.forEach(pago=> { %>
-                                            <option value="<%= pago.method %>">
-                                                <%= pago.method %>
-                                            </option>
-                                            <% }); %>
-                                    </select>
-                                </form>
+                                    </h2>
 
 
+                                    <form action="" class="formcheckout">
 
+                                        <select name="pagosMetodo">
 
-                                <form action="" method="POST">
+                                            <% pagos.forEach(pago=> { %>
+                                                <option value="<%= pago.method %>">
+                                                    <%= pago.method %>
+                                                </option>
+                                                <% }); %>
+                                        </select>
 
 
 
-                                    <div class="boxpC">
-                                        <label name="description">
-                                            <h2>Descripcion</h2>
-                                        </label>
 
-                                        <input type="text" name="description" id="nombrePCrud">
+                                        <div class="field name_field">
+                                            <label class="register_label" name="firstname">Name</label>
+                                            <input type="text" name="firstname" id="name" required minlength="5"
+                                                maxlength="18">
+                                        </div>
+                                        <div class="error_field">Ingrese su nombre</div>
 
-                                    </div>
-                                    <div class="boxpC">
-                                        <label name="description">
-                                            <h2>Descripcion</h2>
-                                        </label>
 
-                                        <input type="text" name="description" id="nombrePCrud">
 
-                                    </div>
-                                    <div class="boxpC">
-                                        <label name="description">
-                                            <h2>Descripcion</h2>
-                                        </label>
+                                        <div class="field email_field">
+                                            <label class="register_label" name="email">Email</label>
+                                            <input type="email" name="email" id="email" required>
+                                        </div>
+                                        <div class="error_field">Ingrese su correo electrónico</div>
 
-                                        <input type="text" name="description" id="nombrePCrud">
 
-                                    </div>
-                                    <div class="boxpC">
-                                        <label name="description">
-                                            <h2>Descripcion</h2>
-                                        </label>
+                                        <div class="field name_field">
+                                            <label class="register_label" name="name">Phonenumber</label>
+                                            <input type="number" name="phonenumber" id="name" required minlength="5"
+                                                maxlength="18">
+                                        </div>
 
-                                        <input type="text" name="description" id="nombrePCrud">
+                                        <div class="field name_field">
+                                            <label class="register_label" name="codigoP">Postal Code</label>
+                                            <input type="number" name="phonenumber" id="name" required minlength="5"
+                                                maxlength="18">
+                                        </div>
+                                        <div class="field name_field">
+                                            <label class="register_label" name="provincia">Provincia</label>
+                                            <input type="text" name="gender" id="name" required>
+                                        </div>
+                                        <div class="field name_field">
+                                            <label class="register_label" name="ciudad">Ciudad</label>
+                                            <input type="text" name="gender" id="name" required>
+                                        </div>
+                                        <div class="field name_field">
+                                            <label class="register_label" name="piso-departamento">Piso o
+                                                departamento</label>
+                                            <input type="text" name="gender" id="name" required>
+                                        </div>
+                                    </form>
 
-                                    </div>
-                                    <div class="boxpC">
-                                        <label name="description">
-                                            <h2>Descripcion</h2>
-                                        </label>
 
-                                        <input type="text" name="description" id="nombrePCrud">
 
-                                    </div>
-                                </form>
 
+
+                                </article>
                             </article>
-                            
                         </section>
                         <br>
 
@@ -87,8 +89,12 @@
                     </section>
                     <br>
 
-                    <article class="precio-envio">
+                    <article class="precio-envio-checkout"><div class="resumen">
+                                <h2>Resume</h2>
+    
+                            </div>
                         <% for (let i=0; i < productosJ.length ; i++) {%>
+                            
                             <article class="productoCheckout">
                                 <div class="nombreProductoAgregado">
                                     <%= productosJ[i].name; %>

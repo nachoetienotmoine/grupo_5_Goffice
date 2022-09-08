@@ -75,8 +75,12 @@
                 </section>
                 <br>
 
-                <article class="precio-envio">
+                <article class="precio-envio"> <div class="resumen">
+                            <h2>Resume</h2>
+
+                        </div>
                     <% for (let i=0; i < productosJ.length ; i++) {%>
+                       
                     <article class="productoCheckout">
                         <div class="nombreProductoAgregado"> <%= productosJ[i].name; %></div>
                         <div class="nombreProductoAgregado"> $<%= productosJ[i].price; %></div>
@@ -91,7 +95,8 @@
 
 
 
-                    </div><a href="/carrito/checkout">
+                    </div>
+                    <a href="/carrito/checkout" class="hrefcheckout">
                     <div class="comprar">
                         <button class="botoncompra">
                            Check-Out
