@@ -1,9 +1,122 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <%- include('./head.ejs')%>
+<%- include('./head.ejs')%>
+
     <body>
         <%- include('./header2.ejs') %>
-        <main></main>
-        <%- include('./footer.ejs') %>
+            <main class="todo-productos-main">
+
+                <section class="contenedortotalCarrito">
+                    <section class="contendedordeloscontendoresdelCarrito">
+
+                        <section class="contenedor2">
+                            <article class="contenedorproducto">
+                                <h2 class="h2-nombre">Forma de pago
+
+                                </h2>
+
+
+                                <form action="">
+
+                                    <select name="pagosMetodo">
+
+                                        <% pagos.forEach(pago=> { %>
+                                            <option value="<%= pago.method %>">
+                                                <%= pago.method %>
+                                            </option>
+                                            <% }); %>
+                                    </select>
+                                </form>
+
+
+
+
+                                <form action="" method="POST">
+
+
+
+                                    <div class="boxpC">
+                                        <label name="description">
+                                            <h2>Descripcion</h2>
+                                        </label>
+
+                                        <input type="text" name="description" id="nombrePCrud">
+
+                                    </div>
+                                    <div class="boxpC">
+                                        <label name="description">
+                                            <h2>Descripcion</h2>
+                                        </label>
+
+                                        <input type="text" name="description" id="nombrePCrud">
+
+                                    </div>
+                                    <div class="boxpC">
+                                        <label name="description">
+                                            <h2>Descripcion</h2>
+                                        </label>
+
+                                        <input type="text" name="description" id="nombrePCrud">
+
+                                    </div>
+                                    <div class="boxpC">
+                                        <label name="description">
+                                            <h2>Descripcion</h2>
+                                        </label>
+
+                                        <input type="text" name="description" id="nombrePCrud">
+
+                                    </div>
+                                    <div class="boxpC">
+                                        <label name="description">
+                                            <h2>Descripcion</h2>
+                                        </label>
+
+                                        <input type="text" name="description" id="nombrePCrud">
+
+                                    </div>
+                                </form>
+
+                            </article>
+                            
+                        </section>
+                        <br>
+
+
+                    </section>
+                    <br>
+
+                    <article class="precio-envio">
+                        <% for (let i=0; i < productosJ.length ; i++) {%>
+                            <article class="productoCheckout">
+                                <div class="nombreProductoAgregado">
+                                    <%= productosJ[i].name; %>
+                                </div>
+                                <div class="nombreProductoAgregado"> $<%= productosJ[i].price; %>
+                                </div>
+                            </article>
+                            <% } %>
+
+                                <div class="preciofinal">
+                                    <h3>Total price</h3>
+
+
+                                    <h3>$<%= userCart.total_price; %>
+                                    </h3>
+
+
+
+                                </div>
+                                <div class="comprar">
+                                    <button class="botoncompra">
+                                        Buy
+                                    </button>
+                                </div>
+
+                    </article>
+
+                </section>
+            </main>
+            <%- include('./footer.ejs') %>
     </body>

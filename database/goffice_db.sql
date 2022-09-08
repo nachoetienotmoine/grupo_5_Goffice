@@ -152,6 +152,20 @@ CREATE TABLE carts_products (
     FOREIGN KEY (products_id) REFERENCES products(id)
 );
 
+ALTER TABLE goffice_db.users DROP FOREIGN KEY users_ibfk_1;
+ALTER TABLE goffice_db.users ADD CONSTRAINT users_ibfk_1 FOREIGN KEY (id_roles) REFERENCES goffice_db.roles(id) ON DELETE CASCADE ON UPDATE CASCADE;
+
+ALTER TABLE goffice_db.carts DROP FOREIGN KEY carts_ibfk_2;
+ALTER TABLE goffice_db.carts ADD CONSTRAINT carts_ibfk_2 FOREIGN KEY (users_id) REFERENCES goffice_db.users(id) ON DELETE CASCADE ON UPDATE CASCADE;
+
+ALTER TABLE goffice_db.carts DROP FOREIGN KEY carts_ibfk_1;
+ALTER TABLE goffice_db.carts ADD CONSTRAINT carts_ibfk_1 FOREIGN KEY (payment_methods_id) REFERENCES goffice_db.payment_methods(id) ON DELETE CASCADE ON UPDATE CASCADE;
+ALTER TABLE goffice_db.carts_products DROP FOREIGN KEY carts_products_ibfk_2;
+ALTER TABLE goffice_db.carts_products ADD CONSTRAINT carts_products_ibfk_2 FOREIGN KEY (products_id) REFERENCES goffice_db.products(id) ON DELETE CASCADE ON UPDATE CASCADE;
+
+ALTER TABLE goffice_db.carts_products DROP FOREIGN KEY carts_products_ibfk_1;
+ALTER TABLE goffice_db.carts_products ADD CONSTRAINT carts_products_ibfk_1 FOREIGN KEY (carts_id) REFERENCES goffice_db.carts(id) ON DELETE CASCADE ON UPDATE CASCADE;
+
 INSERT INTO payment_methods (method)  VALUES ('efectivo');
 INSERT INTO payment_methods (method)  VALUES ('crédito');
 INSERT INTO payment_methods (method)  VALUES ('débito');

@@ -1,7 +1,7 @@
 const db = require('../database/models');
 const Products = db.Product;
 const cart = db.Cart
-
+const pagos = db.PaymentMethod
 const carritoController = {
 
     
@@ -29,7 +29,7 @@ const carritoController = {
             if(cartsProducts.length != 0){
                 res.render("carrito", { productosJ: cartsProducts, userCart });
             }else{
-                await userCart.destroy()
+               
                 res.render("carritoVacio");
             }
             
@@ -103,7 +103,12 @@ const carritoController = {
     },
 
     checkout:  async (req, res) => {
-        res.render("checkout")
+        const id = parseInt(req.params.id);
+        const userId = parseInt(req.session.userLogged.id);
+        const userCart = await cart.findOne({where: {users_id: userId}});
+        const cartsProducts = await userCart.getProducts();
+        const MetodosdePago = await pagos.findAll();
+        res.render("checkout" ,  { productosJ: cartsProducts, userCart , pagos : MetodosdePago})
     }
 }
 

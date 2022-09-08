@@ -208,6 +208,16 @@ p {
     z-index: -2;
 }
 
+.todo-productos-main .contenedor2 {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+
+
+
+
+}
 .todo-productos-main .contenedor {
     display: flex;
     flex-wrap: wrap;
@@ -218,7 +228,6 @@ p {
 
 
 }
-
 .contenedor>.article-main {
     width: 100%;
 }
