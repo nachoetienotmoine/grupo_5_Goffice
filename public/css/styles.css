@@ -3537,6 +3537,7 @@ x
 }
 
 .field label {
+    font-size: large;
     position: relative;
     color: rgb(104 104 104);
 }
