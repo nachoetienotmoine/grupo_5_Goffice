@@ -2,43 +2,34 @@ const form = document.querySelectorAll('.formcheckout');
 const formCredit = document.querySelector('.credit');
 const formCash = document.querySelector('.cash');
 
-formCash.classList.add('hide')
+formCash.classList.add('hide');
 
-let formOnScreen = formCredit;
-
-formOnScreen.addEventListener('click', (e) => {
-
-    for (let i = 0; i < form.length; i++){
-
-        if (e.path[0][i].selected == true){
-            let optionSelected = e.path[0][i];
-            switch (optionSelected.value) {
-                case "efectivo":
-                    formCredit.classList.add('hide')
-                    formCash.classList.remove('hide');
-                    formOnScreen = formCash;
-                    break;
-
-                case "crédito":
-                    formCash.classList.add('hide')
-                    formCredit.classList.remove('hide')
-                    formOnScreen = formCredit;
-                    break;
-            
-                default:
-                    console.log('does not exists');
-            }
-            
-            console.log(optionSelected.value);
-        }
-    }
+formCredit.addEventListener('click', (e) => {
+    switch (e.path[0].value) {
+        case "efectivo":
+            formCash.classList.remove('hide');
+            formCredit.classList.add('hide');
+            break;
     
+        default:
+            console.log('What the fuck did you search for?');
+            break;
+    }
 });
 
-    // formSelect.children[i].selected
+formCash.addEventListener('click', (e) => {
+    switch (e.path[0].value) {
+        case "crédito":
+            formCredit.classList.remove('hide');
+            formCash.classList.add('hide');
+            break;
+    
+        default:
+            console.log('What the fuck did you search for?');
+            break;
+    }
+});
 
-
-// console.log(select.children[1].label);
 
 
 
