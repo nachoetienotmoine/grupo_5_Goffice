@@ -25,7 +25,8 @@
                                         <select name="pagosMetodo">
 
                                             <% pagos.forEach(pago=> { %>
-                                                <option value="<%= pago.method %>">
+                                                <option value="<%= pago.method %>" 
+                                                    <% if (pago.id == 2) { %><%= 'selected' %><% }; %>>
                                                     <%= pago.method %>
                                                 </option>
                                                 <% }); %>
