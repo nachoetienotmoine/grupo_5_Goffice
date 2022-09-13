@@ -4799,3 +4799,10 @@ s .header-bar2 .compracuotas2 {
 .botonEdit {
     text-align: end;
 }
+
+/* ------------------------------------Soporte(ayuda y contacto)----------------------------------- */
+
+.contenedortotalSoporte {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
