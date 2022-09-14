@@ -120,8 +120,38 @@
                                         </div>
                                     </form>
 
+                                    <form action="" class="formcheckout debit">
 
+                                        <select name="pagosMetodo">
 
+                                            <% pagos.forEach(pago=> { %>
+                                                <option value="<%= pago.method %>" 
+                                                    <% if (pago.id == 3) { %><%= 'selected' %><% }; %>>
+                                                    <%= pago.method %>
+                                                </option>
+                                                <% }); %>
+                                        </select>
+
+                                        <div class="field name_field">
+                                            <label class="firstname" name="firstname">nombre</label>
+                                            <input type="text" name="name" id="name" required>
+                                        </div>
+
+                                        <div class="field name_field">
+                                            <label class="firstname" name="firstname">Dirección</label>
+                                            <input type="text" name="name" id="name" required>
+                                        </div>
+
+                                        <div class="field name_field">
+                                            <label class="firstname" name="firstname">Codigo Postal</label>
+                                            <input type="text" name="name" id="name" required>
+                                        </div>
+
+                                        <div class="field name_field">
+                                            <label class="firstname" name="firstname">Pais</label>
+                                            <input type="text" name="name" id="name" required>
+                                        </div>
+                                    </form>
 
                                 </article>
                             </article>
