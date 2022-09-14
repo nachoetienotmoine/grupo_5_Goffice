@@ -4,31 +4,71 @@ const formCash = document.querySelector('.cash');
 
 formCash.classList.add('hide');
 
+let formOnDisplay = formCredit;
+
 formCredit.addEventListener('click', (e) => {
-    switch (e.path[0].value) {
-        case "efectivo":
-            formCash.classList.remove('hide');
-            formCredit.classList.add('hide');
-            break;
-    
-        default:
-            console.log('What the fuck did you search for?');
-            break;
+
+    let selectedValue;
+
+    for (let i = 0; i < form.length ;i++){
+        e.path[0][i].selected == true ? selectedValue = e.path[0][i] : "";
     }
+    
+    if (selectedValue.value == "efectivo"){
+        formCredit.classList.add('hide');
+        formCash.classList.remove('hide');
+    }else if (selectedValue.value == "crédito"){
+        formCash.classList.add('hide');
+        formCredit.classList.remove('hide');
+    }
+
 });
 
 formCash.addEventListener('click', (e) => {
-    switch (e.path[0].value) {
-        case "crédito":
-            formCredit.classList.remove('hide');
-            formCash.classList.add('hide');
-            break;
-    
-        default:
-            console.log('What the fuck did you search for?');
-            break;
+
+    let selectedValue;
+
+    for (let i = 0; i < form.length ;i++){
+        e.path[0][i].selected == true ? selectedValue = e.path[0][i] : "";
     }
+    
+    if (selectedValue.value == "efectivo"){
+        formCredit.classList.add('hide');
+        formCash.classList.remove('hide');
+    }else if (selectedValue.value == "crédito"){
+        formCash.classList.add('hide');
+        formCredit.classList.remove('hide');
+    }
+
 });
+
+
+
+// formCredit.addEventListener('change', (e) => {
+//     switch (e.path[0].value) {
+//         case "efectivo":
+//             formCredit.classList.add('hide');
+//             formCash.classList.remove('hide');
+//             break;
+    
+//         default:
+//             console.log('What the fuck did you search for?');
+//             break;
+//     }
+// });
+
+// formCash.addEventListener('change', (e) => {
+//     switch (e.path[0].value) {
+//         case "crédito":
+//             formCash.classList.add('hide');
+//             formCredit.classList.remove('hide');
+//             break;
+    
+//         default:
+//             console.log('What the fuck did you search for?');
+//             break;
+//     }
+// });
 
 
 
