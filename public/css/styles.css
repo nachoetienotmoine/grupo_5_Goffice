@@ -629,6 +629,7 @@ p {
     display: flex;
     width: 100%;
     flex-direction: row;
+    padding: 0 15%;
 }
 
 .cantidad {
@@ -647,7 +648,7 @@ p {
     color: #1a6692;
     width: 25px;
 border: none;
-background-color: transparent;
+border-radius: 1rem;
 }
 
 .cantidadMas {
@@ -656,9 +657,16 @@ background-color: transparent;
     color: #1a6692;
     width: 25px;
 border: none;
-background-color: transparent;
+border-radius: 1rem;
 }
-
+.cantidadMas:hover {
+transition: 200ms;
+  transform: scale(120%);
+}
+.cantidadMenos:hover {
+    transition: 200ms;
+      transform: scale(120%);
+    }
 .PrecioenCarrito {
     display: flex;
     flex-direction: column;
