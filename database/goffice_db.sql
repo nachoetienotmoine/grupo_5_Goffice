@@ -73,39 +73,39 @@ VALUES (DEFAULT, 'micrófonos');
 
 INSERT INTO products (id, name, description, price, discount, image, stock, id_products_category)
 VALUES (DEFAULT, 'Monitor','es re piola este monitor, no muestra el historial de busqueda del browser',
-1459, 42, 'monitor1.jpg', 2, 1);
+1459, 42, 'monitor1.png', 2, 1);
 
 INSERT INTO products (id, name, description, price, discount, image, stock, id_products_category)
 VALUES (DEFAULT, 'Camara', "esta camara es mejor que la de iphone",
-2245.79, 12, 'camara.jpg', 8, 2);
+2245.79, 12, 'camara.png', 8, 2);
 
 INSERT INTO products (id, name, description, price, discount, image, stock, id_products_category)
 VALUES (DEFAULT, 'Parlante Xinua', "este parlante suena las cumbias mas perronas del condado",
-2101.17, 5, 'Parlante.jpg', 7, 3);
+2101.17, 5, 'Parlante.png', 7, 3);
 
 INSERT INTO products (id, name, description, price, discount, image, stock, id_products_category)
 VALUES (DEFAULT, 'Luces LED', "Las luces mas gamers del mercado, anti-chicas",
-4855.35, 36, 'luces.jpg', 5, 4);
+4855.35, 36, 'luces.png', 5, 4);
 
 INSERT INTO products (id, name, description, price, discount, image, stock, id_products_category)
 VALUES (DEFAULT, 'mouse pad', "El mouse pad mas comodo para tu muñequita bebe",
-2143.64, 10, 'mouse pad.jpg', 8, 5);
+2143.64, 10, 'mouse pad.png', 8, 5);
 
 INSERT INTO products(id, name, description, price, discount, image, stock, id_products_category)
 VALUES (DEFAULT,'Silla Gamer','La silla mas comoda para tus nalgotas bebe',
-3579, 45,'silla.jpg', 9, 6);
+3579, 45,'silla.png', 9, 6);
 
 INSERT INTO products(id, name, description, price, discount, image, stock, id_products_category)
 VALUES (DEFAULT,'Teclado','teclado , nada fuera de lo normal',
-4312,41,'teclado.jpg',1,7);
+4312,41,'teclado.png',1,7);
 
 INSERT INTO products(id, name, description, price, discount, image, stock, id_products_category)
 VALUES (DEFAULT,'Reddragon Zeus','auriculares VIP del grupo 5',
-2815,14,'Reddragon Zeus-X.jpg',1,8);
+2815,14,'Reddragon Zeus-X.png',1,8);
 
 INSERT INTO products(id, name, description, price, discount, image, stock, id_products_category)
 VALUES (DEFAULT,'Microfono Hyperx','El microfono con mas autotune que maria becerra',
-4684,3,'microfono.jpg',0,9);
+4684,3,'microfono.png',0,9);
 
 
 ALTER TABLE `goffice_db`.`users`
