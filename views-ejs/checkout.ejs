@@ -18,20 +18,20 @@
                                         Forma de pago
 
                                     </h2>
+                                    <select name="pagosMetodo" id="metodopago">
+
+                                        <% pagos.forEach(pago=> { %>
+                                            <option value="<%= pago.method %>" 
+                                                <% if (pago.id == 2) { %><%= 'selected' %><% }; %>>
+                                                <%= pago.method %>
+                                            </option>
+                                            <% }); %>
+                                    </select>
 
 
                                     <form action="" class="formcheckout credit">
 
-                                        <select name="pagosMetodo">
-
-                                            <% pagos.forEach(pago=> { %>
-                                                <option value="<%= pago.method %>" 
-                                                    <% if (pago.id == 2) { %><%= 'selected' %><% }; %>>
-                                                    <%= pago.method %>
-                                                </option>
-                                                <% }); %>
-                                        </select>
-
+                                       
 
 
 
@@ -79,15 +79,7 @@
 
                                     <form action="" class="formcheckout cash">
 
-                                        <select name="pagosMetodo">
-
-                                            <% pagos.forEach(pago=> { %>
-                                                <option value="<%= pago.method %>" 
-                                                    <% if (pago.id == 1) { %><%= 'selected' %><% }; %>>
-                                                    <%= pago.method %>
-                                                </option>
-                                                <% }); %>
-                                        </select>
+                                        
 
 
 
@@ -122,15 +114,7 @@
 
                                     <form action="" class="formcheckout debit">
 
-                                        <select name="pagosMetodo">
-
-                                            <% pagos.forEach(pago=> { %>
-                                                <option value="<%= pago.method %>" 
-                                                    <% if (pago.id == 3) { %><%= 'selected' %><% }; %>>
-                                                    <%= pago.method %>
-                                                </option>
-                                                <% }); %>
-                                        </select>
+                                       
 
                                         <div class="field name_field">
                                             <label class="firstname" name="firstname">nombre</label>
@@ -153,6 +137,40 @@
                                         </div>
                                     </form>
 
+                                    <form action="" class="formcheckout trans">
+
+                                        
+                                        <div class="error_field">Ingrese su local</div>
+
+
+
+                                        <div class="field name_field">
+                                            <label class="register_label" name="firstname">Local</label>
+                                            <input type="text" name="firstname" id="name" required minlength="5"
+                                                maxlength="18">
+                                        </div>
+                                        <div class="error_field">Ingrese su local</div>
+
+                                        <div class="field name_field">
+                                            <label class="register_label" name="name">Phonenumber</label>
+                                            <input type="number" name="phonenumber" id="name" required minlength="5"
+                                                maxlength="18">
+                                        </div>
+
+                                        <div class="field name_field">
+                                            <label class="register_label" name="codigoP">Postal Code</label>
+                                            <input type="number" name="phonenumber" id="name" required minlength="5"
+                                                maxlength="18">
+                                        </div>
+                                        <div class="field name_field">
+                                            <label class="register_label" name="provincia">Provincia</label>
+                                            <input type="text" name="gender" id="name" required>
+                                        </div>
+                                        <div class="field name_field">
+                                            <label class="register_label" name="ciudad">Ciudad</label>
+                                            <input type="text" name="gender" id="name" required>
+                                        </div>
+                                    </form>
                                 </article>
                             </article>
                         </section>
