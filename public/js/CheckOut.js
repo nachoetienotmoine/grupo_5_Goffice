@@ -6,7 +6,7 @@ const formTrans = document.querySelector('.trans')
 const selectMetodoPago = document.querySelector('#metodopago');
 formCash.classList.add('hide');
 formDebit.classList.add('hide');
-formCredit.classList.add('hide');
+
 formTrans.classList.add('hide');
 
 

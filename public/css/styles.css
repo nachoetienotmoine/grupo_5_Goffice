@@ -283,6 +283,7 @@ p {
     border-radius: 1rem;
     width: 100%;
     height: 100%;
+    background-color: rgb(255 255 255 / 50%);
 
 }
 .article-main {
@@ -386,7 +387,7 @@ p {
     border-radius: 1rem;
     font-family: "Source Sans Pro", sans-serif;
    justify-content: space-between;
-
+   background-color: rgb(255 255 255 / 50%);
 
 }
 .preciofinal {
@@ -1661,7 +1662,7 @@ hr {
 }
 
 .productosIndex {
-    margin-left: 1rem;
+   
     color: #0b0126;
     background-color: rgb(255 255 255 / 50%);
     border-radius: 1rem;
@@ -3596,7 +3597,7 @@ x
 
 .field input {
     border: none;
-    border-bottom: rgb(172, 172, 172) solid 1px;
+    border-bottom: #0b0126 solid 1px;
     outline: none;
     width: 100%;
     height: 60%;
