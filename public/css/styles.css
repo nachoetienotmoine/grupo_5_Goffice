@@ -203,9 +203,6 @@ p {
     width: 100%;
 
 }
-.imagen-nombre-main>.imagen-div {
-    max-width: 40%;
-}
 
 .imagen-div>#img-main {
     display: flex;
