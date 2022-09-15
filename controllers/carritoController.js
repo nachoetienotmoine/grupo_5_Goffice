@@ -99,6 +99,25 @@ const carritoController = {
         const userCart = await cart.findOne({where: {users_id: userId}});
         // console.log(await cart.findAll({include: [{model: Products, as: 'Products'}]}));
         await userCart.removeProducts([id]);
+
+
+        const cartsProducts = await userCart.getProducts();
+
+        let productsWholeValue = 0;
+        let productsTotal = 0;
+        
+        await cartsProducts.forEach((product) => 
+        {productsWholeValue = productsWholeValue + product.price, productsTotal++});
+
+        await cart.update({
+            total_products: productsTotal,
+            total_price: productsWholeValue
+            },{
+                where: { users_id: userId }
+            });
+    
+
+    
         res.redirect('/carrito')
     },
 

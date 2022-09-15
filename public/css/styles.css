@@ -222,7 +222,7 @@ p {
     width: 100%;
     height: 100%;
     border-radius: 1rem;
-    margin-left: 1rem;
+   
 }
 .formcheckout{
     margin: 3rem;
@@ -4806,9 +4806,11 @@ s .header-bar2 .compracuotas2 {
    margin: 5% 30%;
    font-size: large;
    font-weight: 700;
-   border-radius:2rem ;
+   border-radius:1rem ;
    color: #1a6692;
+   text-align: center;
 }
+
 /* ------------------------------------Soporte(ayuda y contacto)----------------------------------- */
 
 .contenedortotalSoporte {
