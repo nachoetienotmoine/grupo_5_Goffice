@@ -4799,10 +4799,17 @@ s .header-bar2 .compracuotas2 {
 .botonEdit {
     text-align: end;
 }
-
+#metodopago{
+    border-color: #0b0126;
+   margin: 5% 30%;
+   font-size: large;
+   font-weight: 700;
+   border-radius:2rem ;
+   color: #1a6692;
+}
 /* ------------------------------------Soporte(ayuda y contacto)----------------------------------- */
 
 .contenedortotalSoporte {
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: center;}

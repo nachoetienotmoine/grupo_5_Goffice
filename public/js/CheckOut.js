@@ -22,7 +22,7 @@ selectMetodoPago.addEventListener('change', (e)=>{
              
                 break;
         
-                case "credito":
+            case "credito":
                     formCash.classList.add('hide');
                     formCredit.classList.remove('hide');
                     formDebit.classList.add('hide');
@@ -30,14 +30,14 @@ selectMetodoPago.addEventListener('change', (e)=>{
                    
                     break;
 
-                    case "debito":
+            case "debito":
                     formCash.classList.add('hide');
                     formCredit.classList.add('hide');
                     formDebit.classList.remove('hide');
                     formTrans.classList.add('hide');
                     break;
 
-                    case "transferencia":
+            case "transferencia":
                     formCash.classList.add('hide');
                     formCredit.classList.add('hide');
                     formDebit.classList.add('hide');
