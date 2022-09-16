@@ -1101,11 +1101,6 @@ transition: 200ms;
 
 
 
-.pHfooter {
-    color: #1a6692;
-    display: inline;
-
-}
 
 .divcontH {
     text-align: center;
@@ -1113,36 +1108,9 @@ transition: 200ms;
 }
 
 
-.nav1footerH {
-    text-decoration: none;
-    color: #1a6692;
-    font-size: x-small;
 
-}
 
-.nav2footerH {
-    text-decoration: none;
-    color: #1a6692;
-    font-size: x-small;
 
-}
-
-.socialM1H {
-    background-color: #0b0126;
-    color: #1a6692;
-    border: none;
-    margin: 5px;
-    font-size: medium;
-}
-
-.socialM2H {
-    background-color: #0b0126;
-    color: #1a6692;
-    border: none;
-    margin-left: 4px;
-    font-size: medium;
-
-}
 
 .socialM2TH {
     background-color: #0b0126;
@@ -3019,6 +2987,85 @@ hr {
 
 
 /*---------------------------------------------- home  nuevo----------------------------------------------*/
+/*----------------------------------------------Footer social bar-----------------------------------------*/
+
+.social-bar{
+    position: fixed;
+    right: 0;
+    top: 35%;
+    font-size: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    z-index: 100;
+}
+
+.iconF {
+    color: white;
+    background: #2e406e;
+    border-radius: 1rem 0 0 0;
+    text-decoration: none;
+    padding: .7rem;
+    display: flex;
+    transition: all .5s;
+}
+.iconI {
+    color: white;
+    background: #FF1744;
+    text-decoration: none;
+    padding: .7rem;
+    display: flex;
+    transition: all .5s;
+    font-size: 1.7rem;
+}
+.iconA {
+    color: white;
+    background: #0b65e3;
+    text-decoration: none;
+    padding: .7rem;
+    display: flex;
+    transition: all .5s;
+}
+.iconT {
+    color: white;
+    background: #339dc5;
+    border-radius: 0 0 0 1rem;
+    text-decoration: none;
+    padding: .7rem;
+    display: flex;
+    transition: all .5s;
+}
+
+.iconF:hover{
+    padding-right: 3rem;
+    border-radius: 1rem 0 0 1rem;
+    box-shadow: 0 0 .5rem rgba(0,0,0,0);
+    
+}
+.iconI:hover{
+    padding-right: 3rem;
+    border-radius: 1rem 0 0 1rem;
+    box-shadow: 0 0 .5rem rgba(0,0,0,0);
+    
+}
+.iconA:hover{
+    padding-right: 3rem;
+    border-radius: 1rem 0 0 1rem;
+    box-shadow: 0 0 .5rem rgba(0,0,0,0);
+    
+}
+.iconT:hover{
+    padding-right: 3rem;
+    border-radius: 1rem 0 0 1rem;
+    box-shadow: 0 0 .5rem rgba(0,0,0,0);
+    
+}
+
+
+
+
+
+/*----------------------------------------------Footer social bar-----------------------------------------*/
 /*-----------------------------------------------Detalle2-------------------------------------------------*/
 :root {
     --black: #222;
