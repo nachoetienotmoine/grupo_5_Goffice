@@ -34,7 +34,6 @@ for(let i = 0; i < quantityMore.length; i++){
                 gettingRidOfDolarSign = parseInt(gettingRidOfDolarSign);
                 price = gettingRidOfDolarSign * numberValue;
                 productAddedPrice[i].innerHTML = "$" + price;
-                console.log(price)
             }
         }
 
