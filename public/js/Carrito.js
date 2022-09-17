@@ -24,13 +24,15 @@ for(let i = 0; i < quantityMore.length; i++){
             if (productName == productAddedName[i].textContent.trim()){
                 let price = [];
                 let gettingRidOfDolarSign = [];
+                let originalPrice;
 
                 price.push(productAddedPrice[i].textContent);
                 gettingRidOfDolarSign.push(price[0].trimStart().slice(1,price[0].length));
-                
-                price = parseInt(gettingRidOfDolarSign)*2;
-                productAddedPrice[i].textContent = "$"+price;
-                console.log(price);
+
+                originalPrice = parseInt(gettingRidOfDolarSign);
+                gettingRidOfDolarSign = parseInt(gettingRidOfDolarSign);
+                price = gettingRidOfDolarSign * numberValue;
+                productAddedPrice[i].innerHTML = "price";
             }
         }
 
