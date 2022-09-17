@@ -3,6 +3,7 @@ const quantityMore = document.querySelectorAll('.cantidadMas');
 const quantityNumber = document.querySelectorAll('.cantidad');
 const productAddedName = document.querySelectorAll('.nombreProductoAgregado');
 const productAddedPrice = document.querySelectorAll('.precioProductoAgregado');
+const preciocarrito = document.querySelectorAll('.PrecioenCarrito')
 
 // quantityLess.addEventListener('click', (e) => {
 //     e.preventDefault();
@@ -26,13 +27,14 @@ for(let i = 0; i < quantityMore.length; i++){
                 let gettingRidOfDolarSign = [];
                 let originalPrice;
 
-                price.push(productAddedPrice[i].textContent);
+                price.push(preciocarrito[i].textContent);
                 gettingRidOfDolarSign.push(price[0].trimStart().slice(1,price[0].length));
 
                 originalPrice = parseInt(gettingRidOfDolarSign);
                 gettingRidOfDolarSign = parseInt(gettingRidOfDolarSign);
                 price = gettingRidOfDolarSign * numberValue;
-                productAddedPrice[i].innerHTML = "price";
+                productAddedPrice[i].innerHTML = "$" + price;
+                console.log(price)
             }
         }
 
