@@ -15,11 +15,27 @@ const preciocarrito = document.querySelectorAll('.PrecioenCarrito')
 for(let i = 0; i < quantityMore.length; i++){
     quantityMore[i].addEventListener('click', (e) => {
         e.preventDefault();
+
         let numberValue = quantityNumber[i].value;
-        quantityNumber[i].value = ++numberValue;
 
         let productElement = e.target.parentElement.parentElement.parentElement.parentElement.parentElement;
         let productName = productElement.firstElementChild.textContent.trim();
+
+        async function oneProduct(){
+            let product = await fetch('/baseDeDatosInfo/findOne', 
+            {method:'POST',headers: {'Content-Type':'application/json'},body: JSON.stringify({product: productName})})
+            .then(res => res.json()).then(data => {return data;});
+
+            return product;
+        }
+
+        oneProduct().then(res => {
+            if (numberValue < res.stock){
+                quantityNumber[i].value = ++numberValue;
+            }
+        }
+        )
+        
         
         for (let i = 0; i < productAddedName.length; i++){
             if (productName == productAddedName[i].textContent.trim()){
