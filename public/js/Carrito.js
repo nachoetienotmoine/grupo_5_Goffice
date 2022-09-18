@@ -32,28 +32,24 @@ for(let i = 0; i < quantityMore.length; i++){
         oneProduct().then(res => {
             if (numberValue < res.stock){
                 quantityNumber[i].value = ++numberValue;
+                for (let i = 0; i < productAddedName.length; i++){
+                    if (productName == productAddedName[i].textContent.trim()){
+                        let price = [];
+                        let gettingRidOfDolarSign = [];
+                        let originalPrice;
+        
+                        price.push(preciocarrito[i].textContent);
+                        gettingRidOfDolarSign.push(price[0].trimStart().slice(1,price[0].length));
+        
+                        originalPrice = parseInt(gettingRidOfDolarSign);
+                        gettingRidOfDolarSign = parseInt(gettingRidOfDolarSign);
+                        price = gettingRidOfDolarSign * numberValue;
+                        productAddedPrice[i].innerHTML = "$" + price;
+                    }
+                }
             }
         }
         )
-        
-        
-        for (let i = 0; i < productAddedName.length; i++){
-            if (productName == productAddedName[i].textContent.trim()){
-                let price = [];
-                let gettingRidOfDolarSign = [];
-                let originalPrice;
-
-                price.push(preciocarrito[i].textContent);
-                gettingRidOfDolarSign.push(price[0].trimStart().slice(1,price[0].length));
-
-                originalPrice = parseInt(gettingRidOfDolarSign);
-                gettingRidOfDolarSign = parseInt(gettingRidOfDolarSign);
-                price = gettingRidOfDolarSign * numberValue;
-                productAddedPrice[i].innerHTML = "$" + price;
-            }
-        }
-
-
     
         console.log('more!');
     });
