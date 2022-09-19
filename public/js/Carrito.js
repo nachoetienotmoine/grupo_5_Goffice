@@ -4,6 +4,8 @@ const quantityNumber = document.querySelectorAll('.cantidad');
 const productAddedName = document.querySelectorAll('.nombreProductoAgregado');
 const productAddedPrice = document.querySelectorAll('.precioProductoAgregado');
 const preciocarrito = document.querySelectorAll('.PrecioenCarrito')
+const preciototal = document.querySelectorAll('.totalprice')
+
 
 for(let i = 0; i < quantityLess.length; i++){
     quantityLess[i].addEventListener('click', (e) => {
@@ -37,6 +39,10 @@ for(let i = 0; i < quantityLess.length; i++){
                         gettingRidOfDolarSign = parseInt(gettingRidOfDolarSign);
                         price = (gettingRidOfDolarSign * numberValue) - originalPrice + originalPrice;
                         productAddedPrice[i].innerHTML = "$" + price;
+
+                        let precio = preciototal[0].textContent;
+                        precio = parseInt(precio);
+                        preciototal[0].innerHTML = ( precio - gettingRidOfDolarSign)
                     }
                 }
             }
@@ -71,15 +77,17 @@ for(let i = 0; i < quantityMore.length; i++){
                     if (productName == productAddedName[i].textContent.trim()){
                         let price = [];
                         let gettingRidOfDolarSign = [];
-                        let originalPrice;
+                        
         
                         price.push(preciocarrito[i].textContent);
                         gettingRidOfDolarSign.push(price[0].trimStart().slice(1,price[0].length));
-        
-                        originalPrice = parseInt(gettingRidOfDolarSign);
                         gettingRidOfDolarSign = parseInt(gettingRidOfDolarSign);
-                        price = gettingRidOfDolarSign * numberValue;
-                        productAddedPrice[i].innerHTML = "$" + price;
+                        priceTotalItem = gettingRidOfDolarSign * numberValue;
+                        productAddedPrice[i].innerHTML = "$" + priceTotalItem;
+
+                        let precio = preciototal[0].textContent;
+                        precio = parseInt(precio);
+                        preciototal[0].innerHTML = (precio + gettingRidOfDolarSign)
                     }
                 }
             }
