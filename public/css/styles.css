@@ -3737,6 +3737,7 @@ x
    display: none; 
    font-size: large;
    color: #1a6692;
+   text-shadow: -2px 1.5px 6px;
 }
 
 .login_form button {
