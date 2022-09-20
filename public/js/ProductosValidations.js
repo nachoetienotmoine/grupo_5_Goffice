@@ -59,7 +59,8 @@ validationImage.addEventListener('change', function () {
 
     let inputValue = this.value;
     let fileExtension = inputValue.split('.');
-    let extension = fileExtension[fileExtension.length - 1];
+    let extension = fileExtension[1];
+    
     let allowedExtensions = ['jpg', 'jpeg', 'png', 'gif'];
     let extensionMatch = false;
 
