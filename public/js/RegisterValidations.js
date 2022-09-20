@@ -8,36 +8,45 @@ function isEmpty(input){
     let alreadyChecked = false;
 
     for (let i = 0; i < errors.length; i++){
-        errors[i] === input ? alreadyChecked = true : "";
+        errors[i] === 'Debes completar el nombre' ? alreadyChecked = true : "";
     }
+    console.log(alreadyChecked);
 
     if (input.value === "" && !alreadyChecked){
         errors.push('Debes completar el nombre');
         return true;
-    }else if (input.value != ""){
+    }else if (input.value != "" ){
         for (let i = 0; i < errors.length; i++){
-            if (errors[i] === input){
-                errors.splice(0);
+            if (errors[i] === 'Debes completar el nombre'){
+                errors.splice(0,1);
                 return false;
             }
         }
-    }    
+    }else{
+        return true;
+    }   
 }
 
 first_Name.addEventListener('blur', (e) => {
     if (isEmpty(e.target) === true){
         error_field[0].innerHTML = errors[0];
         error_field[0].style.display = "block";
-    }else if (e.target.value.length <= 2){
-        errors.push('El nombre debe contener al menos 2 caracteres');
-        error_field[0].innerHTML = errors[0];
-        error_field[0].style.display = "block";
-    }
-    else{
+    }else{
         error_field[0].style.display = "none";
         
     }
 
+    // if (e.target.value.length <= 2){
+    //     errors.push('El nombre debe contener al menos 2 caracteres');
+    //     error_field[0].innerHTML = errors[0];
+    //     error_field[0].style.display = "block";
+    // }else {
+    //     errors.splice(0);
+    //     error_field[0].style.display = "none";
+    // }
+
+    console.log(errors.length, e.target.value);
+    console.log(errors);
 });
 
 
