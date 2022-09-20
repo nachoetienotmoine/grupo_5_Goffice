@@ -35,7 +35,7 @@ first_Name.addEventListener('blur', (e) => {
     }
     else{
         error_field[0].style.display = "none";
-        console.log('pene');
+        
     }
 
 });
