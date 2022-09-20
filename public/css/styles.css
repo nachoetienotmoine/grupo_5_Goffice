@@ -3399,9 +3399,7 @@ hr {
     color: rgb(172, 172, 172);
 }
 
-.error_field {
-    display: none;
-}
+
 
 .register_form button {
     background-color: #1a6692;
@@ -3736,7 +3734,8 @@ x
 }
 
 .error_field {
-    display: none;
+   font-size: large;
+   color: #1a6692;
 }
 
 .login_form button {
