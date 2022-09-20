@@ -7,17 +7,17 @@ let errors = [];
 function isEmpty(input, name){
 
     let alreadyChecked = false;
-
     for (let i = 0; i < errors.length; i++){
         errors[i] === `Debes completar el ${name.name}` ? alreadyChecked = true : "";
+
     }
 
     if (input === "" && !alreadyChecked){
         errors.push(`Debes completar el ${name.name}`);
         return true;
-    }else if (input != "" ){
+    }else if (input != ""){
         for (let i = 0; i < errors.length; i++){
-            if (errors[i] === `Debes completar el ${name.name}` || errors[i] === `El ${name.name} debe contener al menos 2 caracteres` || errors[i] === `El ${name.name} debe contener al menos 2 caracteres`){
+            if (errors[i] === `Debes completar el ${name.name}`){
                 errors.splice(0,errors.length);
                 return false;
             }
@@ -25,6 +25,27 @@ function isEmpty(input, name){
     }else{
         return true;
     }   
+}
+
+function islongEnough(input,name){
+    let lengthAlreadyChecked = false;
+    for (let i = 0; i < errors.length; i++){   
+        errors[i] === `El ${name.name} debe contener al menos 2 caracteres` ? lengthAlreadyChecked = true : "";
+    }
+
+    if (input.length < 2 && !lengthAlreadyChecked){
+        errors.push(`El ${name.name} debe contener al menos 2 caracteres`);
+        return true;
+    }else if (input.length > 2){
+        for (let i = 0; i < errors.length; i++){
+            if (errors[i] === `El ${name.name} debe contener al menos 2 caracteres`){
+                errors.splice(0,errors.length);
+                return false;
+            }
+        }
+    }else {
+        return true;
+    }
 }
 
 first_Name.addEventListener('blur', (e) => {
@@ -38,8 +59,7 @@ first_Name.addEventListener('blur', (e) => {
         first_Name.value = inputValue;
     }
 
-    if (inputValue.length <= 2){
-        errors.push(`El ${first_Name.name} debe contener al menos 2 caracteres`);
+    if (islongEnough(inputValue,first_Name)){
         error_field[0].innerHTML = errors[0];
         error_field[0].style.display = "block";
     }else {
@@ -54,7 +74,6 @@ first_Name.addEventListener('blur', (e) => {
 last_name.addEventListener('blur', (e) => {
     let inputValue = e.target.value.trim();
 
-
     if (isEmpty(inputValue, last_name) === true){
         error_field[1].innerHTML = errors[0];
         error_field[1].style.display = "block";
@@ -63,8 +82,7 @@ last_name.addEventListener('blur', (e) => {
         last_name.value = inputValue;
     }
 
-    if (inputValue.length <= 2){
-        errors.push(`El ${last_name.name} debe contener al menos 2 caracteres`);
+    if (islongEnough(inputValue,last_name)){
         error_field[1].innerHTML = errors[0];
         error_field[1].style.display = "block";
     }else {
@@ -72,8 +90,8 @@ last_name.addEventListener('blur', (e) => {
         error_field[1].style.display = "none";
     }
 
-    // console.log(errors.length, e.target.value);
-    // console.log(errors);
+    console.log(errors.length, e.target.value);
+    console.log(errors);
 });
 
 
