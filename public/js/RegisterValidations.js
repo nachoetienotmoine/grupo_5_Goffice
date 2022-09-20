@@ -10,12 +10,11 @@ function isEmpty(input){
     for (let i = 0; i < errors.length; i++){
         errors[i] === 'Debes completar el nombre' ? alreadyChecked = true : "";
     }
-    console.log(alreadyChecked);
 
-    if (input.value === "" && !alreadyChecked){
+    if (input === "" && !alreadyChecked){
         errors.push('Debes completar el nombre');
         return true;
-    }else if (input.value != "" ){
+    }else if (input != "" ){
         for (let i = 0; i < errors.length; i++){
             if (errors[i] === 'Debes completar el nombre'){
                 errors.splice(0,1);
@@ -28,15 +27,18 @@ function isEmpty(input){
 }
 
 first_Name.addEventListener('blur', (e) => {
-    if (isEmpty(e.target) === true){
+    let inputValue = e.target.value.trim();
+
+
+    if (isEmpty(inputValue) === true){
         error_field[0].innerHTML = errors[0];
         error_field[0].style.display = "block";
     }else{
         error_field[0].style.display = "none";
-        
+        first_Name.value = inputValue;
     }
 
-    // if (e.target.value.length <= 2){
+    // if (inputValue.length <= 2){
     //     errors.push('El nombre debe contener al menos 2 caracteres');
     //     error_field[0].innerHTML = errors[0];
     //     error_field[0].style.display = "block";
