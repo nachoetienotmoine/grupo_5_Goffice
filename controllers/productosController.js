@@ -41,14 +41,14 @@ const productosController = {
 
 
     crearProductosPost: async (req, res) => {
-        let { name, category, description, discount, price, stock } = req.body;
+        let { name, category, description, discount, price, stock , image} = req.body;
 
         await Products.create({
             name: name,
             description: description,
             discount: discount,
             price: price,
-            image: req.file.originalname,
+            image: image,
             stock: stock,
             id_products_category: category
         });

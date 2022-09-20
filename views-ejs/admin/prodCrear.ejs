@@ -33,11 +33,11 @@
                                 <H2>Name</H2>
                             </label>
 
-                            <input type="text" name="name" id="nombrePCrud"  minlength="6">
+                            <input type="text" name="name" id="nombrePCrud" class="namePV" minlength="6">
                             <i class="far fa-edit"></i>
                         </div>
 
-                        <div class="error_field">Ingrese su contraseña</div>
+                        <div class="error_fieldPname">Ingrese su contraseña</div>
 
                         <div class="boxpC">
                             <label name="category">
@@ -60,11 +60,11 @@
                                 <h2>Descripcion</h2>
                             </label>
 
-                            <input type="text" name="description" id="nombrePCrud" >
+                            <input type="text" name="description" class="descriptionPV" id="nombrePCrud" >
                             <i class="far fa-edit"></i>
                         </div>
 
-                        <div class="error_field">Ingrese su contraseña</div>
+                        <div class="error_fieldPdescription">Ingrese su contraseña</div>
 
                         <div class="boxpC">
                             <label name="discount">
@@ -74,29 +74,30 @@
                             <input type="number" name="discount" id="nombrePCrud" >
                             <i class="far fa-edit"></i>
                         </div>
-                        <div class="error_field">Ingrese su contraseña</div>
+                        
 
                         <div class="boxpC">
                             <label name="price">
                                 <h2>Precio</h2>
                             </label>
 
-                            <input type="number" name="price" id="nombrePCrud" >
+                            <input type="number" name="price" class="pricePV" id="nombrePCrud" >
                             <i class="far fa-edit"></i>
                         </div>
 
-                        <div class="error_field">Ingrese su contraseña</div>
+                        <div class="error_fieldPprice"></div>
 
                         <div class="boxpC">
                             <label name="image">
                                 <h2>Image</h2>
                             </label>
-                            <input type="file" class="buy-now-button" name="image">
+                            <input type="file" class="imagePV"
+                            name="image">
                             
                             <i class="far fa-edit"></i>
                         </div>
 
-                        <div class="error_field">Ingrese su contraseña</div>
+                        <div class="error_fieldPimage">Ingrese una imagen valida</div>
                         
                         <div class="boxpC">
                             <label name="stock">
@@ -123,9 +124,9 @@
                         </div>
                         <article class="precio-envio-detail">
                             <div class="comprar-detailPC">
-                                <button type="submit" class="submit-cart-detail">Guardar Cambios</button>
+                                <button type="submit" class="submit-cart-detail" id="SendProductsForm">Guardar Cambios</button>
                             </div>
-
+ <div class="error_fieldPSend"></div>
                         </article>
                     </form>
 
@@ -135,6 +136,8 @@
                     <div class="return-detail">
                         <button type="submit" class="return-cart-detail">Eliminar</button>
                     </div>
+
+                   
                 </article>
             </section>
             <br>
