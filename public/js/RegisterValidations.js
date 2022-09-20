@@ -16,8 +16,8 @@ function isEmpty(input){
         return true;
     }else if (input != "" ){
         for (let i = 0; i < errors.length; i++){
-            if (errors[i] === 'Debes completar el nombre'){
-                errors.splice(0,1);
+            if (errors[i] === 'Debes completar el nombre' || errors[i] === 'El nombre debe contener al menos 2 caracteres'){
+                errors.splice(0,errors.length+1);
                 return false;
             }
         }
@@ -38,14 +38,14 @@ first_Name.addEventListener('blur', (e) => {
         first_Name.value = inputValue;
     }
 
-    // if (inputValue.length <= 2){
-    //     errors.push('El nombre debe contener al menos 2 caracteres');
-    //     error_field[0].innerHTML = errors[0];
-    //     error_field[0].style.display = "block";
-    // }else {
-    //     errors.splice(0);
-    //     error_field[0].style.display = "none";
-    // }
+    if (inputValue.length <= 2){
+        errors.push('El nombre debe contener al menos 2 caracteres');
+        error_field[0].innerHTML = errors[0];
+        error_field[0].style.display = "block";
+    }else {
+        errors.splice(0);
+        error_field[0].style.display = "none";
+    }
 
     console.log(errors.length, e.target.value);
     console.log(errors);
