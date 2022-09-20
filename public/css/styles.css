@@ -5057,6 +5057,11 @@ s .header-bar2 .compracuotas2 {
         font-size: large;
         color:   red;
      }
+     .error_fieldPimage{
+        display: none; 
+        font-size: large;
+        color:   red;   
+     }
      .error_fieldPSend{
         display: none; 
         font-size: large;

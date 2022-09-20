@@ -48,7 +48,7 @@ const productosController = {
             description: description,
             discount: discount,
             price: price,
-            image: image,
+            image: req.file.originalname,
             stock: stock,
             id_products_category: category
         });
