@@ -3734,6 +3734,7 @@ x
 }
 
 .error_field {
+   display: none; 
    font-size: large;
    color: #1a6692;
 }

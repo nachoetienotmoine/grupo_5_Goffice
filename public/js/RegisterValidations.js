@@ -27,7 +27,7 @@ function isEmpty(input){
 first_Name.addEventListener('blur', (e) => {
     if (isEmpty(e.target) === true){
         error_field[0].innerHTML = errors[0];
-        error_field[0].style.display += "block";
+        error_field[0].style.display = "block";
     }else{
         error_field[0].style.display = "none";
     }
