@@ -17,7 +17,7 @@ function isEmpty(input){
     }else if (input != "" ){
         for (let i = 0; i < errors.length; i++){
             if (errors[i] === 'Debes completar el nombre' || errors[i] === 'El nombre debe contener al menos 2 caracteres'){
-                errors.splice(0,errors.length+1);
+                errors.splice(0,errors.length);
                 return false;
             }
         }
