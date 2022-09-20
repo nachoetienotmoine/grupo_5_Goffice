@@ -16,19 +16,20 @@ let errorName = false;
 let errorDescription = false;
 let errorPrice = false;
 let errorImage = false;
+
 validationName.addEventListener('blur', function () {
 
     let inputValue = this.value;
     if (inputValue.trim() == "") {
         error_fieldPname.style.display = "block"
         validationName.style.borderColor = "red"
-        error_fieldPname.innerHTML = "NO debes dejar este campo sin llenar";
+        error_fieldPname.innerHTML = "No debes dejar este campo sin llenar";
         errorName = false;
 
     } else if (inputValue.trim().length < 6) {
         error_fieldPname.style.display = "block"
         validationName.style.borderColor = "red"
-        error_fieldPname.innerHTML = "Debe teenr mas de 6 letras";
+        error_fieldPname.innerHTML = "El campo debe tener mas de 6 letras";
         errorName = false;
     }
     else {
@@ -44,7 +45,7 @@ validationDescription.addEventListener('blur', function () {
     if (inputValue.trim().length < 20) {
         error_fieldPdescription.style.display = "block"
         validationDescription.style.borderColor = "red"
-        error_fieldPdescription.innerHTML = "Debe tener al menos 20 caracteres";
+        error_fieldPdescription.innerHTML = "El campo debe tener al menos 20 caracteres";
         errorDescription = false;
     }
     else {
