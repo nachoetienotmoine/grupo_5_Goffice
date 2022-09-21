@@ -1,12 +1,8 @@
-
-
-
 const error_fieldPeName = document.querySelector('.error_fieldPeName');
 const error_fieldPeDescription = document.querySelector('.error_fieldPeDescription');
 const error_fieldPeImage = document.querySelector('.error_fieldPeImage');
 const error_fieldPePrice = document.querySelector('.error_fieldPePrice');
 const error_fieldPeSend = document.querySelector('.error_fieldPeSend');
-
 
 let validationEditName = document.querySelector('.nameEditPV');
 let validationEditDescription = document.querySelector('.descriptionEditPV');
@@ -78,7 +74,7 @@ validationEditName.addEventListener('blur', function () {
 validationEditImage.addEventListener('change', function () {
 
     let inputValue = this.value;
-    
+
     let fileExtension = inputValue.split('.');
     let extension = fileExtension[1];
 
@@ -93,14 +89,16 @@ validationEditImage.addEventListener('change', function () {
 
     if (!extensionMatch) {
         error_fieldPeImage.style.display = "block"
-        validationEditImage.style.borderColor = "red"
+        validationEditImage.style.borderColor = "red";
         error_fieldPeImage.innerHTML = "Debe ingresar una imagen en formato : (JPG, JPEG, PNG, GIF)";
         errors.push("Debe ingresar una imagen en formato : (JPG, JPEG, PNG, GIF)");
+
     } else {
         error_fieldPeImage.style.display = "none";
         validationEditImage.style.borderColor = "";
         let SinErrors = errors.indexOf("Debe ingresar una imagen en formato : (JPG, JPEG, PNG, GIF)");
-        errors.splice(SinErrors)
+        errors.splice(SinErrors);
+
     }
 });
 
@@ -115,6 +113,7 @@ SendProductsEditForm.addEventListener('click', function (event) {
             error_fieldPeSend.innerHTML = "Debes completar las casillas correctamente"
             event.preventDefault();
         }
+
     }
 
 })
