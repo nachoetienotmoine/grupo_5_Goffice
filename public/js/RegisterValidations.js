@@ -8,7 +8,7 @@ function Errors(input, message, errorField){
     this.errorField = errorField;
 }
 
-let errorsList = [];
+let errorsList = [[],[],[],[],[],[],[]];
 
 function isEmpty(input, field){
 
@@ -37,7 +37,6 @@ function isEmpty(input, field){
                     Object.keys(errorsList).map(function(i) {
                         errorsList.splice(i,1);
                       });
-                    console.log(errorsList);
                     return false;
                 }
             }
@@ -47,26 +46,35 @@ function isEmpty(input, field){
     }   
 }
 
-// function islongEnough(input,name){
-//     let lengthAlreadyChecked = false;
-//     for (let i = 0; i < errors.length; i++){   
-//         errors[i] === `El ${name.name} debe contener al menos 2 caracteres` ? lengthAlreadyChecked = true : "";
-//     }
+function islongEnough(input, field){
+    let lengthAlreadyChecked = false;
+    let fieldName = field.name;
+    for (let i = 0; i < errorsList.length; i++){  
+        errorsList[i][fieldName].message === `El ${field.name} debe contener al menos 2 caracteres` ? lengthAlreadyChecked = true : "";
+    }
 
-//     if (input.length < 2 && !lengthAlreadyChecked){
-//         errors.push(`El ${name.name} debe contener al menos 2 caracteres`);
-//         return true;
-//     }else if (input.length > 2){
-//         for (let i = 0; i < errors.length; i++){
-//             if (errors[i] === `El ${name.name} debe contener al menos 2 caracteres`){
-//                 errors.splice(1,1);
-//                 return false;
-//             }
-//         }
-//     }else {
-//         return true;
-//     }
-// }
+    if (input.length < 2 && !lengthAlreadyChecked){
+        let input_Name = {
+            [fieldName]: new Errors (field, `El ${field.name} debe contener al menos 2 caracteres`, error_field[0])
+        };
+
+        errorsList.push(input_Name);
+        return true;
+    }else if (input.length > 2){
+        for (let i = 0; i < errorsList.length; i++){
+            if (errorsList[i][fieldName]){
+                if (errorsList[i][fieldName].message === `El ${field.name} debe contener al menos 2 caracteres`){
+                    Object.keys(errorsList).map(function(i) {
+                        errorsList.splice(i,1);
+                      });
+                    return false;
+                }
+            }
+        }
+    }else{
+        return true;
+    }  
+}
 
 first_Name.addEventListener('blur', (e) => {
     let inputValue = e.target.value.trim();
@@ -92,12 +100,25 @@ first_Name.addEventListener('blur', (e) => {
         first_Name.value = inputValue;
     }
 
-    // if (islongEnough(inputValue)){
-    //     error_field[0].innerHTML = errors[0];
-    //     error_field[0].style.display = "block";
-    // }else {
-    //     error_field[0].style.display = "none";
-    // }
+    if (islongEnough(inputValue, field)){
+        let errorMessage;
+        let fieldName = field.name;
+
+        for ( let i = 0; i < errorsList.length; i++){
+            if (errorsList[i][fieldName]){
+                if (errorsList[i][fieldName].input.name == fieldName){
+                    errorMessage = errorsList[i][fieldName].message;
+                }
+            }
+        }
+
+        error_field[0].innerHTML = errorMessage;
+        error_field[0].style.display = "block";
+        console.log(errorsList);
+    }else {
+        error_field[0].style.display = "none";
+        first_Name.value = inputValue;
+    }
 });
 
 last_name.addEventListener('blur', (e) => {
@@ -118,7 +139,6 @@ last_name.addEventListener('blur', (e) => {
 
         error_field[1].innerHTML = errorMessage;
         error_field[1].style.display = "block";
-        console.log(errorsList);
     }else{
         error_field[1].style.display = "none";
         last_name.value = inputValue;
