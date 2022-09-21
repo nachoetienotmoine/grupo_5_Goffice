@@ -104,77 +104,77 @@ SendProductsForm.addEventListener('click', function (event) {
 
     if (!errorDescription && !errorName && !errorPrice && !errorImage) {
         error_fieldPSend.style.display = 'block'
-        error_fieldPSend.innerHTML = "Debes completar las casilla de NAME , DESCRIPTION , IMAGE y PRICE correctamente"
+        error_fieldPSend.innerHTML = "Debes completar las casilla de NAME , DESCRIPTION , IMAGE y PRICE correctamente y luego reenviar el formulario"
         event.preventDefault();
     }
     else if (!errorDescription && !errorName && !errorImage) {
         error_fieldPSend.style.display = 'block'
-        error_fieldPSend.innerHTML = "Debes completar las casilla de NAME , IMAGE y DESCRIPTION correctamente"
+        error_fieldPSend.innerHTML = "Debes completar las casilla de NAME , IMAGE y DESCRIPTION correctamente y luego reenviar el formulario"
         event.preventDefault();
     }
     else if (!errorDescription && !errorName && !errorPrice) {
         error_fieldPSend.style.display = 'block'
-        error_fieldPSend.innerHTML = "Debes completar las casilla de NAME , PRICE y DESCRIPTION correctamente"
+        error_fieldPSend.innerHTML = "Debes completar las casilla de NAME , PRICE y DESCRIPTION correctamente y luego reenviar el formulario"
         event.preventDefault();
     }
     else if (!errorDescription && !errorPrice && !errorImage) {
         error_fieldPSend.style.display = 'block'
-        error_fieldPSend.innerHTML = "Debes completar las casilla de DESCRIPTION , IMAGE y PRICE correctamente"
+        error_fieldPSend.innerHTML = "Debes completar las casilla de DESCRIPTION , IMAGE y PRICE correctamente y luego reenviar el formulario"
         event.preventDefault();
     }
     else if (!errorPrice && !errorName && !errorImage) {
         error_fieldPSend.style.display = 'block'
-        error_fieldPSend.innerHTML = "Debes completar las casilla de NAME , IMAGE y PRICE correctamente"
+        error_fieldPSend.innerHTML = "Debes completar las casilla de NAME , IMAGE y PRICE correctamente y luego reenviar el formulario"
         event.preventDefault();
     }
     else if (!errorPrice && !errorDescription) {
         error_fieldPSend.style.display = 'block'
-        error_fieldPSend.innerHTML = "Debes completar las casilla de PRICE y DESCRIPTION correctamente"
+        error_fieldPSend.innerHTML = "Debes completar las casilla de PRICE y DESCRIPTION correctamente y luego reenviar el formulario"
         event.preventDefault();
     }
     else if (!errorImage && !errorPrice) {
         error_fieldPSend.style.display = 'block'
-        error_fieldPSend.innerHTML = "Debes completar las casilla de IMAGE y PRICE correctamente"
+        error_fieldPSend.innerHTML = "Debes completar las casilla de IMAGE y PRICE correctamente y luego reenviar el formulario"
         event.preventDefault();
     }
     else if (!errorName && !errorPrice) {
         error_fieldPSend.style.display = 'block'
-        error_fieldPSend.innerHTML = "Debes completar las casilla de NAME y PRICE correctamente"
+        error_fieldPSend.innerHTML = "Debes completar las casilla de NAME y PRICE correctamente y luego reenviar el formulario"
         event.preventDefault();
     }
     else if (!errorName && !errorDescription) {
         error_fieldPSend.style.display = 'block'
-        error_fieldPSend.innerHTML = "Debes completar las casilla de NAME y DESCRIPTION correctamente"
+        error_fieldPSend.innerHTML = "Debes completar las casilla de NAME y DESCRIPTION correctamente y luego reenviar el formulario"
         event.preventDefault();
     }
     else if (!errorName && !errorImage) {
         error_fieldPSend.style.display = 'block'
-        error_fieldPSend.innerHTML = "Debes completar las casilla de NAME y IMAGE correctamente"
+        error_fieldPSend.innerHTML = "Debes completar las casilla de NAME y IMAGE correctamente y luego reenviar el formulario"
         event.preventDefault();
     }
     else if (!errorDescription && !errorImage) {
         error_fieldPSend.style.display = 'block'
-        error_fieldPSend.innerHTML = "Debes completar las casilla de DESCRIPTION y IMAGE correctamente"
+        error_fieldPSend.innerHTML = "Debes completar las casilla de DESCRIPTION y IMAGE correctamente y luego reenviar el formulario"
         event.preventDefault();
     }
     else if (!errorName) {
         error_fieldPSend.style.display = 'block'
-        error_fieldPSend.innerHTML = "Debes completar la casilla NAME correctamente"
+        error_fieldPSend.innerHTML = "Debes completar la casilla NAME correctamente y luego reenviar el formulario"
         event.preventDefault();
     }
     else if (!errorDescription) {
         error_fieldPSend.style.display = 'block'
-        error_fieldPSend.innerHTML = "Debes completar la casilla DESCRIPTION correctamente"
+        error_fieldPSend.innerHTML = "Debes completar la casilla DESCRIPTION correctamente y luego reenviar el formulario"
         event.preventDefault();
     }
     else if (!errorPrice) {
         error_fieldPSend.style.display = 'block'
-        error_fieldPSend.innerHTML = "Debes completar la casilla PRICE correctamente"
+        error_fieldPSend.innerHTML = "Debes completar la casilla PRICE correctamente y luego reenviar el formulario"
         event.preventDefault();
     }
     else if (!errorImage) {
         error_fieldPSend.style.display = 'block'
-        error_fieldPSend.innerHTML = "Debes completar la casilla IMAGE correctamente"
+        error_fieldPSend.innerHTML = "Debes completar la casilla IMAGE correctamente y luego reenviar el formulario"
         event.preventDefault();
     }
 })
