@@ -93,7 +93,7 @@ validationEditImage.addEventListener('change', function () {
         error_fieldPeImage.innerHTML = "Debe ingresar una imagen en formato : (JPG, JPEG, PNG, GIF)";
         errors.push("Debe ingresar una imagen en formato : (JPG, JPEG, PNG, GIF)");
 
-    } else {
+   } else {
         error_fieldPeImage.style.display = "none";
         validationEditImage.style.borderColor = "";
         let SinErrors = errors.indexOf("Debe ingresar una imagen en formato : (JPG, JPEG, PNG, GIF)");
@@ -108,11 +108,16 @@ validationEditImage.addEventListener('change', function () {
 
 SendProductsEditForm.addEventListener('click', function (event) {
     for (let i = 0; i < errors.length; i++) {
-        if (errors[i].length != 0) {
+        if (errors[i].length > 0 ) {
             error_fieldPeSend.style.display = 'block'
-            error_fieldPeSend.innerHTML = "Debes completar las casillas correctamente"
+            error_fieldPeSend.innerHTML = "Debes completar las casillas correctamente , y luego volver a enviar el formulario"
             event.preventDefault();
         }
+
+    }
+
+    if(!errors[0]){
+        error_fieldPeSend.style.display = 'none'
 
     }
 
