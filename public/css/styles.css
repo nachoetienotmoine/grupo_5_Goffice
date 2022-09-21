@@ -5069,4 +5069,32 @@ s .header-bar2 .compracuotas2 {
        
      }
 
+     .error_fieldPeName {
+        display: none; 
+        font-size: large;
+        color:  red;
+       
+     }
+     .error_fieldPeDescription {
+        display: none; 
+        font-size: large;
+        color:  red;
+        
+     }
+     .error_fieldPePrice {
+        display: none; 
+        font-size: large;
+        color:   red;
+     }
+     .error_fieldPeImage{
+        display: none; 
+        font-size: large;
+        color:   red;   
+     }
+     .error_fieldPeSend{
+        display: none; 
+        font-size: large;
+        color:   red;
+       
+     }
     /* ///// Validations Productos ///// */
