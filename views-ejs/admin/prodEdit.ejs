@@ -39,11 +39,11 @@
                                 <H2>Name</H2>
                             </label>
 
-                            <input type="text" name="name" id="nombrePCrud" required minlength="6" value="<%= productoEncontrado.name; %>">
+                            <input type="text" name="name" id="nombrePCrud" class="namePV" value="<%= productoEncontrado.name; %>">
                             <i class="far fa-edit"></i>
                         </div>
 
-                        <div class="error_field">Ingrese su contraseña</div>
+                        <div class="error_fieldPname"></div>
 
                         <div class="boxpC">
                             <label name="category">
@@ -64,42 +64,43 @@
                                 <h2>Descripcion</h2>
                             </label>
 
-                            <input type="text" name="description" id="nombrePCrud" required value="<%= productoEncontrado.description; %>">
+                            <input type="text" name="description" id="nombrePCrud" class="descriptionPV"  value="<%= productoEncontrado.description; %>">
                             <i class="far fa-edit"></i>
                         </div>
 
-                        <div class="error_field">Ingrese su contraseña</div>
+                        <div class="error_fieldPdescription"></div>
 
                         <div class="boxpC">
                             <label name="discount">
                                 <h2>Discount</h2>
                             </label>
 
-                            <input type="text" name="discount" id="nombrePCrud" required value="<%= productoEncontrado.discount; %>">
+                            <input type="text" name="discount" id="nombrePCrud"  value="<%= productoEncontrado.discount; %>">
                             <i class="far fa-edit"></i>
                         </div>
 
-                        <div class="error_field">Ingrese su contraseña</div>
+                      
 
                         <div class="boxpC">
                             <label name="price">
                                 <h2>Precio</h2>
                             </label>
 
-                            <input type="text" name="price" id="nombrePCrud" required value="<%= productoEncontrado.price; %>">
+                            <input type="number" name="price" class="pricePV" id="nombrePCrud"  value="<%= productoEncontrado.price; %>">
                             <i class="far fa-edit"></i>
                         </div>
 
-                        <div class="error_field">Ingrese su contraseña</div>
+                        <div class="error_fieldPprice"></div>
                         
                         <div class="boxpC">
                             <label name="image">
                                 <h2>Image</h2>
                             </label>
-                            <input type="file" class="buy-now-button" name="image" required value="/images/<%= productoEncontrado.image; %>">
+                            <input type="file" class="imagePV" name="image" required value="/images/<%= productoEncontrado.image; %>">
                             
                             <i class="far fa-edit"></i>
                         </div>
+                        <div class="error_fieldPimage"></div>
                         <div class="boxpC">
                             <label name="stock">
                                 <h2>Stock</h2>
@@ -125,9 +126,10 @@
                         </div>
                         <article class="precio-envio-detail">
                             <div class="comprar-detailPC">
-                                <button type="submit" class="submit-cart-detail">Guardar Cambios</button>
+                                <button type="submit" class="submit-cart-detail" id="SendProductsForm">Guardar Cambios</button>
                             </div>
-
+                            <br>
+ <div class="error_fieldPSend"></div>
                         </article>
                     </form>
 
