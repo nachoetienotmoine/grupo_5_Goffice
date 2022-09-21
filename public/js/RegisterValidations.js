@@ -8,10 +8,10 @@ function Errors(input, message, errorField){
     this.errorField = errorField;
 }
 
-let errorsList = [[],[],[],[],[],[],[]];
+let errorsList = [];
 
 function isEmpty(input, field){
-
+    let errorField = field.parentElement.nextElementSibling;
     let fieldName = field.name;
 
     let alreadyChecked = false;
@@ -25,7 +25,7 @@ function isEmpty(input, field){
 
     if (input === "" && !alreadyChecked){
         let input_Name = {
-            [fieldName]: new Errors (field, `Debes completar el ${field.name}`, error_field[0])
+            [fieldName]: new Errors (field, `Debes completar el ${fieldName}`, errorField)
         };
 
         errorsList.push(input_Name);
@@ -47,15 +47,21 @@ function isEmpty(input, field){
 }
 
 function islongEnough(input, field){
-    let lengthAlreadyChecked = false;
+    let errorField = field.parentElement.nextElementSibling;
     let fieldName = field.name;
-    for (let i = 0; i < errorsList.length; i++){  
-        errorsList[i][fieldName].message === `El ${field.name} debe contener al menos 2 caracteres` ? lengthAlreadyChecked = true : "";
+
+    let alreadyChecked = false;
+
+    for (let i = 0; i < errorsList.length; i++){
+        if (errorsList[i][fieldName]){
+            errorsList[i][fieldName].message === `El ${fieldName} debe contener al menos 2 caracteres` ? alreadyChecked = true : "";
+        }
+
     }
 
-    if (input.length < 2 && !lengthAlreadyChecked){
+    if (input.length <= 2 && !alreadyChecked){
         let input_Name = {
-            [fieldName]: new Errors (field, `El ${field.name} debe contener al menos 2 caracteres`, error_field[0])
+            [fieldName]: new Errors (field, `El ${fieldName} debe contener al menos 2 caracteres`, errorField)
         };
 
         errorsList.push(input_Name);
@@ -73,7 +79,7 @@ function islongEnough(input, field){
         }
     }else{
         return true;
-    }  
+    }   
 }
 
 first_Name.addEventListener('blur', (e) => {
@@ -139,7 +145,28 @@ last_name.addEventListener('blur', (e) => {
 
         error_field[1].innerHTML = errorMessage;
         error_field[1].style.display = "block";
+        console.log(errorsList);
     }else{
+        error_field[1].style.display = "none";
+        last_name.value = inputValue;
+    }
+
+    if (islongEnough(inputValue, field)){
+        let errorMessage;
+        let fieldName = field.name;
+
+        for ( let i = 0; i < errorsList.length; i++){
+            if (errorsList[i][fieldName]){
+                if (errorsList[i][fieldName].input.name == fieldName){
+                    errorMessage = errorsList[i][fieldName].message;
+                }
+            }
+        }
+
+        error_field[1].innerHTML = errorMessage;
+        error_field[1].style.display = "block";
+        console.log(errorsList);
+    }else {
         error_field[1].style.display = "none";
         last_name.value = inputValue;
     }
