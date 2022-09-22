@@ -5255,12 +5255,13 @@ s .header-bar2 .compracuotas2 {
 /* ///// Validations Productos ///// */
 
 .subDivTrans {
-    font-size: xx-large;
+    font-size: medium;
     border-color: #0b0126;
     color: #1a6692;
     text-align: center;
     border-style: solid;
     border-radius: 1rem;
+    background-color: white;
 }
 
 .divTrans {
@@ -5309,3 +5310,24 @@ s .header-bar2 .compracuotas2 {
 .selectCheckout{
     display: block;
 }
+
+@media (min-width : 769px) {
+    
+.subDivTrans {
+    font-size: large;
+    border-color: #0b0126;
+    color: #1a6692;
+    text-align: center;
+    border-style: solid;
+    border-radius: 1rem;
+}}
+@media (min-width : 1264px) {
+    
+    .subDivTrans {
+        font-size: x-large;
+        border-color: #0b0126;
+        color: #1a6692;
+        text-align: center;
+        border-style: solid;
+        border-radius: 1rem;
+    }}
