@@ -1,3 +1,4 @@
+const formR = document.querySelector('.register_form');
 const error_field = document.querySelectorAll('.error_field')
 const first_Name = document.querySelector('#name');
 const last_name = document.querySelector('#lastname');
@@ -9,6 +10,7 @@ function Errors(input, message, errorField){
 }
 
 let errorsList = [];
+let inputsSelected = [];
 
 function isEmpty(input, field){
     let errorField = field.parentElement.nextElementSibling;
@@ -82,9 +84,27 @@ function islongEnough(input, field){
     }   
 }
 
+function validEmail(email) {
+    var filter = /^\s*[\w\-\+_]+(\.[\w\-\+_]+)*\@[\w\-\+_]+\.[\w\-\+_]+(\.[\w\-\+_]+)*\s*$/;
+    return String(email).search (filter) != -1;
+}
+
+formR.addEventListener('submit', (e) => {
+    e.preventDefault();
+    let firstNameSelected = first_Name.classList.contains('Selected');
+    let lastNameSelected = last_name.classList.contains('Selected');
+
+    if (errorsList.length > 0){
+        console.log("there's errors inside the form");
+    }else if (firstNameSelected && lastNameSelected){
+        console.log("no errors inside :D");
+    }
+});
+
 first_Name.addEventListener('blur', (e) => {
     let inputValue = e.target.value.trim();
     let field = first_Name;
+    first_Name.classList.add('Selected');
 
     if (isEmpty(inputValue, field)){
         let fieldName = field.name;
@@ -130,6 +150,7 @@ first_Name.addEventListener('blur', (e) => {
 last_name.addEventListener('blur', (e) => {
     let inputValue = e.target.value.trim();
     let field = last_name;
+    last_name.classList.add('Selected');
 
     if (isEmpty(inputValue, field)){
         let fieldName = field.name;
