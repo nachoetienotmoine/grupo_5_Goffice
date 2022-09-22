@@ -85,7 +85,7 @@ function islongEnough(input, field){
     }   
 }
 
-function notvalidEmail(input, field) {
+function notValidEmail(input, field) {
     var filter = /^\s*[\w\-\+_]+(\.[\w\-\+_]+)*\@[\w\-\+_]+\.[\w\-\+_]+(\.[\w\-\+_]+)*\s*$/;
     // return String(input).search (filter) != -1;
 
@@ -103,7 +103,7 @@ function notvalidEmail(input, field) {
 
     }
 
-    if (String(input).search (filter) != -1 && !alreadyChecked){
+    if (String(input).search (filter) == -1 && !alreadyChecked){
         let input_Name = {
             [fieldName]: new Errors (field, `El ${fieldName} debe contener un formato valido`, errorField)
         };
@@ -255,8 +255,8 @@ email.addEventListener('blur', (e) => {
         error_field[2].style.display = "none";
         email.value = inputValue;
     }
-    console.log(notvalidEmail(inputValue, field));
-    if (notvalidEmail(inputValue, field)){
+    console.log(notValidEmail(inputValue, field));
+    if (notValidEmail(inputValue, field)){
         let errorMessage;
         let fieldName = field.name;
 
