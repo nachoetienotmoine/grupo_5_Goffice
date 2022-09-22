@@ -14,16 +14,17 @@
                             <article class="box-checkout">
                                 <article class="contenedorproducto-checkout">
                                     <h2 class="h2-nombre">
-                                       
+
                                         Forma de pago
 
                                     </h2>
                                     <select name="pagosMetodo" id="metodopago">
 
                                         <% pagos.forEach(pago=> { %>
-                                            <option value="<%= pago.method %>" 
-                                                <% if (pago.id == 2) { %><%= 'selected' %><% }; %>>
-                                                <%= pago.method %>
+                                            <option value="<%= pago.method %>" <% if (pago.id==2) { %>
+                                                <%= 'selected' %>
+                                                    <% }; %>>
+                                                        <%= pago.method %>
                                             </option>
                                             <% }); %>
                                     </select>
@@ -31,16 +32,16 @@
 
                                     <form action="" class="formcheckout credit">
 
-                                       
+
 
 
 
                                         <div class="field name_field">
-                                            <label class="register_label" name="firstname">Name</label>
-                                            <input type="text" name="firstname" id="name" required minlength="5"
-                                                maxlength="18">
+                                            <label class="register_label" name="name">Name</label>
+                                            <input type="text" name="name" class="nameInputCheckout" required
+                                                minlength="5" maxlength="18">
                                         </div>
-                                        <div class="error_field">Ingrese su nombre</div>
+                                        <div class="error_fieldCheckoutCreditName"></div>
 
 
 
@@ -48,73 +49,117 @@
                                             <label class="register_label" name="email">Email</label>
                                             <input type="email" name="email" id="email" required>
                                         </div>
-                                        <div class="error_field">Ingrese su correo electrónico</div>
+
 
 
                                         <div class="field name_field">
                                             <label class="register_label" name="name">Phonenumber</label>
-                                            <input type="number" name="phonenumber" id="name" required minlength="5"
-                                                maxlength="18">
+                                            <input type="number" name="phonenumber" id="name"
+                                                class="phonenumberInputCheckout" required minlength="5" maxlength="18">
                                         </div>
+                                        <div class="error_fieldCheckoutCreditPhonenumber"></div>
+
+
+                                        <div class="field name_field">
+                                            <label class="register_label" name="provincia">Provincia</label>
+                                            <br><br>
+                                            <select name="" id="" class="selectCheckout">
+                                                
+                                                <option value="Buenos Aires">Buenos Aires</option>
+                                                <option value="Ciudad Autónoma de Buenos Aires">Ciudad Autónoma de Buenos Aires</option>
+                                                <option value="Catamarca">Catamarca</option>
+                                                <option value="Chaco">Chaco</option>
+                                                <option value="Chubut">Chubut</option>
+                                                <option value="Córdoba">Córdoba</option>
+                                                <option value="Corrientes">Corrientes</option>
+                                                <option value="Entre Ríos">Entre Ríos</option>
+                                                <option value="Formosa">Formosa</option>
+                                                <option value="Jujuy">Jujuy</option>
+                                                <option value="La Pampa">La Pampa</option>
+                                                <option value="La Rioja">La Rioja</option>
+                                                <option value="Mendoza">Mendoza</option>
+                                                <option value="Misiones">Misiones</option>
+                                                <option value="Neuquén">Neuquén</option>
+                                                <option value="Río Negro">Río Negro</option>
+                                                <option value="Salta">Salta</option>
+                                                <option value="San Juan">San Juan</option>
+                                                <option value="San Luis">San Luis</option>
+                                                <option value="Santa Cruz">Santa Cruz</option>
+                                                <option value="Santa Fe">Santa Fe</option>
+                                                <option value="Santiago del Estero">Santiago del Estero</option>
+                                                <option value="Tierra del Fuego">Tierra del Fuego</option>
+                                                <option value="Tucumán">Tucumán</option>
+                                               
+                                            </select>
+                                        </div>
+                                        <div class="error_fieldCheckoutCreditCodigoProvincia"></div>
+
+
+                                        <div class="field name_field">
+                                            <label class="register_label" name="ciudad">City</label>
+                                            <br><br>
+                                            <select name="" id="" class="selectCheckout">
+                                                <option value="Yerba Buena">Yerba Buena</option>
+                                                <option value="San Miguel de Tucuman">San Miguel de Tucuman</option>
+                                                
+                                            </select>
+                                        </div>
+                                        <div class="error_fieldCheckoutCreditCiudad"></div>
+
 
                                         <div class="field name_field">
                                             <label class="register_label" name="codigoP">Postal Code</label>
-                                            <input type="number" name="phonenumber" id="name" required minlength="5"
-                                                maxlength="18">
+                                            <input type="number" name="phonenumber" class="codigoPostalInputCheckout"
+                                                required minlength="5" maxlength="18">
                                         </div>
+                                        <div class="error_fieldCheckoutCreditCodigoPostal"></div>
+
+
                                         <div class="field name_field">
-                                            <label class="register_label" name="provincia">Provincia</label>
-                                            <input type="text" name="gender" id="name" required>
+                                            <label class="register_label" name="piso-departamento">Adress
+                                                </label>
+                                            <input type="text" name="direccion" class="adressInputCheckout" required>
                                         </div>
-                                        <div class="field name_field">
-                                            <label class="register_label" name="ciudad">Ciudad</label>
-                                            <input type="text" name="gender" id="name" required>
-                                        </div>
-                                        <div class="field name_field">
-                                            <label class="register_label" name="piso-departamento">Piso o
-                                                departamento</label>
-                                            <input type="text" name="gender" id="name" required>
-                                        </div>
+                                        <div class="error_fieldCheckoutCreditAdress"></div>
                                     </form>
 
+
                                     <form action="" class="formcheckout cash">
+                                        <section class="xxx">
 
-                                        
+                                            <div class="zzz">
+                                                <label class="register_label" name="name"> </label>
+                                                <div class="hhh"> Cabaliiito eiufheih</div>
+                                            </div>
+                                            <div class="error_field">Ingrese su local</div>
+
+                                            <div class="zzz">
+                                                <label class="register_label" name="ciudad">Ciudad</label>
+                                                <div class="hhh"> Cabaliiito eiufheih</div>
+                                            </div>
+
+                                            <div class="zzz">
+                                                <label class="register_label" name="ciudad">Ciudad</label>
+                                                <div class="hhh"> Cabaliiito eiufheih</div>
+                                            </div>
+                                            <div class="zzz">
+                                                <label class="register_label" name="ciudad">Ciudad</label>
+                                                <div class="hhh"> Cabaliiito eiufheih</div>
+                                            </div>
+                                            <div class="zzz">
+                                                <label class="register_label" name="ciudad">Ciudad</label>
+                                                <div class="hhh"> Cabaliiito eiufheih</div>
+                                            </div>
+
+                                        </section>
 
 
 
-
-                                        <div class="field name_field">
-                                            <label class="register_label" name="firstname">Local</label>
-                                            <input type="text" name="firstname" id="name" required minlength="5"
-                                                maxlength="18">
-                                        </div>
-                                        <div class="error_field">Ingrese su local</div>
-
-                                        <div class="field name_field">
-                                            <label class="register_label" name="name">Phonenumber</label>
-                                            <input type="number" name="phonenumber" id="name" required minlength="5"
-                                                maxlength="18">
-                                        </div>
-
-                                        <div class="field name_field">
-                                            <label class="register_label" name="codigoP">Postal Code</label>
-                                            <input type="number" name="phonenumber" id="name" required minlength="5"
-                                                maxlength="18">
-                                        </div>
-                                        <div class="field name_field">
-                                            <label class="register_label" name="provincia">Provincia</label>
-                                            <input type="text" name="gender" id="name" required>
-                                        </div>
-                                        <div class="field name_field">
-                                            <label class="register_label" name="ciudad">Ciudad</label>
-                                            <input type="text" name="gender" id="name" required>
-                                        </div>
                                     </form>
 
                                     <form action="" class="formcheckout debit">
 
-                                       
+
 
                                         <div class="field name_field">
                                             <label class="firstname" name="firstname">nombre</label>
@@ -139,45 +184,25 @@
 
                                     <form action="" class="formcheckout trans">
 
-                                        
-                                        <div class="field name_field">
-                                            <label class="register_label" name="firstname">Local</label>
-                                            <input type="text" name="firstname" id="name" required minlength="5"
-                                                maxlength="18">
-                                        </div>
-                                        <div class="field name_field">
-                                            <label class="register_label" name="firstname">Local</label>
-                                            <input type="text" name="firstname" id="name" required minlength="5"
-                                                maxlength="18">
-                                        </div>
+
+                                        <section class="sectionTrans">
 
 
-                                        <div class="field name_field">
-                                            <label class="register_label" name="firstname">Local</label>
-                                            <input type="text" name="firstname" id="name" required minlength="5"
-                                                maxlength="18">
-                                        </div>
-                                        <div class="error_field">Ingrese su local</div>
+                                            <div class="divTrans">
+                                                <label class="checkoutTransferenciaLabels" name="name">NOMBRE</label>
+                                                <div class="subDivTrans"> Goffice Inc</div>
+                                            </div>
 
-                                        <div class="field name_field">
-                                            <label class="register_label" name="name">Phonenumber</label>
-                                            <input type="number" name="phonenumber" id="name" required minlength="5"
-                                                maxlength="18">
-                                        </div>
+                                            <div class="divTrans">
+                                                <label class="checkoutTransferenciaLabels" name="cvu">CVU</label>
+                                                <div class="subDivTrans">0000003100036460396498</div>
+                                            </div>
+                                            <div class="divTrans">
+                                                <label class="checkoutTransferenciaLabels" name="alias">ALIAS</label>
+                                                <div class="subDivTrans">elde.clips.bagre.mp</div>
+                                            </div>
 
-                                        <div class="field name_field">
-                                            <label class="register_label" name="codigoP">Postal Code</label>
-                                            <input type="number" name="phonenumber" id="name" required minlength="5"
-                                                maxlength="18">
-                                        </div>
-                                        <div class="field name_field">
-                                            <label class="register_label" name="provincia">Provincia</label>
-                                            <input type="text" name="gender" id="name" required>
-                                        </div>
-                                        <div class="field name_field">
-                                            <label class="register_label" name="ciudad">Ciudad</label>
-                                            <input type="text" name="gender" id="name" required>
-                                        </div>
+                                        </section>
                                     </form>
                                 </article>
                             </article>
@@ -188,12 +213,13 @@
                     </section>
                     <br>
 
-                    <article class="precio-envio-checkout"><div class="resumen">
-                                <h2>Resume</h2>
-    
-                            </div>
+                    <article class="precio-envio-checkout">
+                        <div class="resumen">
+                            <h2>Resume</h2>
+
+                        </div>
                         <% for (let i=0; i < productosJ.length ; i++) {%>
-                            
+
                             <article class="productoCheckout">
                                 <div class="nombreProductoAgregado">
                                     <%= productosJ[i].name; %>
@@ -224,7 +250,7 @@
                 </section>
             </main>
             <div class="social-bar">
-       
+
                 <a href="" class="iconF"><i class="fab fa-facebook"></i></a>
                 <a href="" class="iconI"><i class="fab fa-instagram"></i></a>
                 <a href="" class="iconA"><i class="fas fa-at"></i></a>

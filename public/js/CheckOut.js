@@ -2,11 +2,13 @@ const form = document.querySelectorAll('.formcheckout');
 const formCredit = document.querySelector('.credit');
 const formCash = document.querySelector('.cash');
 const formDebit = document.querySelector('.debit');
-const formTrans = document.querySelector('.trans')
+const formTrans = document.querySelector('.trans');
+
 const selectMetodoPago = document.querySelector('#metodopago');
+
+
 formCash.classList.add('hide');
 formDebit.classList.add('hide');
-
 formTrans.classList.add('hide');
 
 
@@ -49,6 +51,5 @@ selectMetodoPago.addEventListener('change', (e)=>{
         }
     ;
 })
-
 
 
