@@ -3,6 +3,7 @@ const error_field = document.querySelectorAll('.error_field')
 const first_Name = document.querySelector('#name');
 const last_name = document.querySelector('#lastname');
 const email = document.querySelector('#email');
+const password = document.querySelector('#password');
 
 function Errors(input, message, errorField){
     this.input = input,
@@ -49,7 +50,7 @@ function isEmpty(input, field){
     }   
 }
 
-function islongEnough(input, field){
+function islongEnough(input, field, longSet){
     let errorField = field.parentElement.nextElementSibling;
     let fieldName = field.name;
 
@@ -57,14 +58,14 @@ function islongEnough(input, field){
 
     for (let i = 0; i < errorsList.length; i++){
         if (errorsList[i][fieldName]){
-            errorsList[i][fieldName].message === `El ${fieldName} debe contener al menos 2 caracteres` ? alreadyChecked = true : "";
+            errorsList[i][fieldName].message === `El ${fieldName} debe contener al menos ${longSet} caracteres` ? alreadyChecked = true : "";
         }
 
     }
 
     if (input.length <= 2 && !alreadyChecked){
         let input_Name = {
-            [fieldName]: new Errors (field, `El ${fieldName} debe contener al menos 2 caracteres`, errorField)
+            [fieldName]: new Errors (field, `El ${fieldName} debe contener al menos ${longSet} caracteres`, errorField)
         };
 
         errorsList.push(input_Name);
@@ -72,7 +73,7 @@ function islongEnough(input, field){
     }else if (input.length > 2){
         for (let i = 0; i < errorsList.length; i++){
             if (errorsList[i][fieldName]){
-                if (errorsList[i][fieldName].message === `El ${field.name} debe contener al menos 2 caracteres`){
+                if (errorsList[i][fieldName].message === `El ${field.name} debe contener al menos ${longSet} caracteres`){
                     Object.keys(errorsList).map(function(i) {
                         errorsList.splice(i,1);
                       });
@@ -179,11 +180,12 @@ formR.addEventListener('submit', (e) => {
     e.preventDefault();
     let firstNameSelected = first_Name.classList.contains('Selected');
     let lastNameSelected = last_name.classList.contains('Selected');
-    let emailSelected = email.classList.contains('Selected');;
+    let emailSelected = email.classList.contains('Selected');
+    let passwordSelected = password.classList.contains('Selected');;
 
     if (errorsList.length > 0){
         console.log("there's errors inside the form");
-    }else if (firstNameSelected && lastNameSelected && emailSelected){
+    }else if (firstNameSelected && lastNameSelected && emailSelected && passwordSelected){
         console.log("no errors inside :D");
     }
 });
@@ -212,7 +214,7 @@ first_Name.addEventListener('blur', (e) => {
         first_Name.value = inputValue;
     }
 
-    if (islongEnough(inputValue, field)){
+    if (islongEnough(inputValue, field, 2)){
         let errorMessage;
         let fieldName = field.name;
 
@@ -256,7 +258,7 @@ last_name.addEventListener('blur', (e) => {
         last_name.value = inputValue;
     }
 
-    if (islongEnough(inputValue, field)){
+    if (islongEnough(inputValue, field, 2)){
         let errorMessage;
         let fieldName = field.name;
 
@@ -345,4 +347,49 @@ email.addEventListener('blur', (e) => {
     }
     
 
+});
+
+password.addEventListener('blur', (e) => {
+    let inputValue = e.target.value.trim();
+    let field = password;
+    password.classList.add('Selected');
+
+    if (isEmpty(inputValue, field)){
+        let fieldName = field.name;
+        let errorMessage;
+
+        for ( let i = 0; i < errorsList.length; i++){
+            if (errorsList[i][fieldName]){
+                if (errorsList[i][fieldName].input.name == fieldName){
+                    errorMessage = errorsList[i][fieldName].message;
+                }
+            }
+        }
+
+        error_field[3].innerHTML = errorMessage;
+        error_field[3].style.display = "block";
+    }else{
+        error_field[3].style.display = "none";
+        password.value = inputValue;
+    }
+
+    if (islongEnough(inputValue, field, 8)){
+        let errorMessage;
+        let fieldName = field.name;
+
+        for ( let i = 0; i < errorsList.length; i++){
+            if (errorsList[i][fieldName]){
+                if (errorsList[i][fieldName].input.name == fieldName){
+                    errorMessage = errorsList[i][fieldName].message;
+                }
+            }
+        }
+
+        error_field[3].innerHTML = errorMessage;
+        error_field[3].style.display = "block";
+        console.log(errorsList);
+    }else {
+        error_field[3].style.display = "none";
+        password.value = inputValue;
+    }
 });
