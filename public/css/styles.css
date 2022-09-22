@@ -4080,7 +4080,11 @@ x
     height: 100%;
     border-radius: 50%;
 }
-
+.detail-imagePC>#general-detail-imagePC1 {
+    width: 50%;
+    height: 100%;
+    
+}
 .main-detail-section>.detail-imagePC {
     display: flex;
     width: 100%;
@@ -4136,6 +4140,8 @@ x
 
 .main-detail-sectionPC>.detail-imagePC {
     max-height: 50%;
+    background-color: rgb(255 255 255 / 50%);
+    border-radius: 10px;
 }
 
 .main-detail-section2 {
