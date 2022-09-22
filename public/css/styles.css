@@ -396,8 +396,7 @@ p {
     flex-direction: column;
     flex-wrap: wrap;
     box-shadow: 0 0.5rem 1.5rem rgb(0 0 0 / 20%);
-    padding-left: 1%;
-    padding-right: 1%;
+   padding: 1%;
     border-radius: 1rem;
     font-family: "Source Sans Pro", sans-serif;
     justify-content: space-between;
@@ -1037,8 +1036,7 @@ p {
         justify-content: center;
         flex-wrap: wrap;
         box-shadow: 0 0.5rem 1.5rem rgb(0 0 0 / 20%);
-        padding-left: 1%;
-        padding-right: 1%;
+        padding: 1%;
         font-family: "Source Sans Pro", sans-serif;
         width: 35%;
         height: 70%;
