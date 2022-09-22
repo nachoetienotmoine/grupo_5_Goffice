@@ -167,6 +167,6 @@ ALTER TABLE goffice_db.carts_products DROP FOREIGN KEY carts_products_ibfk_1;
 ALTER TABLE goffice_db.carts_products ADD CONSTRAINT carts_products_ibfk_1 FOREIGN KEY (carts_id) REFERENCES goffice_db.carts(id) ON DELETE CASCADE ON UPDATE CASCADE;
 
 INSERT INTO payment_methods (method)  VALUES ('efectivo');
-INSERT INTO payment_methods (method)  VALUES ('credito');
-INSERT INTO payment_methods (method)  VALUES ('debito');
+INSERT INTO payment_methods (method)  VALUES ('mercado pago');
+INSERT INTO payment_methods (method)  VALUES ('tarjeta');
 INSERT INTO payment_methods (method)  VALUES ('transferencia');
