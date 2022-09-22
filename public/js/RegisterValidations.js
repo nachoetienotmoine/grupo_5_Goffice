@@ -5,6 +5,7 @@ const last_name = document.querySelector('#lastname');
 const email = document.querySelector('#email');
 const password = document.querySelector('#password');
 const phoneNumber = document.querySelector('#phonenumber');
+const image = document.querySelector('#file');
 
 function Errors(input, message, errorField){
     this.input = input,
@@ -219,10 +220,11 @@ formR.addEventListener('submit', (e) => {
     let emailSelected = email.classList.contains('Selected');
     let passwordSelected = password.classList.contains('Selected');
     let phoneNumberSelected = phoneNumber.classList.contains('Selected');
+    let imageSelected = image.classList.contains('Selected');;
 
     if (errorsList.length > 0){
         console.log("there's errors inside the form");
-    }else if (firstNameSelected && lastNameSelected && emailSelected && passwordSelected && phoneNumberSelected){
+    }else if (firstNameSelected && lastNameSelected && emailSelected && passwordSelected && phoneNumberSelected && imageSelected){
         console.log("no errors inside :D");
     }
 });
@@ -474,4 +476,49 @@ phoneNumber.addEventListener('blur', (e) => {
         phoneNumber.value = inputValue;
     }
 
+});
+
+image.addEventListener('change', (e) => {
+    let field = image;
+    let inputValue = e.target.value.trim();
+    let fileExtension = inputValue.split('.');
+    let extension = fileExtension[1];
+    let allowedExtensions = ['jpg', 'jpeg', 'png', 'gif'];
+
+    let extensionMatch = false;
+    image.classList.add('Selected');
+
+    allowedExtensions.forEach(extensionA => {
+        if (extensionA === extension) {
+            extensionMatch = true;
+        }
+    });
+
+    if (!extensionMatch){
+        let errorField = field.parentElement.nextElementSibling;
+        let fieldName = field.name;
+
+        let input_Name = {
+            [fieldName]: new Errors (field, `Debe ingresar una imagen en formato : (JPG, JPEG, PNG, GIF)`, errorField)
+        };
+        errorsList.push(input_Name);
+        console.log(errorsList);
+        error_field[5].innerHTML = "Debe ingresar una imagen en formato : (JPG, JPEG, PNG, GIF)";
+        error_field[5].style.display = "block";
+    }else{
+        let fieldName = field.name;
+        for (let i = 0; i < errorsList.length; i++){
+            if (errorsList[i][fieldName]){
+                if (errorsList[i][fieldName].message === `Debe ingresar una imagen en formato : (JPG, JPEG, PNG, GIF)`){
+                    Object.keys(errorsList).map(function(i) {
+                        errorsList.splice(i,1);
+                    });
+                    error_field[5].style.display = "none";
+                    return false;
+                }
+            }
+        }
+
+        error_field[5].style.display = "none";
+    }
 });
