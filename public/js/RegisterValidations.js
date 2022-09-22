@@ -6,6 +6,7 @@ const email = document.querySelector('#email');
 const password = document.querySelector('#password');
 const phoneNumber = document.querySelector('#phonenumber');
 const image = document.querySelector('#file');
+const gender = document.querySelector('#gender');
 
 function Errors(input, message, errorField){
     this.input = input,
@@ -220,11 +221,12 @@ formR.addEventListener('submit', (e) => {
     let emailSelected = email.classList.contains('Selected');
     let passwordSelected = password.classList.contains('Selected');
     let phoneNumberSelected = phoneNumber.classList.contains('Selected');
-    let imageSelected = image.classList.contains('Selected');;
+    let imageSelected = image.classList.contains('Selected');
+    let genderSelected = gender.classList.contains('Selected');
 
     if (errorsList.length > 0){
         console.log("there's errors inside the form");
-    }else if (firstNameSelected && lastNameSelected && emailSelected && passwordSelected && phoneNumberSelected && imageSelected){
+    }else if (firstNameSelected && lastNameSelected && emailSelected && passwordSelected && phoneNumberSelected && imageSelected && genderSelected){
         console.log("no errors inside :D");
     }
 });
@@ -502,7 +504,7 @@ image.addEventListener('change', (e) => {
             [fieldName]: new Errors (field, `Debe ingresar una imagen en formato : (JPG, JPEG, PNG, GIF)`, errorField)
         };
         errorsList.push(input_Name);
-        console.log(errorsList);
+
         error_field[5].innerHTML = "Debe ingresar una imagen en formato : (JPG, JPEG, PNG, GIF)";
         error_field[5].style.display = "block";
     }else{
@@ -521,4 +523,86 @@ image.addEventListener('change', (e) => {
 
         error_field[5].style.display = "none";
     }
+});
+
+gender.addEventListener('blur', (e) => {
+    let inputValue = e.target.value.trim();
+    let field = gender;
+    let allowedGenders = ['male', 'female', 'secret'];
+    let isAllowedGender = false;
+    gender.classList.add('Selected');
+
+    if (isEmpty(inputValue, field)){
+        let fieldName = field.name;
+        let errorMessage;
+
+        for ( let i = 0; i < errorsList.length; i++){
+            if (errorsList[i][fieldName]){
+                if (errorsList[i][fieldName].input.name == fieldName){
+                    errorMessage = errorsList[i][fieldName].message;
+                }
+            }
+        }
+
+        error_field[6].innerHTML = errorMessage;
+        error_field[6].style.display = "block";
+    }else{
+        error_field[6].style.display = "none";
+        gender.value = inputValue;
+    }
+
+    if (isNotBetween(inputValue, field, 4, 6)){
+        let fieldName = field.name;
+        let errorMessage;
+
+        for ( let i = 0; i < errorsList.length; i++){
+            if (errorsList[i][fieldName]){
+                if (errorsList[i][fieldName].input.name == fieldName){
+                    errorMessage = errorsList[i][fieldName].message;
+                }
+            }
+        }
+
+        error_field[6].innerHTML = errorMessage;
+        error_field[6].style.display = "block";
+    }else{
+        error_field[6].style.display = "none";
+        gender.value = inputValue;
+    }
+
+    allowedGenders.forEach(genre => {
+        if (genre == inputValue) {
+            isAllowedGender = true;
+        }
+    });
+
+    if (!isAllowedGender){
+        let errorField = field.parentElement.nextElementSibling;
+        let fieldName = field.name;
+
+        let input_Name = {
+            [fieldName]: new Errors (field, `los ${fieldName} aceptados son: male, female, secret`, errorField)
+        };
+        errorsList.push(input_Name);
+
+        error_field[6].innerHTML = `los ${fieldName} aceptados son: male, female, secret`;
+        error_field[6].style.display = "block";
+    }else{
+        let fieldName = field.name;
+        for (let i = 0; i < errorsList.length; i++){
+            if (errorsList[i][fieldName]){
+                if (errorsList[i][fieldName].message === `los ${fieldName} aceptados son: male, female, secret`){
+                    Object.keys(errorsList).map(function(i) {
+                        errorsList.splice(i,1);
+                    });
+                    error_field[6].style.display = "none";
+                    return false;
+                }
+            }
+        }
+
+        error_field[6].style.display = "none";
+    }
+
+    console.log(errorsList);
 });
