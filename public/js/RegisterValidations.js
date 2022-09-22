@@ -126,6 +126,55 @@ function notValidEmail(input, field) {
     }
 }
 
+async function oneUser(emailInput){
+    let user = await fetch('/baseDeDatosInfo/findOneEmail', 
+    {method:'POST',headers: {'Content-Type':'application/json'},body: JSON.stringify({userEmail: emailInput})})
+    .then(res => res.json()).then(data => {return data;});
+
+    return user.email;
+}
+
+async function userAlreadyExists(inputValue, field){
+    let errorField = field.parentElement.nextElementSibling;
+    let fieldName = field.name;
+    let alreadyChecked = false;
+    let user = await oneUser(inputValue);
+
+    for (let i = 0; i < errorsList.length; i++){
+        if (errorsList[i][fieldName]){
+            errorsList[i][fieldName].message === `El ${fieldName} ya existe` ? alreadyChecked = true : "";
+        }
+    }
+
+    if (user === inputValue && !alreadyChecked){
+        let input_Name = {
+            [fieldName]: new Errors (field, `El ${fieldName} ya existe`, errorField)
+        };
+        errorsList.push(input_Name);
+        return true;
+    }else if (user != inputValue){
+        for (let i = 0; i < errorsList.length; i++){
+            if (errorsList[i][fieldName]){
+                if (errorsList[i][fieldName].message === `El ${fieldName} ya existe`){
+                    Object.keys(errorsList).map(function(i) {
+                        errorsList.splice(i,1);
+                      });
+                    return false;
+                }
+            }
+        }
+    }
+    else {
+        return true;
+    }
+
+}
+
+
+
+
+
+
 formR.addEventListener('submit', (e) => {
     e.preventDefault();
     let firstNameSelected = first_Name.classList.contains('Selected');
@@ -158,7 +207,6 @@ first_Name.addEventListener('blur', (e) => {
 
         error_field[0].innerHTML = errorMessage;
         error_field[0].style.display = "block";
-        console.log(errorsList);
     }else{
         error_field[0].style.display = "none";
         first_Name.value = inputValue;
@@ -178,7 +226,6 @@ first_Name.addEventListener('blur', (e) => {
 
         error_field[0].innerHTML = errorMessage;
         error_field[0].style.display = "block";
-        console.log(errorsList);
     }else {
         error_field[0].style.display = "none";
         first_Name.value = inputValue;
@@ -204,7 +251,6 @@ last_name.addEventListener('blur', (e) => {
 
         error_field[1].innerHTML = errorMessage;
         error_field[1].style.display = "block";
-        console.log(errorsList);
     }else{
         error_field[1].style.display = "none";
         last_name.value = inputValue;
@@ -250,12 +296,11 @@ email.addEventListener('blur', (e) => {
 
         error_field[2].innerHTML = errorMessage;
         error_field[2].style.display = "block";
-        console.log(errorsList);
     }else{
         error_field[2].style.display = "none";
         email.value = inputValue;
     }
-    console.log(notValidEmail(inputValue, field));
+
     if (notValidEmail(inputValue, field)){
         let errorMessage;
         let fieldName = field.name;
@@ -270,12 +315,34 @@ email.addEventListener('blur', (e) => {
 
         error_field[2].innerHTML = errorMessage;
         error_field[2].style.display = "block";
-        console.log(errorsList);
     }else {
         error_field[2].style.display = "none";
         email.value = inputValue;
     }
 
-
+    if (userAlreadyExists(inputValue, field)){
+        userAlreadyExists(inputValue, field)
+        .then(res => {
+            if (res){
+                let errorMessage;
+                let fieldName = field.name;
+        
+                for ( let i = 0; i < errorsList.length; i++){
+                    if (errorsList[i][fieldName]){
+                        if (errorsList[i][fieldName].input.name == fieldName){
+                            errorMessage = errorsList[i][fieldName].message;
+                        }
+                    }
+                }
+        
+                error_field[2].innerHTML = errorMessage;
+                error_field[2].style.display = "block";
+            }
+    });
+    }else{
+        error_field[2].style.display = "none";
+        email.value = inputValue;
+    }
+    
 
 });
