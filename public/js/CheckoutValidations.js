@@ -21,7 +21,7 @@ let errorNameCheckout = false;
 let errorPhonenumberCheckout = false;
 let errorCodigoPostalCheckout = false;
 let errorAdressCheckout = false;
-let errorAdressEmail = false;
+let errorEmailCheckout = false;
 
 validationCheckoutCreditName.addEventListener('blur', () => {
 
@@ -112,16 +112,16 @@ validationCheckoutCreditEmail.addEventListener('blur', () => {
     if (validationCheckoutCreditEmail.value == "") {
         error_fieldCheckoutCreditEmail.style.display = "block"
         error_fieldCheckoutCreditEmail.innerHTML = "Debe completar el siguiente campo"
-        errorAdressEmail = false
+        errorEmailCheckout = false
 
     } else if (!email.value.match(emailVerification)) {
         error_fieldCheckoutCreditEmail.style.display = "block"
         error_fieldCheckoutCreditEmail.innerHTML = "El caracter usado no es correcto"
-        errorAdressEmail = false
+        errorEmailCheckout = false
     }
     else {
         error_fieldCheckoutCreditEmail.style.display = "none"
-        errorAdressEmail = true
+        errorEmailCheckout = true
     }
 
 
@@ -131,7 +131,7 @@ validationCheckoutCreditEmail.addEventListener('blur', () => {
 
 mercadoPagoButton.addEventListener('click', function (event) {
 
-    if (!errorAdressCheckout || !errorCodigoPostalCheckout || !errorNameCheckout || !errorPhonenumberCheckout) {
+    if (!errorAdressCheckout || !errorCodigoPostalCheckout || !errorNameCheckout || !errorPhonenumberCheckout ||errorEmailCheckout ) {
         error_fieldCheckoutCreditMercadopago.style.display = 'block'
         error_fieldCheckoutCreditMercadopago.innerHTML = "Debes completar las casillas correctamente y luego reenviar el formulario"
         event.preventDefault();
