@@ -5304,7 +5304,18 @@ s .header-bar2 .compracuotas2 {
     font-size: large;
     color: red;
 }
-
+.error_fieldCheckoutCreditEmail {
+    display: none;
+    display: none;
+    font-size: large;
+    color: red;
+}
+.error_fieldCheckoutCreditMercadopago {
+    display: none;
+    display: none;
+    font-size: large;
+    color: red;
+}
 .selectCheckout{
     display: block;
 }

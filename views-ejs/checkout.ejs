@@ -38,7 +38,7 @@
 
                                         <div class="field name_field">
                                             <label class="register_label" name="name">Name</label>
-                                            <input type="text" name="name" class="nameInputCheckout" required
+                                            <input type="text" name="name" class="nameInputCheckout" 
                                                 minlength="5" maxlength="18">
                                         </div>
                                         <div class="error_fieldCheckoutCreditName"></div>
@@ -47,15 +47,16 @@
 
                                         <div class="field email_field">
                                             <label class="register_label" name="email">Email</label>
-                                            <input type="email" name="email" id="email" required>
+                                            <input type="email" name="email" id="email" class="EmailInputCheckout">
                                         </div>
+                                        <div class="error_fieldCheckoutCreditEmail"></div>
 
 
 
                                         <div class="field name_field">
                                             <label class="register_label" name="name">Phonenumber</label>
                                             <input type="number" name="phonenumber" id="name"
-                                                class="phonenumberInputCheckout" required minlength="5" maxlength="18">
+                                                class="phonenumberInputCheckout" >
                                         </div>
                                         <div class="error_fieldCheckoutCreditPhonenumber"></div>
 
@@ -111,7 +112,7 @@
                                         <div class="field name_field">
                                             <label class="register_label" name="codigoP">Postal Code</label>
                                             <input type="number" name="phonenumber" class="codigoPostalInputCheckout"
-                                                required minlength="5" maxlength="18">
+                                                >
                                         </div>
                                         <div class="error_fieldCheckoutCreditCodigoPostal"></div>
 
@@ -119,15 +120,16 @@
                                         <div class="field name_field">
                                             <label class="register_label" name="piso-departamento">Adress
                                             </label>
-                                            <input type="text" name="direccion" class="adressInputCheckout" required>
+                                            <input type="text" name="direccion" class="adressInputCheckout" >
                                         </div>
                                         <div class="error_fieldCheckoutCreditAdress"></div>
 <br>
                                         <div class="comprar">
-                                            <button class="botoncompra">
+                                            <button class="botoncompra" id="mercadoPagoButton">
                                                Mercado Pago
                                             </button>
                                         </div>
+                                        <div class="error_fieldCheckoutCreditMercadopago"></div>
                                     </form>
 
 
