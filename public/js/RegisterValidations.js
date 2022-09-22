@@ -4,6 +4,7 @@ const first_Name = document.querySelector('#name');
 const last_name = document.querySelector('#lastname');
 const email = document.querySelector('#email');
 const password = document.querySelector('#password');
+const phoneNumber = document.querySelector('#phonenumber');
 
 function Errors(input, message, errorField){
     this.input = input,
@@ -171,6 +172,41 @@ async function userAlreadyExists(inputValue, field){
 
 }
 
+function isNotBetween(input, field, rangeA, rangeB){
+    let errorField = field.parentElement.nextElementSibling;
+    let fieldName = field.name;
+    let alreadyChecked = false;
+
+    for (let i = 0; i < errorsList.length; i++){
+        if (errorsList[i][fieldName]){
+            errorsList[i][fieldName].message === `El ${fieldName} debe ser entre ${rangeA} y ${rangeB} caracteres` ? alreadyChecked = true : "";
+        }
+
+    }
+
+    if (input.length < rangeA || input.length >= rangeB && !alreadyChecked){
+        let input_Name = {
+            [fieldName]: new Errors (field, `El ${fieldName} debe ser entre ${rangeA} y ${rangeB} caracteres`, errorField)
+        };
+
+        errorsList.push(input_Name);
+        return true;
+    }else if (input.length > rangeA || input.length <= rangeB){
+        for (let i = 0; i < errorsList.length; i++){
+            if (errorsList[i][fieldName]){
+                if (errorsList[i][fieldName].message === `El ${fieldName} debe ser entre ${rangeA} y ${rangeB} caracteres`){
+                    Object.keys(errorsList).map(function(i) {
+                        errorsList.splice(i,1);
+                      });
+                    return false;
+                }
+            }
+        }
+    }else{
+        return true;
+    }   
+}
+
 
 
 
@@ -181,11 +217,12 @@ formR.addEventListener('submit', (e) => {
     let firstNameSelected = first_Name.classList.contains('Selected');
     let lastNameSelected = last_name.classList.contains('Selected');
     let emailSelected = email.classList.contains('Selected');
-    let passwordSelected = password.classList.contains('Selected');;
+    let passwordSelected = password.classList.contains('Selected');
+    let phoneNumberSelected = phoneNumber.classList.contains('Selected');
 
     if (errorsList.length > 0){
         console.log("there's errors inside the form");
-    }else if (firstNameSelected && lastNameSelected && emailSelected && passwordSelected){
+    }else if (firstNameSelected && lastNameSelected && emailSelected && passwordSelected && phoneNumberSelected){
         console.log("no errors inside :D");
     }
 });
@@ -392,4 +429,49 @@ password.addEventListener('blur', (e) => {
         error_field[3].style.display = "none";
         password.value = inputValue;
     }
+});
+
+phoneNumber.addEventListener('blur', (e) => {
+    let inputValue = e.target.value.trim();
+    let field = phoneNumber;
+    phoneNumber.classList.add('Selected');
+
+    if (isEmpty(inputValue, field)){
+        let fieldName = field.name;
+        let errorMessage;
+
+        for ( let i = 0; i < errorsList.length; i++){
+            if (errorsList[i][fieldName]){
+                if (errorsList[i][fieldName].input.name == fieldName){
+                    errorMessage = errorsList[i][fieldName].message;
+                }
+            }
+        }
+
+        error_field[4].innerHTML = errorMessage;
+        error_field[4].style.display = "block";
+    }else{
+        error_field[4].style.display = "none";
+        phoneNumber.value = inputValue;
+    }
+
+    if (isNotBetween(inputValue, field, 6, 18)){
+        let fieldName = field.name;
+        let errorMessage;
+
+        for ( let i = 0; i < errorsList.length; i++){
+            if (errorsList[i][fieldName]){
+                if (errorsList[i][fieldName].input.name == fieldName){
+                    errorMessage = errorsList[i][fieldName].message;
+                }
+            }
+        }
+
+        error_field[4].innerHTML = errorMessage;
+        error_field[4].style.display = "block";
+    }else{
+        error_field[4].style.display = "none";
+        phoneNumber.value = inputValue;
+    }
+
 });
