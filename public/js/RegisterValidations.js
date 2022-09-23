@@ -249,7 +249,7 @@ first_Name.addEventListener('blur', (e) => {
         }
 
         error_field[0].innerHTML = errorMessage;
-        error_field[0].style.display = "block";
+        return error_field[0].style.display = "block";
     }else{
         error_field[0].style.display = "none";
         first_Name.value = inputValue;
@@ -268,10 +268,10 @@ first_Name.addEventListener('blur', (e) => {
         }
 
         error_field[0].innerHTML = errorMessage;
-        error_field[0].style.display = "block";
+        return error_field[0].style.display = "block";
     }else {
         error_field[0].style.display = "none";
-        first_Name.value = inputValue;
+        return first_Name.value = inputValue;
     }
 });
 
@@ -293,7 +293,7 @@ last_name.addEventListener('blur', (e) => {
         }
 
         error_field[1].innerHTML = errorMessage;
-        error_field[1].style.display = "block";
+        return error_field[1].style.display = "block";
     }else{
         error_field[1].style.display = "none";
         last_name.value = inputValue;
@@ -312,8 +312,7 @@ last_name.addEventListener('blur', (e) => {
         }
 
         error_field[1].innerHTML = errorMessage;
-        error_field[1].style.display = "block";
-        console.log(errorsList);
+        return error_field[1].style.display = "block";
     }else {
         error_field[1].style.display = "none";
         last_name.value = inputValue;
@@ -338,7 +337,7 @@ email.addEventListener('blur', (e) => {
         }
 
         error_field[2].innerHTML = errorMessage;
-        error_field[2].style.display = "block";
+        return error_field[2].style.display = "block";
     }else{
         error_field[2].style.display = "none";
         email.value = inputValue;
@@ -357,7 +356,7 @@ email.addEventListener('blur', (e) => {
         }
 
         error_field[2].innerHTML = errorMessage;
-        error_field[2].style.display = "block";
+        return error_field[2].style.display = "block";
     }else {
         error_field[2].style.display = "none";
         email.value = inputValue;
@@ -408,7 +407,7 @@ password.addEventListener('blur', (e) => {
         }
 
         error_field[3].innerHTML = errorMessage;
-        error_field[3].style.display = "block";
+        return error_field[3].style.display = "block";
     }else{
         error_field[3].style.display = "none";
         password.value = inputValue;
@@ -427,8 +426,7 @@ password.addEventListener('blur', (e) => {
         }
 
         error_field[3].innerHTML = errorMessage;
-        error_field[3].style.display = "block";
-        console.log(errorsList);
+        return error_field[3].style.display = "block";
     }else {
         error_field[3].style.display = "none";
         password.value = inputValue;
@@ -453,7 +451,7 @@ phoneNumber.addEventListener('blur', (e) => {
         }
 
         error_field[4].innerHTML = errorMessage;
-        error_field[4].style.display = "block";
+        return error_field[4].style.display = "block";
     }else{
         error_field[4].style.display = "none";
         phoneNumber.value = inputValue;
@@ -472,7 +470,7 @@ phoneNumber.addEventListener('blur', (e) => {
         }
 
         error_field[4].innerHTML = errorMessage;
-        error_field[4].style.display = "block";
+        return error_field[4].style.display = "block";
     }else{
         error_field[4].style.display = "none";
         phoneNumber.value = inputValue;
@@ -545,7 +543,7 @@ gender.addEventListener('blur', (e) => {
         }
 
         error_field[6].innerHTML = errorMessage;
-        error_field[6].style.display = "block";
+        return error_field[6].style.display = "block";
     }else{
         error_field[6].style.display = "none";
         gender.value = inputValue;
@@ -564,7 +562,7 @@ gender.addEventListener('blur', (e) => {
         }
 
         error_field[6].innerHTML = errorMessage;
-        error_field[6].style.display = "block";
+        return error_field[6].style.display = "block";
     }else{
         error_field[6].style.display = "none";
         gender.value = inputValue;
@@ -586,7 +584,7 @@ gender.addEventListener('blur', (e) => {
         errorsList.push(input_Name);
 
         error_field[6].innerHTML = `los ${fieldName} aceptados son: male, female, secret`;
-        error_field[6].style.display = "block";
+        return error_field[6].style.display = "block";
     }else{
         let fieldName = field.name;
         for (let i = 0; i < errorsList.length; i++){
@@ -603,6 +601,4 @@ gender.addEventListener('blur', (e) => {
 
         error_field[6].style.display = "none";
     }
-
-    console.log(errorsList);
 });
