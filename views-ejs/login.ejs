@@ -28,7 +28,7 @@
 
                     <div class="field password_field">
                         <label class="login_label" for="password">Password</label>
-                        <input id="LoginPasswordValidation" type="password" name="password"  value="<%= locals.old && old.password %>">
+                        <input class="LoginPasswordValidation" type="password" name="password" id="password" value="<%= locals.old && old.password %>">
                         <% if (locals.errors && errors.password) { %>
                             <p class="feedback">
                                 <%= errors.password.msg %>

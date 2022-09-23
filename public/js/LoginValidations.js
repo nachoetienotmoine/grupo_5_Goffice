@@ -1,5 +1,5 @@
 let LoginEmailValidation = document.querySelector('#LoginEmailValidation');
-let LoginPasswordValidation = document.querySelector('#LoginPasswordValidation');
+let LoginPasswordValidation = document.querySelector('.LoginPasswordValidation');
 
 const error_fieldLoginPassword = document.querySelector('.error_fieldLoginPassword')
 const error_fieldLoginEmail = document.querySelector('.error_fieldLoginEmail')
