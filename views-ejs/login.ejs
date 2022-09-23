@@ -16,19 +16,19 @@
 
                     <div class="field email_field">
                         <label class="login_label" for="email">Email</label>
-                        <input class="login-val" type="text" name="email" id="email" value="<%= locals.old && old.email %>">
+                        <input id="LoginEmailValidation" type="text" name="email"   value="<%= locals.old && old.email %>">
                         <% if (locals.errors && errors.email) { %>
                             <p class="feedback">
                                 <%= errors.email.msg %>
                             </p>
                             <% } %>
                     </div>
-                    <div class="error_field">Ingrese su correo electronico</div>
+                    <div class="error_fieldLoginEmail"></div>
 
 
                     <div class="field password_field">
                         <label class="login_label" for="password">Password</label>
-                        <input class="login-pass" type="password" name="password" id="password" value="<%= locals.old && old.password %>">
+                        <input id="LoginPasswordValidation" type="password" name="password"  value="<%= locals.old && old.password %>">
                         <% if (locals.errors && errors.password) { %>
                             <p class="feedback">
                                 <%= errors.password.msg %>
@@ -37,6 +37,9 @@
                                 <ion-icon onclick="toggle()" class="password-icon" id="eye-icon" name="eye-off"
                                     size="large"></ion-icon>
                     </div>
+                    <div class="error_fieldLoginPassword"></div>
+
+
                     <div class="field password_field">
                         <label class="login_label" for="password">Recordar usuario</label>
 

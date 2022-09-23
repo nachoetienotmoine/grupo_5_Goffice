@@ -1,36 +1,49 @@
+let LoginEmailValidation = document.querySelector('#LoginEmailValidation');
+let LoginPasswordValidation = document.querySelector('#LoginPasswordValidation');
 
-let formulario = document.querySelector("form.login_validation");
-
-formulario.addEventListener("submit", function(e){
-
-    let errors = [];
-
-    let campoEmail = document.querySelector(".login-val");
+const error_fieldLoginPassword = document.querySelector('.error_fieldLoginPassword')
+const error_fieldLoginEmail = document.querySelector('.error_fieldLoginEmail')
 
 
-    if (campoEmail.value == "") {
-        errors.push("El campo Email tiene que estar completo")        
-    } else if (campoEmail.value.length < 3) {
-        errors.push("El campo Email tiene que ser mayor válido")
-    }       
+let errorPassword = false;
 
-    let campoPassword = document.querySelector(".login-pass");
+LoginPasswordValidation.addEventListener('keyup', function(){
+if(LoginPasswordValidation.value == ""){
+    error_fieldLoginPassword.style.display = "block"
+    LoginPasswordValidation.style.borderColor = "red"
+    error_fieldLoginPassword.innerHTML = "No debes dejar este campo sin llenar";
+    errorPassword = false;
+}else if(LoginPasswordValidation.value.length < 8){
+    error_fieldLoginPassword.style.display = "block"
+    LoginPasswordValidation.style.borderColor = "red"
+    error_fieldLoginPassword.innerHTML = "Los caracteres deben superar los 8";
+    errorPassword = false;
 
+}
+else if(!LoginPasswordValidation.value.match(/(?=.*?[a-z])/)){
+    error_fieldLoginPassword.style.display = "block"
+    LoginPasswordValidation.style.borderColor = "red"
+    error_fieldLoginPassword.innerHTML = "debe contener un nimusolsjklsf";
+    errorPassword = false;
 
-    if (campoPassword.value == "") {
-        errors.push("El campo Password tiene que estar completo")        
-    } else if (campoPassword.value.length < 3) {
-        errors.push("El campo Password tiene que ser mayor a 8")
-    }  
-    
-    if(errors.length > 0){
-        e.preventDefault();
-    }
-    let ulErrores = document.querySelector("div.errors-front ul")
-    for (let i = 0; i < errors.length; i++) {
-        
-        ulErrores.innerHTML += "<li>" + errors[i] + "</li>"
-        
-    }
-})
+}else if(!LoginPasswordValidation.value.match(/(?=.*?[A-Z])/)){
+    error_fieldLoginPassword.style.display = "block"
+    LoginPasswordValidation.style.borderColor = "red"
+    error_fieldLoginPassword.innerHTML = "debe contener un mayuscula";
+    errorPassword = false;
 
+}else if(!LoginPasswordValidation.value.match(/(?=.*?[.#?!@$%^&*-])/)){
+    error_fieldLoginPassword.style.display = "block"
+    LoginPasswordValidation.style.borderColor = "red"
+    error_fieldLoginPassword.innerHTML = "debe contener un caracter especail (#?!@$%^&*-)";
+    errorPassword = false;
+
+}else{
+    error_fieldLoginPassword.style.display = "none"
+    LoginPasswordValidation.style.borderColor = ""
+     errorPassword = true;
+}
+
+}
+
+)

@@ -5492,20 +5492,29 @@ s .header-bar2 .compracuotas2 {
 }
 .error_fieldCheckoutCreditEmail {
     display: none;
-    display: none;
+ 
     font-size: large;
     color: red;
 }
 .error_fieldCheckoutCreditMercadopago {
     display: none;
-    display: none;
+  
     font-size: large;
     color: red;
 }
 .selectCheckout{
     display: block;
 }
-
+.error_fieldLoginPassword{
+    display: none;
+     font-size: large;
+    color: red;
+}
+.error_fieldLoginEmail{
+    display: none;
+    font-size: large;
+    color: red;
+}
 @media (min-width : 769px) {
     
 .subDivTrans {
