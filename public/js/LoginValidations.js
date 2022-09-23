@@ -13,99 +13,123 @@ let errorPassword = false;
 let errorEmail = false;
 
 LoginPasswordValidation.addEventListener('keyup', function () {
-        if (LoginPasswordValidation.value == "") {
-            error_fieldLoginPassword.style.display = "block"
-            LoginPasswordValidation.style.borderColor = "red"
-            error_fieldLoginPassword.innerHTML = "No debes dejar este campo sin llenar";
-            errorPassword = false;
-        } else if (LoginPasswordValidation.value.length < 8) {
-            error_fieldLoginPassword.style.display = "block"
-            LoginPasswordValidation.style.borderColor = "red"
-            error_fieldLoginPassword.innerHTML = "Los caracteres deben superar los 8";
-            errorPassword = false;
 
-        } else if (!LoginPasswordValidation.value.match(/(?=.*?[a-z])/)) {
-            error_fieldLoginPassword.style.display = "block"
-            LoginPasswordValidation.style.borderColor = "red"
-            error_fieldLoginPassword.innerHTML = "debe contener un nimusolsjklsf";
-            errorPassword = false;
 
-        } else if (!LoginPasswordValidation.value.match(/(?=.*?[A-Z])/)) {
-            error_fieldLoginPassword.style.display = "block"
-            LoginPasswordValidation.style.borderColor = "red"
-            error_fieldLoginPassword.innerHTML = "debe contener un mayuscula";
-            errorPassword = false;
+    if (LoginPasswordValidation.value == "") {
+        error_fieldLoginPassword.style.display = "block"
+        LoginPasswordValidation.style.borderColor = "red"
+        error_fieldLoginPassword.innerHTML = "No debes dejar este campo sin llenar";
+        errorPassword = false;
+    } else if (LoginPasswordValidation.value.length < 8) {
+        error_fieldLoginPassword.style.display = "block"
+        LoginPasswordValidation.style.borderColor = "red"
+        error_fieldLoginPassword.innerHTML = "Los caracteres deben superar los 8";
+        errorPassword = false;
 
-        } else if (!LoginPasswordValidation.value.match(/(?=.*?[.#?!@$%^&*-])/)) {
-            error_fieldLoginPassword.style.display = "block"
-            LoginPasswordValidation.style.borderColor = "red"
-            error_fieldLoginPassword.innerHTML = "debe contener un caracter especail (#?!@$%^&*-)";
-            errorPassword = false;
+    } else if (!LoginPasswordValidation.value.match(/(?=.*?[a-z])/)) {
+        error_fieldLoginPassword.style.display = "block"
+        LoginPasswordValidation.style.borderColor = "red"
+        error_fieldLoginPassword.innerHTML = "Debe contener un nimusolsjklsf";
+        errorPassword = false;
 
-        } else {
-            error_fieldLoginPassword.style.display = "none"
-                  LoginPasswordValidation.style.borderColor = "green"
-            errorPassword = true;
-        }
+    } else if (!LoginPasswordValidation.value.match(/(?=.*?[A-Z])/)) {
+        error_fieldLoginPassword.style.display = "block"
+        LoginPasswordValidation.style.borderColor = "red"
+        error_fieldLoginPassword.innerHTML = "Debe contener una mayuscula";
+        errorPassword = false;
+
+    } else if (!LoginPasswordValidation.value.match(/(?=.*?[.#?!@$%^&*-])/)) {
+        error_fieldLoginPassword.style.display = "block"
+        LoginPasswordValidation.style.borderColor = "red"
+        error_fieldLoginPassword.innerHTML = "Debe contener un caracter especial (#?!@$%^&*-)";
+        errorPassword = false;
 
     }
+
+    else {
+        error_fieldLoginPassword.style.display = "none"
+        LoginPasswordValidation.style.borderColor = ""
+        errorPassword = true;
+    }
+
+}
 
 )
 
 LoginEmailValidation.addEventListener('keyup', function () {
-    var matchEmail = /^\s*[\w\-\+_]+(\.[\w\-\+_]+)*\@[\w\-\+_]+\.[\w\-\+_]+(\.[\w\-\+_]+)*\s*$/;
 
-        if (LoginEmailValidation.value == "") {
-            error_fieldLoginEmail.style.display = "block"
-            LoginEmailValidation.style.borderColor = "red"
-            error_fieldLoginEmail.innerHTML = "No debes dejar este campo sin llenar";
-            errorEmail = false;
+    let fileExtensionLogin = LoginEmailValidation.value.split('@');
+    let extensionLogin = fileExtensionLogin[1];
+let fileExtensionLogin1 = extensionLogin.split('.');
+let  extensionLogin1 = fileExtensionLogin1[1];
     
 
-        } 
-        else if(!LoginEmailValidation.value.match(matchEmail)){
-            error_fieldLoginEmail.style.display = "block"
-            LoginEmailValidation.style.borderColor = "red"
-            error_fieldLoginEmail.innerHTML = "debe ser un formato valido";
-            errorEmail = false;
+    let allowedExtensions = ['dk', 'uk', 'es', 'com', 'ar'];
+    let extensionMatchLogin = false;
+
+    allowedExtensions.forEach(extensionALogin => {
+        if (extensionALogin == extensionLogin1) {
+            extensionMatchLogin = true;
         }
-        
-        
-        else {
-            error_fieldLoginEmail.style.display = "none"
-            LoginEmailValidation.style.borderColor = "green"
-            
-            errorEmail = true;
-        }
+    })
+
+    var matchEmail = /^\s*[\w\-\+_]+(\.[\w\-\+_]+)*\@[\w\-\+_]+\.[\w\-\+_]+(\.[\w\-\+_]+)*\s*$/;
+
+    if (LoginEmailValidation.value == "") {
+        error_fieldLoginEmail.style.display = "block"
+        LoginEmailValidation.style.borderColor = "red"
+        error_fieldLoginEmail.innerHTML = "No debes dejar este campo sin llenar";
+        errorEmail = false;
+
 
     }
+    else if (!LoginEmailValidation.value.match(matchEmail)) {
+        error_fieldLoginEmail.style.display = "block"
+        LoginEmailValidation.style.borderColor = "red"
+        error_fieldLoginEmail.innerHTML = "Debe usar un formato valido de email";
+        errorEmail = false;
+    }
+    else if (!extensionMatchLogin) {
+        error_fieldLoginEmail.style.display = "block"
+        LoginEmailValidation.style.borderColor = "red"
+        error_fieldLoginEmail.innerHTML = "Debe contener un un dominio valido (['dk', 'uk', 'es', 'com' , 'ar'])";
+        errorEmail = false;
+    }
+
+    else {
+        error_fieldLoginEmail.style.display = "none"
+        LoginEmailValidation.style.borderColor = ""
+        errorEmail = true;
+    }
+
+}
 
 )
 
-sendLoginForm.addEventListener("click", function(e){
-   
-    if(!errorPassword && !errorEmail){
+sendLoginForm.addEventListener("click", function (e) {
+
+    if (!errorPassword && !errorEmail) {
         errorSubmitLogin.style.display = "block",
-        errorSubmitLogin.innerHTML = "debe completar correctamente los campos";
+            errorSubmitLogin.innerHTML = "Debe completar correctamente los campos";
         LoginPasswordValidation.style.borderColor = "red"
         LoginEmailValidation.style.borderColor = "red"
         e.preventDefault()
     }
-    else if(!errorPassword){
+    else if (!errorPassword) {
         errorSubmitLogin.style.display = "block",
-        errorSubmitLogin.innerHTML = "debe completar correctamente el campo password";
+            errorSubmitLogin.innerHTML = "Debe completar correctamente el campo password";
         LoginPasswordValidation.style.borderColor = "red"
-        
+
         e.preventDefault()
     }
-    else if(!errorEmail){
+    else if (!errorEmail) {
         errorSubmitLogin.style.display = "block",
-        errorSubmitLogin.innerHTML = "debe completar correctamente el camo email";
+            errorSubmitLogin.innerHTML = "Debe completar correctamente el campo email";
         LoginEmailValidation.style.borderColor = "red"
         e.preventDefault()
     }
 
-   
-  
+
+
 
 })
