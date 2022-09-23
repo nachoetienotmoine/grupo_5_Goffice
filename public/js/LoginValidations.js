@@ -1,9 +1,12 @@
+const e = require("express");
+
 let LoginEmailValidation = document.querySelector('#LoginEmailValidation');
 let LoginPasswordValidation = document.querySelector('.LoginPasswordValidation');
-
+let sendLoginForm = document.querySelector(".sendLoginForm")
 
 const error_fieldLoginPassword = document.querySelector('.error_fieldLoginPassword')
 const error_fieldLoginEmail = document.querySelector('.error_fieldLoginEmail')
+const errorSubmitLogin = document.querySelector('.errorSubmitLogin')
 
 
 let errorPassword = false;
@@ -78,3 +81,10 @@ LoginEmailValidation.addEventListener('keyup', function () {
 
 )
 
+sendLoginForm.addEventListener("click", function(e){
+    if(errorPassword || errorEmail){
+        errorSubmitLogin.style.display = "block",
+        errorSubmitLogin.innerHTML = "debe completar correctamente los campos";
+        e.preventDefault()
+    }
+})

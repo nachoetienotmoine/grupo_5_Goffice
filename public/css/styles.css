@@ -5515,6 +5515,11 @@ s .header-bar2 .compracuotas2 {
     font-size: large;
     color: red;
 }
+.errorSubmitLogin{
+    display: none;
+    font-size: large;
+    color: red;
+}
 @media (min-width : 769px) {
     
 .subDivTrans {
