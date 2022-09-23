@@ -17,8 +17,8 @@ const usersController = {
 
         let { firstname, lastname, email, password, phonenumber, gender } = req.body;
 
-        let passwordHashed = await bcrypt.hashSync(req.body.password, 1);
-
+        let passwordHashed =  bcrypt.hashSync(req.body.password, 10);
+console.log(passwordHashed);
         await Users.create({
             first_name: firstname,
             last_name: lastname,
@@ -28,8 +28,9 @@ const usersController = {
             gender: gender,
             image: req.file.originalname,
             id_roles: 2
+            
         });
-
+              
         res.redirect('/users/login');
     },
     profile: (req, res) => {
