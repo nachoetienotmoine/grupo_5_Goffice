@@ -44,7 +44,7 @@ LoginPasswordValidation.addEventListener('keyup', function () {
 
         } else {
             error_fieldLoginPassword.style.display = "none"
-            LoginPasswordValidation.style.borderColor = ""
+                  LoginPasswordValidation.style.borderColor = "green"
             errorPassword = true;
         }
 
@@ -73,7 +73,8 @@ LoginEmailValidation.addEventListener('keyup', function () {
         
         else {
             error_fieldLoginEmail.style.display = "none"
-            LoginEmailValidation.style.borderColor = ""
+            LoginEmailValidation.style.borderColor = "green"
+            
             errorEmail = true;
         }
 
@@ -86,16 +87,21 @@ sendLoginForm.addEventListener("click", function(e){
     if(!errorPassword && !errorEmail){
         errorSubmitLogin.style.display = "block",
         errorSubmitLogin.innerHTML = "debe completar correctamente los campos";
+        LoginPasswordValidation.style.borderColor = "red"
+        LoginEmailValidation.style.borderColor = "red"
         e.preventDefault()
     }
     else if(!errorPassword){
         errorSubmitLogin.style.display = "block",
         errorSubmitLogin.innerHTML = "debe completar correctamente el campo password";
+        LoginPasswordValidation.style.borderColor = "red"
+        
         e.preventDefault()
     }
     else if(!errorEmail){
         errorSubmitLogin.style.display = "block",
         errorSubmitLogin.innerHTML = "debe completar correctamente el camo email";
+        LoginEmailValidation.style.borderColor = "red"
         e.preventDefault()
     }
 
