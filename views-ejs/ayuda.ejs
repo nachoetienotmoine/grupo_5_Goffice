@@ -27,43 +27,31 @@
                                         <form action="" class="formcheckout">
        
                                             <div class="field name_field">
-                                                <label class="register_label" name="firstname">Cancelar una compra</label>
-                                                <input type="text" name="firstname" id="name" required minlength="5"
-                                                    maxlength="18">
+                                                <button type="submit" class="submit-cart"><a href="/soporte/costoenvio">Costos y tiempos de envío</a></button>
                                             </div>
-                                            <div class="error_field">Gmail Goffice</div>
-    
-    
-    
-                                            <div class="field email_field">
-                                                <label class="register_label" name="email">Devoluciones</label>
-                                                <input type="email" name="email" id="email" required>
-                                            </div>
-                                            <div class="error_field"></div>
-    
-    
+                                            
                                             <div class="field name_field">
-                                                <label class="register_label" name="name">Cambios</label>
-                                                <input type="number" name="phonenumber" id="name" required minlength="5"
-                                                    maxlength="18">
+                                                <button type="submit" class="submit-cart">Puntos de retiro</button>
                                             </div>
-    
+                                            
                                             <div class="field name_field">
-                                                <label class="register_label" name="codigoP">Locales Comerciales</label>
-                                                <input type="number" name="phonenumber" id="name" required minlength="5"
-                                                    maxlength="18">
+                                                <button type="submit" class="submit-cart">Devoluciones</button>
                                             </div>
+                                           
                                             <div class="field name_field">
-                                                <label class="register_label" name="provincia">Defensa del consumidor</label>
-                                                <input type="text" name="gender" id="name" required>
+                                                <button type="submit" class="submit-cart">Términos y condiciones</button>
                                             </div>
+                                          
                                             <div class="field name_field">
-                                                <label class="register_label" name="ciudad">Términos y condiciones de uso del sitio</label>
-                                                <input type="text" name="gender" id="name" required>
+                                                <button type="submit" class="submit-cart">Políticas de privacidad</button>
                                             </div>
+                                           
                                             <div class="field name_field">
-                                                <label class="register_label" name="piso-departamento">Contacto</label>
-                                                <input type="text" name="gender" id="name" required>
+                                                <button type="submit" class="submit-cart">Contactanos</button>
+                                            </div>
+                                       
+                                            <div class="field name_field">
+                                                <button type="submit" class="submit-cart">Arrepentimiento</button>
                                             </div>
                                         </form>
                                     </article>
@@ -79,7 +67,12 @@
                         <br>
        
                     </section>
+                    <br><br><br><br><br><br><br><br>
+
+
                 </main>
+
+               
                 <div class="social-bar">
        
                     <a href="" class="iconF"><i class="fab fa-facebook"></i></a>
@@ -87,7 +80,8 @@
                     <a href="" class="iconA"><i class="fas fa-at"></i></a>
                     <a href="" class="iconT"><i class="fab fa-twitter"></i></a>
                 </div>
+                <%- include('./footer.ejs') %>    
         </body>
-<%- include('./footer.ejs') %>
+
 
 </html>
