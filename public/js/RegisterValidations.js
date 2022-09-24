@@ -231,6 +231,35 @@ function onlyUpperCase(input, field, fieldMessage){
 
 }
 
+function onlySpecialCharacters(input, field, fieldMessage){
+    let inputValue = input;
+    let errorField = field.parentElement.nextElementSibling;
+    let fieldName = field.name;
+    
+    if (!inputValue.match(/(?=.*?[.#?!@$%^&*-])/) && !wasChecked(fieldName, fieldMessage)){
+        let input_Name = {
+            [fieldName]: new Errors (field, fieldMessage, errorField)
+        };
+    
+        errorsList.push(input_Name);
+        return true;
+    }else if (inputValue.match(/(?=.*?[.#?!@$%^&*-])/)){
+        for (let i = 0; i < errorsList.length; i++){
+            if (errorsList[i][fieldName]){
+                if (errorsList[i][fieldName].message === fieldMessage){
+                    Object.keys(errorsList).map(function(i) {
+                        errorsList.splice(i,1);
+                      });
+                    return false;
+                }
+            }
+        }
+    }else{
+        return true;
+    }  
+
+}
+
 
 
 
@@ -474,7 +503,26 @@ password.addEventListener('blur', (e) => {
         password.value = inputValue;
     }
 
-    if (onlyUpperCase(inputValue, field, "Debe contener una mayuscula")){
+    if (onlyUpperCase(inputValue, field, "Debe contener una mayúscula")){
+        let errorMessage;
+        let fieldName = field.name;
+
+        for ( let i = 0; i < errorsList.length; i++){
+            if (errorsList[i][fieldName]){
+                if (errorsList[i][fieldName].input.name == fieldName){
+                    errorMessage = errorsList[i][fieldName].message;
+                }
+            }
+        }
+
+        error_field[3].innerHTML = errorMessage;
+        return error_field[3].style.display = "block";
+    }else{
+        error_field[3].style.display = "none";
+        password.value = inputValue;
+    }
+
+    if (onlySpecialCharacters(inputValue, field, "Debe contener un caracter especial ( #, ?, !, @, $, %, ^, &, *, -, )")){
         let errorMessage;
         let fieldName = field.name;
 
