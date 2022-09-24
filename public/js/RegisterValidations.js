@@ -260,6 +260,46 @@ function onlySpecialCharacters(input, field, fieldMessage){
 
 }
 
+function domainAvailable(input, field, fieldMessage){
+    let inputValue = input;
+    let errorField = field.parentElement.nextElementSibling;
+    let fieldName = field.name;
+    let fileExtension = inputValue.split('.');
+    let extension = fileExtension[1];
+    let allowedExtensions = ['dk', 'uk', 'es', 'com', 'ar'];
+    let extensionMatch = false;
+
+
+    allowedExtensions.forEach(inputValue => {
+        if (inputValue === extension) {
+            extensionMatch = true;
+        }
+    });
+    
+    if (!extensionMatch && !wasChecked(fieldName, fieldMessage)){
+        let input_Name = {
+            [fieldName]: new Errors (field, fieldMessage, errorField)
+        };
+    
+        errorsList.push(input_Name);
+        return true;
+    }else if (extensionMatch){
+        for (let i = 0; i < errorsList.length; i++){
+            if (errorsList[i][fieldName]){
+                if (errorsList[i][fieldName].message === fieldMessage){
+                    Object.keys(errorsList).map(function(i) {
+                        errorsList.splice(i,1);
+                      });
+                    return false;
+                }
+            }
+        }
+    }else{
+        return true;
+    }  
+
+}
+
 
 
 
@@ -414,8 +454,8 @@ email.addEventListener('blur', (e) => {
         email.value = inputValue;
     }
 
-    if (userAlreadyExists(inputValue, field, "Este email ya existe")){
-        userAlreadyExists(inputValue, field, "Este email ya existe")
+    if (userAlreadyExists(inputValue, field, "El email ya existe")){
+        userAlreadyExists(inputValue, field, "El email ya existe")
         .then(res => {
             if (res){
                 let errorMessage;
@@ -434,6 +474,25 @@ email.addEventListener('blur', (e) => {
             }
     });
     }else{
+        error_field[2].style.display = "none";
+        email.value = inputValue;
+    }
+
+    if (domainAvailable(inputValue, field, "Debe contener un dominio valido 'dk', 'uk', 'es', 'com' , 'ar'")){
+        let errorMessage;
+        let fieldName = field.name;
+
+        for ( let i = 0; i < errorsList.length; i++){
+            if (errorsList[i][fieldName]){
+                if (errorsList[i][fieldName].input.name == fieldName){
+                    errorMessage = errorsList[i][fieldName].message;
+                }
+            }
+        }
+
+        error_field[2].innerHTML = errorMessage;
+        return error_field[2].style.display = "block";
+    }else {
         error_field[2].style.display = "none";
         email.value = inputValue;
     }
