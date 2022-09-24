@@ -186,14 +186,14 @@ function isNotBetween(input, field, rangeA, rangeB){
 
     }
 
-    if (input.length < rangeA || input.length >= rangeB && !alreadyChecked){
+    if (input.length < rangeA || input.length > rangeB && !alreadyChecked){
         let input_Name = {
             [fieldName]: new Errors (field, `El ${fieldName} debe ser entre ${rangeA} y ${rangeB} caracteres`, errorField)
         };
 
         errorsList.push(input_Name);
         return true;
-    }else if (input.length > rangeA || input.length <= rangeB){
+    }else if (input.length >= rangeA && input.length <= rangeB){
         for (let i = 0; i < errorsList.length; i++){
             if (errorsList[i][fieldName]){
                 if (errorsList[i][fieldName].message === `El ${fieldName} debe ser entre ${rangeA} y ${rangeB} caracteres`){
@@ -207,6 +207,40 @@ function isNotBetween(input, field, rangeA, rangeB){
     }else{
         return true;
     }   
+}
+
+function onlyNumeric(input, field){
+    let inputValue = input;
+    let errorField = field.parentElement.nextElementSibling;
+    let fieldName = field.name;
+    let alreadyChecked = false;
+    for (let i = 0; i < errorsList.length; i++){
+        if (errorsList[i][fieldName]){
+            errorsList[i][fieldName].message === `${fieldName} debe contener un nimusolsjklsf` ? alreadyChecked = true : "";
+        }
+    }
+    if (inputValue.match(/(?=.*?[a-z])/) && !alreadyChecked){
+        let input_Name = {
+            [fieldName]: new Errors (field, `${fieldName} debe contener un nimusolsjklsf`, errorField)
+        };
+    
+        errorsList.push(input_Name);
+        return true;
+    }else if (!inputValue.match(/(?=.*?[a-z])/)){
+        for (let i = 0; i < errorsList.length; i++){
+            if (errorsList[i][fieldName]){
+                if (errorsList[i][fieldName].message === `${fieldName} debe contener un nimusolsjklsf`){
+                    Object.keys(errorsList).map(function(i) {
+                        errorsList.splice(i,1);
+                      });
+                    return false;
+                }
+            }
+        }
+    }else{
+        return true;
+    }  
+
 }
 
 
@@ -226,9 +260,10 @@ formR.addEventListener('submit', (e) => {
 
     if (errorsList.length > 0){
         console.log("there's errors inside the form");
-    }else if (firstNameSelected && lastNameSelected && emailSelected && passwordSelected && phoneNumberSelected && imageSelected && genderSelected){
+    }else if (errorsList.length = 0 && firstNameSelected && lastNameSelected && emailSelected && passwordSelected && phoneNumberSelected && imageSelected && genderSelected){
         console.log("no errors inside :D");
     }
+    console.log(errorsList);
 });
 
 first_Name.addEventListener('blur', (e) => {
@@ -431,6 +466,26 @@ password.addEventListener('blur', (e) => {
         error_field[3].style.display = "none";
         password.value = inputValue;
     }
+
+    if (onlyNumeric(inputValue, field)){
+        let errorMessage;
+        let fieldName = field.name;
+
+        for ( let i = 0; i < errorsList.length; i++){
+            if (errorsList[i][fieldName]){
+                if (errorsList[i][fieldName].input.name == fieldName){
+                    errorMessage = errorsList[i][fieldName].message;
+                }
+            }
+        }
+
+        error_field[3].innerHTML = errorMessage;
+        return error_field[3].style.display = "block";
+    }else{
+        error_field[3].style.display = "none";
+        password.value = inputValue;
+    }
+
 });
 
 phoneNumber.addEventListener('blur', (e) => {
@@ -449,7 +504,7 @@ phoneNumber.addEventListener('blur', (e) => {
                 }
             }
         }
-
+        
         error_field[4].innerHTML = errorMessage;
         return error_field[4].style.display = "block";
     }else{
@@ -475,7 +530,6 @@ phoneNumber.addEventListener('blur', (e) => {
         error_field[4].style.display = "none";
         phoneNumber.value = inputValue;
     }
-
 });
 
 image.addEventListener('change', (e) => {
