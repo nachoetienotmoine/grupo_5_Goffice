@@ -17,22 +17,23 @@ function Errors(input, message, errorField){
 let errorsList = [];
 let inputsSelected = [];
 
-function isEmpty(input, field){
+function wasChecked(fieldName, fieldMessage){
+    let alreadyChecked = false;
+    for (let i = 0; i < errorsList.length; i++){
+        if (errorsList[i][fieldName]){
+            errorsList[i][fieldName].message === fieldMessage ? alreadyChecked = true : "";
+        }
+    }
+    return alreadyChecked;
+}
+
+function isEmpty(input, field, fieldMessage){
     let errorField = field.parentElement.nextElementSibling;
     let fieldName = field.name;
 
-    let alreadyChecked = false;
-
-    for (let i = 0; i < errorsList.length; i++){
-        if (errorsList[i][fieldName]){
-            errorsList[i][fieldName].message === `Debes completar el ${fieldName}` ? alreadyChecked = true : "";
-        }
-
-    }
-
-    if (input === "" && !alreadyChecked){
+    if (input === "" && !wasChecked(fieldName, fieldMessage)){
         let input_Name = {
-            [fieldName]: new Errors (field, `Debes completar el ${fieldName}`, errorField)
+            [fieldName]: new Errors (field, fieldMessage, errorField)
         };
 
         errorsList.push(input_Name);
@@ -40,7 +41,7 @@ function isEmpty(input, field){
     }else if (input != ""){
         for (let i = 0; i < errorsList.length; i++){
             if (errorsList[i][fieldName]){
-                if (errorsList[i][fieldName].message === `Debes completar el ${fieldName}`){
+                if (errorsList[i][fieldName].message === fieldMessage){
                     Object.keys(errorsList).map(function(i) {
                         errorsList.splice(i,1);
                       });
@@ -271,7 +272,7 @@ first_Name.addEventListener('blur', (e) => {
     let field = first_Name;
     first_Name.classList.add('Selected');
 
-    if (isEmpty(inputValue, field)){
+    if (isEmpty(inputValue, field, "debes completar el nombre")){
         let fieldName = field.name;
         let errorMessage;
 
@@ -315,7 +316,7 @@ last_name.addEventListener('blur', (e) => {
     let field = last_name;
     last_name.classList.add('Selected');
 
-    if (isEmpty(inputValue, field)){
+    if (isEmpty(inputValue, field, "debes completar el apellido")){
         let fieldName = field.name;
         let errorMessage;
 
@@ -359,7 +360,7 @@ email.addEventListener('blur', (e) => {
     let field = email;
     email.classList.add('Selected');
 
-    if (isEmpty(inputValue, field)){
+    if (isEmpty(inputValue, field, "debes completar el email")){
         let fieldName = field.name;
         let errorMessage;
 
@@ -429,7 +430,7 @@ password.addEventListener('blur', (e) => {
     let field = password;
     password.classList.add('Selected');
 
-    if (isEmpty(inputValue, field)){
+    if (isEmpty(inputValue, field, "debes completar la contraseña")){
         let fieldName = field.name;
         let errorMessage;
 
@@ -493,7 +494,7 @@ phoneNumber.addEventListener('blur', (e) => {
     let field = phoneNumber;
     phoneNumber.classList.add('Selected');
 
-    if (isEmpty(inputValue, field)){
+    if (isEmpty(inputValue, field, "debes completar con un número de teléfono")){
         let fieldName = field.name;
         let errorMessage;
 
@@ -584,7 +585,7 @@ gender.addEventListener('blur', (e) => {
     let isAllowedGender = false;
     gender.classList.add('Selected');
 
-    if (isEmpty(inputValue, field)){
+    if (isEmpty(inputValue, field, "debes completar el campo")){
         let fieldName = field.name;
         let errorMessage;
 
