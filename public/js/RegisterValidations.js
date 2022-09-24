@@ -202,6 +202,35 @@ function onlyNumeric(input, field, fieldMessage){
 
 }
 
+function onlyUpperCase(input, field, fieldMessage){
+    let inputValue = input;
+    let errorField = field.parentElement.nextElementSibling;
+    let fieldName = field.name;
+    
+    if (!inputValue.match(/(?=.*?[A-Z])/) && !wasChecked(fieldName, fieldMessage)){
+        let input_Name = {
+            [fieldName]: new Errors (field, fieldMessage, errorField)
+        };
+    
+        errorsList.push(input_Name);
+        return true;
+    }else if (inputValue.match(/(?=.*?[A-Z])/)){
+        for (let i = 0; i < errorsList.length; i++){
+            if (errorsList[i][fieldName]){
+                if (errorsList[i][fieldName].message === fieldMessage){
+                    Object.keys(errorsList).map(function(i) {
+                        errorsList.splice(i,1);
+                      });
+                    return false;
+                }
+            }
+        }
+    }else{
+        return true;
+    }  
+
+}
+
 
 
 
@@ -219,7 +248,7 @@ formR.addEventListener('submit', (e) => {
 
     if (errorsList.length > 0){
         console.log("there's errors inside the form");
-    }else if (errorsList.length = 0 && firstNameSelected && lastNameSelected && emailSelected && passwordSelected && phoneNumberSelected && imageSelected && genderSelected){
+    }else if (errorsList.length <= 0 && firstNameSelected && lastNameSelected && emailSelected && passwordSelected && phoneNumberSelected && imageSelected && genderSelected){
         console.log("no errors inside :D");
     }
     console.log(errorsList);
@@ -426,7 +455,26 @@ password.addEventListener('blur', (e) => {
         password.value = inputValue;
     }
 
-    if (onlyNumeric(inputValue, field, "La contraseña requiere de un valor numérico")){
+    if (onlyNumeric(inputValue, field, "Debe contener un valor numérico")){
+        let errorMessage;
+        let fieldName = field.name;
+
+        for ( let i = 0; i < errorsList.length; i++){
+            if (errorsList[i][fieldName]){
+                if (errorsList[i][fieldName].input.name == fieldName){
+                    errorMessage = errorsList[i][fieldName].message;
+                }
+            }
+        }
+
+        error_field[3].innerHTML = errorMessage;
+        return error_field[3].style.display = "block";
+    }else{
+        error_field[3].style.display = "none";
+        password.value = inputValue;
+    }
+
+    if (onlyUpperCase(inputValue, field, "Debe contener una mayuscula")){
         let errorMessage;
         let fieldName = field.name;
 
