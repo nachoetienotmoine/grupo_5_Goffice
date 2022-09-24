@@ -306,7 +306,7 @@ function domainAvailable(input, field, fieldMessage){
 
 
 formR.addEventListener('submit', (e) => {
-    e.preventDefault();
+    
     let firstNameSelected = first_Name.classList.contains('Selected');
     let lastNameSelected = last_name.classList.contains('Selected');
     let emailSelected = email.classList.contains('Selected');
@@ -316,11 +316,12 @@ formR.addEventListener('submit', (e) => {
     let genderSelected = gender.classList.contains('Selected');
 
     if (errorsList.length > 0){
+        e.preventDefault();
         console.log("there's errors inside the form");
     }else if (errorsList.length <= 0 && firstNameSelected && lastNameSelected && emailSelected && passwordSelected && phoneNumberSelected && imageSelected && genderSelected){
         console.log("no errors inside :D");
+        e.defaultPrevented;
     }
-    console.log(errorsList);
 });
 
 first_Name.addEventListener('blur', (e) => {
