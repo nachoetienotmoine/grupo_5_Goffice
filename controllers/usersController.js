@@ -100,7 +100,7 @@ console.log(passwordHashed);
             //delete userId.password;
             req.session.userLogged = elEmail;
             if (req.body.remember_user) {
-                res.cookie('userEmail', req.body.email, { maxAge: (10000 * 60) * 60 });
+                res.cookie('userEmail', req.body.email, { maxAge: (2005475700 * 670) * 670 });
             }
             res.redirect('/users/profile');
         } else {
