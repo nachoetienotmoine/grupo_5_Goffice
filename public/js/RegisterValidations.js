@@ -54,30 +54,21 @@ function isEmpty(input, field, fieldMessage){
     }   
 }
 
-function islongEnough(input, field, longSet){
+function islongEnough(input, field, longSet, fieldMessage){
     let errorField = field.parentElement.nextElementSibling;
     let fieldName = field.name;
 
-    let alreadyChecked = false;
-
-    for (let i = 0; i < errorsList.length; i++){
-        if (errorsList[i][fieldName]){
-            errorsList[i][fieldName].message === `El ${fieldName} debe contener al menos ${longSet} caracteres` ? alreadyChecked = true : "";
-        }
-
-    }
-
-    if (input.length <= 2 && !alreadyChecked){
+    if (input.length <= longSet && !wasChecked(fieldName, fieldMessage)){
         let input_Name = {
-            [fieldName]: new Errors (field, `El ${fieldName} debe contener al menos ${longSet} caracteres`, errorField)
+            [fieldName]: new Errors (field, fieldMessage, errorField)
         };
 
         errorsList.push(input_Name);
         return true;
-    }else if (input.length > 2){
+    }else if (input.length > longSet){
         for (let i = 0; i < errorsList.length; i++){
             if (errorsList[i][fieldName]){
-                if (errorsList[i][fieldName].message === `El ${field.name} debe contener al menos ${longSet} caracteres`){
+                if (errorsList[i][fieldName].message === fieldMessage){
                     Object.keys(errorsList).map(function(i) {
                         errorsList.splice(i,1);
                       });
@@ -90,27 +81,14 @@ function islongEnough(input, field, longSet){
     }   
 }
 
-function notValidEmail(input, field) {
-    var filter = /^\s*[\w\-\+_]+(\.[\w\-\+_]+)*\@[\w\-\+_]+\.[\w\-\+_]+(\.[\w\-\+_]+)*\s*$/;
-    // return String(input).search (filter) != -1;
-
-    ////*//////*/////
-
+function notValidEmail(input, field, fieldMessage) {
+    let filter = /^\s*[\w\-\+_]+(\.[\w\-\+_]+)*\@[\w\-\+_]+\.[\w\-\+_]+(\.[\w\-\+_]+)*\s*$/;
     let errorField = field.parentElement.nextElementSibling;
     let fieldName = field.name;
 
-    let alreadyChecked = false;
-
-    for (let i = 0; i < errorsList.length; i++){
-        if (errorsList[i][fieldName]){
-            errorsList[i][fieldName].message === `El ${fieldName} debe contener un formato valido` ? alreadyChecked = true : "";
-        }
-
-    }
-
-    if (String(input).search (filter) == -1 && !alreadyChecked){
+    if (String(input).search (filter) == -1 && !wasChecked(fieldName, fieldMessage)){
         let input_Name = {
-            [fieldName]: new Errors (field, `El ${fieldName} debe contener un formato valido`, errorField)
+            [fieldName]: new Errors (field, fieldMessage, errorField)
         };
 
         errorsList.push(input_Name);
@@ -118,7 +96,7 @@ function notValidEmail(input, field) {
     }else if (String(input).search (filter) != -1){
         for (let i = 0; i < errorsList.length; i++){
             if (errorsList[i][fieldName]){
-                if (errorsList[i][fieldName].message === `El ${field.name} debe contener un formato valido`){
+                if (errorsList[i][fieldName].message === fieldMessage){
                     Object.keys(errorsList).map(function(i) {
                         errorsList.splice(i,1);
                       });
@@ -139,28 +117,21 @@ async function oneUser(emailInput){
     return user.email;
 }
 
-async function userAlreadyExists(inputValue, field){
+async function userAlreadyExists(inputValue, field, fieldMessage){
     let errorField = field.parentElement.nextElementSibling;
     let fieldName = field.name;
-    let alreadyChecked = false;
     let user = await oneUser(inputValue);
 
-    for (let i = 0; i < errorsList.length; i++){
-        if (errorsList[i][fieldName]){
-            errorsList[i][fieldName].message === `El ${fieldName} ya existe` ? alreadyChecked = true : "";
-        }
-    }
-
-    if (user === inputValue && !alreadyChecked){
+    if (user === inputValue && !wasChecked(fieldName, fieldMessage)){
         let input_Name = {
-            [fieldName]: new Errors (field, `El ${fieldName} ya existe`, errorField)
+            [fieldName]: new Errors (field, fieldMessage, errorField)
         };
         errorsList.push(input_Name);
         return true;
     }else if (user != inputValue){
         for (let i = 0; i < errorsList.length; i++){
             if (errorsList[i][fieldName]){
-                if (errorsList[i][fieldName].message === `El ${fieldName} ya existe`){
+                if (errorsList[i][fieldName].message === fieldMessage){
                     Object.keys(errorsList).map(function(i) {
                         errorsList.splice(i,1);
                       });
@@ -175,21 +146,13 @@ async function userAlreadyExists(inputValue, field){
 
 }
 
-function isNotBetween(input, field, rangeA, rangeB){
+function isNotBetween(input, field, fieldMessage, rangeA, rangeB){
     let errorField = field.parentElement.nextElementSibling;
     let fieldName = field.name;
-    let alreadyChecked = false;
 
-    for (let i = 0; i < errorsList.length; i++){
-        if (errorsList[i][fieldName]){
-            errorsList[i][fieldName].message === `El ${fieldName} debe ser entre ${rangeA} y ${rangeB} caracteres` ? alreadyChecked = true : "";
-        }
-
-    }
-
-    if (input.length < rangeA || input.length > rangeB && !alreadyChecked){
+    if (input.length < rangeA || input.length > rangeB && !wasChecked(fieldName, fieldMessage)){
         let input_Name = {
-            [fieldName]: new Errors (field, `El ${fieldName} debe ser entre ${rangeA} y ${rangeB} caracteres`, errorField)
+            [fieldName]: new Errors (field, fieldMessage, errorField)
         };
 
         errorsList.push(input_Name);
@@ -197,7 +160,7 @@ function isNotBetween(input, field, rangeA, rangeB){
     }else if (input.length >= rangeA && input.length <= rangeB){
         for (let i = 0; i < errorsList.length; i++){
             if (errorsList[i][fieldName]){
-                if (errorsList[i][fieldName].message === `El ${fieldName} debe ser entre ${rangeA} y ${rangeB} caracteres`){
+                if (errorsList[i][fieldName].message === fieldMessage){
                     Object.keys(errorsList).map(function(i) {
                         errorsList.splice(i,1);
                       });
@@ -210,27 +173,22 @@ function isNotBetween(input, field, rangeA, rangeB){
     }   
 }
 
-function onlyNumeric(input, field){
+function onlyNumeric(input, field, fieldMessage){
     let inputValue = input;
     let errorField = field.parentElement.nextElementSibling;
     let fieldName = field.name;
-    let alreadyChecked = false;
-    for (let i = 0; i < errorsList.length; i++){
-        if (errorsList[i][fieldName]){
-            errorsList[i][fieldName].message === `${fieldName} debe contener un nimusolsjklsf` ? alreadyChecked = true : "";
-        }
-    }
-    if (inputValue.match(/(?=.*?[a-z])/) && !alreadyChecked){
+    
+    if (!inputValue.match(/\d/) && !wasChecked(fieldName, fieldMessage)){
         let input_Name = {
-            [fieldName]: new Errors (field, `${fieldName} debe contener un nimusolsjklsf`, errorField)
+            [fieldName]: new Errors (field, fieldMessage, errorField)
         };
     
         errorsList.push(input_Name);
         return true;
-    }else if (!inputValue.match(/(?=.*?[a-z])/)){
+    }else if (inputValue.match(/\d/)){
         for (let i = 0; i < errorsList.length; i++){
             if (errorsList[i][fieldName]){
-                if (errorsList[i][fieldName].message === `${fieldName} debe contener un nimusolsjklsf`){
+                if (errorsList[i][fieldName].message === fieldMessage){
                     Object.keys(errorsList).map(function(i) {
                         errorsList.splice(i,1);
                       });
@@ -291,7 +249,7 @@ first_Name.addEventListener('blur', (e) => {
         first_Name.value = inputValue;
     }
 
-    if (islongEnough(inputValue, field, 2)){
+    if (islongEnough(inputValue, field, 2, "La contraseña debe contener al menos 2 caracteres")){
         let errorMessage;
         let fieldName = field.name;
 
@@ -335,7 +293,7 @@ last_name.addEventListener('blur', (e) => {
         last_name.value = inputValue;
     }
 
-    if (islongEnough(inputValue, field, 2)){
+    if (islongEnough(inputValue, field, 2, "La contraseña debe contener al menos 2 caracteres")){
         let errorMessage;
         let fieldName = field.name;
 
@@ -379,7 +337,7 @@ email.addEventListener('blur', (e) => {
         email.value = inputValue;
     }
 
-    if (notValidEmail(inputValue, field)){
+    if (notValidEmail(inputValue, field, "El email no está en un formato valido")){
         let errorMessage;
         let fieldName = field.name;
 
@@ -398,8 +356,8 @@ email.addEventListener('blur', (e) => {
         email.value = inputValue;
     }
 
-    if (userAlreadyExists(inputValue, field)){
-        userAlreadyExists(inputValue, field)
+    if (userAlreadyExists(inputValue, field, "Este email ya existe")){
+        userAlreadyExists(inputValue, field, "Este email ya existe")
         .then(res => {
             if (res){
                 let errorMessage;
@@ -449,7 +407,7 @@ password.addEventListener('blur', (e) => {
         password.value = inputValue;
     }
 
-    if (islongEnough(inputValue, field, 8)){
+    if (islongEnough(inputValue, field, 8, "La contraseña debe contener al menos 8 caracteres")){
         let errorMessage;
         let fieldName = field.name;
 
@@ -468,7 +426,7 @@ password.addEventListener('blur', (e) => {
         password.value = inputValue;
     }
 
-    if (onlyNumeric(inputValue, field)){
+    if (onlyNumeric(inputValue, field, "La contraseña requiere de un valor numérico")){
         let errorMessage;
         let fieldName = field.name;
 
@@ -513,7 +471,7 @@ phoneNumber.addEventListener('blur', (e) => {
         phoneNumber.value = inputValue;
     }
 
-    if (isNotBetween(inputValue, field, 6, 18)){
+    if (isNotBetween(inputValue, field, "El número de teléfono debe ser entre 6 y 18 caracteres", 6, 18)){
         let fieldName = field.name;
         let errorMessage;
 
@@ -604,7 +562,7 @@ gender.addEventListener('blur', (e) => {
         gender.value = inputValue;
     }
 
-    if (isNotBetween(inputValue, field, 4, 6)){
+    if (isNotBetween(inputValue, field, "El genero debe contener entre 4 y 6 caracteres", 4, 6)){
         let fieldName = field.name;
         let errorMessage;
 
