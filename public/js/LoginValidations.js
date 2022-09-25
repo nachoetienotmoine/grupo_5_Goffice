@@ -28,7 +28,7 @@ window.addEventListener('load', function () {
         } else if (!LoginPasswordValidation.value.match(/(?=.*?[a-z])/)) {
             error_fieldLoginPassword.style.display = "block"
             LoginPasswordValidation.style.borderColor = "red"
-            error_fieldLoginPassword.innerHTML = "Debe contener un nimusolsjklsf";
+            error_fieldLoginPassword.innerHTML = "Debe contener un número";
             errorPassword = false;
         } else if (!LoginPasswordValidation.value.match(/(?=.*?[A-Z])/)) {
             error_fieldLoginPassword.style.display = "block"
@@ -102,7 +102,7 @@ window.addEventListener('load', function () {
     sendLoginForm.addEventListener("click", function (e) {
         if (!errorPassword && !errorEmail) {
             errorSubmitLogin.style.display = "block",
-                errorSubmitLogin.innerHTML = "Debe completar correctamente los campos,, o actualizar los mismo";
+                errorSubmitLogin.innerHTML = "Debe completar correctamente los campos, o actualizar los mismo";
             LoginPasswordValidation.style.borderColor = "red"
             LoginEmailValidation.style.borderColor = "red"
             e.preventDefault()
