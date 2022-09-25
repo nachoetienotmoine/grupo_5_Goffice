@@ -78,11 +78,14 @@
                         <label name="image">
                             <h2>Image</h2>
                         </label>
-                        <input type="file" class="buy-now-button" name="image" required
+                        <input type="file" class="buy-now-button" id="imgProfileEditValid" name="image" required
                             value="/images/<%= user.image; %>">
+                            <div class="error_imgProfileEdit"></div>
 
                         <i class="far fa-edit"></i>
                     </div>
+                    
+                    
                     <br>
                     <article class="precio-envio-detail">
                         <div class="comprar-detailPC">
