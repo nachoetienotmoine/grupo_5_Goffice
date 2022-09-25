@@ -20,18 +20,18 @@ const usersController = {
 
             let passwordHashed =  bcrypt.hashSync(req.body.password, 10);
     
-            // await Users.create({
-            //     first_name: firstname,
-            //     last_name: lastname,
-            //     email: email,
-            //     password: passwordHashed,
-            //     phone_number: phonenumber,
-            //     gender: gender,
-            //     image: req.file.originalname,
-            //     id_roles: 2
+            await Users.create({
+                first_name: firstname,
+                last_name: lastname,
+                email: email,
+                password: passwordHashed,
+                phone_number: phonenumber,
+                gender: gender,
+                image: req.file.originalname,
+                id_roles: 2
                 
-            // });
-                  console.log('it created it :D');
+            });
+
             res.redirect('/users/login');
         }else {
             
@@ -45,7 +45,7 @@ const usersController = {
 
             let errorsArray = errors.array();
             errorsArray.forEach(error => {
-                console.log(error);
+
                 if (error.param == "firstname"){
                     firstNameErrors.push(error);
                 }else if (error.param == "lastname"){
