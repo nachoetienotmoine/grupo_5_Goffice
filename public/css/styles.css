@@ -3321,6 +3321,7 @@ hr {
     }
 
 
+    
 }
 
 
@@ -4391,7 +4392,7 @@ x
            
          }*/
 #nombrePCrud:hover {
-    border: 2px solid #1a6692;
+    border: 1px solid #1a6692;
     cursor: pointer;
 
 }
@@ -5521,6 +5522,9 @@ s .header-bar2 .compracuotas2 {
 .selectCheckout{
     display: block;
 }
+
+/* ///// Validations Login ///// */
+
 .error_fieldLoginPassword{
     display: none;
      font-size: large;
@@ -5536,6 +5540,35 @@ s .header-bar2 .compracuotas2 {
     font-size: large;
     color: red;
 }
+
+
+
+
+/* ///// Validations ProfileEdit ///// */
+
+
+.error_firstNameProfileEdit{
+    display: none;
+    font-size: large;
+    color: red;
+}
+
+
+.error_lastNameProfileEdit{
+    display: none;
+    font-size: large;
+    color: red;
+}
+
+.error_phoneNumberProfileEdit{
+    display: none;
+    font-size: large;
+    color: red;
+}
+
+
+
+
 @media (min-width : 769px) {
     
 .subDivTrans {

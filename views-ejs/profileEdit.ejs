@@ -1,19 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EDIT USER <%= user.first_name; %> <%= user.last_name; %></title>
-    <link rel="icon" type="image/PNG" href="../public/images/Gofficee.png">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/css/styles.css">
-</head>
+    <%- include('./head.ejs')%>
 <!-- body -->
 
 <body>
@@ -49,27 +37,31 @@
                             <H2>First Name</H2>
                         </label>
 
-                        <input type="text" name="name" id="nombrePCrud" required minlength="6" value="<%= user.first_name; %>">
+                        <input type="text" name="name" id="nombrePCrud" class="firstNameProfileEditValid" required minlength="6" value="<%= user.first_name; %>">
+                        <div class="error_firstNameProfileEdit"></div>
                         <i class="far fa-edit"></i>
                     </div>
+                    
 
                     <div class="boxpC">
                         <label name="lastname">
                             <H2>Last Name</H2>
                         </label>
 
-                        <input type="text" name="lastname" id="nombrePCrud" required minlength="6" value="<%= user.last_name; %>">
+                        <input type="text" name="lastname" id="nombrePCrud" class="lastNameProfileEditValid" required minlength="6" value="<%= user.last_name; %>">
                         <i class="far fa-edit"></i>
                     </div>
+                    <div class="error_lastNameProfileEdit"></div>
 
                     <div class="boxpC">
                         <label name="phone_number">
                             <h2>Phone Number</h2>
                         </label>
 
-                        <input type="text" name="phonenumber" id="nombrePCrud" required value="<%= user.phone_number; %>">
+                        <input type="text" name="phonenumber" id="nombrePCrud" class="phoneNumberProfileEditValid" required value="<%= user.phone_number; %>">
                         <i class="far fa-edit"></i>
                     </div>
+                    <div class="error_phoneNumberProfileEdit"></div>
                     <div class="boxpC">
                         <label name="gender">
                             <H2>Gender</H2>
@@ -94,8 +86,9 @@
                     <br>
                     <article class="precio-envio-detail">
                         <div class="comprar-detailPC">
-                            <button type="submit" class="submit-cart-detail">Guardar Cambios</button>
+                            <button type="submit" class="submit-cart-detail" id="submitProfileEditValid">Guardar Cambios</button>
                         </div>
+                        <div class="error_submitProfileEdit"></div>
 
                     </article>
                 </form>
