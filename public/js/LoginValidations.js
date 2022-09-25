@@ -28,9 +28,16 @@ window.addEventListener('load', function () {
         } else if (!LoginPasswordValidation.value.match(/(?=.*?[a-z])/)) {
             error_fieldLoginPassword.style.display = "block"
             LoginPasswordValidation.style.borderColor = "red"
-            error_fieldLoginPassword.innerHTML = "Debe contener un número";
+            error_fieldLoginPassword.innerHTML = "Debe contener una minuscula";
             errorPassword = false;
-        } else if (!LoginPasswordValidation.value.match(/(?=.*?[A-Z])/)) {
+        } else if (!LoginPasswordValidation.value.match(/(?=.*?[0-9])/)) {
+            error_fieldLoginPassword.style.display = "block"
+            LoginPasswordValidation.style.borderColor = "red"
+            error_fieldLoginPassword.innerHTML = "Debe contener un numero";
+            errorPassword = false;
+
+        }
+        else if (!LoginPasswordValidation.value.match(/(?=.*?[A-Z])/)) {
             error_fieldLoginPassword.style.display = "block"
             LoginPasswordValidation.style.borderColor = "red"
             error_fieldLoginPassword.innerHTML = "Debe contener una mayuscula";
