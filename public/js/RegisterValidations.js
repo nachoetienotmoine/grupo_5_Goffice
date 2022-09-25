@@ -350,6 +350,8 @@ formR.addEventListener('submit', (e) => {
         e.defaultPrevented;
     }else{
         e.preventDefault();
+        error_field[6].innerHTML = "Completa los campos del formulario 💅💅✨🔥";
+        return error_field[6].style.display = "block";
     }
 });
 
