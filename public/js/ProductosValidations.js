@@ -34,7 +34,7 @@ validationName.addEventListener('blur', function () {
     }
     else {
         error_fieldPname.style.display = "none";
-        validationName.style.borderColor = ""
+        validationName.style.borderColor = "green"
         errorName = true;
     }
 });
@@ -50,7 +50,7 @@ validationDescription.addEventListener('blur', function () {
     }
     else {
         error_fieldPdescription.style.display = "none";
-        validationDescription.style.borderColor = "";
+        validationDescription.style.borderColor = "green";
         errorDescription = true;
     }
 });
@@ -74,10 +74,12 @@ validationImage.addEventListener('change', function () {
         error_fieldPimage.style.display = "block"
         validationImage.style.borderColor = "red"
         error_fieldPimage.innerHTML = "Debe ingresar una imagen en formato : (JPG, JPEG, PNG, GIF)";
+        validationImage.style.color = "red"
         errorImage = false;
     } else {
         error_fieldPimage.style.display = "none";
-        validationImage.style.borderColor = "";
+        validationImage.style.borderColor = "green";
+        validationImage.style.color = "green"
         errorImage = true;
     }
 });
@@ -95,7 +97,8 @@ validationPrice.addEventListener('blur', function () {
     }
     else {
         error_fieldPprice.style.display = "none";
-        validationPrice.style.borderColor = "";
+        validationPrice.style.borderColor = "green";
+       
         errorPrice = true;
     }
 });
@@ -105,76 +108,108 @@ SendProductsForm.addEventListener('click', function (event) {
     if (!errorDescription && !errorName && !errorPrice && !errorImage) {
         error_fieldPSend.style.display = 'block'
         error_fieldPSend.innerHTML = "Debes completar las casilla de NAME , DESCRIPTION , IMAGE y PRICE correctamente y luego reenviar el formulario"
+        validationPrice.style.borderColor = "red"
+        validationDescription.style.borderColor = "red"
+        validationImage.style.color = "red"
+        validationName.style.borderColor = "red"
         event.preventDefault();
     }
     else if (!errorDescription && !errorName && !errorImage) {
         error_fieldPSend.style.display = 'block'
         error_fieldPSend.innerHTML = "Debes completar las casilla de NAME , IMAGE y DESCRIPTION correctamente y luego reenviar el formulario"
+        validationDescription.style.borderColor = "red"
+        validationImage.style.color = "red"
+        validationName.style.borderColor = "red"
         event.preventDefault();
     }
     else if (!errorDescription && !errorName && !errorPrice) {
         error_fieldPSend.style.display = 'block'
         error_fieldPSend.innerHTML = "Debes completar las casilla de NAME , PRICE y DESCRIPTION correctamente y luego reenviar el formulario"
+        validationDescription.style.borderColor = "red"
+        validationPrice.style.borderColor = "red"
+        validationName.style.borderColor = "red"
         event.preventDefault();
     }
     else if (!errorDescription && !errorPrice && !errorImage) {
         error_fieldPSend.style.display = 'block'
         error_fieldPSend.innerHTML = "Debes completar las casilla de DESCRIPTION , IMAGE y PRICE correctamente y luego reenviar el formulario"
+        validationPrice.style.borderColor = "red"
+        validationDescription.style.borderColor = "red"
+        validationImage.style.color = "red"
         event.preventDefault();
     }
     else if (!errorPrice && !errorName && !errorImage) {
         error_fieldPSend.style.display = 'block'
         error_fieldPSend.innerHTML = "Debes completar las casilla de NAME , IMAGE y PRICE correctamente y luego reenviar el formulario"
+        validationPrice.style.borderColor = "red"
+        validationName.style.borderColor = "red"
+        validationImage.style.color = "red"
         event.preventDefault();
     }
     else if (!errorPrice && !errorDescription) {
         error_fieldPSend.style.display = 'block'
         error_fieldPSend.innerHTML = "Debes completar las casilla de PRICE y DESCRIPTION correctamente y luego reenviar el formulario"
+        validationPrice.style.borderColor = "red"
+        validationDescription.style.borderColor = "red"
         event.preventDefault();
     }
     else if (!errorImage && !errorPrice) {
         error_fieldPSend.style.display = 'block'
         error_fieldPSend.innerHTML = "Debes completar las casilla de IMAGE y PRICE correctamente y luego reenviar el formulario"
+        validationPrice.style.borderColor = "red"
+        validationImage.style.color = "red"
         event.preventDefault();
     }
     else if (!errorName && !errorPrice) {
         error_fieldPSend.style.display = 'block'
         error_fieldPSend.innerHTML = "Debes completar las casilla de NAME y PRICE correctamente y luego reenviar el formulario"
+        validationPrice.style.borderColor = "red"
+        validationName.style.borderColor = "red"
         event.preventDefault();
     }
     else if (!errorName && !errorDescription) {
         error_fieldPSend.style.display = 'block'
         error_fieldPSend.innerHTML = "Debes completar las casilla de NAME y DESCRIPTION correctamente y luego reenviar el formulario"
+        validationName.style.borderColor = "red"
+        validationDescription.style.borderColor = "red"
         event.preventDefault();
     }
     else if (!errorName && !errorImage) {
         error_fieldPSend.style.display = 'block'
         error_fieldPSend.innerHTML = "Debes completar las casilla de NAME y IMAGE correctamente y luego reenviar el formulario"
+        validationName.style.borderColor = "red"
+        validationImage.style.color = "red"
         event.preventDefault();
     }
     else if (!errorDescription && !errorImage) {
         error_fieldPSend.style.display = 'block'
         error_fieldPSend.innerHTML = "Debes completar las casilla de DESCRIPTION y IMAGE correctamente y luego reenviar el formulario"
+        validationImage.style.color = "red"
+        validationDescription.style.borderColor = "red"
         event.preventDefault();
     }
     else if (!errorName) {
         error_fieldPSend.style.display = 'block'
         error_fieldPSend.innerHTML = "Debes completar la casilla NAME correctamente y luego reenviar el formulario"
+        validationName.style.borderColor = "red"
         event.preventDefault();
     }
     else if (!errorDescription) {
         error_fieldPSend.style.display = 'block'
         error_fieldPSend.innerHTML = "Debes completar la casilla DESCRIPTION correctamente y luego reenviar el formulario"
+        validationDescription.style.borderColor = "red"
         event.preventDefault();
     }
     else if (!errorPrice) {
         error_fieldPSend.style.display = 'block'
         error_fieldPSend.innerHTML = "Debes completar la casilla PRICE correctamente y luego reenviar el formulario"
+        validationPrice.style.borderColor = "red"
         event.preventDefault();
     }
     else if (!errorImage) {
         error_fieldPSend.style.display = 'block'
         error_fieldPSend.innerHTML = "Debes completar la casilla IMAGE correctamente y luego reenviar el formulario"
+        validationImage.style.color = "red"
         event.preventDefault();
     }
 })

@@ -11,7 +11,7 @@ let validationEditPrice = document.querySelector('.priceEditPV');
 
 let SendProductsEditForm = document.querySelector('#SendProductsEditForm');
 let errors = [];
-
+let errorImagenEdit = false ;
 validationEditDescription.addEventListener('blur', function () {
 
     let inputValue = this.value;
@@ -89,15 +89,17 @@ validationEditImage.addEventListener('change', function () {
 
     if (!extensionMatch) {
         error_fieldPeImage.style.display = "block"
-        validationEditImage.style.borderColor = "red";
+        validationEditImage.style.color = "red";
         error_fieldPeImage.innerHTML = "Debe ingresar una imagen en formato : (JPG, JPEG, PNG, GIF)";
         errors.push("Debe ingresar una imagen en formato : (JPG, JPEG, PNG, GIF)");
+        errorImagenEdit = false
 
    } else {
         error_fieldPeImage.style.display = "none";
-        validationEditImage.style.borderColor = "";
+        validationEditImage.style.color = "green";
         let SinErrors = errors.indexOf("Debe ingresar una imagen en formato : (JPG, JPEG, PNG, GIF)");
         errors.splice(SinErrors);
+        errorImagenEdit = true
 
     }
 });
@@ -115,10 +117,18 @@ SendProductsEditForm.addEventListener('click', function (event) {
         }
 
     }
+ if(!errorImagenEdit){
+        
+        validationEditImage.style.color = "red";
+        validationEditImage.style.fontSize = "large";
+        error_fieldPeImage.style.display ="block" 
+        error_fieldPeImage.innerHTML = "Debe ingresar una imagen en formato : (JPG, JPEG, PNG, GIF)";
+        event.preventDefault();
+    }
 
     if(!errors[0]){
         error_fieldPeSend.style.display = 'none'
 
     }
-
+   
 })

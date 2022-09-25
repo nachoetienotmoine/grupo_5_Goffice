@@ -1,4 +1,4 @@
-window.addEventListener('load', function () {
+
 
     let LoginEmailValidation = document.querySelector('#LoginEmailValidation');
     let LoginPasswordValidation = document.querySelector('.LoginPasswordValidation');
@@ -127,5 +127,3 @@ window.addEventListener('load', function () {
             e.preventDefault()
         }
     })
-
-}) 
