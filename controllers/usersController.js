@@ -14,24 +14,65 @@ const usersController = {
         res.render("users", { usersJ: usersJ })
     },
     crearUsers: async (req, res) => {
+        let errors = validationResult(req);
+        if (errors.isEmpty()){
+            let { firstname, lastname, email, password, phonenumber, gender } = req.body;
 
-        let { firstname, lastname, email, password, phonenumber, gender } = req.body;
-
-        let passwordHashed =  bcrypt.hashSync(req.body.password, 10);
-console.log(passwordHashed);
-        await Users.create({
-            first_name: firstname,
-            last_name: lastname,
-            email: email,
-            password: passwordHashed,
-            phone_number: phonenumber,
-            gender: gender,
-            image: req.file.originalname,
-            id_roles: 2
+            let passwordHashed =  bcrypt.hashSync(req.body.password, 10);
+    
+            // await Users.create({
+            //     first_name: firstname,
+            //     last_name: lastname,
+            //     email: email,
+            //     password: passwordHashed,
+            //     phone_number: phonenumber,
+            //     gender: gender,
+            //     image: req.file.originalname,
+            //     id_roles: 2
+                
+            // });
+                  console.log('it created it :D');
+            res.redirect('/users/login');
+        }else {
             
-        });
-              
-        res.redirect('/users/login');
+            let firstNameErrors = [];
+            let lastNameErrors = [];
+            let emailNameErrors = [];
+            let passwordNameErrors = [];
+            let phoneNumberNameErrors = [];
+            let imageNameErrors = [];
+            let genderNameErrors = [];
+
+            let errorsArray = errors.array();
+            errorsArray.forEach(error => {
+                console.log(error);
+                if (error.param == "firstname"){
+                    firstNameErrors.push(error);
+                }else if (error.param == "lastname"){
+                    lastNameErrors.push(error);
+                }else if (error.param == "email"){
+                    emailNameErrors.push(error);
+                }else if (error.param == "password"){
+                    passwordNameErrors.push(error);
+                }else if (error.param == "phonenumber"){
+                    phoneNumberNameErrors.push(error);
+                }else if (error.param == "image"){
+                    imageNameErrors.push(error);
+                }else if (error.param == "gender"){
+                    genderNameErrors.push(error);
+                }
+            })
+
+            
+            res.render('registro', {
+                errors: errors.mapped(), old: req.body, firstNameErrors, lastNameErrors, emailNameErrors,
+                                                        passwordNameErrors, phoneNumberNameErrors,imageNameErrors,
+                                                        genderNameErrors
+                                                        
+            });
+        }
+
+        
     },
     profile: (req, res) => {
 

@@ -16,44 +16,79 @@
 
                 <div class="field name_field">
                     <label class="register_label" name="firstname">First Name</label>
-                    <input type="text" name="firstname" id="name" minlength="2" maxlength="18">
+                    <input type="text" name="firstname" id="name"  maxlength="18" value="<%= locals.old && old.firstname%>">
+                    <% if (locals.errors && errors.firstname) { %>
+                        <p class="feedback">
+                            <%= firstNameErrors[0].msg %>
+                        </p>
+                        <% } %>
                 </div>
                 <div class="error_field">Ingrese su nombre</div>
 
                 <div class="field lastName_field">
                     <label class="register_label" name="lastname">Last Name</label>
-                    <input type="text" name="lastname" id="lastname" minlength="2" maxlength="18">
+                    <input type="text" name="lastname" id="lastname" maxlength="18" value="<%= locals.old && old.lastname%>">
+                    <% if (locals.errors && errors.lastname) { %>
+                        <p class="feedback">
+                            <%= lastNameErrors[0].msg %>
+                        </p>
+                        <% } %>
                 </div>
                 <div class="error_field">Ingrese su apellido</div>
 
                 <div class="field email_field">
                     <label class="register_label" name="email">Email</label>
-                    <input type="text" name="email" id="email">
+                    <input type="text" name="email" id="email" value="<%= locals.old && old.email%>">
+                    <% if (locals.errors && errors.email) { %>
+                        <p class="feedback">
+                            <%= emailNameErrors[0].msg %>
+                        </p>
+                        <% } %>
                 </div>
                 <div class="error_field">Ingrese su correo electrónico</div>
 
                 <div class="field password_field">
                     <label class="register_label" name="password">Password</label>
-                    <input type="password" name="password" id="password">
+                    <input type="password" name="password" id="password" value="<%= locals.old && old.password%>">
                     <ion-icon onclick="toggle()" class="password-icon"	id ="eye-icon" name="eye-off" size="large" ></ion-icon>
+                    <% if (locals.errors && errors.password) { %>
+                        <p class="feedback">
+                            <%= passwordNameErrors[0].msg %>
+                        </p>
+                        <% } %>
                 </div>
                 <div class="error_field">Ingrese su apellido</div>
                 <div class="field name_field">
                     <label class="register_label" name="name">Phonenumber</label>
-                    <input type="number" name="phonenumber" id="phonenumber" minlength="5" maxlength="18">
+                    <input type="number" name="phonenumber" id="phonenumber" maxlength="18" value="<%= locals.old && old.phonenumber%>">
+                    <% if (locals.errors && errors.phonenumber) { %>
+                        <p class="feedback">
+                            <%= phoneNumberNameErrors[0].msg %>
+                        </p>
+                        <% } %>
                 </div>
                 <div class="error_field">Ingrese su apellido</div>
                 <div class="field name_field">
                     
                     <label class="register_label" name="image">Image</label>
                    
-                    <input type="file" name="image" id="file">
+                    <input type="file" name="image" id="file" value="<%= locals.old && old.image%>">
+                    <% if (locals.errors && errors.image) { %>
+                        <p class="feedback">
+                            <%= imageNameErrors[0].msg %>
+                        </p>
+                        <% } %>
                     
                 </div>
                 <div class="error_field">Ingrese su apellido</div>
                 <div class="field name_field">
                     <label class="register_label" name="name">Gender</label>
-                    <input type="text" name="gender" id="gender">
+                    <input type="text" name="gender" id="gender" value="<%= locals.old && old.gender%>">
+                    <% if (locals.errors && errors.gender) { %>
+                        <p class="feedback">
+                            <%= genderNameErrors[0].msg %>
+                        </p>
+                        <% } %>
                 </div>
                 
                 <div class="error_field">Ingrese su contraseña</div>
