@@ -71,9 +71,6 @@ validationEditName.addEventListener('blur', function () {
         validationEditName.style.borderColor = "";
         let SinErrors = errors.indexOf("El campo debe tener mas de 4 letras" || "El campo debe tener mas de 19 letras")
         errors.splice(SinErrors)
-
-
-
     }
 });
 

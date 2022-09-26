@@ -171,35 +171,3 @@ submitProfileEditValid.addEventListener('click', function (event) {
     }
    
 })
-
-
-
-
-
-
-
-/*submitProfileEditValid.addEventListener("click", function(e){
-    if (!firstNameError){
-        error_submitProfileEdit.style.display = "block";
-        error_submitProfileEdit.innerHTML = "Debe completar correctamente los campos, o actualizar los mismo";
-        submitProfileEditValid.style.borderColor = "red";
-        e.preventDefault()
-    }
-    else  if (!lastNameError){
-        error_submitProfileEdit.style.display = "block";
-        error_submitProfileEdit.innerHTML = "Debe completar correctamente los campos, o actualizar los mismo";
-        submitProfileEditValid.style.borderColor = "red";
-        e.preventDefault()
-    }
-    else  if (!phoneNumberError){
-        error_submitProfileEdit.style.display = "block";
-        error_submitProfileEdit.innerHTML = "Debe completar correctamente los campos, o actualizar los mismo";
-        submitProfileEditValid.style.borderColor = "red";
-        e.preventDefault()
-    }
-
-    else {
-        error_submitProfileEdit.style.display = "none";
-
-    }
-})*/

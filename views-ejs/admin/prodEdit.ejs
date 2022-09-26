@@ -1,26 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
-
     <%- include('../head.ejs')%>
 <!-- body -->
-
 <body>
-
     <!-- header -->
     <%- include('../header2.ejs')%>
         <!--</header> -->
-
         <!-- main -->
         <main class="main-detail">
             <section class="main-detail-sectionPC">
                 <div class="title-product-detailPC">
                     <h2><%= productoEncontrado.name; %></h2>
-                    
                 </div>
                 <div class="detail-imagePC">
                     <img id="general-detail-imagePC" src="/images/<%= productoEncontrado.image; %>" alt="articulo">
                 </div>
-
             </section>
             <br>
             </section>
@@ -29,33 +23,30 @@
                     <h2>Detalle de Producto</h2>
                 </div>
                 <br>
-
                 <article class="description-productPC">
                     <form action="/admin/productos/<%= productoEncontrado.id; %>/?_method=PUT" id="productForm" method="POST"
                         enctype="multipart/form-data">
-
                         <div class="boxpC">
                             <label name="name">
                                 <H2>Name</H2>
                             </label>
-
-                            <input type="text" name="name" id="nombrePCrud" class="nameEditPV" required value="<%= productoEncontrado.name; %>">
+                            <input type="text" name="name" id="nombrePCrud" class="nameEditPV" value="<%= productoEncontrado.name; %>" value="<%= locals.old && old.name%>">
                             <i class="far fa-edit"></i>
+                            <% if (locals.errors && errors.name) { %>
+                                <p class="feedback">
+                                    <%= nameErrors[0].msg %>
+                                </p>
+                                <% } %>
                         </div>
-
                         <div class="error_fieldPeName"></div>
-
                         <div class="boxpC">
                             <label name="category">
                                 <H2>Category</H2>
                             </label>
-
                             <select name="category" id="nombrePCrud2" >
-                                
                                 <% categoryProducts.forEach(category => { %>
                                     <option value="<%= category.id %>" <% if (productoEncontrado.id_products_category == category.id) { %><%= 'selected' %><% }; %>><%= category.category %></option>
                                     <% }); %>
-
                             </select>
                             <i class="far fa-edit"></i>
                         </div>
@@ -63,41 +54,45 @@
                             <label name="description">
                                 <h2>Descripcion</h2>
                             </label>
-
-                            <input type="text" name="description" id="nombrePCrud" class="descriptionEditPV" required value="<%= productoEncontrado.description; %>">
+                            <input type="text" name="description" id="nombrePCrud" class="descriptionEditPV" value="<%= productoEncontrado.description; %>" value="<%= locals.old && old.description%>">
                             <i class="far fa-edit"></i>
+                            <% if (locals.errors && errors.description) { %>
+                                <p class="feedback">
+                                    <%= descriptionErrors[0].msg %>
+                                </p>
+                                <% } %>
                         </div>
-
                         <div class="error_fieldPeDescription"></div>
-
                         <div class="boxpC">
                             <label name="discount">
                                 <h2>Discount</h2>
                             </label>
-
-                            <input type="text" name="discount" id="nombrePCrud" required value="<%= productoEncontrado.discount; %>">
+                            <input type="text" name="discount" id="nombrePCrud" value="<%= productoEncontrado.discount; %>" value="<%= locals.old && old.discount%>">
                             <i class="far fa-edit"></i>
+                            <% if (locals.errors && errors.discount){ %>
+                                <p class="feedback">
+                                    <%= discountErrors[0].msg %>
+                                </p>
+                                <% } %>
                         </div>
-
-                      
-
                         <div class="boxpC">
                             <label name="price">
                                 <h2>Precio</h2>
                             </label>
-
-                            <input type="number" name="price" class="priceEditPV" id="nombrePCrud" required value="<%= productoEncontrado.price; %>">
+                            <input type="number" name="price" class="priceEditPV" id="nombrePCrud" value="<%= productoEncontrado.price; %>" value="<%= locals.old && old.price%>">
                             <i class="far fa-edit"></i>
+                            <% if (locals.errors && errors.price){ %>
+                                <p class="feedback">
+                                    <%= priceErrors[0].msg %>
+                                </p>
+                                <% } %>
                         </div>
-
                         <div class="error_fieldPePrice"></div>
-                        
                         <div class="boxpC">
                             <label name="image">
                                 <h2>Image</h2>
                             </label>
-                            <input type="file" class="imageEditPV" name="image" required value="images/<%= productoEncontrado.image; %>">
-                            
+                            <input type="file" class="imageEditPV" name="image" value="images/<%= productoEncontrado.image; %>">
                             <i class="far fa-edit"></i>
                         </div>
                         <div class="error_fieldPeImage"></div>
@@ -105,9 +100,6 @@
                             <label name="stock">
                                 <h2>Stock</h2>
                             </label>
-
-                            
-
                             <select name="stock" id="nombrePCrud2" required>
                                 <option value="0">Out of Stock</option>
                                 <option value="1">1</option>
@@ -120,7 +112,6 @@
                                 <option value="8">8</option>
                                 <option value="9">9</option>
                                 <option value="10">10</option>
-
                             </select>
                             <i class="far fa-edit"></i>
                         </div>
@@ -132,29 +123,22 @@
  <div class="error_fieldPeSend"></div>
                         </article>
                     </form>
-
                 </article>
                 <br>
                 <article class="precio-envio-detail">
-
-                    <form action="/admin/productos/<%= productoEncontrado.id; %>/?_method=DELETE" method="POST"> 
+                    <form action="/admin/productos/<%= productoEncontrado.id; %>/?_method=DELETE" method="POST">
                         <div class="return-detail">
                             <button type="submit" class="return-cart-detail">Eliminar</button>
                         </div>
                     </form>
-
                 </article>
             </section>
             <br>
             <br>
-
             <br>
-
-
         </main>
         <!-- footer -->
         <%- include('../footer')%>
             <!-- </footer> -->
 </body>
-
 </html>
