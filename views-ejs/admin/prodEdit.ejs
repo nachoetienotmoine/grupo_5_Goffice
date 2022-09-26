@@ -39,8 +39,14 @@
                                 <H2>Name</H2>
                             </label>
 
-                            <input type="text" name="name" id="nombrePCrud" class="nameEditPV" required value="<%= productoEncontrado.name; %>">
+                            <input type="text" name="name" id="nombrePCrud" class="nameEditPV" value="<%= productoEncontrado.name; %>" value="<%= locals.old && old.name%>">
                             <i class="far fa-edit"></i>
+
+                            <% if (locals.errors && errors.name) { %>
+                                <p class="feedback">
+                                    <%= nameErrors[0].msg %>
+                                </p>
+                                <% } %>
                         </div>
 
                         <div class="error_fieldPeName"></div>
@@ -64,7 +70,7 @@
                                 <h2>Descripcion</h2>
                             </label>
 
-                            <input type="text" name="description" id="nombrePCrud" class="descriptionEditPV" required value="<%= productoEncontrado.description; %>">
+                            <input type="text" name="description" id="nombrePCrud" class="descriptionEditPV" value="<%= productoEncontrado.description; %>">
                             <i class="far fa-edit"></i>
                         </div>
 
@@ -75,7 +81,7 @@
                                 <h2>Discount</h2>
                             </label>
 
-                            <input type="text" name="discount" id="nombrePCrud" required value="<%= productoEncontrado.discount; %>">
+                            <input type="text" name="discount" id="nombrePCrud" value="<%= productoEncontrado.discount; %>">
                             <i class="far fa-edit"></i>
                         </div>
 
@@ -86,7 +92,7 @@
                                 <h2>Precio</h2>
                             </label>
 
-                            <input type="number" name="price" class="priceEditPV" id="nombrePCrud" required value="<%= productoEncontrado.price; %>">
+                            <input type="number" name="price" class="priceEditPV" id="nombrePCrud" value="<%= productoEncontrado.price; %>">
                             <i class="far fa-edit"></i>
                         </div>
 
@@ -96,7 +102,7 @@
                             <label name="image">
                                 <h2>Image</h2>
                             </label>
-                            <input type="file" class="imageEditPV" name="image" required value="images/<%= productoEncontrado.image; %>">
+                            <input type="file" class="imageEditPV" name="image" value="images/<%= productoEncontrado.image; %>">
                             
                             <i class="far fa-edit"></i>
                         </div>

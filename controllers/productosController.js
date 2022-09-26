@@ -4,6 +4,7 @@ const { parse } = require("path");
 const path = require('path');
 const Products = db.Product;
 const CategoryProducts = db.ProductCategory;
+const { validationResult } = require('express-validator');
 
 const productosController = {
     ////homeee///
@@ -63,22 +64,65 @@ const productosController = {
         res.render('admin/prodEdit', { productoEncontrado: products, productImage: productImage, categoryProducts: categoryProducts });
     },
     update: async (req, res) => {
-        let { name, category, description, discount, price, stock } = req.body;
-        Products.update(
-            {
-                name: name,
-                description: description,
-                discount: discount,
-                price: price,
-                image: req.file.originalname,
-                stock: stock,
-                id_products_category: category
-            },
-            {
-                where: { id: req.params.id }
+            let errors = validationResult(req);
+            if (errors.isEmpty()){
+                let { name, category, description, discount, price, stock } = req.body;
+                // Products.update(
+                //     {
+                //         name: name,
+                //         description: description,
+                //         discount: discount,
+                //         price: price,
+                //         image: req.file.originalname,
+                //         stock: stock,
+                //         id_products_category: category
+                //     },
+                //     {
+                //         where: { id: req.params.id }
+                //     });
+                //    res.redirect('/admin/productos/' + req.params.id);
+                console.log("ANASHE :D");
+            }else {
+                let nameErrors = [];
+                // let lastNameErrors = [];
+                // let emailNameErrors = [];
+                // let passwordNameErrors = [];
+                // let phoneNumberNameErrors = [];
+                // let imageNameErrors = [];
+                // let genderNameErrors = [];
+    
+                let errorsArray = errors.array();
+                errorsArray.forEach(error => {
+    
+                    if (error.param == "name"){
+                        nameErrors.push(error);
+                    }
+                    // else if (error.param == "lastname"){
+                    //     lastNameErrors.push(error);
+                    // }else if (error.param == "email"){
+                    //     emailNameErrors.push(error);
+                    // }else if (error.param == "password"){
+                    //     passwordNameErrors.push(error);
+                    // }else if (error.param == "phonenumber"){
+                    //     phoneNumberNameErrors.push(error);
+                    // }else if (error.param == "image"){
+                    //     imageNameErrors.push(error);
+                    // }else if (error.param == "gender"){
+                    //     genderNameErrors.push(error);
+                    // }
+                })
+    
+                const products = await Products.findByPk(req.params.id);
+                const categoryProducts = await CategoryProducts.findAll();
+                let productImage = path.format({ root: '/ignored', dir: path.join(__dirname, '..', '/public/images'), base: 'IMG_2546.jpg' });
+
+                res.render('admin/prodEdit', {
+                    errors: errors.mapped(), old: req.body, nameErrors,
+                    productoEncontrado: products, productImage: productImage, categoryProducts: categoryProducts  
+                });
             }
-        );
-        res.redirect('/admin/productos/' + req.params.id);
+   
+        
     },
 
 
