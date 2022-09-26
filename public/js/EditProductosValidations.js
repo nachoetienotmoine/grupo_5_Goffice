@@ -53,6 +53,7 @@
 
 // validationEditName.addEventListener('blur', function () {
 
+<<<<<<< HEAD
 //     let inputValue = this.value;
 //     if (inputValue.trim().length < 4) {
 //         error_fieldPeName.style.display = "block"
@@ -65,6 +66,26 @@
 //         validationEditName.style.borderColor = "";
 //         let SinErrors = errors.indexOf("El campo debe tener mas de 6 letras")
 //         errors.splice(SinErrors)
+=======
+    let inputValue = this.value;
+    if (inputValue.trim().length < 4) {
+        error_fieldPeName.style.display = "block"
+        validationEditName.style.borderColor = "red"
+        error_fieldPeName.innerHTML = "El campo debe tener mas de 4 letras";
+        errors.push("El campo debe tener mas de 4 letras")
+    }
+    else if (inputValue.trim().length > 19) {
+        error_fieldPeName.style.display = "block"
+        validationEditName.style.borderColor = "red"
+        error_fieldPeName.innerHTML = "El campo debe tener mas de 19 letras";
+        errors.push("El campo debe tener mas de 19 letras")
+    }
+    else {
+        error_fieldPeName.style.display = "none";
+        validationEditName.style.borderColor = "";
+        let SinErrors = errors.indexOf("El campo debe tener mas de 4 letras" || "El campo debe tener mas de 19 letras")
+        errors.splice(SinErrors)
+>>>>>>> 2619c2db3e78ae180b1ddfd8350245bd1fac6088
 
 
 
