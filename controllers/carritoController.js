@@ -127,6 +127,7 @@ const carritoController = {
         const userCart = await cart.findOne({where: {users_id: userId}});
         const cartsProducts = await userCart.getProducts();
         const MetodosdePago = await pagos.findAll();
+
         res.render("checkout" ,  { productosJ: cartsProducts, userCart , pagos : MetodosdePago})
     }
 }
