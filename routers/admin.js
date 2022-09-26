@@ -13,7 +13,7 @@ const validateProducts = [
         .notEmpty().withMessage('Debes completar la descripción').bail()
         .isLength({ min: 20}).withMessage('El campo debe tener al menos 20 caracteres').bail(),
   check('discount')
-        .notEmpty().withMessage('Debes completar la descuento').bail()
+        .notEmpty().withMessage('Debes completar el descuento').bail()
         .isInt({ max: 99}).withMessage('El descuento no puede ser mayor al 100%').bail(),
   check('price')
         .notEmpty().withMessage('Debes completar el precio').bail()
@@ -37,7 +37,7 @@ router.get('/users',usersController.users);
 router.get("/productos",productosController.listar);
 router.get("/productos/create", productosController.crearProductos);
 router.get("/productos/:id",productosController.detalleProducto);
-router.post("/productos", upload.single('image'), productosController.crearProductosPost);
+router.post("/productos", upload.single('image'), validateProducts ,productosController.crearProductosPost);
 router.get("/productos/:id/edit", productosController.editProducto);
 router.put("/productos/:id",upload.single('image'), validateProducts, productosController.update);
 router.delete("/productos/:id", productosController.deleteProducto);

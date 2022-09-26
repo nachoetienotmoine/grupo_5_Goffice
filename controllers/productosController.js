@@ -33,18 +33,45 @@ const productosController = {
         });
     },
     crearProductosPost: async (req, res) => {
-        let { name, category, description, discount, price, stock , image} = req.body;
-        await Products.create({
-            name: name,
-            description: description,
-            discount: discount,
-            price: price,
-            image: req.file.originalname,
-            stock: stock,
-            id_products_category: category
-        });
-        res.redirect('/admin/productos');
-    },
+        let errors = validationResult(req);
+        if (errors.isEmpty()){
+            let { name, category, description, discount, price, stock , image} = req.body;
+            Products.create(
+                {
+                    name: name,
+                    description: description,
+                    discount: discount,
+                    price: price,
+                    image: req.file.originalname,
+                    stock: stock,
+                    id_products_category: category
+                });
+               res.redirect('/admin/productos');
+        }else {
+            let nameErrors = [];
+            let descriptionErrors = [];
+            let discountErrors = [];
+            let priceErrors = [];
+           
+
+            let errorsArray = errors.array();
+            errorsArray.forEach(error => {
+                if (error.param == "name"){
+                    nameErrors.push(error);
+                }else if (error.param == "description"){
+                    descriptionErrors.push(error);
+                }else if (error.param == "discount"){
+                    discountErrors.push(error);
+                }else if (error.param == "price"){
+                    priceErrors.push(error);
+                }
+            })
+            const categoryProducts = await CategoryProducts.findAll();
+            res.render('admin/prodCrear', {
+                errors: errors.mapped(), old: req.body, nameErrors, descriptionErrors, discountErrors,
+                                                        priceErrors, categoryProducts: categoryProducts}
+               )
+    }},
     editProducto: async (req, res) => {
         const products = await Products.findByPk(req.params.id);
         const categoryProducts = await CategoryProducts.findAll();

@@ -33,7 +33,12 @@
                                 <H2>Name</H2>
                             </label>
 
-                            <input type="text" name="name" id="nombrePCrud" class="namePV" minlength="6">
+                            <input type="text" name="name" id="nombrePCrud" class="namePV" value="<%= locals.old && old.name%>">
+                            <% if (locals.errors && errors.name) { %>
+                                <p class="feedback">
+                                    <%= nameErrors[0].msg %>
+                                </p>
+                                <% } %>
                             <i class="far fa-edit"></i>
                         </div>
 
@@ -60,7 +65,12 @@
                                 <h2>Descripcion</h2>
                             </label>
 
-                            <input type="text" name="description" class="descriptionPV" id="nombrePCrud" >
+                            <input type="text" name="description" class="descriptionPV" id="nombrePCrud" value="<%= locals.old && old.description%>">
+                            <% if (locals.errors && errors.description) { %>
+                                <p class="feedback">
+                                    <%= descriptionErrors[0].msg %>
+                                </p>
+                                <% } %>
                             <i class="far fa-edit"></i>
                         </div>
 
@@ -71,7 +81,12 @@
                                 <h2>Discount</h2>
                             </label>
 
-                            <input type="number" name="discount" id="nombrePCrud" >
+                            <input type="number" name="discount" id="nombrePCrud" value="<%= locals.old && old.discount%>">
+                            <% if (locals.errors && errors.discount) { %>
+                                <p class="feedback">
+                                    <%= discountErrors[0].msg %>
+                                </p>
+                                <% } %>
                             <i class="far fa-edit"></i>
                         </div>
                         
@@ -81,7 +96,12 @@
                                 <h2>Precio</h2>
                             </label>
 
-                            <input type="number" name="price" class="pricePV" id="nombrePCrud" >
+                            <input type="number" name="price" class="pricePV" id="nombrePCrud" value="<%= locals.old && old.price%>">
+                            <% if (locals.errors && errors.price) { %>
+                                <p class="feedback">
+                                    <%= priceErrors[0].msg %>
+                                </p>
+                                <% } %>
                             <i class="far fa-edit"></i>
                         </div>
 
