@@ -13,6 +13,7 @@ formCash.classList.add('hide');
 formtarjeta.classList.add('hide');
 formTrans.classList.add('hide');
 
+totalPrice[0].children[1].innerHTML = TotalPriceCarrito;
 
 selectMetodoPago.addEventListener('change', (e)=>{
     
