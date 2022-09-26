@@ -48,9 +48,17 @@ Conclusión general: Nos organizamos bien con el sprint aunque ocacionalmente tu
 Retro 6:
 --------
 
-Cuestiones positivas del sprint anterior: Se logró dominar la implementación de la base de datos, la creaciópn y vinculación con todos los metodos necesarios, dando cumplimiento a las entregas obligatorias del sprint.
+Cuestiones positivas del sprint anterior: Se logró dominar la implementación de la base de datos, la creación y vinculación con todos los metodos necesarios, dando cumplimiento a las entregas obligatorias del sprint.
 Cosas qué deberían empezar a hacer: Dejar reflejadas las dailys en el momento de reunirnos, organizarnos para avanzar con propuestas optativas
 Cosas qué deberían dejar de hacer: Mejorar nuestra organización sobre los desarrollos de tareas, trabajo cohesionado y avance.
+Conclusión general: Lo positivo es el cumplimiento en torno a la entrega, existen muchas oportunidades de mejora en la forma en que se llega a la entrega.
+
+Retro 7:
+--------
+
+Cuestiones positivas del sprint anterior: se logró dar complimiento a las exigencias obligatorias y optativas del sprint, dando funcionalidad completa en lo previsto para la entrega: validaciones de front y back.
+Cosas qué deberían empezar a hacer: dar un standard de formalidad a las reuniones que realizamos, dejandolas asentadas en Dailys, a modo de complir con una metodología clara de trabajo.
+Cosas qué deberían dejar de hacer: trabajar con mayor correlación, un esfuerzo mayor de los que dominan menos las herramientas aprendidas para poder colaborar mas en el proyecto.
 Conclusión general: Lo positivo es el cumplimiento en torno a la entrega, existen muchas oportunidades de mejora en la forma en que se llega a la entrega.
 
 ○ Temática del sitio y público objetivo:
