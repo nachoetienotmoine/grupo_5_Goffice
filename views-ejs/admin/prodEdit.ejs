@@ -94,6 +94,11 @@
                             </label>
                             <input type="file" class="imageEditPV" name="image" value="images/<%= productoEncontrado.image; %>">
                             <i class="far fa-edit"></i>
+                            <% if (locals.errors && errors.image){ %>
+                                <p class="feedback">
+                                    <%= imageErrors[0].msg %>
+                                </p>
+                                <% } %>
                         </div>
                         <div class="error_fieldPeImage"></div>
                         <div class="boxpC">

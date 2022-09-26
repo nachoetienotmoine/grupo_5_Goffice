@@ -69,15 +69,13 @@ const productosController = {
                         where: { id: req.params.id }
                     });
                    res.redirect('/admin/productos/' + req.params.id);
-                
             }else {
                 let nameErrors = [];
                 let descriptionErrors = [];
                 let discountErrors = [];
                 let priceErrors = [];
-                let phoneNumberNameErrors = [];
-                let imageNameErrors = [];
-                let genderNameErrors = [];
+                let imageErrors = [];
+
                 let errorsArray = errors.array();
                 errorsArray.forEach(error => {
                     if (error.param == "name"){
@@ -88,12 +86,8 @@ const productosController = {
                         discountErrors.push(error);
                     }else if (error.param == "price"){
                         priceErrors.push(error);
-                    }else if (error.param == "phonenumber"){
-                        phoneNumberNameErrors.push(error);
                     }else if (error.param == "image"){
-                        imageNameErrors.push(error);
-                    }else if (error.param == "gender"){
-                        genderNameErrors.push(error);
+                        imageErrors.push(error);
                     }
                 })
                 const products = await Products.findByPk(req.params.id);
@@ -101,7 +95,7 @@ const productosController = {
                 let productImage = path.format({ root: '/ignored', dir: path.join(__dirname, '..', '/public/images'), base: 'IMG_2546.jpg' });
                 res.render('admin/prodEdit', {
                     errors: errors.mapped(), old: req.body, nameErrors, descriptionErrors, discountErrors,
-                                                            priceErrors,
+                                                            priceErrors, imageErrors,
                     productoEncontrado: products, productImage: productImage, categoryProducts: categoryProducts
                 });
             }

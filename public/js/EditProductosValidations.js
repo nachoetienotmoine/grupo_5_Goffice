@@ -53,7 +53,7 @@ validationEditPrice.addEventListener('blur', function () {
 
 validationEditName.addEventListener('blur', function () {
 
-<<<<<<< HEAD
+
     let inputValue = this.value;
     if (inputValue.trim().length < 4) {
         error_fieldPeName.style.display = "block"
@@ -66,7 +66,7 @@ validationEditName.addEventListener('blur', function () {
         validationEditName.style.borderColor = "";
         let SinErrors = errors.indexOf("El campo debe tener mas de 6 letras")
         errors.splice(SinErrors)
-=======
+
     let inputValue = this.value;
     if (inputValue.trim().length < 4) {
         error_fieldPeName.style.display = "block"
@@ -85,17 +85,12 @@ validationEditName.addEventListener('blur', function () {
         validationEditName.style.borderColor = "";
         let SinErrors = errors.indexOf("El campo debe tener mas de 4 letras" || "El campo debe tener mas de 19 letras")
         errors.splice(SinErrors)
-<<<<<<< HEAD
-    }
-});
-=======
->>>>>>> 2619c2db3e78ae180b1ddfd8350245bd1fac6088
 
 
 
     }
+    }
 });
->>>>>>> bd7497e1e95bc629cc918f35f3f079b74c38aae5
 
 validationEditImage.addEventListener('change', function () {
 
@@ -135,26 +130,26 @@ validationEditImage.addEventListener('change', function () {
 
 
 SendProductsEditForm.addEventListener('click', function (event) {
-//     for (let i = 0; i < errors.length; i++) {
-//         if (errors[i].length > 0 ) {
-//             error_fieldPeSend.style.display = 'block'
-//             error_fieldPeSend.innerHTML = "Debes completar las casillas correctamente , y luego volver a enviar el formulario"
-//             event.preventDefault();
-//         }
+    for (let i = 0; i < errors.length; i++) {
+        if (errors[i].length > 0 ) {
+            error_fieldPeSend.style.display = 'block'
+            error_fieldPeSend.innerHTML = "Debes completar las casillas correctamente , y luego volver a enviar el formulario"
+            event.preventDefault();
+        }
 
-//     }
-//  if(!errorImagenEdit){
+    }
+ if(!errorImagenEdit){
         
-//         validationEditImage.style.color = "red";
-//         validationEditImage.style.fontSize = "large";
-//         error_fieldPeImage.style.display ="block" 
-//         error_fieldPeImage.innerHTML = "Debe ingresar una imagen en formato : (JPG, JPEG, PNG, GIF)";
-//         event.preventDefault();
-//     }
+        validationEditImage.style.color = "red";
+        validationEditImage.style.fontSize = "large";
+        error_fieldPeImage.style.display ="block" 
+        error_fieldPeImage.innerHTML = "Debe ingresar una imagen en formato : (JPG, JPEG, PNG, GIF)";
+        event.preventDefault();
+    }
 
-//     if(!errors[0]){
-//         error_fieldPeSend.style.display = 'none'
+    if(!errors[0]){
+        error_fieldPeSend.style.display = 'none'
 
-//     }
+    }
    
-// })
+})
