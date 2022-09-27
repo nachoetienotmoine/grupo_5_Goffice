@@ -5,15 +5,26 @@ const formtarjeta = document.querySelector('.tarjeta');
 const formTrans = document.querySelector('.trans');
 const totalPrice = document.querySelectorAll('.preciofinal');
 const selectMetodoPago = document.querySelector('#metodopago');
+const multiplicand = document.querySelectorAll('.multiplicand');
+const checkOutProduct = document.querySelectorAll('.productoCheckout');;
 
 const TotalPriceCarrito = localStorage.getItem("totalPriceCarrito");
-const productsAmount = localStorage.getItem("productsAmount");
+let productsAmount = localStorage.getItem("productsAmount");
 
 formCash.classList.add('hide');
 formtarjeta.classList.add('hide');
 formTrans.classList.add('hide');
 
-totalPrice[0].children[1].innerHTML = TotalPriceCarrito;
+TotalPriceCarrito > 0 ? totalPrice[0].children[1].innerHTML = TotalPriceCarrito : "";
+
+productsAmount = JSON.parse(productsAmount);
+
+for (let i = 0; i < checkOutProduct.length; i++){
+        let productsInResume = []
+        productsInResume.push(checkOutProduct[i].children[1].textContent.trim());
+        multiplicand[i].innerHTML = productsAmount[i][productsInResume].amount + "x";
+}
+
 
 selectMetodoPago.addEventListener('change', (e)=>{
     

@@ -9,7 +9,7 @@ const linkHrefCheckOut = document.querySelector('.hrefcheckout');
 
 let totalPriceValue = 0;
 let products = [];
-let productsParsedJson = [];
+let productsParsedJson;
 
 function ProductAmount(product, amount){
     this.product = product,
@@ -18,7 +18,7 @@ function ProductAmount(product, amount){
 
 linkHrefCheckOut.addEventListener('click', () => {
     localStorage.setItem('totalPriceCarrito', totalPriceValue);
-    for(let i = 0; i < products.length; i++){productsParsedJson.push(JSON.stringify(products[i]))}
+    productsParsedJson = JSON.stringify(products)
     localStorage.setItem('productsAmount', productsParsedJson);
 });
 
@@ -74,7 +74,7 @@ for(let i = 0; i < quantityLess.length; i++){
                         }   
 
                         if (!alreadyChecked){
-                            input_Name = {
+                            fieldName = {
                                 [input_Name]: new ProductAmount (input_Name, productNumberValue)
                             };
                             products.push(input_Name);
