@@ -3,9 +3,24 @@ const quantityMore = document.querySelectorAll('.cantidadMas');
 const quantityNumber = document.querySelectorAll('.cantidad');
 const productAddedName = document.querySelectorAll('.nombreProductoAgregado');
 const productAddedPrice = document.querySelectorAll('.precioProductoAgregado');
-const preciocarrito = document.querySelectorAll('.PrecioenCarrito')
-const preciototal = document.querySelectorAll('.totalprice')
+const preciocarrito = document.querySelectorAll('.PrecioenCarrito');
+const preciototal = document.querySelectorAll('.totalprice');
+const linkHrefCheckOut = document.querySelector('.hrefcheckout');
 
+let totalPriceValue = 0;
+let products = [];
+let productsParsedJson = [];
+
+function ProductAmount(product, amount){
+    this.product = product,
+    this.amount = amount
+}
+
+linkHrefCheckOut.addEventListener('click', () => {
+    localStorage.setItem('totalPriceCarrito', totalPriceValue);
+    for(let i = 0; i < products.length; i++){productsParsedJson.push(JSON.stringify(products[i]))}
+    localStorage.setItem('productsAmount', productsParsedJson);
+});
 
 for(let i = 0; i < quantityLess.length; i++){
     quantityLess[i].addEventListener('click', (e) => {
@@ -43,13 +58,38 @@ for(let i = 0; i < quantityLess.length; i++){
                         let precio = preciototal[0].textContent;
                         precio = parseInt(precio);
                         preciototal[0].innerHTML = ( precio - gettingRidOfDolarSign)
+
+                        totalPriceValue = precio - gettingRidOfDolarSign;
+
+                        let input_Name = productAddedName[i].textContent.trim();
+                        let productNumberValue = numberValue;
+
+
+                        let alreadyChecked = false;
+                        let fieldName = input_Name;
+                        for (let i = 0; i < products.length; i++){
+                            if(products[i][fieldName]){
+                                products[i][fieldName].product === fieldName ? alreadyChecked = true : ""; 
+                            }
+                        }   
+
+                        if (!alreadyChecked){
+                            input_Name = {
+                                [input_Name]: new ProductAmount (input_Name, productNumberValue)
+                            };
+                            products.push(input_Name);
+                        }else{
+                            for (let i = 0; i < products.length; i++){
+                                if(products[i][fieldName]){
+                                    products[i][fieldName].amount = numberValue;
+                                }
+                            }
+                        }
                     }
                 }
             }
         }
         )
-    
-        console.log('less!');
     });
 }
 
@@ -87,14 +127,39 @@ for(let i = 0; i < quantityMore.length; i++){
 
                         let precio = preciototal[0].textContent;
                         precio = parseInt(precio);
-                        preciototal[0].innerHTML = (precio + gettingRidOfDolarSign)
+                        preciototal[0].innerHTML = (precio + gettingRidOfDolarSign);
+                        
+                        totalPriceValue = precio + gettingRidOfDolarSign;
+                        console.log(totalPriceValue);
+
+                        let input_Name = productAddedName[i].textContent.trim();
+                        let productNumberValue = numberValue;
+
+
+                        let alreadyChecked = false;
+                        let fieldName = input_Name;
+                        for (let i = 0; i < products.length; i++){
+                            if(products[i][fieldName]){
+                                products[i][fieldName].product === fieldName ? alreadyChecked = true : ""; 
+                            }
+                        }   
+
+                        if (!alreadyChecked){
+                            input_Name = {
+                                [input_Name]: new ProductAmount (input_Name, productNumberValue)
+                            };
+                            products.push(input_Name);
+                        }else{
+                            for (let i = 0; i < products.length; i++){
+                                if(products[i][fieldName]){
+                                    products[i][fieldName].amount = numberValue;
+                                }
+                            }
+                        }
                     }
                 }
             }
         }
         )
-    
-        console.log('more!');
     });
 }
-

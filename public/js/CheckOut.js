@@ -3,14 +3,17 @@ const formmercadopago = document.querySelector('.mercadopago');
 const formCash = document.querySelector('.cash');
 const formtarjeta = document.querySelector('.tarjeta');
 const formTrans = document.querySelector('.trans');
-
+const totalPrice = document.querySelectorAll('.preciofinal');
 const selectMetodoPago = document.querySelector('#metodopago');
 
+const TotalPriceCarrito = localStorage.getItem("totalPriceCarrito");
+const productsAmount = localStorage.getItem("productsAmount");
 
 formCash.classList.add('hide');
 formtarjeta.classList.add('hide');
 formTrans.classList.add('hide');
 
+totalPrice[0].children[1].innerHTML = TotalPriceCarrito;
 
 selectMetodoPago.addEventListener('change', (e)=>{
     
