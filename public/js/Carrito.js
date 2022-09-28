@@ -16,10 +16,12 @@ function ProductAmount(product, amount){
     this.amount = amount
 }
 
-linkHrefCheckOut.addEventListener('click', () => {
+linkHrefCheckOut.addEventListener('click', (e) => {
     localStorage.setItem('totalPriceCarrito', totalPriceValue);
     productsParsedJson = JSON.stringify(products)
     localStorage.setItem('productsAmount', productsParsedJson);
+    e.preventDefault();
+    console.log(productsParsedJson);
 });
 
 for(let i = 0; i < quantityLess.length; i++){
@@ -68,20 +70,20 @@ for(let i = 0; i < quantityLess.length; i++){
                         let alreadyChecked = false;
                         let fieldName = input_Name;
                         for (let i = 0; i < products.length; i++){
-                            if(products[i][fieldName]){
-                                products[i][fieldName].product === fieldName ? alreadyChecked = true : ""; 
+                            if(products[i]["productName"]){
+                                products[i]["productName"].product === fieldName ? alreadyChecked = true : ""; 
                             }
                         }   
 
                         if (!alreadyChecked){
                             fieldName = {
-                                [input_Name]: new ProductAmount (input_Name, productNumberValue)
+                                ["productName"]: new ProductAmount (input_Name, numberValue)
                             };
                             products.push(input_Name);
                         }else{
                             for (let i = 0; i < products.length; i++){
-                                if(products[i][fieldName]){
-                                    products[i][fieldName].amount = numberValue;
+                                if(products[i]["productName"].product == fieldName){
+                                    products[i]["productName"].amount = numberValue;
                                 }
                             }
                         }
@@ -133,26 +135,25 @@ for(let i = 0; i < quantityMore.length; i++){
                         console.log(totalPriceValue);
 
                         let input_Name = productAddedName[i].textContent.trim();
-                        let productNumberValue = numberValue;
 
 
                         let alreadyChecked = false;
                         let fieldName = input_Name;
                         for (let i = 0; i < products.length; i++){
-                            if(products[i][fieldName]){
-                                products[i][fieldName].product === fieldName ? alreadyChecked = true : ""; 
+                            if(products[i]["productName"]){
+                                products[i]["productName"].product === fieldName ? alreadyChecked = true : ""; 
                             }
                         }   
 
                         if (!alreadyChecked){
                             input_Name = {
-                                [input_Name]: new ProductAmount (input_Name, productNumberValue)
+                                ["productName"]: new ProductAmount (input_Name, numberValue)
                             };
                             products.push(input_Name);
                         }else{
                             for (let i = 0; i < products.length; i++){
-                                if(products[i][fieldName]){
-                                    products[i][fieldName].amount = numberValue;
+                                if(products[i]["productName"].product == fieldName){
+                                    products[i]["productName"].amount = numberValue;
                                 }
                             }
                         }

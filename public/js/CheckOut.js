@@ -18,11 +18,14 @@ formTrans.classList.add('hide');
 TotalPriceCarrito > 0 ? totalPrice[0].children[1].innerHTML = TotalPriceCarrito : "";
 
 productsAmount = JSON.parse(productsAmount);
-
-for (let i = 0; i < checkOutProduct.length; i++){
-        let productsInResume = []
-        productsInResume.push(checkOutProduct[i].children[1].textContent.trim());
-        multiplicand[i].innerHTML = productsAmount[i][productsInResume].amount + "x";
+if (productsAmount.length > 0){
+        checkOutProduct.forEach(product => {
+                for(let i = 0; i < productsAmount.length; i++){
+                        if(product.children[1].textContent.trim() === productsAmount[i]["productName"].product){
+                              console.log(productsAmount[i]["productName"].amount);  
+                        }
+                }
+        })
 }
 
 
