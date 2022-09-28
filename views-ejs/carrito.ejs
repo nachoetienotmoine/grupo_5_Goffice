@@ -119,224 +119,52 @@
                 <!-- Additional required wrapper -->
                 <div class="swiper-wrapper">
                     <!-- Slides -->
-                    <div class="swiper-slide">
-                        <div class="slider-box">
-                            <h3 class="h3Carro">Microfono</h3>
-                            <div class="img-box">
-                                <img src="images/microfono.png">
-                            </div>
-    
-                            <div class="detail-slider">
-                                <div class="estrellas">
-                                    <span>
-                                        <i class="fa fa-star"></i>
-                                    </span>
-                                    <span>
-                                        <i class="fa fa-star"></i>
-                                    </span>
-                                    <span>
-                                        <i class="fa fa-star"></i>
-                                    </span>
-                                    <span>
-                                        <i class="fa fa-star"></i>
-                                    </span>
-                                    <span>
-                                        <i class="fa fa-star"></i>
-                                    </span>
-    
+                    
+                    <% for( let i = 0; i < productosJ.length; i++ ) { %>
+                        <div class="swiper-slide">
+                            <div class="slider-box">
+                                <h3 class="h3Carro"><%= productosJ[i].name; %></h3>
+                                <div class="img-box">
+                                    <img src="images/<%= productosJ[i].image; %>">
                                 </div>
-    
-                                <p>$4684</p>
-                                <br>
-                                <button type="submit" class="submit-cart2">Add to cart</button>
-    
-                            </div>
-    
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-    
-                        <div class="slider-box">
-                            <h3 class="h3Carro">Mouse</h3>
-                            <div class="img-box">
-                                <img src="images/camara.png">
-                            </div>
-    
-                            <div class="detail-slider">
-                                <div class="estrellas">
-                                    <span>
-                                        <i class="fa fa-star"></i>
-                                    </span>
-                                    <span>
-                                        <i class="fa fa-star"></i>
-                                    </span>
-                                    <span>
-                                        <i class="fa fa-star"></i>
-                                    </span>
-                                    <span>
-                                        <i class="fa fa-star"></i>
-                                    </span>
-                                    <span>
-                                        <i class="fa fa-star"></i>
-                                    </span>
-    
+        
+                                <div class="detail-slider">
+                                    <div class="estrellas">
+                                        <span>
+                                            <i class="fa fa-star"></i>
+                                        </span>
+                                        <span>
+                                            <i class="fa fa-star"></i>
+                                        </span>
+                                        <span>
+                                            <i class="fa fa-star"></i>
+                                        </span>
+                                        <span>
+                                            <i class="fa fa-star"></i>
+                                        </span>
+                                        <span>
+                                            <i class="fa fa-star"></i>
+                                        </span>
+        
+                                    </div>
+        
+        
+                                    <p>$<%= productosJ[i].price; %></p>
+                                    <br>
+                                    <div class="bottom">
+                                        <form action="/carrito/agregar/<%= productosJ[i].id %>" method="post">
+                                            <div class="btn__group">
+                                                <button type="submit" class="btn addToCart">Añadir carrito</button>
+                                                <a href="/detalle/<%= productosJ[i].id %>" class="btn view">Vista</a>
+                                            </div>
+                                        </form>
+                                    </div>
+        
                                 </div>
-    
-                                <p>$4684</p>
-                                <br>
-                                <button type="submit" class="submit-cart2">Add to cart</button>
-    
+        
                             </div>
-    
                         </div>
-                    </div>
-                    <div class="swiper-slide">
-    
-                        <div class="slider-box">
-                            <h3 class="h3Carro">MousePad</h3>
-                            <div class="img-box">
-                                <img src="images/Mouse pad.png">
-                            </div>
-    
-                            <div class="detail-slider">
-                                <div class="estrellas">
-                                    <span>
-                                        <i class="fa fa-star"></i>
-                                    </span>
-                                    <span>
-                                        <i class="fa fa-star"></i>
-                                    </span>
-                                    <span>
-                                        <i class="fa fa-star"></i>
-                                    </span>
-                                    <span>
-                                        <i class="fa fa-star"></i>
-                                    </span>
-                                    <span>
-                                        <i class="fa fa-star"></i>
-                                    </span>
-    
-                                </div>
-    
-    
-                                <p>$4684</p>
-                                <br>
-                                <button type="submit" class="submit-cart2">Add to cart</button>
-    
-                            </div>
-    
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-    
-                        <div class="slider-box">
-                            <h3 class="h3Carro">Silla</h3>
-                            <div class="img-box">
-                                <img src="images/silla.png">
-                            </div>
-    
-                            <div class="detail-slider">
-                                <div class="estrellas">
-                                    <span>
-                                        <i class="fa fa-star"></i>
-                                    </span>
-                                    <span>
-                                        <i class="fa fa-star"></i>
-                                    </span>
-                                    <span>
-                                        <i class="fa fa-star"></i>
-                                    </span>
-                                    <span>
-                                        <i class="fa fa-star"></i>
-                                    </span>
-                                    <span>
-                                        <i class="fa fa-star"></i>
-                                    </span>
-    
-                                </div>
-    
-    
-                                <p>$4684</p>
-                                <br>
-                                <button type="submit" class="submit-cart2">Add to cart</button>
-    
-                            </div>
-    
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="slider-box">
-                            <h3 class="h3Carro">Teclado</h3>
-                            <div class="img-box">
-                                <img src="images/teclado.png">
-                            </div>
-    
-                            <div class="detail-slider">
-                                <div class="estrellas">
-                                    <span>
-                                        <i class="fa fa-star"></i>
-                                    </span>
-                                    <span>
-                                        <i class="fa fa-star"></i>
-                                    </span>
-                                    <span>
-                                        <i class="fa fa-star"></i>
-                                    </span>
-                                    <span>
-                                        <i class="fa fa-star"></i>
-                                    </span>
-                                    <span>
-                                        <i class="fa fa-star"></i>
-                                    </span>
-    
-                                </div>
-    
-    
-                                <p>$4684</p>
-                                <br>
-                                <button type="submit" class="submit-cart2">Add to cart</button>
-    
-                            </div>
-    
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="slider-box">
-                            <h3 class="h3Carro">Auriculares</h3>
-                            <div class="img-box">
-                                <img src="images/Reddragon Zeus-X.png">
-                            </div>
-    
-                            <div class="detail-slider">
-                                <div class="estrellas">
-                                    <span>
-                                        <i class="fa fa-star"></i>
-                                    </span>
-                                    <span>
-                                        <i class="fa fa-star"></i>
-                                    </span>
-                                    <span>
-                                        <i class="fa fa-star"></i>
-                                    </span>
-                                    <span>
-                                        <i class="fa fa-star"></i>
-                                    </span>
-                                    <span>
-                                        <i class="fa fa-star"></i>
-                                    </span>
-    
-                                </div>
-    
-    
-                                <p>$4684</p>
-                                <br>
-                                <button type="submit" class="submit-cart2">Add to cart</button>
-    
-                            </div>
-    
-                        </div>
-                    </div>
-    
+                    <% } %>
     
                 </div>
                 <!-- If we need pagination -->
