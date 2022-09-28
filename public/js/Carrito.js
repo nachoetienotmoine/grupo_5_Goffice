@@ -20,8 +20,6 @@ linkHrefCheckOut.addEventListener('click', (e) => {
     localStorage.setItem('totalPriceCarrito', totalPriceValue);
     productsParsedJson = JSON.stringify(products)
     localStorage.setItem('productsAmount', productsParsedJson);
-    e.preventDefault();
-    console.log(productsParsedJson);
 });
 
 for(let i = 0; i < quantityLess.length; i++){

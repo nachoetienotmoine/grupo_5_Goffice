@@ -22,7 +22,7 @@ if (productsAmount.length > 0){
         checkOutProduct.forEach(product => {
                 for(let i = 0; i < productsAmount.length; i++){
                         if(product.children[1].textContent.trim() === productsAmount[i]["productName"].product){
-                              console.log(productsAmount[i]["productName"].amount);  
+                                multiplicand[i].innerHTML = productsAmount[i]["productName"].amount + "x";
                         }
                 }
         })
