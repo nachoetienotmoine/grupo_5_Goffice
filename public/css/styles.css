@@ -2047,6 +2047,29 @@ hr {
     border-radius: 1rem;
 }
 
+
+.box{
+    background-color: rgba(255, 255, 255, 0.2);
+    width: 100px;
+    height: 150px;
+    margin: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.2) 0 50px 30px --7px;
+    margin-left: 35%;
+
+}
+
+.logoBox{
+    width: 100px;
+}
+
+
+
+
+
 @media (min-width:769px) {
     hr {
         width: 50%;
@@ -2594,59 +2617,37 @@ hr {
         transform: scale(1.1);
     }
 
-    .asus {
-        width: 15%;
-        height: 6rem;
-
-    }
+    
 
 
-    .intel {
-        width: 15%;
-
-        height: 6rem;
-
-
-    }
-
-    .lenovo {
-        width: 15%;
-
-        height: 6rem;
-    }
-
-
-    .logitech {
-        width: 15%;
-
-        height: 6rem;
-    }
-
-
-    .apple {
-        width: 15%;
-        height: 6rem;
-    }
-
-    .logos {
+    .box{
+        background-color: rgba(255, 255, 255, 0.2);
+        width: 600px;
+        height: 250px;
+        margin: 10px;
         display: flex;
-        text-align: center;
+        align-items: center;
         justify-content: center;
+        border-radius: 10px;
+        box-shadow: rgba(0, 0, 0, 0.2) 0 50px 30px --7px;
+        transform: translateX(200%);
+        transition: transform 1.3s ease;
+        margin-left: 20%;
 
     }
 
-    .partners {
-        text-align: center;
-        padding: 1rem;
+    .logoBox{
+        width: 70px;
+    }
+
+    .box:nth-of-type(even) {
+        transform: translateX(-200%);
 
     }
 
-    .contenedorLogosIndex {
-        display: flex;
-        gap: 1rem;
-        justify-content: space-evenly;
+    .box.show {
+        transform: translateX(0);
     }
-
 
 }
 
@@ -3204,7 +3205,7 @@ hr {
         border-radius: 50%;
         font-size: 20px;
         position: fixed;
-        bottom: 150px;
+        bottom: 70px;
         right: 20px;
         cursor: pointer;
         transition: all 300ms ease;
@@ -3320,6 +3321,36 @@ hr {
         justify-content: space-evenly;
     }
 
+
+    .box{
+        background-color: rgba(255, 255, 255, 0.2);
+        width: 1500px;
+        height: 250px;
+        margin: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 10px;
+        box-shadow: rgba(0, 0, 0, 0.2) 0 50px 30px --7px;
+        transform: translateX(400%);
+        transition: transform 1.3s ease;
+
+    }
+
+    .logoBox{
+        width: 200px;
+    }
+
+    .box:nth-of-type(even) {
+        transform: translateX(-200%);
+
+    }
+
+    .box.show {
+        transform: translateX(0);
+    }
+
+    
 
     
 }
