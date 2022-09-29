@@ -49,7 +49,7 @@ switch (location.href) {
             scriptSrc("/js/HeaderSearchBar.js");
             break;
     case "http://localhost:3000/admin/productos/create":
-            scriptSrc("/js/EditProductosValidations.js");
+            scriptSrc("/js/ProductosValidations.js");
             scriptSrc("/js/HeaderSearchBar.js");
             break;
 }
