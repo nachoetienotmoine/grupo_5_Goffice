@@ -2050,15 +2050,15 @@ hr {
 
 .box{
     background-color: rgba(255, 255, 255, 0.2);
-    width: 100px;
+    width: 50%;
     height: 150px;
-    margin: 5px;
+    margin-bottom: 1rem;
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: center;
     border-radius: 10px;
     box-shadow: rgba(0, 0, 0, 0.2) 0 50px 30px --7px;
-    margin-left: 35%;
+    margin-left: 25%;
 
 }
 
@@ -2622,7 +2622,7 @@ hr {
 
     .box{
         background-color: rgba(255, 255, 255, 0.2);
-        width: 600px;
+        width: 88%;
         height: 250px;
         margin: 10px;
         display: flex;
@@ -2630,14 +2630,15 @@ hr {
         justify-content: center;
         border-radius: 10px;
         box-shadow: rgba(0, 0, 0, 0.2) 0 50px 30px --7px;
-        transform: translateX(200%);
+        transform: translateX(-200%);
         transition: transform 1.3s ease;
-        margin-left: 20%;
+       
 
     }
 
     .logoBox{
-        width: 70px;
+        width: 35%;
+        height: 88%;
     }
 
     .box:nth-of-type(even) {
@@ -3324,7 +3325,7 @@ hr {
 
     .box{
         background-color: rgba(255, 255, 255, 0.2);
-        width: 1500px;
+        width: 88%;
         height: 250px;
         margin: 10px;
         display: flex;
@@ -3332,13 +3333,14 @@ hr {
         justify-content: center;
         border-radius: 10px;
         box-shadow: rgba(0, 0, 0, 0.2) 0 50px 30px --7px;
-        transform: translateX(400%);
+        transform: translateX(-400%);
         transition: transform 1.3s ease;
 
     }
 
     .logoBox{
-        width: 200px;
+        width: 35%;
+        height: 90%;
     }
 
     .box:nth-of-type(even) {
