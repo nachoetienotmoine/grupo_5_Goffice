@@ -20,14 +20,15 @@ const carritoController = {
                 });
 
             const cartsProducts = await cart.findOne({where: {users_id: userId}});
+            const products = await Products.findAll();
 
-            res.render("carritoVacio", { productosJ: cartsProducts });
+            res.render("carritoVacio", { productosJ: cartsProducts, products });
 
         }else{
             const cartsProducts = await userCart.getProducts();
-
+            const products = await Products.findAll();
             if(cartsProducts.length != 0){
-                res.render("carrito", { productosJ: cartsProducts, userCart });
+                res.render("carrito", { productosJ: cartsProducts, userCart, products });
             }else{
                
                 res.render("carritoVacio");
