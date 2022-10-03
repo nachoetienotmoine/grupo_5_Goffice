@@ -31,7 +31,7 @@ const carritoController = {
                 res.render("carrito", { productosJ: cartsProducts, userCart, products });
             }else{
                
-                res.render("carritoVacio");
+                res.render("carritoVacio" , { productosJ: cartsProducts, products });
             }
             
             
