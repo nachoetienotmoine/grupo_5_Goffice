@@ -131,7 +131,7 @@ validationCheckoutCreditEmail.addEventListener('blur', () => {
 
 mercadoPagoButton.addEventListener('click', function (event) {
 
-    if (!errorAdressCheckout || !errorCodigoPostalCheckout || !errorNameCheckout || !errorPhonenumberCheckout ||errorEmailCheckout ) {
+    if (!errorAdressCheckout || !errorCodigoPostalCheckout || !errorNameCheckout || !errorPhonenumberCheckout || !errorEmailCheckout ) {
         error_fieldCheckoutCreditMercadopago.style.display = 'block'
         error_fieldCheckoutCreditMercadopago.innerHTML = "Debes completar las casillas correctamente y luego reenviar el formulario"
         event.preventDefault();
