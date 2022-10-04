@@ -12,7 +12,7 @@ module.exports = (sequelize, dataTypes) => {
 
 
         },
-        products_id: {
+        product_id: {
             type: dataTypes.INTEGER
 
         }
@@ -29,15 +29,15 @@ module.exports = (sequelize, dataTypes) => {
     UserProducts.associate = function (models) {
 
 
-        UserProducts.hasMany(models.User, {
+        UserProducts.belongsTo(models.User, {
             as: "Users",
             foreignKey: "user_id"
         })
         ,
 
-        UserProducts.hasMany(models.Product, {
-                as: 'Products',
-                foreignKey: 'products_id'
+        UserProducts.belongsTo(models.Product, {
+                as: "Products",
+                foreignKey: "product_id"
             })
 
     }
