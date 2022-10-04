@@ -170,3 +170,13 @@ INSERT INTO payment_methods (method)  VALUES ('efectivo');
 INSERT INTO payment_methods (method)  VALUES ('mercado pago');
 INSERT INTO payment_methods (method)  VALUES ('tarjeta');
 INSERT INTO payment_methods (method)  VALUES ('transferencia');
+
+CREATE TABLE users_products (
+    id INT NOT NULL AUTO_INCREMENT,
+    user_id INT NOT NULL,
+    products_id INT NOT NULL,
+
+	PRIMARY KEY (id),
+    FOREIGN KEY (user_id) REFERENCES users(id),
+    FOREIGN KEY (products_id) REFERENCES products(id)
+);
