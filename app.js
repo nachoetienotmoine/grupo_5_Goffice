@@ -3,7 +3,7 @@ const app = express();
 const path = require('path');
 const session = require('express-session');
 const cookies = require('cookie-parser');
-
+const cors = require('cors');
 
 const routersDetalle = require('./routers/detalleApi');
 const routersCarrito = require('./routers/carritoApi');
@@ -42,7 +42,9 @@ app.use(session({
 
 app.use(cookies());
 app.use(userLoggedMiddleware);
- 
+app.use(cors({
+    origin: "http://localhost:4000",
+}))
 
 app.use('/baseDeDatosInfo', routersBaseDeDatosInfo)
 app.use('/detalle', routersDetalle);
