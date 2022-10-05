@@ -8,8 +8,10 @@ const { validationResult } = require('express-validator');
 const productosController = {
     ////homeee///
     index: async (req, res) => {
-        const products = await Products.findAll()
-        res.render("index", { productosJ: products })
+        const products = await Products.findAll();
+        let productsWithStock = [];
+        products.forEach(product => { product.stock > 0 ? productsWithStock.push(product) : "";});
+        res.render("index", { productosJ: productsWithStock })
     },
     ////detalle///
     Detalle: async (req, res) => {

@@ -23,17 +23,22 @@ const carritoController = {
 
             const cartsProducts = await cart.findOne({where: {users_id: userId}});
             const products = await Products.findAll();
+            let productsWithStock = [];
+            products.forEach(product => { product.stock > 0 ? productsWithStock.push(product) : "";});
 
-            res.render("carritoVacio", { productosJ: cartsProducts, products });
+            res.render("carritoVacio", { productosJ: cartsProducts, products: productsWithStock});
 
         }else{
             const cartsProducts = await userCart.getProducts();
             const products = await Products.findAll();
             if(cartsProducts.length != 0){
-                res.render("carrito", { productosJ: cartsProducts, userCart, products });
+                let productsWithStock = [];
+                products.forEach(product => { product.stock > 0 ? productsWithStock.push(product) : "";});
+                res.render("carrito", { productosJ: cartsProducts, userCart, products: productsWithStock });
             }else{
-               
-                res.render("carritoVacio" , { productosJ: cartsProducts, products });
+                let productsWithStock = [];
+                products.forEach(product => { product.stock > 0 ? productsWithStock.push(product) : "";});
+                res.render("carritoVacio" , { productosJ: cartsProducts, products: productsWithStock });
             }
             
             
@@ -135,7 +140,6 @@ const carritoController = {
     },
 
     checkoutCompra: async (req, res) => {
-        let { name, lastname, phonenumber, gender } = req.body;
         const userEmail = req.session.userLogged.email;
         let products;
 
@@ -148,19 +152,30 @@ const carritoController = {
             let id = userData.dataValues.id;
             id = parseInt(id);
             let productsFromDb = [];
-            console.log();console.log();console.log();
             for (let i = 0; i < products.length; i++){
                 productsFromDb.push(await Products.findOne({where: {name: products[i]}}))
             }
-            // console.log(productsFromDb[0].dataValues.id);
+
             for (let i = 0; i < products.length; i++){
                 await users_products.create({
                     users_id: id,
                     product_id: productsFromDb[i].dataValues.id
                 })
             }
-            console.log();console.log();console.log();
+
+            for (let i = 0; i < products.length; i++){
+                
+                if ( productsFromDb[i].dataValues.stock > 0){
+                    const stockLess = productsFromDb[i].dataValues.stock - 1;
+                    Products.update({
+                        stock: stockLess
+                    },{
+                        where: {id: productsFromDb[i].dataValues.id}
+                    })
+                }
+            }
             
+
         }
         res.redirect('/');
     }
