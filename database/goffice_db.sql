@@ -180,3 +180,7 @@ CREATE TABLE users_products (
     FOREIGN KEY (user_id) REFERENCES users(id),
     FOREIGN KEY (product_id) REFERENCES products(id)
 );
+ALTER TABLE goffice_db.users_products DROP FOREIGN KEY users_products_ibfk_2;
+ALTER TABLE goffice_db.users_products ADD CONSTRAINT users_products_ibfk_2 FOREIGN KEY (product_id) REFERENCES goffice_db.products(id) ON DELETE CASCADE ON UPDATE CASCADE;
+ALTER TABLE goffice_db.users_products DROP FOREIGN KEY users_products_ibfk_1;
+ALTER TABLE goffice_db.users_products ADD CONSTRAINT users_products_ibfk_1 FOREIGN KEY (user_id) REFERENCES goffice_db.users(id) ON DELETE CASCADE ON UPDATE CASCADE;
