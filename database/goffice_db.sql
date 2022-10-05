@@ -181,3 +181,4 @@ CREATE TABLE users_products (
     FOREIGN KEY (product_id) REFERENCES products(id)
 );
 
+
