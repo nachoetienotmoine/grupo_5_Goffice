@@ -15,7 +15,8 @@ const error_fieldCheckoutCreditMercadopago = document.querySelector('.error_fiel
 
 error_fieldCheckoutCreditMercadopago
 let mercadoPagoButton = document.querySelector('#mercadoPagoButton');
-
+const forms = document.querySelectorAll('form');
+const allProductsResume = document.querySelectorAll('.productoCheckout');
 
 let errorNameCheckout = false;
 let errorPhonenumberCheckout = false;
@@ -135,5 +136,15 @@ mercadoPagoButton.addEventListener('click', function (event) {
         error_fieldCheckoutCreditMercadopago.style.display = 'block'
         error_fieldCheckoutCreditMercadopago.innerHTML = "Debes completar las casillas correctamente y luego reenviar el formulario"
         event.preventDefault();
+    }else{
+        let AllProducts = [];
+        allProductsResume.forEach(product => AllProducts.push(product.children[1].textContent.trim()));
+        const visibleFormName = event.path[2].classList[1];
+        let formOnDisplay;
+
+        forms.forEach((form) => {form.classList.contains(visibleFormName) ? formOnDisplay = form : ""})
+
+        fetch('/carrito/checkout', 
+            {method:'POST',headers: {'Content-Type':'application/json'},body: JSON.stringify({products: AllProducts})})
     }})
   

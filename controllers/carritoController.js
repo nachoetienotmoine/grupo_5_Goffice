@@ -2,6 +2,8 @@ const db = require('../database/models');
 const Products = db.Product;
 const cart = db.Cart
 const pagos = db.PaymentMethod
+const Users = db.User;
+const users_products = db.UserProducts;
 const carritoController = {
 
     
@@ -130,6 +132,37 @@ const carritoController = {
         const MetodosdePago = await pagos.findAll();
 
         res.render("checkout" ,  { productosJ: cartsProducts, userCart , pagos : MetodosdePago})
+    },
+
+    checkoutCompra: async (req, res) => {
+        let { name, lastname, phonenumber, gender } = req.body;
+        const userEmail = req.session.userLogged.email;
+        let products;
+
+        if (req.body.products != undefined){
+            products = req.body.products;
+        }
+        
+        if (products != undefined){
+            let userData = await Users.findOne({where: {email: userEmail}});
+            let id = userData.dataValues.id;
+            id = parseInt(id);
+            let productsFromDb = [];
+            console.log();console.log();console.log();
+            for (let i = 0; i < products.length; i++){
+                productsFromDb.push(await Products.findOne({where: {name: products[i]}}))
+            }
+            // console.log(productsFromDb[0].dataValues.id);
+            for (let i = 0; i < products.length; i++){
+                await users_products.create({
+                    user_id: 1,
+                    products_id: 2,
+                })
+            }
+            console.log();console.log();console.log();
+            
+        }
+        res.redirect('/');
     }
 }
 

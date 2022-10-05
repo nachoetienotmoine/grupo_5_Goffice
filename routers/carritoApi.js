@@ -13,6 +13,7 @@ router.delete('/delete/:id', authMiddleware, carritoController.delete);
 
 /// check out ////
 router.get('/checkout',authMiddleware ,carritoController.checkout);
+router.post('/checkout',authMiddleware ,carritoController.checkoutCompra);
 /// check out ///
 
 
