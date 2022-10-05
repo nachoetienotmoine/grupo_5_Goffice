@@ -7,14 +7,14 @@ module.exports = (sequelize, dataTypes) => {
             autoIncrement: true
 
         },
-        user_id: {
+        users_id: {
             type: dataTypes.INTEGER,
-
+            primaryKey: true
 
         },
         product_id: {
-            type: dataTypes.INTEGER
-
+            type: dataTypes.INTEGER,
+            primaryKey: true
         }
 
     };
@@ -31,7 +31,7 @@ module.exports = (sequelize, dataTypes) => {
 
         UserProducts.belongsTo(models.User, {
             as: "Users",
-            foreignKey: "user_id"
+            foreignKey: "users_id"
         })
         ,
 

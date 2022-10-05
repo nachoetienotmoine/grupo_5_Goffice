@@ -173,14 +173,11 @@ INSERT INTO payment_methods (method)  VALUES ('transferencia');
 
 CREATE TABLE users_products (
     id INT NOT NULL AUTO_INCREMENT,
-    user_id INT NOT NULL,
+    users_id INT NOT NULL,
     product_id INT NOT NULL,
 
 	PRIMARY KEY (id),
-    FOREIGN KEY (user_id) REFERENCES users(id),
+    FOREIGN KEY (users_id) REFERENCES users(id),
     FOREIGN KEY (product_id) REFERENCES products(id)
 );
-ALTER TABLE goffice_db.users_products DROP FOREIGN KEY users_products_ibfk_2;
-ALTER TABLE goffice_db.users_products ADD CONSTRAINT users_products_ibfk_2 FOREIGN KEY (product_id) REFERENCES goffice_db.products(id) ON DELETE CASCADE ON UPDATE CASCADE;
-ALTER TABLE goffice_db.users_products DROP FOREIGN KEY users_products_ibfk_1;
-ALTER TABLE goffice_db.users_products ADD CONSTRAINT users_products_ibfk_1 FOREIGN KEY (user_id) REFERENCES goffice_db.users(id) ON DELETE CASCADE ON UPDATE CASCADE;
+

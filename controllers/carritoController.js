@@ -155,8 +155,8 @@ const carritoController = {
             // console.log(productsFromDb[0].dataValues.id);
             for (let i = 0; i < products.length; i++){
                 await users_products.create({
-                    user_id: 1,
-                    products_id: 2,
+                    users_id: id,
+                    product_id: productsFromDb[i].dataValues.id
                 })
             }
             console.log();console.log();console.log();
