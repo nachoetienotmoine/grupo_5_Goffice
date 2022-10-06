@@ -23,9 +23,8 @@ const BaseDeDatos = {
     lastProductAdded: async (req, res) => {
         let lastProduct = [0,0]
         let allProducts = await Products.findAll();
-        console.log(allProducts);
         await allProducts.forEach((product) => {product.id > lastProduct[0] ? lastProduct[1] = product: "";});
-        return res.send(lastProduct)
+        return res.send(lastProduct);
     }
 
 }

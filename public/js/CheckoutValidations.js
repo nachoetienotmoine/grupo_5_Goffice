@@ -129,7 +129,6 @@ validationCheckoutCreditEmail.addEventListener('blur', () => {
 })
 
 
-
 mercadoPagoButton.addEventListener('click', function (event) {
 
     if (!errorAdressCheckout || !errorCodigoPostalCheckout || !errorNameCheckout || !errorPhonenumberCheckout || !errorEmailCheckout ) {
@@ -137,14 +136,28 @@ mercadoPagoButton.addEventListener('click', function (event) {
         error_fieldCheckoutCreditMercadopago.innerHTML = "Debes completar las casillas correctamente y luego reenviar el formulario"
         event.preventDefault();
     }else{
-        let AllProducts = [];
-        allProductsResume.forEach(product => AllProducts.push(product.children[1].textContent.trim()));
+        event.preventDefault();
+
+        function Products(name, multiplier){
+            this.name = name,
+            this.multiplier = multiplier
+        }
+
+        let products = [];
+
+        allProductsResume.forEach(product => {
+            products.push(
+                product = {
+                    ["product"]: new Products(product.children[1].textContent.trim(), product.firstElementChild.textContent.trim())
+                }
+            )});
+
         const visibleFormName = event.path[2].classList[1];
         let formOnDisplay;
 
-        forms.forEach((form) => {form.classList.contains(visibleFormName) ? formOnDisplay = form : ""})
-
+        forms.forEach((form) => {form.classList.contains(visibleFormName) ? formOnDisplay = form : ""});
+        
         fetch('/carrito/checkout', 
-            {method:'POST',headers: {'Content-Type':'application/json'},body: JSON.stringify({products: AllProducts})})
+            {method:'POST',headers: {'Content-Type':'application/json'},body: JSON.stringify({products: products})})
     }})
   
