@@ -138,6 +138,10 @@ mercadoPagoButton.addEventListener('click', function (event) {
     }else{
         event.preventDefault();
 
+        let finalPrice = document.querySelector('.preciofinal');
+        finalPrice = finalPrice.children[1].textContent.trim();
+        finalPrice = finalPrice.slice(1,finalPrice.length);
+        finalPrice = parseInt(finalPrice);
         function Products(name, multiplier){
             this.name = name,
             this.multiplier = multiplier
@@ -158,6 +162,6 @@ mercadoPagoButton.addEventListener('click', function (event) {
         forms.forEach((form) => {form.classList.contains(visibleFormName) ? formOnDisplay = form : ""});
         
         fetch('/carrito/checkout', 
-            {method:'POST',headers: {'Content-Type':'application/json'},body: JSON.stringify({products: products})})
+            {method:'POST',headers: {'Content-Type':'application/json'},body: JSON.stringify({products: products, totalPrice: finalPrice})})
     }})
   

@@ -27,7 +27,7 @@ const carritoController = {
             products.forEach(product => { product.stock > 0 ? productsWithStock.push(product) : "";});
             
             let cartsProductsWithStock = [];
-            cartsProducts.forEach(product => { product.stock > 0 ? cartsProductsWithStock.push(product) : "";});
+            // cartsProducts.forEach(product => { product.stock > 0 ? cartsProductsWithStock.push(product) : "";});
 
             res.render("carritoVacio", { productosJ: cartsProductsWithStock, products: productsWithStock});
 
@@ -154,26 +154,15 @@ const carritoController = {
     checkoutCompra: async (req, res) => {
         const userEmail = req.session.userLogged.email;
         let frontProducts = req.body.products;
-
-        // console.log();
-        // console.log();
-        // console.log();
-        // console.log();
-        // console.log(frontProducts[0]["product"]);
-        // console.log(frontProducts[1]["product"]);
-        // console.log(frontProducts[2]["product"]);
-        // console.log();
-        // console.log();
-        // console.log();
-        // console.log();
+        const totalPrice = req.body.totalPrice;
         
         let userData = await Users.findOne({where: {email: userEmail}});
         let id = userData.dataValues.id;
         id = parseInt(id);
         let productsFromDb = [];
-        // let userCart = await cart.findOne({where: {id: id}});
-        // let totalProductsFromDb = userCart.dataValues.total_products;
-        // let totalPriceFromDb = userCart.dataValues.total_price;
+        let userCart = await cart.findOne({where: {id: id}});
+        let totalProductsFromDb = userCart.dataValues.total_products;
+        let totalPriceFromDb = userCart.dataValues.total_price;
             
             for (let i = 0; i < frontProducts.length; i++){
                 productsFromDb.push(await Products.findOne({where: {name: frontProducts[i]["product"].name}}))
@@ -193,20 +182,24 @@ const carritoController = {
                         })
                     }
                 }
+            }
+            let productsBought = 0;
+            frontProducts.forEach(() => {productsBought = productsBought + 1;})
+            productsBought = totalProductsFromDb - productsBought;
+            
+            let priceToUpdate = totalPriceFromDb - totalPrice;
+            priceToUpdate >= 0 ? "" : priceToUpdate = 0;
+            productsBought >= 0 ? "" : productsBought = 0;
+            await cart.update({
+                total_products: productsBought,
+                total_price:  priceToUpdate
+                },{
+                    where: { users_id: id }
+                });  
 
-
-
-
-                // await cart.update({
-                //     total_products: totalProductsFromDb - 1,
-                //     total_price:  totalPriceFromDb - productsFromDb[i].dataValues.price
-                //     },{
-                //         where: { users_id: id }
-                //     });
-
-                //     if (productsFromDb[i].dataValues.stock - 1 === 0){
-                //         await userCart.removeProducts({where: {products_id: productsFromDb[i].dataValues.id}})
-                //     }
+            for (let i = 0; i < frontProducts.length; i++){
+                await userCart.removeProducts([productsFromDb[i].dataValues.id]);
+            }
             // }    
 
             // for (let i = 0; i < products.length; i++){
@@ -214,7 +207,7 @@ const carritoController = {
             //         users_id: id,
             //         product_id: productsFromDb[i].dataValues.id
             //     })
-            }
+            // }
 
 
 
