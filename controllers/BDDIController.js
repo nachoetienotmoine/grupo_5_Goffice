@@ -15,10 +15,10 @@ const BaseDeDatos = {
         let dbResponse = await Users.findOne({where: {email: userEmail}});
 
         if (dbResponse === null){
-            dbResponse = {"response":"400"}
+            dbResponse = {"response":"200"}
         }
         
-        return res.send(dbResponse);
+        return res.sendStatus(dbResponse);
     },
     lastProductAdded: async (req, res) => {
         let lastProduct = [0,0]

@@ -130,18 +130,15 @@ validationCheckoutCreditEmail.addEventListener('blur', () => {
 
 
 mercadoPagoButton.addEventListener('click', function (event) {
-
+    event.preventDefault();
     if (!errorAdressCheckout || !errorCodigoPostalCheckout || !errorNameCheckout || !errorPhonenumberCheckout || !errorEmailCheckout ) {
         error_fieldCheckoutCreditMercadopago.style.display = 'block'
         error_fieldCheckoutCreditMercadopago.innerHTML = "Debes completar las casillas correctamente y luego reenviar el formulario"
-        event.preventDefault();
     }else{
-        event.preventDefault();
-
         let finalPrice = document.querySelector('.preciofinal');
-        finalPrice = finalPrice.children[1].textContent.trim();
-        finalPrice = finalPrice.slice(1,finalPrice.length);
+        finalPrice = localStorage.getItem('totalPriceCarrito');
         finalPrice = parseInt(finalPrice);
+       
         function Products(name, multiplier){
             this.name = name,
             this.multiplier = multiplier
@@ -160,8 +157,22 @@ mercadoPagoButton.addEventListener('click', function (event) {
         let formOnDisplay;
 
         forms.forEach((form) => {form.classList.contains(visibleFormName) ? formOnDisplay = form : ""});
-        
+
+        let fetched = false;
+
         fetch('/carrito/checkout', 
-            {method:'POST',headers: {'Content-Type':'application/json'},body: JSON.stringify({products: products, totalPrice: finalPrice})})
+        {method:'POST',headers: {'Content-Type':'application/json'},
+        body: JSON.stringify({products: products, totalPrice: finalPrice})})   
+                .then(res => {
+                    if (res.status === 200){
+                        fetched = true;
+                    }
+                })
+        
+        setTimeout(function(){
+            if (fetched){
+                window.location.href = 'http://localhost:3000/'; 
+            }
+        },2000)
     }})
   
