@@ -5,7 +5,7 @@ const router = express.Router();
 
 const pagoTarjetaController = require('../controllers/pagoTarjetaController');
 
-router.get('/pagoTarjetaController', pagoTarjetaController.route);
+router.get('/', pagoTarjetaController.route);
 
 
 module.exports = router;

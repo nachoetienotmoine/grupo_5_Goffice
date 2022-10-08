@@ -51,13 +51,13 @@ app.use('/baseDeDatosInfo', routersBaseDeDatosInfo)
 app.use('/detalle', routersDetalle);
 app.use('/carrito', routersCarrito);
 app.use('/soporte', routersSoporte);
-app.use('/pagoTrajeta', routersPagoTarjeta);
+app.use('/pagoTarjeta', routersPagoTarjeta);
 
 app.use('/', routersHome);
 app.use('/users', routersUsers);
 app.use('/admin',authMiddleware,adminMiddleware ,routersAdmin);
-app.listen(process.env.PORT || 4000, function() {
-    console.log("Servidor corriendo en el puerto 4000");
+app.listen(process.env.PORT || 3000, function() {
+    console.log("Servidor corriendo en el puerto 3000");
 });
 
 
