@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('./head.ejs')%>
+
+<head>
+    <Title>Card Form</Title>
+</head>
+
+    <body>
+        <%- include('./header2.ejs') %>
+
+        <div class="conteiner">
+            <section class="cardForm" id="cardForm">
+                <div class="front">
+                    <div class="logo-brand">
+                        <img src="./images/visa.png" alt="">
+                        
+                    </div>
+                    <img src="./images/chip-tarjeta.png" class="chip" alt="">
+                    <div class="datos" id="number">
+                        <div class="groups">
+                            <p class="labelCard">Card Number</p>
+                            <p class="numberCard">#### #### #### ####</p>
+                        </div>
+                        <div class="card-name">
+                            <div class="groups" id="name">
+                                <p class="labelCard">Card Name</p>
+                                <p class="name">Jhon Doe</p>
+                            </div>
+                            <div class="groups" id="expiration">
+                                <p class="labelCard">Expiration</p>
+                                <p class="expiration"> <span class="month">MM</span>/ <span class="year">AA</span></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </section>
+        </div>
+
+
+
+
+
+
+        
+    </body>
+
+</html>
