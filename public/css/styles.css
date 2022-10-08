@@ -5411,10 +5411,190 @@ s .header-bar2 .compracuotas2 {
 }
 
 /* ------------------------------------Pago Con Tarjeta----------------------------------- */
+.conteinerPT {
+    width: 90%;
+    max-width: 1000px;
+    padding: 40px 20px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+   align-items: center;
+
+}
+
+.cardForm {
+    width: 100%;
+    max-width: 500px;
+    position: relative;
+    color: white;
+    transition: .3s ease all;
+    transform: rotateY(0deg);
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+    cursor: pointer;
+    z-index: 2;
+    
+}
+
+.cardForm.active {
+    transform: rotateY(180deg);
+
+}
+
+.cardForm > div {
+    padding:30px;
+    border-radius: 15px;
+    min-height: 315px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 10px 10px 0 rgba(90, 116, 148, 0.3) ;
+}
+
+.cardForm .front {
+    width: 100%;
+    background: url(../images/bg-tarjeta-01.jpeg);
+    background-size: cover;
+
+}
+
+.front .logo-brand {
+    text-align: right;
+    min-height: 50px;
+}
+
+.front .logo-brand img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    max-width: 80px;
+
+}
+
+.front .chip {
+    width: 100%;
+    max-width: 50px;
+    margin-bottom: 20px;
+
+}
+
+.front .labelCard {
+    font-size: 16px;
+    color: #7d8994;
+    margin-bottom: 5px;
+
+}
+
+.front .groups .number,
+.front .groups .name,
+.front .groups .expiration {
+    color: white;
+    font-size: 22px;
+    text-transform: uppercase;
+}
+
+.front .card-name {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
 
 
+.back {
+    background: url(../images/bg-tarjeta-01.jpeg);
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    transform: rotateY(180deg);
+    backface-visibility: hidden;
+    
 
 
+}
+
+.back .magnetic {
+    height: 40px;
+    background: #000;
+    width: 100%;
+    position: absolute;
+    top: 30px;
+    left: 0;
+
+
+}
+
+.back .datos {
+    margin-top: 60px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.back .datos p {
+    margin-bottom: 5px;
+}
+
+.back .datos #sign {
+    width: 70%;
+
+}
+
+.back .datos #sign .sign {
+    height: 40px;
+    background: repeating-linear-gradient(skyblue 0, skyblue 5px, orange 5px, orange 10px);
+}
+
+.back .datos #sign .sign p {
+    line-height: 40px;
+    font-family:  cursive;
+    color: #000;
+    font-size: 30px;
+    padding: 0 10px;
+    text-transform: capitalize;
+}
+
+.back .datos #ccv {
+    width: 20%;
+
+}
+
+.back .datos #ccv .ccv {
+    background: white;
+height: 40px ;
+color: #000;
+padding: 10px;
+text-align: center;
+
+}
+
+.back .legend {
+    font-size: 14px;
+    line-height: 24px;
+}
+
+.back .link-bank {
+    font-size: 14px;
+    color: white;
+}
+
+
+.conteiner-btn .btn-open-close {
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+    line-height: 20px;
+    background: #0b65e3;
+    color: white;
+    position: relative;
+    top: -25px;
+    z-index: 3;
+    border-radius: 100%;
+    box-shadow: -5px 4px 8px rgba(25,56,183,0.4);
+    padding: 5px;
+    transition: all .2s ease;
+    border: none;
+    cursor: pointer;
+
+} 
 
 /* ------------------------------------ End Pay Card----------------------------------- */
 

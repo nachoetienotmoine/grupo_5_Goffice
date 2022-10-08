@@ -9,7 +9,7 @@
     <body>
         <%- include('./header2.ejs') %>
 
-        <div class="conteiner">
+        <div class="conteinerPT">
             <section class="cardForm" id="cardForm">
                 <div class="front">
                     <div class="logo-brand">
@@ -34,8 +34,33 @@
                         </div>
                     </div>
                 </div>
+
+                <div class="back">
+                    <div class="magnetic"> </div>
+                    <div class="datos">
+                        <div class="groups" id="sign">
+                            <p class="labelCard">Signature</p>
+                            <div class="sign"><p></p></div>
+
+                        </div>
+                        <div class="groups" id="ccv">
+                            <p class="labelCard">CCV</p>
+                            <p class="ccv"></p>
+                        </div>
+                    </div>
+                    <p class="legend">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis, dolores.</p>
+                    <a href="#" class="link-bank">www.tubanco.com</a>
+                </div>
                 
             </section>
+
+            <div class="conteiner-btn">
+                <button class="btn-open-close" id="btn-open-close"> <i class="fas fa-plus"></i></button>
+            </div>
+
+
+
+
         </div>
 
 
@@ -45,5 +70,5 @@
 
         
     </body>
-
+<script src="js/Tarjeta.js"></script>
 </html>
