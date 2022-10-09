@@ -1,12 +1,14 @@
 const db = require('../database/models');
 const Products = db.Product;
-const cart = db.Cart
+const CategoryProducts = db.ProductCategory;
+
 const apiController = {
     
     products: async (req, res) => {
 
         let productsDb = await Products.findAll({include: "ProductCategorys"});
-        let count = 0;
+        let categoryDb = await CategoryProducts.findAll();
+        let count = productsDb.length;
         let countByCategory = [];
         let products = [];
         let relations = [];
@@ -22,14 +24,19 @@ const apiController = {
 
         }
         console.log();console.log();console.log();console.log();console.log();console.log();console.log();console.log();
-        console.log(relations);
+        console.log();
         console.log();console.log();console.log();console.log();console.log();console.log();console.log();console.log();
+        
+        categoryDb.forEach((category) => {
+            
+            let sameCategory = 0;
 
-        productsDb.forEach((product) => {count++, countByCategory.push({
-            id: product.dataValues.id,
-            name: product.dataValues.name,
-            category: product.dataValues.ProductCategorys
-        })})
+            productsDb.forEach((product) => {product.dataValues.id_products_category === category.dataValues.id ? sameCategory++ : "";})
+
+            countByCategory.push({
+                name: category.dataValues.category,
+                count: sameCategory,
+        })});
 
         productsDb.forEach((product) => {
 
