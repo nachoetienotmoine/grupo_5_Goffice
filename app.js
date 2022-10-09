@@ -5,6 +5,8 @@ const session = require('express-session');
 const cookies = require('cookie-parser');
 const cors = require('cors');
 
+const routersApi = require('./routers/api');
+
 const routersDetalle = require('./routers/detalleApi');
 const routersCarrito = require('./routers/carritoApi');
 const routersHome = require('./routers/homeApi');
@@ -46,6 +48,8 @@ app.use(userLoggedMiddleware);
 app.use(cors({
     origin: "http://localhost:4000",
 }))
+
+app.use('/api', routersApi);
 
 app.use('/baseDeDatosInfo', routersBaseDeDatosInfo)
 app.use('/detalle', routersDetalle);
