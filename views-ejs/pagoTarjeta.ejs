@@ -59,6 +59,55 @@
             </div>
 
 
+            <form action="" id="creditForm" class="creditForm">
+                <div class="groups">
+                    <label for="inputNumber"> Card Number</label>
+                    <input type="text" id="inputNumber" maxlength="19" autocomplete="off" >
+                </div>
+
+                <div class="groups">
+                    <label for="inputName"> Card Name</label>
+                    <input type="text" id="inputName" maxlength="19" autocomplete="off">
+                </div>
+
+                <div class="flexbox">
+                    <div class="group-expire">
+                        <label for="selectMonth">Expiration</label>
+                        <div class="flexbox">
+                            <div class="group-select">
+                                <select name="month" id="selectMonth">
+                                    <option disabled selected>Month</option>
+
+                                </select>
+                                    
+                                <i class="fas fa-angle-down"></i>
+                                
+                            </div>
+                        
+                        
+                            <div class="group-select">
+                                <select name="year" id="selectYear">
+                                    <option disabled selected>Year</option>
+
+                                </select>
+                                    
+                                <i class="fas fa-angle-down"></i>
+                                
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="group-ccv">
+                        <label for="inputccv">ccv</label>
+                        <input type="text" maxlength="3" id="inputCCV">
+                    </div>
+                </div>
+                <button type="submit" class="btn-submitT">submit</button>
+                
+            </form>
+
+
 
 
         </div>
