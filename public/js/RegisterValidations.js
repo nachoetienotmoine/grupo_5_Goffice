@@ -295,7 +295,7 @@ function domainAvailable(input, field, fieldMessage){
     let fieldName = field.name;
     let fileExtension = inputValue.split('.');
     let extension = fileExtension[1];
-    let allowedExtensions = ['dk', 'uk', 'es', 'com', 'ar' , 'gmail'];
+    let allowedExtensions = ['dk', 'uk', 'es', 'com', 'ar'];
     let extensionMatch = false;
 
 

@@ -17,7 +17,7 @@ const productosController = {
     Detalle: async (req, res) => {
         const id = parseInt(req.params.id);
         const product = await Products.findByPk(id)
-        res.render('detalle', {user: product});
+        res.render('detalle', {product: product});
     },
     ////////
     listar: async (req, res) => {
