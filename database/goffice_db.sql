@@ -73,7 +73,7 @@ VALUES (DEFAULT, 'micrófonos');
 
 INSERT INTO products (id, name, description, price, discount, image, stock, id_products_category)
 VALUES (DEFAULT, 'Monitor','es re piola este monitor, no muestra el historial de busqueda del browser',
-1459, 42, 'monitor1.png', 2, 1);
+1459, 42, 'monitor1.png', 8, 1);
 
 INSERT INTO products (id, name, description, price, discount, image, stock, id_products_category)
 VALUES (DEFAULT, 'Camara', "esta camara es mejor que la de iphone",
@@ -97,7 +97,7 @@ VALUES (DEFAULT,'Silla Gamer','La silla mas comoda para tus nalgotas bebe',
 
 INSERT INTO products(id, name, description, price, discount, image, stock, id_products_category)
 VALUES (DEFAULT,'Teclado','teclado , nada fuera de lo normal',
-4312,41,'teclado.png',1,7);
+4312,41,'teclado.png',10,7);
 
 INSERT INTO products(id, name, description, price, discount, image, stock, id_products_category)
 VALUES (DEFAULT,'Reddragon Zeus','auriculares VIP del grupo 5',
@@ -105,7 +105,7 @@ VALUES (DEFAULT,'Reddragon Zeus','auriculares VIP del grupo 5',
 
 INSERT INTO products(id, name, description, price, discount, image, stock, id_products_category)
 VALUES (DEFAULT,'Microfono Hyperx','El microfono con mas autotune que maria becerra',
-4684,3,'microfono.png',0,9);
+4684,3,'microfono.png',10,9);
 
 
 ALTER TABLE `goffice_db`.`users`

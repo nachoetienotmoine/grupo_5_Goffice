@@ -1,85 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <%- include('../head.ejs')%>
+<%- include('../head.ejs')%>
 
-<body>
+    <body>
 
-    <%- include('../header2.ejs')%>
+        <%- include('../header2.ejs')%>
 
-   
-    <main class="todo-productos-main">
 
-        
-            <br>
-            <section class="contenedor">
+            <main class="todo-productos-main">
 
 
 
-                <article class="contenedorproducto">
-                    <h2 class="h2-nombre">
-                        <%= prodEncontrado.name %>
+                <section class="contenedor">
 
-                    </h2>
 
-                    <article class="article-main">
 
-                        <article class="imagen-nombre-main">
-                            <div class="imagen-div">
-                                <img src="/images/<%= prodEncontrado.image; %>" alt="Producto" id="img-main">
-                                <div class="descuento"><span id="discount" data-action="cart-can"
-                                        class="badge rounded-circle">
-                                        <%= prodEncontrado.discount; %>%
-                                    </span>
-                                </div>
-                            </div>
+                    <article class="contenedorproducto">
+                        <h2 class="h2-nombre">
+                            <%= prodEncontrado.name %>
 
-                            <div class="descriptions-main">
+                        </h2>
 
-                                <%= prodEncontrado.description; %>
+                        <article class="article-main">
 
-                            </div>
-
-                            <div class="button-box">
-                                <button class="button-main" id="buttonmain">
-                                    <%= prodEncontrado.category; %>
-                                </button>
-
-                                <button class="button-main">
-                                    $<%= Math.round(prodEncontrado.price - prodEncontrado.discount/100 *
-                                    prodEncontrado.price); %>
-                                </button>
-
-                                <button class="button-main" id="buttonmain">
-                                    Stock : <%= prodEncontrado.stock; %>
-                                </button>
-                                <div class="botonEdit">
-                               
-                                    <a  href="/admin/productos/<%= prodEncontrado.id; %>/edit"><i class="far fa-edit"></i></a>
+                            <article class="imagen-nombre-main">
+                                <div class="imagen-div">
+                                    <img src="/images/<%= prodEncontrado.image; %>" alt="Producto" id="img-main">
+                                    <div class="descuento"><span id="discount" data-action="cart-can"
+                                            class="badge rounded-circle">
+                                            <%= prodEncontrado.discount; %>%
+                                        </span>
+                                    </div>
                                 </div>
 
-                            </div>
+                                <div class="descriptions-main">
+
+                                    <%= prodEncontrado.description; %>
+
+                                </div>
+
+                                <div class="button-box">
+                                    <button class="button-main" id="buttonmain">
+                                        <%= prodEncontrado.category; %>
+                                    </button>
+
+                                    <button class="button-main">
+                                        $<%= Math.round(prodEncontrado.price - prodEncontrado.discount/100 *
+                                            prodEncontrado.price); %>
+                                    </button>
+
+                                    <button class="button-main" id="buttonmain">
+                                        Stock : <%= prodEncontrado.stock; %>
+                                    </button>
+                                    <div class="botonEdit">
+
+                                        <a href="/admin/productos/<%= prodEncontrado.id; %>/edit"><i
+                                                class="far fa-edit"></i></a>
+                                    </div>
+
+                                </div>
+                            </article>
                         </article>
                     </article>
-                </article>
-                <br>
-            </section>
-            <div class="detail-imagePC">
-                <br><br>
+                    <br>
+                </section>
+
+<br><br><br><br><br>
                 <section class="main-detail-section2">
-            <article class="nav-image-detail">
-                <img id="particular-detail-image" src="/images/<%= prodEncontrado.image; %>" alt="articulo">
-                <img id="particular-detail-image" src="/images/<%= prodEncontrado.image; %>" alt="articulo">
-                <img id="particular-detail-image" src="/images/<%= prodEncontrado.image; %>" alt="articulo">
-                <img id="particular-detail-image" src="/images/<%= prodEncontrado.image; %>" alt="articulo">
-            </article>
-           
-        </section>
-           </div> <br>
-    </main>
+                    <article class="nav-image-detail">
+                        <img id="particular-detail-image" src="/images/<%= prodEncontrado.image; %>" alt="articulo">
+                        <img id="particular-detail-image" src="/images/<%= prodEncontrado.image; %>" alt="articulo">
+                        <img id="particular-detail-image" src="/images/<%= prodEncontrado.image; %>" alt="articulo">
+                        <img id="particular-detail-image" src="/images/<%= prodEncontrado.image; %>" alt="articulo">
+                    </article>
 
-    <%- include('../footer.ejs') %>
+                </section>
+                </div> <br>
+            </main>
 
-</body>
+            <%- include('../footer.ejs') %>
+
+    </body>
 
 </html>
