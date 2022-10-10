@@ -12,26 +12,26 @@
 
                 <div class="carrusel">
                     <ul class="carrusel-fotos">
-                        <li id="foto1"><img src="/images/<%= user.image  %>" alt=""></li>
-                        <li id="foto2"><img src="/images/<%= user.image  %>" alt=""></li>
-                        <li id="foto3"><img src="/images/<%= user.image  %>" alt=""></li>
-                        <li id="foto4"><img src="/images/<%= user.image  %>" alt=""></li>
+                        <li id="foto1"><img src="/images/<%= product.image  %>" alt=""></li>
+                        <li id="foto2"><img src="/images/<%= product.image  %>" alt=""></li>
+                        <li id="foto3"><img src="/images/<%= product.image  %>" alt=""></li>
+                        <li id="foto4"><img src="/images/<%= product.image  %>" alt=""></li>
 
                     </ul>
 
 
                     <ul class="carrusel-menu">
-                        <li><a href="#foto1"><img src="/images/<%= user.image  %>" alt=""></a></li>
-                        <li><a href="#foto2"><img src="/images/<%= user.image  %>" alt=""></a></li>
-                        <li><a href="#foto3"><img src="/images/<%= user.image  %>" alt=""></a></li>
-                        <li><a href="#foto4"><img src="/images/<%= user.image  %>" alt=""></a></li>
+                        <li><a href="#foto1"><img src="/images/<%= product.image  %>" alt=""></a></li>
+                        <li><a href="#foto2"><img src="/images/<%= product.image  %>" alt=""></a></li>
+                        <li><a href="#foto3"><img src="/images/<%= product.image  %>" alt=""></a></li>
+                        <li><a href="#foto4"><img src="/images/<%= product.image  %>" alt=""></a></li>
 
                     </ul>
 
                   
                         <div class="detalles-content">
                             <h3>
-                                <%= user.name %>
+                                <%= product.name %>
                             </h3>
                             <div class="rating">
                                 <span>
@@ -50,16 +50,16 @@
                                     <i class="fa fa-star"></i>
                                 </span>
                             </div>
-                            <p class="price"><b>Precio: </b> $<%= user.price %>
+                            <p class="price"><b>Precio: </b> $<%= product.price %>
                             </p>
                             <p class="description">
                                 <b>Descripcion: </b> <span>
-                                    <%= user.description %>
+                                    <%= product.description %>
                                 </span>
                             </p>
 
                             <div class="bottom">
-                                <form action="/carrito/agregar/<%= user.id %>" method="post">
+                                <form action="/carrito/agregar/<%= product.id %>" method="post">
                                     <div class="btn__group">
                                         <button type="submit" class="btn addToCart">Añadir carrito</button>
 
