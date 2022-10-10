@@ -115,6 +115,10 @@ INSERT INTO products(id, name, description, price, discount, image, stock, id_pr
 VALUES (DEFAULT,"NekoHeadPhones7w7", "Headphones to drain up those juicy dollars from your's simps ewe", 8000, 33, "nekoHeadphones.png", 4, 1);
 
 
+INSERT INTO products(id, name, description, price, discount, image, stock, id_products_category)
+VALUES (DEFAULT, 'Nikon Camera 3000', 'Una camara para captar los momentos más epicos del universo entero baby girl <3', 60000, 19, 'CamaraMamonaEpica3000.png', 7, 2);
+
+
 ALTER TABLE `goffice_db`.`users`
 CHANGE COLUMN `phone_number` `phone_number` VARCHAR(200) NOT NULL;
 ALTER TABLE `goffice_db`.`users`
