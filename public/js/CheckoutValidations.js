@@ -95,7 +95,7 @@ validationCheckoutCreditAdress.addEventListener('blur', () => {
 
     } else if (validationCheckoutCreditAdress.value.trim().length < 8) {
         error_fieldCheckoutCreditAdress.style.display = "block"
-        error_fieldCheckoutCreditAdress.innerHTML = "El numero minimo de caracteres debe ser 6"
+        error_fieldCheckoutCreditAdress.innerHTML = "El numero minimo de caracteres debe ser 8"
         errorAdressCheckout = false
     }
     else {
