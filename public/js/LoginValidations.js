@@ -60,7 +60,7 @@ LoginEmailValidation.addEventListener('keyup', function () {
     let extensionLogin = fileExtensionLogin[1];
     let fileExtensionLogin1 = extensionLogin.split('.');
     let extensionLogin1 = fileExtensionLogin1[1];
-    let allowedExtensions = ['dk', 'uk', 'es', 'com', 'ar', 'gmail'];
+    let allowedExtensions = ['dk', 'uk', 'es', 'com', 'ar'];
     let extensionMatchLogin = false;
     allowedExtensions.forEach(extensionALogin => {
         if (extensionALogin == extensionLogin1) {
@@ -83,7 +83,7 @@ LoginEmailValidation.addEventListener('keyup', function () {
     else if (!extensionMatchLogin) {
         error_fieldLoginEmail.style.display = "block"
         LoginEmailValidation.style.borderColor = "red"
-        error_fieldLoginEmail.innerHTML = "Debe contener un un dominio valido (['dk', 'uk', 'es', 'com' , 'ar', 'gmail'])";
+        error_fieldLoginEmail.innerHTML = "Debe contener un un dominio valido (['dk', 'uk', 'es', 'com' , 'ar'])";
         errorEmail = false;
     } else {
         error_fieldLoginEmail.style.display = "none"
