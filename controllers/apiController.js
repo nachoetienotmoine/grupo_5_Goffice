@@ -59,6 +59,9 @@ const apiController = {
         }
 
         return res.send(productsData);
+    },
+    oneProduct: async (req, res) => {
+        res.send(req.params.id + " xsd")
     }
 }
 
