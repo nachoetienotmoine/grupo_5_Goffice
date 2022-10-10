@@ -34,7 +34,7 @@ const apiController = {
             productsDb.forEach((product) => {product.dataValues.id_products_category === category.dataValues.id ? sameCategory++ : "";})
 
             countByCategory.push({
-                name: category.dataValues.category,
+                category: category.dataValues.category,
                 count: sameCategory,
         })});
 
