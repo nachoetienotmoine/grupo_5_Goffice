@@ -7,6 +7,9 @@ const crNumber = document.querySelector("#cardForm .numberCard");
 const crName = document.querySelector("#cardForm .name");
 const logoBrand = document.querySelector("#logoBrand1");
 const sign = document.querySelector("#cardForm .sign p")
+const expirateMonth = document.querySelector("#cardForm #expiration .month");
+const expirateYear = document.querySelector("#cardForm #expiration .year");
+const ccv = document.querySelector("#cardForm .ccv");
 
 const showfront = () => {
     if(tarjeta.classList.contains("active")){
@@ -109,4 +112,34 @@ showfront();
         crName.textContent = "Jhon Doe";
     }
 
+});
+
+
+// select month
+
+Form.selectMonth.addEventListener("change", (e) => {
+    expirateMonth.textContent = e.target.value;
+    showfront();
+})
+
+// select year
+
+Form.selectYear.addEventListener("change", (e) => {
+    expirateYear.textContent = e.target.value.slice(2);
+    showfront();
+})
+
+
+//ccv
+
+Form.inputCCV.addEventListener("keyup", () =>{
+    if (!tarjeta.classList.contains("active")){
+        tarjeta.classList.toggle("active")
+    }
+
+    Form.inputCCV.value = Form.inputCCV.value
+    .replace(/\D/g, "")
+    .replace(/\s/g, "");
+
+    ccv.textContent = Form.inputCCV.value;
 });
