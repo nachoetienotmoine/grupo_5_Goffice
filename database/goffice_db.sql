@@ -108,6 +108,13 @@ VALUES (DEFAULT,'Microfono Hyperx','El microfono con mas autotune que maria bece
 4684,3,'microfono.png',10,9);
 
 
+INSERT INTO products(id, name, description, price, discount, image, stock, id_products_category)
+VALUES (DEFAULT, 'Monitor Epico2', 'El monitor epico, para ver cosas epicas en el.', 6000, 2, 'image.png', 4, 8);
+
+INSERT INTO products(id, name, description, price, discount, image, stock, id_products_category)
+VALUES (DEFAULT,"NekoHeadPhones7w7", "Headphones to drain up those juicy dollars from your's simps ewe", 8000, 33, "nekoHeadphones.png", 4, 1);
+
+
 ALTER TABLE `goffice_db`.`users`
 CHANGE COLUMN `phone_number` `phone_number` VARCHAR(200) NOT NULL;
 ALTER TABLE `goffice_db`.`users`
