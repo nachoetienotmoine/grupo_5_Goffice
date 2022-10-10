@@ -118,6 +118,12 @@ VALUES (DEFAULT,"NekoHeadPhones7w7", "Headphones to drain up those juicy dollars
 INSERT INTO products(id, name, description, price, discount, image, stock, id_products_category)
 VALUES (DEFAULT, 'Nikon Camera 3000', 'Una camara para captar los momentos más epicos del universo entero baby girl <3', 60000, 19, 'CamaraMamonaEpica3000.png', 7, 2);
 
+INSERT INTO products(id, name, description, price, discount, image, stock, id_products_category)
+VALUES (DEFAULT, 'MasterOfGodsChair', 'Destroy your enemies with the new MasterOfGodsChair, the maximum comfort, well equiped chair that helps you to stay comfort while you slain your enemies in any type of game, Battlefield, Call Of Duty, Fortnite, hello kitty world, Where is the monkey?, Talking Tom. and MANY MORE!', 1000000, 0, 'NeonMasterDominatorChair.png', 1, 6);
+
+INSERT INTO products(id, name, description, price, discount, image, stock, id_products_category)
+VALUES (DEFAULT, 'GamingChairNice', 'A cool gaming chair :3', 3500, 0, 'GamingChairNice.png', 5, 6);
+
 
 ALTER TABLE `goffice_db`.`users`
 CHANGE COLUMN `phone_number` `phone_number` VARCHAR(200) NOT NULL;
