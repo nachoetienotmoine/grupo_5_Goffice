@@ -2,76 +2,82 @@
 <html lang="en">
 
 <%- include('./head.ejs')%>
-<%- include('./header2.ejs') %>
+    <%- include('./header2.ejs') %>
 
-<body>
+        <body>
 
-    <main class="mainD">
+            <main class="mainD">
 
-    
 
-    <div class="carrusel">
-        <ul class="carrusel-fotos">
-          <li id="foto1"><img src="/images/<%= user.image  %>" alt="" ></li>
-          <li id="foto2"><img src="/images/<%= user.image  %>" alt=""></li>
-          <li id="foto3"><img src="/images/<%= user.image  %>" alt=""></li>
-          <li id="foto4"><img src="/images/<%= user.image  %>" alt=""></li>
-          <li id="foto5"><img src="/images/<%= user.image  %>" alt=""></li>
-          <li id="foto6"><img src="/images/<%= user.image  %>" alt=""></li>
-        </ul>
-        <ul class="carrusel-menu">
-            <li><a href="#foto1"><img src="/images/<%= user.image  %>" alt=""></a></li>
-            <li><a href="#foto2"><img src="/images/<%= user.image  %>" alt=""></a></li>
-            <li><a href="#foto3"><img src="/images/<%= user.image  %>" alt=""></a></li>
-            <li><a href="#foto4"><img src="/images/<%= user.image  %>" alt=""></a></li>
-            
-          </ul>
-    
-         <article class="detalle-grid">
-            <div class="detalles-content">
-                <h3><%= user.name  %></h3>
-                <div class="rating">
-                    <span>
-                        <i class="fa fa-star"></i>
-                    </span>
-                    <span>
-                        <i class="fa fa-star"></i>
-                    </span>
-                    <span>
-                        <i class="fa fa-star"></i>
-                    </span>
-                    <span>
-                        <i class="fa fa-star"></i>
-                    </span>
-                    <span>
-                        <i class="fa fa-star"></i>
-                    </span>
-                </div>
-                    <p class="price"><b>Precio: </b> $<%= user.price  %></p>
-                    <p class="description">
-                        <b>Descripcion: </b> <span><%= user.description  %></span>
-                    </p>
-                   
-                    <div class="bottom">
-                        <form action="/carrito/agregar/<%= user.id %>" method="post">
-                            <div class="btn__group">
-                                <button type="submit" class="btn addToCart">Añadir carrito</button>
-                                
+
+                <div class="carrusel">
+                    <ul class="carrusel-fotos">
+                        <li id="foto1"><img src="/images/<%= user.image  %>" alt=""></li>
+                        <li id="foto2"><img src="/images/<%= user.image  %>" alt=""></li>
+                        <li id="foto3"><img src="/images/<%= user.image  %>" alt=""></li>
+                        <li id="foto4"><img src="/images/<%= user.image  %>" alt=""></li>
+
+                    </ul>
+
+
+                    <ul class="carrusel-menu">
+                        <li><a href="#foto1"><img src="/images/<%= user.image  %>" alt=""></a></li>
+                        <li><a href="#foto2"><img src="/images/<%= user.image  %>" alt=""></a></li>
+                        <li><a href="#foto3"><img src="/images/<%= user.image  %>" alt=""></a></li>
+                        <li><a href="#foto4"><img src="/images/<%= user.image  %>" alt=""></a></li>
+
+                    </ul>
+
+                  
+                        <div class="detalles-content">
+                            <h3>
+                                <%= user.name %>
+                            </h3>
+                            <div class="rating">
+                                <span>
+                                    <i class="fa fa-star"></i>
+                                </span>
+                                <span>
+                                    <i class="fa fa-star"></i>
+                                </span>
+                                <span>
+                                    <i class="fa fa-star"></i>
+                                </span>
+                                <span>
+                                    <i class="fa fa-star"></i>
+                                </span>
+                                <span>
+                                    <i class="fa fa-star"></i>
+                                </span>
                             </div>
-                        </form>
-                    </div>
+                            <p class="price"><b>Precio: </b> $<%= user.price %>
+                            </p>
+                            <p class="description">
+                                <b>Descripcion: </b> <span>
+                                    <%= user.description %>
+                                </span>
+                            </p>
+
+                            <div class="bottom">
+                                <form action="/carrito/agregar/<%= user.id %>" method="post">
+                                    <div class="btn__group">
+                                        <button type="submit" class="btn addToCart">Añadir carrito</button>
+
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                   
+            </main>
+            <div class="social-bar">
+
+                <a href="" class="iconF"><i class="fab fa-facebook"></i></a>
+                <a href="" class="iconI"><i class="fab fa-instagram"></i></a>
+                <a href="" class="iconA"><i class="fas fa-at"></i></a>
+                <a href="" class="iconT"><i class="fab fa-twitter"></i></a>
             </div>
-        </article> 
-    </main>
-    <div class="social-bar">
-       
-        <a href="" class="iconF"><i class="fab fa-facebook"></i></a>
-        <a href="" class="iconI"><i class="fab fa-instagram"></i></a>
-        <a href="" class="iconA"><i class="fas fa-at"></i></a>
-        <a href="" class="iconT"><i class="fab fa-twitter"></i></a>
-    </div>
-  
-</body>
-<%- include('./footer.ejs') %>
+
+        </body>
+        <%- include('./footer.ejs') %>
 
 </html>

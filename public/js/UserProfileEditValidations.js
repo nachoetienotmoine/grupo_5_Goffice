@@ -20,22 +20,22 @@ const error_submitProfileEdit = document.querySelector(".error_submitProfileEdit
 
 
 let errorsProfileEdit = [];
-
+let errorImagenEdit = false;
 
 firstNameProfileEditValid.addEventListener("keyup", function(){
     if (firstNameProfileEditValid.value == ""){
         error_firstNameProfileEdit.style.display = "block";
-        error_firstNameProfileEdit.innerHTML = "pone algo hdp";
+        error_firstNameProfileEdit.innerHTML = "El campo FirstName no puede estar vacio";
         firstNameProfileEditValid.style.borderColor = "red";
-        errors.push("pone algo hdp")
+        errorsProfileEdit.push("El campo FirstName no puede estar vacio")
         
     }
 
     else if (firstNameProfileEditValid.value.trim().length < 2){
         error_firstNameProfileEdit.style.display = "block";
-        error_firstNameProfileEdit.innerHTML = "Tiene que ser mayor a 1";
+        error_firstNameProfileEdit.innerHTML = "El campo firstName tiene que ser mayor a 1";
         firstNameProfileEditValid.style.borderColor = "red";
-        errors.push("tiene que ser mayor a 1")
+        errorsProfileEdit.push("El campo firstName tiene que ser mayor a 1")
         
 
     }
@@ -43,7 +43,7 @@ firstNameProfileEditValid.addEventListener("keyup", function(){
     else {
         error_firstNameProfileEdit.style.display = "none";
         firstNameProfileEditValid.style.borderColor = "";
-        let profileEditSinError = errorsProfileEdit.indexOf("pone algo hdp" || "tiene que ser mayor a 1")
+        let profileEditSinError = errorsProfileEdit.indexOf( "El campo FirstName no puede estar vacio"|| "El campo firstName tiene que ser mayor a 1")
         errorsProfileEdit.splice(profileEditSinError)
         
 
@@ -54,17 +54,17 @@ firstNameProfileEditValid.addEventListener("keyup", function(){
 lastNameProfileEditValid.addEventListener("keyup", function(){
     if (lastNameProfileEditValid.value == ""){
         error_lastNameProfileEdit.style.display = "block";
-        error_lastNameProfileEdit.innerHTML = "ponete algo rei";
+        error_lastNameProfileEdit.innerHTML = "El campo LastName no puede estar vacio";
         lastNameProfileEditValid.style.borderColor = "red";
-        errors.push("ponete algo rei")
+        errorsProfileEdit.push("ponete algo rei")
         
     }
 
     else if (lastNameProfileEditValid.value.trim().length < 3){
         error_lastNameProfileEdit.style.display = "block";
-        error_lastNameProfileEdit.innerHTML = "tiene que ser mayor a 3 pa";
+        error_lastNameProfileEdit.innerHTML = "El campo LastName tiene que ser mayor a 3";
         lastNameProfileEditValid.style.borderColor = "red";
-        errors.push("tiene que ser mayor a 3 pa")
+        errorsProfileEdit.push("El campo LastName tiene que ser mayor a 3")
        
 
     }
@@ -72,7 +72,7 @@ lastNameProfileEditValid.addEventListener("keyup", function(){
     else {
         error_lastNameProfileEdit.style.display = "none";
         lastNameProfileEditValid.style.borderColor = "";
-        let profileEditSinError = errorsProfileEdit.indexOf("ponete algo rei" || "tiene que ser mayor a 3 pa")
+        let profileEditSinError = errorsProfileEdit.indexOf("El campo LastName no puede estar vacio" || "El campo LastName tiene que ser mayor a 3")
         errorsProfileEdit.splice(profileEditSinError)
         
     }
@@ -82,17 +82,17 @@ lastNameProfileEditValid.addEventListener("keyup", function(){
 phoneNumberProfileEditValid.addEventListener("keyup", function(){
     if (phoneNumberProfileEditValid.value == ""){
         error_phoneNumberProfileEdit.style.display = "block";
-        error_phoneNumberProfileEdit.innerHTML = "tiene que ser un formato valido";
+        error_phoneNumberProfileEdit.innerHTML = "El campo phoneNumber no puede estar vacio";
         phoneNumberProfileEditValid.style.borderColor = "red";
-        errors.push("tiene que ser un formato valido")
+        errorsProfileEdit.push("El campo phoneNumber no puede estar vacio")
         
     }
 
     else if (phoneNumberProfileEditValid.value.trim().length < 7 || phoneNumberProfileEditValid.value.trim().length > 16){
         error_phoneNumberProfileEdit.style.display = "block";
-        error_phoneNumberProfileEdit.innerHTML = "entre 7 y 16";
+        error_phoneNumberProfileEdit.innerHTML = "El campo phoneNumber debe contener entre 7 y 16 caracteres";
         phoneNumberProfileEditValid.style.borderColor = "red";
-        errors.push("entre 7 y 16")
+        errorsProfileEdit.push("El campo phoneNumber debe contener entre 7 y 16 caracteres")
         
 
     }
@@ -100,7 +100,7 @@ phoneNumberProfileEditValid.addEventListener("keyup", function(){
     else {
         error_phoneNumberProfileEdit.style.display = "none";
         phoneNumberProfileEditValid.style.borderColor = "";
-        let profileEditSinError = errorsProfileEdit.indexOf("entre 7 y 16" || "tiene que ser mayor a 3 pa")
+        let profileEditSinError = errorsProfileEdit.indexOf("El campo phoneNumber no puede estar vacio" || "El campo phoneNumber debe contener entre 7 y 16 caracteres")
         errorsProfileEdit.splice(profileEditSinError)
        
 
@@ -127,9 +127,9 @@ imgProfileEditValid.addEventListener('change', function () {
         error_imgProfileEdit.style.display = "block"
         imgProfileEditValid.style.color = "red";
         error_imgProfileEdit.innerHTML = "Debe ingresar una imagen en formato : (JPG, JPEG, PNG, GIF)";
-        errors.push("Debe ingresar una imagen en formato : (JPG, JPEG, PNG, GIF)");
+        errorsProfileEdit.push("Debe ingresar una imagen en formato : (JPG, JPEG, PNG, GIF)");
         errorImagenEdit = false;
-        errors.push("Debe ingresar una imagen en formato : (JPG, JPEG, PNG, GIF)")
+        errorsProfileEdit.push("Debe ingresar una imagen en formato : (JPG, JPEG, PNG, GIF)")
 
    } else {
         error_imgProfileEdit.style.display = "none";
@@ -137,6 +137,7 @@ imgProfileEditValid.addEventListener('change', function () {
         let profileEditSinError = errorsProfileEdit.indexOf("Debe ingresar una imagen en formato : (JPG, JPEG, PNG, GIF)");
         errorsProfileEdit.splice(profileEditSinError);
         errorImagenEdit = true
+        
 
     }
 });
@@ -148,8 +149,8 @@ imgProfileEditValid.addEventListener('change', function () {
 
 
 submitProfileEditValid.addEventListener('click', function (event) {
-    for (let i = 0; i < errors.length; i++) {
-        if (errors[i].length > 0 ) {
+    for (let i = 0; i < errorsProfileEdit.length; i++) {
+        if (errorsProfileEdit[i].length > 0 ) {
             error_submitProfileEdit.style.display = 'block'
             error_submitProfileEdit.innerHTML = "Debes completar las casillas correctamente , y luego volver a enviar el formulario"
             event.preventDefault();
@@ -165,7 +166,7 @@ submitProfileEditValid.addEventListener('click', function (event) {
         event.preventDefault();
     }
 
-    if(!errors[0]){
+    if(!errorsProfileEdit[0]){
         error_fieldPeSend.style.display = 'none'
 
     }
