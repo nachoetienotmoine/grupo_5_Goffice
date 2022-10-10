@@ -17,6 +17,13 @@
                 <i class="fas fa-bars" id="btn"></i>
             </div>
             <ul class="nav_list">
+                <li>
+                    <a href="/">
+                        <i class="fas fa-home"></i>
+                        <span class="links_name">Home</span>
+                    </a>
+                    <span class="tooltip">Home</span>
+                </li>
                 <% if (locals.isLogged) { %>
                 <li>
                     <a href="/users/profile">
@@ -24,6 +31,13 @@
                         <span class="links_name">User</span>
                     </a>
                     <span class="tooltip">User</span>
+                </li>
+                <li>
+                    <a href="/carrito">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="links_name">Cart</span>
+                    </a>
+                    <span class="tooltip">Cart</span>
                 </li>
                 <li>
                     <a href="/users/logout">
@@ -48,13 +62,8 @@
                     <span class="tooltip">Log in</span>
                 </li>
                 <% } %>
-                <li>
-                    <a href="/">
-                        <i class="fas fa-home"></i>
-                        <span class="links_name">Home</span>
-                    </a>
-                    <span class="tooltip">Home</span>
-                </li>
+                
+               
                 <li>
                     <a href="https://www.youtube.com/watch?v=aF5eTnUwpNU">
                         <i class="fas fa-language"></i>

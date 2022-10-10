@@ -18,7 +18,7 @@ const BaseDeDatos = {
             dbResponse = {"response":"200"}
         }
         
-        return res.sendStatus(dbResponse);
+        return res.send(dbResponse);
     },
     lastProductAdded: async (req, res) => {
         let lastProduct = [0,0]
