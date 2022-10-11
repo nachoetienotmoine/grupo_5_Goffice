@@ -130,6 +130,9 @@ VALUES (DEFAULT, 'MicrophoneExtreme', 'MicrophoneExtreme is the new epic super p
 INSERT INTO products(id, name, description, price, discount, image, stock, id_products_category)
 VALUES (DEFAULT, 'HyperX Microphone', 'The HyperX Microphone is a high quality microphone that allows the owner to talk through it without any problems.', 6500, 2, 'HyperXMicrophone.png', 4, 9);
 
+INSERT INTO products(id, name, description, price, discount, image, stock, id_products_category)
+VALUES (DEFAULT, "Asus Monitor", "The Asus Monitor is a high quality and high definition monitor.", 7500, 5, "AsusMonitor.png", 3, 1);
+
 
 ALTER TABLE `goffice_db`.`users`
 CHANGE COLUMN `phone_number` `phone_number` VARCHAR(200) NOT NULL;
