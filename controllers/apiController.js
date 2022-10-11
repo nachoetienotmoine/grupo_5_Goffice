@@ -1,8 +1,54 @@
 const db = require('../database/models');
 const Products = db.Product;
 const CategoryProducts = db.ProductCategory;
+const Users = db.User;
 
 const apiController = {
+
+    users: async (req, res) => {
+        const users = await Users.findAll();
+        const userQuantity = users.length;
+        const allUsers = [];
+
+        users.forEach((user) => {
+            let userInfo = {
+              id: user.id,
+              name: user.first_name + " " + user.last_name,
+              email: user.email,
+              detail: `http://localhost:3000/api/users/${user.id}`
+            }
+            
+            allUsers.push(userInfo);
+        })
+
+        let userData = {
+            count: userQuantity,
+            users: allUsers
+        }
+        
+        return res.send(JSON.stringify(userData));
+    },
+
+    oneUsers: async (req, res) => {
+        const id = req.params.id;
+        const user = await Users.findOne({where:{id:id}});
+        let image = user.dataValues.image;
+        image = encodeURIComponent(image.trim());
+        let userInfo = {
+            id: user.dataValues.id,
+            first_name: user.dataValues.first_name,
+            last_name: user.dataValues.last_name,
+            email: user.dataValues.email,
+            phone_number: user.dataValues.phone_number,
+            gender: user.dataValues.gender,
+            image: user.dataValues.image,
+            URL: `http://localhost:3000/images/users/${image}`
+        }
+
+
+
+        return res.send(JSON.stringify(userInfo));
+    },
     
     products: async (req, res) => {
 
@@ -45,7 +91,7 @@ const apiController = {
             name: product.dataValues.name,
             description: product.dataValues.description,
             relations: relationsProduct,
-            detail: `http://localhost:3000/detalle/${product.dataValues.id}`
+            detail: `http://localhost:3000/api/products/${product.dataValues.id}`
             })});
 
         let productsData = {
