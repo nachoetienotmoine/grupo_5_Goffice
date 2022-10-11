@@ -3456,6 +3456,103 @@ hr {
 .hghghg{
     background-color: green;
 }
+.social-bar {
+    position: fixed;
+    right: 0;
+    top: 35%;
+    font-size: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    z-index: 100;
+    display: none;
+}
+
+.iconF {
+    color: white;
+    background: #2e406e;
+    border-radius: 1rem 0 0 0;
+    text-decoration: none;
+    padding: .7rem;
+    display: flex;
+    transition: all .5s;
+    display: none;
+}
+
+.iconI {
+    color: white;
+    background: #FF1744;
+    text-decoration: none;
+    padding: .7rem;
+    display: flex;
+    transition: all .5s;
+    font-size: 1.7rem;
+    display: none;
+}
+
+.iconA {
+    color: white;
+    background: #0b65e3;
+    text-decoration: none;
+    padding: .7rem;
+    display: flex;
+    transition: all .5s;
+    display: none;
+}
+
+.iconT {
+    color: white;
+    background: #339dc5;
+    text-decoration: none;
+    padding: .7rem;
+    display: flex;
+    transition: all .5s;
+    display: none;
+}
+.iconW {
+    color: white;
+    background: #05d436;
+    border-radius: 0 0 0 1rem;
+    text-decoration: none;
+    padding: .8rem;
+    display: flex;
+    transition: all .5s;
+    display: none;
+}
+
+.iconF:hover {
+    padding-right: 3rem;
+    border-radius: 1rem 0 0 1rem;
+    box-shadow: 0 0 .5rem rgba(0, 0, 0, 0);
+    display: none;
+}
+
+.iconI:hover {
+    padding-right: 3rem;
+    border-radius: 1rem 0 0 1rem;
+    box-shadow: 0 0 .5rem rgba(0, 0, 0, 0);
+    display: none;
+}
+
+.iconA:hover {
+    padding-right: 3rem;
+    border-radius: 1rem 0 0 1rem;
+    box-shadow: 0 0 .5rem rgba(0, 0, 0, 0);
+display: none;
+}
+
+.iconT:hover {
+    padding-right: 3rem;
+    border-radius: 1rem 0 0 1rem;
+    box-shadow: 0 0 .5rem rgba(0, 0, 0, 0);
+display: none;
+}
+.iconW:hover {
+    padding-right: 3rem;
+    border-radius: 1rem 0 0 1rem;
+    box-shadow: 0 0 .5rem rgba(0, 0, 0, 0);
+display: none;
+}
 @media (min-width: 769px) {
     .social-bar {
         position: fixed;
