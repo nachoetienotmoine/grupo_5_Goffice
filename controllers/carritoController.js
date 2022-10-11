@@ -159,10 +159,10 @@ const carritoController = {
         let id = userData.dataValues.id;
         id = parseInt(id);
         let productsFromDb = [];
-        let userCart = await cart.findOne({where: {id: id}});
+        let userCart = await cart.findOne({where: {users_id: id}});
         let totalProductsFromDb = userCart.dataValues.total_products;
         let totalPriceFromDb = userCart.dataValues.total_price;
-            console.log(frontProducts);
+
             for (let i = 0; i < frontProducts.length; i++){
                 productsFromDb.push(await Products.findOne({where: {name: frontProducts[i]["product"].name}}))
             }

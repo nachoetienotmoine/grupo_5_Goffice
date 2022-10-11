@@ -12,16 +12,14 @@ const apiController = {
         let countByCategory = [];
         let products = [];
         let relations = [];
-        let URL = [];
 
         for (let i = 0; i < productsDb.length; i++){
             let product = await Products.findByPk(productsDb[i].dataValues.id,{include: "Carts", where:{products_id: productsDb[i].dataValues.id}});
-            
-            if(product.dataValues.Carts.length > 0){
-                if (product.dataValues.id === product.dataValues.Carts[0].dataValues.carts_products.dataValues.products_id){
-                    relations.push(product.dataValues.Carts[0].dataValues.carts_products.dataValues);
-                }
-        
+            let userCart = product.dataValues.Carts;
+
+            if (userCart.length > 0){
+                userCart.forEach((cart) => {relations.push(cart.dataValues.carts_products.dataValues)});
+                
             }
 
         }
@@ -40,9 +38,7 @@ const apiController = {
             
         let relationsProduct = [];
 
-        for(let i = 0; i < relations.length; i++){
-            product.dataValues.id === relations[i].products_id ? relationsProduct.push({carts_products:relations[i]}) : "";
-        }
+        relations.forEach((relation) => {product.dataValues.id === relation.products_id ? relationsProduct.push({carts_products:relation}) : "";})
 
         products.push({
             id: product.dataValues.id,
@@ -58,10 +54,43 @@ const apiController = {
             products: products
         }
 
-        return res.send(productsData);
+        return res.send(JSON.stringify(productsData));
     },
     oneProduct: async (req, res) => {
-        res.send(req.params.id + " xsd")
+        let id = parseInt(req.params.id);
+        let product = await Products.findByPk(id,{include: "Carts"});
+        let fieldPerProduct = [];
+        let productRelations = [];
+        let userProductsRelation = await product.getUserProducts();
+        let userCart = product.dataValues.Carts;
+
+        fieldPerProduct.push({
+            id: product.dataValues.id,
+            name: product.dataValues.name,
+            description: product.dataValues.description,
+            price: product.dataValues.price,
+            discount: product.dataValues.discount,
+            image: product.dataValues.image,
+            stock: product.dataValues.stock,
+            id_products_category: product.dataValues.id_products_category
+        });
+
+        if (userCart.length > 0){
+            userCart.forEach((cart) => {productRelations.push({carts_products: cart.dataValues.carts_products.dataValues,})});
+            
+        }
+
+        if (userProductsRelation.length > 0){
+            userProductsRelation.forEach((product) => { productRelations.push({users_products: product.dataValues});})
+        }
+
+        let OneProduct = {
+            productData: fieldPerProduct,
+            relations: productRelations,
+            URL: `http://localhost:3000/images/${product.dataValues.image}`
+        }
+
+        return res.send(JSON.stringify(OneProduct));
     }
 }
 

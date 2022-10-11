@@ -4,7 +4,10 @@ const Users = db.User;
 const BaseDeDatos = {
     
     productos: async (req, res) => {
-        return res.send(await Products.findAll());
+        let products = await Products.findAll();
+        let productsWithStock = [];
+        products.forEach(product => { product.stock > 0 ? productsWithStock.push(product) : "";});
+        return res.send(productsWithStock);
     },
     findOne: async (req, res) => {
         let product = req.body.product
