@@ -133,6 +133,9 @@ VALUES (DEFAULT, 'HyperX Microphone', 'The HyperX Microphone is a high quality m
 INSERT INTO products(id, name, description, price, discount, image, stock, id_products_category)
 VALUES (DEFAULT, "Asus Monitor", "The Asus Monitor is a high quality and high definition monitor.", 7500, 5, "AsusMonitor.png", 3, 1);
 
+INSERT INTO products(id, name, description, price, discount, image, stock, id_products_category)
+VALUES (DEFAULT, "Corsair Keyboard", "Keyboard go click click bruh :P", 5800, 15, "CorsairKeyboard.png", 5, 7);
+
 
 ALTER TABLE `goffice_db`.`users`
 CHANGE COLUMN `phone_number` `phone_number` VARCHAR(200) NOT NULL;
