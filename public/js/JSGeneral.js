@@ -22,6 +22,7 @@ let id = sessionStorage.getItem("id");
 switch (location.href) {
     case 'http://localhost:3000/':
         scriptSrc("/js/HeaderSearchBar.js");
+        
         break;
     case 'http://localhost:3000/users/login':
         scriptSrc("/js/LoginValidations.js");
