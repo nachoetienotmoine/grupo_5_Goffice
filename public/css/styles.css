@@ -5976,7 +5976,7 @@ text-align: center;
     color: #0b0126;
     font-size: 18px;
     text-transform: uppercase;
-    transition: .1s;
+    transition: .3s;
     border-radius: .5rem;
     
 }
@@ -5985,6 +5985,7 @@ text-align: center;
     text-align: center;
     padding: 4%;
     font-size: 3rem;
+    color: #0b0126;
 
 }
 
@@ -6001,7 +6002,7 @@ text-align: center;
     color: #fff;
     transform: scale(.9);
     background: #1a6692;
-    border: solid 1px #0751a6 ;
+    
 
 }
 
