@@ -2036,6 +2036,7 @@ hr {
     background-color: rgb(255 255 255 / 50%);
     border-radius: 1rem;
     margin: 0 25%;
+    color: #1a6692;
 }
 
 .contenedorLogosIndex {
@@ -2751,7 +2752,7 @@ hr {
     .btn:hover {
         background-color: #1a6692;
         color: white;
-        border: 1px solid #1a6692;
+        
     }
 
     .price {
@@ -2933,57 +2934,7 @@ hr {
         object-fit: contain;
     }
 
-    @keyframes slide {
-        0% {
-            margin-left: 0%;
-        }
-
-        15% {
-            margin-left: 0%;
-        }
-
-        18% {
-            margin-left: -100%;
-        }
-
-        32% {
-            margin-left: -100%;
-        }
-
-        35% {
-            margin-left: -200%;
-        }
-
-        50% {
-            margin-left: -200%;
-        }
-
-        53% {
-            margin-left: -300%;
-        }
-
-        68% {
-            margin-left: -300%;
-        }
-
-        71% {
-            margin-left: -401%;
-        }
-
-        86% {
-            margin-left: -401%;
-        }
-
-        89% {
-            margin-left: -505%;
-        }
-
-        100% {
-            margin-left: -505%;
-        }
-
-
-    }
+   
 
     .h2H {
         font-size: 40px;

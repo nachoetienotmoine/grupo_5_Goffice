@@ -24,7 +24,7 @@ switch (location.href) {
         scriptSrc("/js/HeaderSearchBar.js");
         scriptSrc("/js/animationLogo.js");
 
-        animationLogo
+        
         break;
     case 'http://localhost:3000/users/login':
         scriptSrc("/js/LoginValidations.js");
