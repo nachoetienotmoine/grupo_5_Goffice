@@ -3406,9 +3406,17 @@ hr {
 .iconT {
     color: white;
     background: #339dc5;
-    border-radius: 0 0 0 1rem;
     text-decoration: none;
     padding: .7rem;
+    display: flex;
+    transition: all .5s;
+}
+.iconW {
+    color: white;
+    background: #05d436;
+    border-radius: 0 0 0 1rem;
+    text-decoration: none;
+    padding: .8rem;
     display: flex;
     transition: all .5s;
 }
@@ -3435,6 +3443,12 @@ hr {
 }
 
 .iconT:hover {
+    padding-right: 3rem;
+    border-radius: 1rem 0 0 1rem;
+    box-shadow: 0 0 .5rem rgba(0, 0, 0, 0);
+
+}
+.iconW:hover {
     padding-right: 3rem;
     border-radius: 1rem 0 0 1rem;
     box-shadow: 0 0 .5rem rgba(0, 0, 0, 0);
