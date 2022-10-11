@@ -124,6 +124,12 @@ VALUES (DEFAULT, 'MasterOfGodsChair', 'Destroy your enemies with the new MasterO
 INSERT INTO products(id, name, description, price, discount, image, stock, id_products_category)
 VALUES (DEFAULT, 'GamingChairNice', 'A cool gaming chair :3', 3500, 0, 'GamingChairNice.png', 5, 6);
 
+INSERT INTO products(id, name, description, price, discount, image, stock, id_products_category)
+VALUES (DEFAULT, 'MicrophoneExtreme', 'MicrophoneExtreme is the new epic super pro microphone thats going to make you want to talk all day along in your streams :3', 7000, 10, 'microphonePro.png', 9, 9);
+
+INSERT INTO products(id, name, description, price, discount, image, stock, id_products_category)
+VALUES (DEFAULT, 'HyperX Microphone', 'The HyperX Microphone is a high quality microphone that allows the owner to talk through it without any problems.', 6500, 2, 'HyperXMicrophone.png', 4, 9);
+
 
 ALTER TABLE `goffice_db`.`users`
 CHANGE COLUMN `phone_number` `phone_number` VARCHAR(200) NOT NULL;
