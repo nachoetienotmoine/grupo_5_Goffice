@@ -3,6 +3,7 @@ const userCardTemplate = document.querySelector("[data-user-template]");
 const userCardContainer = document.querySelector("[data-user-cards-container]");
 const searchInput = document.querySelector("[data-search]");
 const aHref = document.querySelector("a")
+const barSearcher = document.querySelector(".buscar2");
 
 userCardContainer.classList.add('hide')
 
@@ -57,3 +58,17 @@ body.addEventListener('click', (e) => {
     }
     
 })
+
+barSearcher.addEventListener('submit', (e) => {
+    e.preventDefault()
+    
+    let cards = document.querySelectorAll('.buscar_card');
+    let cardsOnView = [];
+    cards.forEach((card) => {
+        if (!card.classList.contains('hide')){
+            cardsOnView.push(card);
+        }
+    });
+    
+    window.location.href = cardsOnView[0].children[0].href;
+});
