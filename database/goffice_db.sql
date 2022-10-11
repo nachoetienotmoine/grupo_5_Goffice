@@ -136,6 +136,10 @@ VALUES (DEFAULT, "Asus Monitor", "The Asus Monitor is a high quality and high de
 INSERT INTO products(id, name, description, price, discount, image, stock, id_products_category)
 VALUES (DEFAULT, "Corsair Keyboard", "Keyboard go click click bruh :P", 5800, 15, "CorsairKeyboard.png", 5, 7);
 
+INSERT INTO products(id, name, description, price, discount, image, stock, id_products_category)
+VALUES (DEFAULT, "Mouse Pad", "This is a soft and comfortable mouse pad.", 2500, 0, "MousePad.png", 7, 5);
+
+
 
 ALTER TABLE `goffice_db`.`users`
 CHANGE COLUMN `phone_number` `phone_number` VARCHAR(200) NOT NULL;
