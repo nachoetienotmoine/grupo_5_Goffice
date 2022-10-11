@@ -145,6 +145,9 @@ VALUES (DEFAULT, "Yuki MousePad", "Buy your own soft and comfortable mouse pad o
 INSERT INTO products(id, name, description, price, discount, image, stock, id_products_category)
 VALUES (DEFAULT, "Genius Mouse Pad", "Great and comfortable mouse pad", 1500, 7, "GeniusMousePad.png", 4, 5);
 
+INSERT INTO products(id, name, description, price, discount, image, stock, id_products_category)
+VALUES (DEFAULT, "Rakoon Mouse Pad", "This big and soft mouse pad is of great quality.", 2300, 11, "RakoonMousePad.png", 2, 5);
+
 
 
 
