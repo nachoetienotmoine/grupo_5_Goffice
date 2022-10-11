@@ -22,7 +22,9 @@ let id = sessionStorage.getItem("id");
 switch (location.href) {
     case 'http://localhost:3000/':
         scriptSrc("/js/HeaderSearchBar.js");
-        
+        scriptSrc("/js/animationLogo.js");
+
+        animationLogo
         break;
     case 'http://localhost:3000/users/login':
         scriptSrc("/js/LoginValidations.js");
@@ -35,11 +37,13 @@ switch (location.href) {
     case 'http://localhost:3000/carrito':
         scriptSrc("/js/Carrito.js");
         scriptSrc("/js/HeaderSearchBar.js");
+        
         break;
     case 'http://localhost:3000/carrito/checkout':
         scriptSrc("/js/CheckOut.js");
         scriptSrc("/js/CheckoutValidations.js");
         scriptSrc("/js/HeaderSearchBar.js");
+        scriptSrc("/js/animationLogo.js");
         break;
     case 'http://localhost:3000/users/profile/Edit':
         scriptSrc("/js/UserProfileEditValidations.js");
@@ -56,5 +60,6 @@ switch (location.href) {
     case "http://localhost:3000/pagotarjeta":
         scriptSrc("/js/Tarjeta.js");
         scriptSrc("/js/HeaderSearchBar.js");
+        scriptSrc("/js/animationLogo.js");
         break;
 }
