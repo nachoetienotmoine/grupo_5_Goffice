@@ -5940,9 +5940,70 @@ text-align: center;
 
 /* ------------------------------------ End Pay Card----------------------------------- */
 
-/* ------------------------------------Soporte(ayuda y contacto)----------------------------------- */
+/* ------------------------------------Soporte(help & Information)----------------------------------- */
+
+.conctactBody{
+
+    background-color: #a5a6a9;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='199' viewBox='0 0 100 199'%3E%3Cg fill='%23165ebe' fill-opacity='0.37'%3E%3Cpath d='M0 199V0h1v1.99L100 199h-1.12L1 4.22V199H0zM100 2h-.12l-1-2H100v2z'%3E%3C/path%3E%3C/g%3E%3C/svg%3E");
+}
 
 
+.boxHelp {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    /* box-shadow: 0px 0px 8px black;*/
+    border-radius: 1rem;
+    margin: 5% 5% 5% 28%;
+    box-shadow: 0 0.5rem 1.7rem rgb(0 0 0 / 20%);
+    background-color: rgb(255 255 255 / 50%);
+    border-radius: .5rem;
+    gap: 2rem;
+}
+
+.boxHelp ul li {
+    list-style: none;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.boxHelp ul li a {
+    display: block;
+    padding: 10px 0;
+    text-decoration: none;
+    font-weight: 700;
+    color: #0b0126;
+    font-size: 18px;
+    text-transform: uppercase;
+    transition: .1s;
+    border-radius: .5rem;
+    
+}
+
+.titleHI {
+    text-align: center;
+    padding: 4%;
+    font-size: 3rem;
+
+}
+
+.helpList{
+    list-style-type: decimal;
+  line-height: 1.6;
+  padding: 4px 8px;
+  text-align: center;
+  
+}
+
+
+.boxHelp ul li a:hover{
+    color: #fff;
+    transform: scale(.9);
+    background: #1a6692;
+    border: solid 1px #0751a6 ;
+
+}
 
 
 
