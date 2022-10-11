@@ -139,6 +139,10 @@ VALUES (DEFAULT, "Corsair Keyboard", "Keyboard go click click bruh :P", 5800, 15
 INSERT INTO products(id, name, description, price, discount, image, stock, id_products_category)
 VALUES (DEFAULT, "Mouse Pad", "This is a soft and comfortable mouse pad.", 2500, 0, "MousePad.png", 7, 5);
 
+INSERT INTO products(id, name, description, price, discount, image, stock, id_products_category)
+VALUES (DEFAULT, "Yuki MousePad", "Buy your own soft and comfortable mouse pad of your best girl.", 2700, 17, "AnimeGirlMousePad.png", 10, 5);
+
+
 
 
 ALTER TABLE `goffice_db`.`users`
