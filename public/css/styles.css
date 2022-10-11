@@ -5991,6 +5991,18 @@ text-align: center;
 
 }
 
+.comentBox{
+    width: 30%;
+    border: solid 1px  #0b0126;
+    border-radius: 3px;
+   
+}
+
+.inputBox{
+    height: 1.8rem;
+    width: 25%;
+    border: solid 1px #0b0126;
+}
 
 #btnContact {
     width: 10%;
