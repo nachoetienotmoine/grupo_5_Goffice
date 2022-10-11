@@ -50,10 +50,10 @@
                                     <i class="fa fa-star"></i>
                                 </span>
                             </div>
-                            <p class="price"><b>Precio: </b> $<%= product.price %>
+                            <p class="price"><b>Price: </b> $<%= product.price %>
                             </p>
                             <p class="description">
-                                <b>Descripcion: </b> <span>
+                                <b>Description: </b> <span>
                                     <%= product.description %>
                                 </span>
                             </p>
@@ -61,7 +61,7 @@
                             <div class="bottom">
                                 <form action="/carrito/agregar/<%= product.id %>" method="post">
                                     <div class="btn__group">
-                                        <button type="submit" class="btn addToCart">Añadir carrito</button>
+                                        <button type="submit" class="btn addToCart">Add to Cart</button>
 
                                     </div>
                                 </form>
