@@ -96,6 +96,7 @@ const apiController = {
 
         let productsData = {
             count: count,
+            categoryCount: categoryDb.length,
             countByCategory: countByCategory,
             products: products
         }
