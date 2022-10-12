@@ -36,7 +36,11 @@ const soporteController = {
     ///Arrepentimiento///
     arrepentir: (req, res) => {
      res.render("arrepentimiento")
-    }
+    },
+    ///404///
+    errar: (req, res) => {
+        res.render("error404")
+       }
 }
 
 

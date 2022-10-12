@@ -13,5 +13,6 @@ router.get('/terminos', soporteController.determinar);
 router.get('/privacidad', soporteController.privar);
 router.get('/arrepentimiento', soporteController.arrepentir);
 router.get('/contacto', soporteController.contactar);
+router.get('/errar', soporteController.errar);
 
 module.exports = router;

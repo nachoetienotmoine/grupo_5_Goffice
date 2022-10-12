@@ -3,7 +3,8 @@ const validationCheckoutCreditPhonenumber = document.querySelector('.phonenumber
 const validationCheckoutCreditCodigoPostal = document.querySelector('.codigoPostalInputCheckout');
 const validationCheckoutCreditAdress = document.querySelector('.adressInputCheckout');
 const validationCheckoutCreditEmail = document.querySelector('.EmailInputCheckout');
-
+const spinner = document.querySelector('.spinner');
+console.log(spinner)
 
 const error_fieldCheckoutCreditName = document.querySelector('.error_fieldCheckoutCreditName');
 const error_fieldCheckoutCreditPhonenumber = document.querySelector('.error_fieldCheckoutCreditPhonenumber');
@@ -14,7 +15,7 @@ const error_fieldCheckoutCreditEmail = document.querySelector('.error_fieldCheck
 const error_fieldCheckoutCreditMercadopago = document.querySelector('.error_fieldCheckoutCreditMercadopago');
 
 error_fieldCheckoutCreditMercadopago
-let mercadoPagoButton = document.querySelector('#mercadoPagoButton');
+const mercadoPagoButton = document.querySelector('#mercadoPagoButton');
 const forms = document.querySelectorAll('form');
 const allProductsResume = document.querySelectorAll('.productoCheckout');
 
@@ -135,6 +136,8 @@ mercadoPagoButton.addEventListener('click', function (event) {
         error_fieldCheckoutCreditMercadopago.style.display = 'block'
         error_fieldCheckoutCreditMercadopago.innerHTML = "Debes completar las casillas correctamente y luego reenviar el formulario"
     }else{
+        mercadoPagoButton.style.display = 'none'
+        spinner.style.display= "grid"
         let finalPrice = document.querySelector('.preciofinal');
         finalPrice = localStorage.getItem('totalPriceCarrito');
         finalPrice = parseInt(finalPrice);
@@ -174,5 +177,7 @@ mercadoPagoButton.addEventListener('click', function (event) {
                 window.location.href = 'http://localhost:3000/'; 
             }
         },2000)
+
+       
     }})
   
