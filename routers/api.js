@@ -10,5 +10,7 @@ router.get('/users/:id', apiController.oneUsers);
 router.get('/products/', apiController.products);
 router.get('/products/:id', apiController.oneProduct);
 
+router.get('/soldTotal', apiController.soldTotal)
+
 module.exports = router;
 

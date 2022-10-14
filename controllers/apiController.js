@@ -2,6 +2,7 @@ const db = require('../database/models');
 const Products = db.Product;
 const CategoryProducts = db.ProductCategory;
 const Users = db.User;
+const usersProducts = db.UserProducts;
 
 const apiController = {
 
@@ -138,6 +139,41 @@ const apiController = {
         }
 
         return res.send(JSON.stringify(OneProduct));
+    },
+    soldTotal: async (req, res) => {
+        const usersExchanges = await usersProducts.findAll({include:"Users"}); 
+        let soldTotal = usersExchanges.length;
+        let exchanges = [];
+        let users = [];
+
+        // usersExchanges.forEach(async (exchange) => {
+        //     const product = await Products.findByPk(exchange.product_id);
+        //     exchanges.push({users_id: exchange.users_id, product_id: exchange.product_id, productName: product.dataValues.name });
+        //     users.push({
+        //         id: exchange.Users.dataValues.id,
+        //         firstName: exchange.Users.dataValues.first_name,
+        //         lastName: exchange.Users.dataValues.last_name
+        //     });
+            
+        // })
+
+        for (let i = 0; i < usersExchanges.length; i++){
+            const product = await Products.findByPk(usersExchanges[i].product_id);
+            exchanges.push({users_id: usersExchanges[0].users_id, product_id: usersExchanges[i].product_id, productName: product.dataValues.name });
+            users.push({
+                id: usersExchanges[i].Users.dataValues.id,
+                firstName: usersExchanges[i].Users.dataValues.first_name,
+                lastName: usersExchanges[i].Users.dataValues.last_name
+            });
+        }
+
+        let soldTotalData = {
+            usersExchanges: exchanges,
+            users: users, 
+            totalExchanges: soldTotal
+        }
+
+        return res.send(JSON.stringify(soldTotalData));
     }
 }
 
