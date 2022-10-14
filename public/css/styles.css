@@ -4457,12 +4457,12 @@ x
 
 .feedback {
     font-size: medium;
-    color: #1a6692;
+    color: red;
 }
 
 .feedbackTotal {
     font-size: x-large;
-    color: #1a6692;
+    color: red;
     text-align: center;
 }
 
