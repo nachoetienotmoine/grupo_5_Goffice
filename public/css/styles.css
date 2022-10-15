@@ -6063,7 +6063,7 @@ s .header-bar2 .compracuotas2 {
     font-size: 18px;
     text-transform: uppercase;
     transition: .3s;
-    border-radius: .5rem;
+    border-radius: .2rem;
     border: 1px solid #eee;
 
 }
@@ -6095,7 +6095,7 @@ s .header-bar2 .compracuotas2 {
     width: 0;
     height: 0;
     position: absolute;
-    left: 1px;
+    left: -1.5px;
     top: -10px;
     border-style: solid ;
     border-width: 0 0 11.5px 11.5px;
@@ -6107,7 +6107,7 @@ s .header-bar2 .compracuotas2 {
     width: 0;
     height: 0;
     position: absolute;
-    right: 1px;
+    right: -1.5px;
     top: -10px;
     border-style: solid ;
     border-width: 11.5px 0 0 11.5px;
