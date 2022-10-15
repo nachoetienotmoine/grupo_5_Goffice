@@ -6023,7 +6023,98 @@ s .header-bar2 .compracuotas2 {
     color: #2364d2;
 }
 
+
 /* ------------------------------------ End Pay Card----------------------------------- */
+
+/* ------------------------------------ cash payment----------------------------------- */
+
+.cashTitle{
+    text-align: center;
+    padding: 2%;
+    font-size: 1.5rem;
+    color: #0b0126;
+}
+
+.boxCash {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    /* box-shadow: 0px 0px 8px black;*/
+    border-radius: 1rem;
+    margin: 5% 5% 5% 28%;
+    box-shadow: 0 0.5rem 1.7rem rgb(0 0 0 / 20%);
+    background-color: rgb(255 255 255 / 50%);
+    border-radius: .5rem;
+    gap: 2rem;
+}
+
+.boxCash ul li {
+    list-style: none;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.boxCash ul li a {
+    display: block;
+    padding: 10px 0;
+    text-decoration: none;
+    font-weight: 700;
+    color: #0b0126;
+    font-size: 18px;
+    text-transform: uppercase;
+    transition: .3s;
+    border-radius: .5rem;
+    border: 1px solid #eee;
+
+}
+
+.cashList {
+    list-style-type: decimal;
+    line-height: 1.6;
+    padding: 4px 8px;
+    text-align: center;
+
+}
+
+.boxCash ul li a:hover {
+    color: #fff;
+    transform: scale(1.2);
+    background: #1a6692;
+    border: 1px solid #1a6692;
+
+
+}
+
+.boxCash:hover ul li a {
+    color: #eee;
+
+}
+
+.boxCash ul li a:hover::before{
+    content:" ";
+    width: 0;
+    height: 0;
+    position: absolute;
+    left: 1px;
+    top: -10px;
+    border-style: solid ;
+    border-width: 0 0 11.5px 11.5px;
+    border-color: transparent transparent #1a6692 transparent ;
+}
+
+.boxCash ul li a:hover::after{
+    content:" ";
+    width: 0;
+    height: 0;
+    position: absolute;
+    right: 1px;
+    top: -10px;
+    border-style: solid ;
+    border-width: 11.5px 0 0 11.5px;
+    border-color: transparent transparent transparent #1a6692 ;
+}
+/* ------------------------------------ cash payment end ----------------------------------- */
+
 
 /* ------------------------------------Soporte(help & Information)----------------------------------- */
 
