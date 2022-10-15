@@ -159,7 +159,7 @@ const apiController = {
 
         for (let i = 0; i < usersExchanges.length; i++){
             const product = await Products.findByPk(usersExchanges[i].product_id);
-            exchanges.push({users_id: usersExchanges[0].users_id, product_id: usersExchanges[i].product_id, productName: product.dataValues.name });
+            exchanges.push({users_id: usersExchanges[i].users_id, product_id: usersExchanges[i].product_id, productName: product.dataValues.name });
             users.push({
                 id: usersExchanges[i].Users.dataValues.id,
                 firstName: usersExchanges[i].Users.dataValues.first_name,
@@ -172,6 +172,7 @@ const apiController = {
             users: users, 
             totalExchanges: soldTotal
         }
+        console.log(soldTotalData);
 
         return res.send(JSON.stringify(soldTotalData));
     }
