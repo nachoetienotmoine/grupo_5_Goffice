@@ -175,6 +175,45 @@ const apiController = {
         console.log(soldTotalData);
 
         return res.send(JSON.stringify(soldTotalData));
+    },
+    fiveMostSold: async (req, res) => {
+        const userExchanges = await usersProducts.findAll({include:"Users"});
+
+        let maximun = [];
+        userExchanges.forEach((exchange, j) => {
+            let repeats = 0;
+            for (let i = 0; i < userExchanges.length; i++){
+                if (exchange.dataValues.product_id === userExchanges[i].dataValues.product_id){
+                    repeats = repeats + 1;
+                    maximun[j] = {repeats: repeats, id: exchange.dataValues.product_id};
+                }
+            }
+        });
+        let maximunTrimed = []
+        maximun.map(x => {
+            for (let i = 0; i < maximun.length; i++){
+                let isInside = false;
+                    maximunTrimed.forEach((num) => {
+                        if (num.id === x.id){
+                            isInside = true;
+                        }
+                    })
+                if (x.id === maximun[i].id && !isInside){
+                    maximunTrimed.push(x)
+                }
+            }
+        });  
+        
+
+        maximunTrimed = maximunTrimed.sort(function(a, b){return b.repeats - a.repeats});
+
+        let fiveMostSold = [];
+        
+        for(let i = 0; i < 5; i++){
+            fiveMostSold.push(maximunTrimed[i])
+        }
+
+        return res.send(JSON.stringify(fiveMostSold));   
     }
 }
 

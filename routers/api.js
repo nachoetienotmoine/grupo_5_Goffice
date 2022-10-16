@@ -11,6 +11,7 @@ router.get('/products/', apiController.products);
 router.get('/products/:id', apiController.oneProduct);
 
 router.get('/soldTotal', apiController.soldTotal)
+router.get('/fiveMostSold', apiController.fiveMostSold)
 
 module.exports = router;
 
