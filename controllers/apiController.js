@@ -214,6 +214,11 @@ const apiController = {
         }
 
         return res.send(JSON.stringify(fiveMostSold));   
+    },
+    createForm: async (req, res) => {
+        
+        const categoryProducts = await CategoryProducts.findAll();
+        res.render("admin/prodCrear", { categoryProducts: categoryProducts })   
     }
 }
 
