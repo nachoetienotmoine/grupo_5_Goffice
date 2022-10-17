@@ -214,10 +214,19 @@ const apiController = {
         
         return res.send(JSON.stringify(fiveMostSold));   
     },
-    createForm: async (req, res) => {
+    createProduct: async (req, res) => {
         
-        const categoryProducts = await CategoryProducts.findAll();
-        res.render("admin/prodCrear", { categoryProducts: categoryProducts })   
+        let { name, category, description, discount, price, stock , image} = req.body;
+        Products.create(
+            {
+                name: name[0],
+                description: description,
+                discount: discount,
+                price: price,
+                image: req.file.originalname,
+                stock: stock,
+                id_products_category: category
+            }); 
     }
 }
 
