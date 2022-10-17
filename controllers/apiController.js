@@ -172,7 +172,6 @@ const apiController = {
             users: users, 
             totalExchanges: soldTotal
         }
-        console.log(soldTotalData);
 
         return res.send(JSON.stringify(soldTotalData));
     },
@@ -212,7 +211,7 @@ const apiController = {
         for(let i = 0; i < 5; i++){
             fiveMostSold.push(maximunTrimed[i])
         }
-
+        
         return res.send(JSON.stringify(fiveMostSold));   
     },
     createForm: async (req, res) => {
