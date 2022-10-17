@@ -159,7 +159,7 @@ INSERT INTO roles (`id`, `role`) VALUES (1, 'admin');
 INSERT INTO roles (`id`, `role`) VALUES (2, 'guest');
 
 
-INSERT INTO users (`id`, `first_name`, `last_name`, `email`, `password`, `phone_number`, `gender`, `image`, `id_roles`) VALUES (1, 'Ignacio', 'Andreozzi', 'ignacio.andreozzi@hotmail.com', '$2a$10$vhZi/HzH9Wt1qZYumKByT.Xlt5V/HJLJK5tXqW9eI..gbpHb4bu9y', '5493815186646', 'male', 'lord_sixth.jpg', 1);
+INSERT INTO users (`id`, `first_name`, `last_name`, `email`, `password`, `phone_number`, `gender`, `image`, `id_roles`) VALUES (1, 'Ignacio', 'Andreozzi', 'ignacio.andreozzi@hotmail.com', '$2a$10$vhZi/HzH9Wt1qZYumKByT.Xlt5V/HJLJK5tXqW9eI..gbpHb4bu9y', '5493815186646', 'male', 'Ignacio Andreozzi.jpg', 1);
 INSERT INTO users (`id`, `first_name`, `last_name`, `email`, `password`, `phone_number`, `gender`, `image`, `id_roles`) VALUES (2, 'Gonzalo', 'Andreozzi', 'andreozzigonzalo@gmail.com', '$2a$10$q0xiD0u3ucqOMYyvcHQB6unDbSEWe/1BaSZ9iMH3ZtsZj7maijdo6', '5493815302514', 'male', 'GonzaShino.png', 1);
 INSERT INTO users (`id`, `first_name`, `last_name`, `email`, `password`, `phone_number`, `gender`, `image`, `id_roles`) VALUES (3, 'Nelson', 'Patiño', 'nelson227@hotmail.es', '$2a$10$NFtBZiHTO1Sm2rqJd5C5zOkrdCXSbkDfUXgGEWJNKp2gZEZYIzfma', '5491151410473', 'male', '496f6e98-cce5-4cd6-8487-4a8aed06950a.png', 1);
 INSERT INTO users (`id`, `first_name`, `last_name`, `email`, `password`, `phone_number`, `gender`, `image`, `id_roles`) VALUES (4, 'Ignacio', 'Etienot', 'nachoetienotmoine@gmail.com', '$2a$10$9.x1F5m1Nvh7CK2yKY21YuXHsawh2a5/napkhTS.FdtoRdwrzm.8G', '5493512056946', 'male', 'SakuNacho.jpg', 1);
