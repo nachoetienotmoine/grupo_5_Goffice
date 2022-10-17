@@ -13,8 +13,6 @@ const storage = multer.diskStorage({
   });
   const upload = multer({ storage: storage });
 
-  console.log();console.log();console.log(__dirname, '../public/images/');console.log();console.log();
-
 const apiController = require('../controllers/apiController');
 
 router.get('/users', apiController.users);
