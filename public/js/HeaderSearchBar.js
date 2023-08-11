@@ -44,8 +44,9 @@ searchInput.addEventListener('input', (e) => {
 
 
 body.addEventListener('click', (e) => {
-    const input = e.path[0] == searchInput;
-    const productCardContainer = e.path[2] == userCardContainer;
+    var path = e.composedPath ? e.composedPath() : e.path;
+    const input = path[0] == searchInput;
+    const productCardContainer = path[2] == userCardContainer;
     if (input && !productCardContainer) {
         userCardContainer.classList.remove('hide')
         let card = document.querySelectorAll(".buscar_card");
