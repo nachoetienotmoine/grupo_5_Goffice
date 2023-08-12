@@ -106,7 +106,7 @@ const carritoController = {
                 },{
                     where: { users_id: userId }
                 });
-        }
+        };
     
         res.redirect("/carrito");
     },
@@ -152,6 +152,7 @@ const carritoController = {
     },
 
     checkoutCompra: async (req, res) => {
+        console.log("\n\n\n\n HIIIIIIIII BUYING! \n\n\n\n");
         const userEmail = req.session.userLogged.email;
         let frontProducts = req.body.products;
         const totalPrice = req.body;
@@ -204,12 +205,12 @@ const carritoController = {
                 await users_products.create({
                     users_id: id,
                     product_id: productsFromDb[i].dataValues.id
-                })
-            }
+                });
+            };
 
         res.sendStatus(200);
     }
-}
+};
 
 
 module.exports = carritoController;

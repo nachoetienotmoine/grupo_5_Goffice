@@ -26,9 +26,6 @@ let errorAdressCheckout = false;
 let errorEmailCheckout = false;
 
 validationCheckoutCreditName.addEventListener('blur', () => {
-
-
-
     if (validationCheckoutCreditName.value == "") {
         error_fieldCheckoutCreditName.style.display = "block"
         error_fieldCheckoutCreditName.innerHTML = "Debe completar el siguiente campo"
@@ -41,14 +38,10 @@ validationCheckoutCreditName.addEventListener('blur', () => {
     else {
         error_fieldCheckoutCreditName.style.display = "none"
         errorNameCheckout = true
-    }
-
-
+    };
 });
 
 validationCheckoutCreditPhonenumber.addEventListener('blur', () => {
-
-
     if (validationCheckoutCreditPhonenumber.value == "") {
         error_fieldCheckoutCreditPhonenumber.style.display = "block"
         error_fieldCheckoutCreditPhonenumber.innerHTML = "Debe completar el siguiente campo"
@@ -61,14 +54,10 @@ validationCheckoutCreditPhonenumber.addEventListener('blur', () => {
     else {
         error_fieldCheckoutCreditPhonenumber.style.display = "none"
         errorPhonenumberCheckout = true
-    }
+    };
 });
 
-
 validationCheckoutCreditCodigoPostal.addEventListener('blur', () => {
-
-
-
     if (validationCheckoutCreditCodigoPostal.value == "") {
         error_fieldCheckoutCreditCodigoPostal.style.display = "block"
         error_fieldCheckoutCreditCodigoPostal.innerHTML = "Debe completar el siguiente campo"
@@ -81,14 +70,10 @@ validationCheckoutCreditCodigoPostal.addEventListener('blur', () => {
     else {
         error_fieldCheckoutCreditCodigoPostal.style.display = "none"
         errorCodigoPostalCheckout = true
-    }
-
-
+    };
 });
+
 validationCheckoutCreditAdress.addEventListener('blur', () => {
-
-
-
     if (validationCheckoutCreditAdress.value == "") {
         error_fieldCheckoutCreditAdress.style.display = "block"
         error_fieldCheckoutCreditAdress.innerHTML = "Debe completar el siguiente campo"
@@ -102,15 +87,11 @@ validationCheckoutCreditAdress.addEventListener('blur', () => {
     else {
         error_fieldCheckoutCreditAdress.style.display = "none"
         errorAdressCheckout = true
-    }
-
-
-})
+    };
+});
 
 validationCheckoutCreditEmail.addEventListener('blur', () => {
-
     const emailVerification = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
-
     if (validationCheckoutCreditEmail.value == "") {
         error_fieldCheckoutCreditEmail.style.display = "block"
         error_fieldCheckoutCreditEmail.innerHTML = "Debe completar el siguiente campo"
@@ -124,28 +105,27 @@ validationCheckoutCreditEmail.addEventListener('blur', () => {
     else {
         error_fieldCheckoutCreditEmail.style.display = "none"
         errorEmailCheckout = true
-    }
-
-
-})
+    };
+});
 
 
 mercadoPagoButton.addEventListener('click', function (event) {
     event.preventDefault();
-    if (!errorAdressCheckout || !errorCodigoPostalCheckout || !errorNameCheckout || !errorPhonenumberCheckout || !errorEmailCheckout ) {
+
+    if (!errorAdressCheckout || !errorCodigoPostalCheckout || !errorNameCheckout || !errorPhonenumberCheckout || !errorEmailCheckout) {
         error_fieldCheckoutCreditMercadopago.style.display = 'block'
         error_fieldCheckoutCreditMercadopago.innerHTML = "Debes completar las casillas correctamente y luego reenviar el formulario"
-    }else{
-        mercadoPagoButton.style.display = 'none'
-        spinner.style.display= "grid"
+    } else {
+        mercadoPagoButton.style.display = 'none';
+        spinner.style.display = "grid";
         let finalPrice = document.querySelector('.preciofinal');
         finalPrice = localStorage.getItem('totalPriceCarrito');
         finalPrice = parseInt(finalPrice);
-       
-        function Products(name, multiplier){
+
+        function Products(name, multiplier) {
             this.name = name,
             this.multiplier = multiplier
-        }
+        };
 
         let products = [];
 
@@ -154,30 +134,31 @@ mercadoPagoButton.addEventListener('click', function (event) {
                 product = {
                     ["product"]: new Products(product.children[1].textContent.trim(), product.firstElementChild.textContent.trim())
                 }
-            )});
-
-        const visibleFormName = event.path[2].classList[1];
+            );
+        });
+        const path = event.composedPath ? event.composedPath() : event.path;
+        const visibleFormName = path[2].classList[1];
         let formOnDisplay;
 
-        forms.forEach((form) => {form.classList.contains(visibleFormName) ? formOnDisplay = form : ""});
+        forms.forEach((form) => { form.classList.contains(visibleFormName) ? formOnDisplay = form : "" });
 
         let fetched = false;
 
-        fetch('/carrito/checkout', 
-        {method:'POST',headers: {'Content-Type':'application/json'},
-        body: JSON.stringify({products: products, totalPrice: finalPrice})})   
-                .then(res => {
-                    if (res.status === 200){
-                        fetched = true;
-                    }
-                })
-        
-        setTimeout(function(){
-            if (fetched){
-                window.location.href = 'http://localhost:3000/'; 
-            }
-        },2000)
+        fetch('/carrito/checkout',
+            {
+                method: 'POST', headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ products: products, totalPrice: finalPrice })
+            })
+            .then(res => {
+                if (res.status === 200) {
+                    fetched = true;
+                };
+            });
 
-       
-    }})
-  
+        setTimeout(function () {
+            if (fetched) {
+                window.location.href = 'http://localhost:3000/';
+            }
+        }, 2000);
+    }
+});
